@@ -24,10 +24,12 @@ export default function page(props) {
             <section className="section-hero-image section">
                 {/* //TODO Jsou aktuality dobry h1? Webkamery? */}
                 <h1>Aktuality</h1>
-                <img className="hero-image" src={image} alt="Ski slope" />
+                {/* <img className="hero-image" src={image} alt="Ski slope" /> */}
 
             </section>
             <section className="section-aktuality">
+                <h1>Aktuality</h1>
+
                 <Aktualita image={servis} title="PODĚKOVÁNÍ za sezónu 2019/20" date="29.3. 2020" url="ASnDASie2"
                     rawText="Za normálních okolností bychom teď, na konci března, pravděpodobně oznamovali konec další lyžařské sezóny v karlovském údolí. Tato zima ale 'normální' nebyla, a to nemáme na mysli jen její předčasný konec...                    "
                 />

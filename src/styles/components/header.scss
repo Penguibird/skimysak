@@ -11,8 +11,8 @@ header {
         margin-top: -4.5em;
         // margin: 1vw;
         margin-left: 1.5vw;
-        width: clamp(0px, 12vw, 200px);
-    }
+        width: 12vw;
+        max-width: 200px;    }
     img {
         width: inherit;
     }
@@ -26,9 +26,10 @@ nav {
     // top: 0;
     
     // flex-grow: 1;
+    padding-right: 5em;
     width: 100%;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: right;
     transition: background-color cubic-bezier(0.65, 0.05, 0.36, 1) 0.3s;
     &:hover {
