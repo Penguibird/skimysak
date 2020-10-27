@@ -1,5 +1,5 @@
 import * as React from 'react';
-import css from '../styles/404.scss';
+import css from '../styles/pages/404.scss';
 import { Helmet } from "react-helmet";
 import Header from '../components/header'
 import Footer from '../components/footer'

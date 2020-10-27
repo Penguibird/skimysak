@@ -1,5 +1,5 @@
 import * as React from 'react';
-import css from '../styles/pocasi.scss';
+import css from '../styles/pages/pocasi.scss';
 import { Helmet } from "react-helmet";
 import Header from '../components/header'
 import Footer from '../components/footer'

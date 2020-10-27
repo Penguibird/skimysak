@@ -1,5 +1,5 @@
 import * as React from 'react';
-import css from '../styles/weather.scss'
+import css from '../styles/components/weather.scss'
 import { Fragment, useState, useEffect } from 'react';
 import { Link } from "gatsby";
 import snowing from "../../assets/snowing.png";
