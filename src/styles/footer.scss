@@ -1,0 +1,12 @@
+footer {
+    background-color: var(--background-blue);
+    // border-top: 1px var(--text-black) solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.7em;
+    & > * + * {
+        margin-top: 0.3em;
+    }
+}

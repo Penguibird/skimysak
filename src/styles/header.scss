@@ -1,0 +1,45 @@
+header {
+    /* width: 100%; */
+    display: flex;
+    transition: background-color cubic-bezier(0.65, 0.05, 0.36, 1) 0.3s;
+    &:hover {
+        background-color: var(--background-blue);
+    }
+}
+
+.logo {
+    flex-grow: 2;
+    div {
+        // margin: 10px;
+        margin: 1vw;
+        margin-left: 3.5vw;
+        width: clamp(0px, 25vw, 200px);
+        img {
+            width: inherit;
+        }
+    }
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    a {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        padding: 5px 2em;
+        transition: background-color cubic-bezier(0.65, 0.05, 0.36, 1) 0.1s;
+        &:hover {
+            background-color: var(--background-blue-darker);
+        }
+        * { //the text inside it, might be h1 later
+            font-size: clamp(10px, 1.8vw, 20px);
+            display: inline;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 700;
+            color: var(--title-white);
+        }
+    }
+}
