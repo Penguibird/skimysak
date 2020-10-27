@@ -6,6 +6,8 @@ import { Link } from 'gatsby';
 import Header from '../components/header'
 import Footer from '../components/footer'
 import Weather from '../components/weather';
+import Aktualita from '../components/aktualita'
+
 import videoMp4 from '../../assets/video.mp4';
 import image from '../../assets/photo.jpg'
 import kamery from '../../assets/kamery.jpg'
@@ -49,7 +51,7 @@ export default function Home() {
                     )}
                 </Media>
                 <div className="flexbox-column main-title-wrap">
-                    <h1 className="big-title title-white hero-image-title">
+                    <h1 className="big title-white hero-image-title">
                         Parádní lyžování v jeseníkách
                     </h1>
                     <a className="scroll-down" href="#mainSection">
@@ -94,9 +96,17 @@ export default function Home() {
                 </h2>
             </section>
             <section className="section-aktuality section">
-                <article>
-                    {/* TODO: Aktuality, link to a webpage and shit */}
-                </article>
+                {/* <h2>Aktuality</h2> */}
+                {/* TODO Decide if h belongs here */}
+                <Aktualita image={servis} title="PODĚKOVÁNÍ za sezónu 2019/20" date="29.3. 2020" url="ASnDASie2"
+                    rawText="Za normálních okolností bychom teď, na konci března, pravděpodobně oznamovali konec další lyžařské sezóny v karlovském údolí. Tato zima ale 'normální' nebyla, a to nemáme na mysli jen její předčasný konec...                    "
+                />
+                <Aktualita image={servis} title="PODĚKOVÁNÍ za sezónu 2019/20" date="29.3. 2020" url="ASnDASie2"
+                    rawText="Za normálních okolností bychom teď, na konci března, pravděpodobně oznamovali konec další lyžařské sezóny v karlovském údolí. Tato zima ale 'normální' nebyla, a to nemáme na mysli jen její předčasný konec...                    "
+                />
+                <Aktualita image={servis} title="PODĚKOVÁNÍ za sezónu 2019/20" date="29.3. 2020" url="ASnDASie2"
+                    rawText="Za normálních okolností bychom teď, na konci března, pravděpodobně oznamovali konec další lyžařské sezóny v karlovském údolí. Tato zima ale 'normální' nebyla, a to nemáme na mysli jen její předčasný konec...                    "
+                />
             </section>
             <section className="flexbox-column section section-sluzby" >
                 <h1 className="big-title title-blue " >
@@ -107,8 +117,7 @@ export default function Home() {
                         {/* //TODO all of these */}
                         <img src={servis} alt="snowy mountain" />
                         <h3>Půjčovna/Servis</h3>
-                        <p>
-                            Mauris id fermentum nulla. Vivamus a ante congue, porta nunc nec, hendrerit turpis.
+                        <p>Mauris id fermentum nulla. Vivamus a ante congue, porta nunc nec, hendrerit turpis.
                             Aliquam bibendum, turpis eu mattis iaculis, ex lorem mollis sem, ut sollicitudin risus orci quis tellus.</p>
                     </article></Link>
                     <Link to="/sluzby/skola"><article className="sluzby-item" >

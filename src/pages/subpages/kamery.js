@@ -17,9 +17,9 @@ export default function page(props) {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content="Parádní lyžování v jeseníkách" />
         </Helmet>
-        <Header />
-        <main>
-            <section className="section-hero-image section">
+        <main className="kamery">
+            <Header />
+                <section className="section-hero-image section">
                 {/* //TODO Jsou kamery dobry nazev? Webkamery? */}
                 <h1>Kamery</h1>
                 <img className="hero-image" src={image} alt="Ski slope" />

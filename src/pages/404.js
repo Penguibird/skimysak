@@ -21,8 +21,10 @@ export default function page(props) {
         <main>
             <section className="section section-hero-image">
                 <img className="hero-image" src={image} alt="Ski slope" />
-                <h1>404: Stránka nenalezena</h1>
-                <Link to="/" ><h2>Hlavní stránka</h2></Link>
+                <h1>Error 404: Stránka nenalezena</h1>
+            </section>
+            <section className="section-text section">
+                <Link to="/" ><h2>Zpátky na Hlavní stránku</h2></Link>
             </section>
         </main>
         <Footer />
