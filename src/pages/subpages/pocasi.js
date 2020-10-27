@@ -1,8 +1,8 @@
 import * as React from 'react';
-import css from '../styles/pages/pocasi.scss';
+import '../../styles/pages/pocasi.scss';
 import { Helmet } from "react-helmet";
-import Header from '../components/header'
-import Footer from '../components/footer'
+import Header from '../../components/header'
+import Footer from '../../components/footer'
 import { Fragment, useState, useEffect } from 'react';
 import useSWR from 'swr';
 

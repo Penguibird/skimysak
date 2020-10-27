@@ -29,6 +29,7 @@ h1 {
     font-family: "Montserrat", sans-serif;
     font-size: clamp(25px, 6vw, 6vw);
     font-weight: 800;
+    color: var(--title-white);
     text-transform: uppercase;
     text-align: center;
 }
@@ -52,23 +53,52 @@ h3 {
     text-align: center;
 }
 
-p {
+p, li {
     display: block;
     font-family: "HelveticaNeue", sans-serif;
-    font-size: clamp(14px, 1.5vw, 20px);
+    font-size: clamp(14px, 1.8vw, 20px);
     font-weight: 300;
     color: var(--text-black);
+    text-align: justify;
     strong {
         font-weight: 600;
+    }
+}
+
+ul, ol {
+    & > * + * {
+       padding-top: .5em;
     }
 }
 
 a {
     font-family: "HelveticaNeue", sans-serif;
     // font-size: clamp(20px, 1.5vw, 15px);
-    font-weight: 400;
+    font-weight: 300;
     color: var(--text-black);
     text-decoration: none;
+}
+
+table {
+    border-collapse: collapse;
+    overflow-x: auto;
+    th, td {
+        font-family: "HelveticaNeue", sans-serif;
+        font-size: clamp(14px, 1.6vw, 20px);
+        font-weight: 300;
+        color: var(--text-black);
+
+        padding: .5em 1.2em;
+
+        border: var(--text-black-light) 1px solid;
+    }
+    th {
+        font-weight: 600;
+    }
+}
+
+.align-right {
+    text-align: right;
 }
 
 .flexbox-column {
@@ -88,6 +118,22 @@ a {
 
 .section {
     padding: 4vw 0px;
+}
+
+.section-text {
+    background-color: var(--background-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+        max-width: 40ch;
+    }
+    p {
+        max-width: 65ch;
+    }
+    & > * + * {
+        margin-top: 1.5em;
+    }
 }
 
 /*section*/
@@ -167,7 +213,7 @@ a {
     background-image: url("../../assets/kamery.jpg");
 }
 .widget-skipasy {
-    background-image: url("../../assets/skipasy.jpg");
+    background-image: url("../../assets/skipas.jpg"); //url("../../../assets/skipasy.jpg");
 }
 
 /* Section */

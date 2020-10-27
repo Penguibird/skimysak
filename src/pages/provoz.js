@@ -1,5 +1,5 @@
 import * as React from 'react';
-// import css from '../styles/pages/provoz.scss'
+// import '../styles/pages/provoz.scss'
 import { Fragment, useState, useEffect } from 'react';
 import { Helmet } from "react-helmet";
 

@@ -65,14 +65,15 @@ export default function Home() {
                 <Weather />
                 {/* <Weather /> */}
                 {/* <Weather /> */}
-                <Link to="/kamery" className="widget widget-kamery" >
+                <Link to="/subpages/kamery" className="widget widget-kamery" >
                     {/* <img src={kamery_ico} alt="kamery" /> */}
                     <h2 className="widget-title">KAMERY</h2>
                 </Link>
-                <Link to="/servis" className="widget widget-skipasy" >
+                <a href="https://www.skikarlov.cz/lyzovani/ceny-skipasu" className="widget widget-skipasy" >
+                    {/* //TODO: Test */}
                     {/* <img src={kamery_ico} alt="kamery" /> */}
                     <h2 className="widget-title">Skipasy</h2>
-                </Link>
+                </a>
             </section>
 
             <section id="mainSection" className="flexbox-column section section-main-text" >
@@ -102,17 +103,19 @@ export default function Home() {
                     SLUŽBY
                 </h1>
                 <div className="flexbox-row sluzby-wrap">
-                    <Link to="/servis"><article className="sluzby-item" > //TODO all of these
+                    <Link to="/sluzby/servis"><article className="sluzby-item" >
+                        {/* //TODO all of these */}
                         <img src={servis} alt="snowy mountain" />
-                        <h3>Servis</h3>
+                        <h3>Půjčovna/Servis</h3>
                         <p>
                             Mauris id fermentum nulla. Vivamus a ante congue, porta nunc nec, hendrerit turpis.
                             Aliquam bibendum, turpis eu mattis iaculis, ex lorem mollis sem, ut sollicitudin risus orci quis tellus.</p>
                     </article></Link>
-                    <Link to="/servis"><article className="sluzby-item" >
+                    <Link to="/sluzby/skola"><article className="sluzby-item" >
                         <img src={servis} />
-                        <h3>Škola</h3>
-                        <p>Mauris id fermentum nulla. Vivamus a ante congue, porta nunc nec, hendrerit turpis. Aliquam bibendum, turpis eu mattis iaculis, ex lorem mollis sem, ut sollicitudin risus orci quis tellus.</p>
+                        <h3>Lyžařská škola</h3>
+                        <p>Chcete se zdokonalit v lyžování? Učíme lyžaře i snowboardisty všech věkových kategorií a všech úrovní.
+                Bez stresu a na pohodu!</p>
                     </article></Link>
                     <Link to="/servis"><article className="sluzby-item" >
                         <img src={servis} />
@@ -121,7 +124,9 @@ export default function Home() {
                     </article></Link>
                 </div>
             </section>
-
+            <section className="section-text section-socials">
+                <a href="https://www.facebook.com" className="facebook-link"><h2 className="facebook">Najděte nás i na facebooku!</h2></a>
+            </section>
             <section className="section section-bottom" >
                 <h1 className="big-title title-white" >
                     U NÁS JE NÁDHERNĚ

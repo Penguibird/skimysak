@@ -1,10 +1,10 @@
 import * as React from 'react';
-import css from '../styles/pages/contact.scss'
+import '../../styles/pages/contact.scss'
 import {Fragment, useState, useEffect} from 'react';
 import { Helmet } from "react-helmet";
 
-import Header from '../components/header';
-import Footer from '../components/footer';
+import Header from '../../components/header';
+import Footer from '../../components/footer';
 
 export default function Contact(props) {
 

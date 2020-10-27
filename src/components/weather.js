@@ -1,5 +1,5 @@
 import * as React from 'react';
-import css from '../styles/components/weather.scss'
+import '../styles/components/weather.scss'
 import { Fragment, useState, useEffect } from 'react';
 import { Link } from "gatsby";
 import snowing from "../../assets/snowing.png";
@@ -25,15 +25,14 @@ export default function Weather(props) {
         // TODO: imgs
     }
     if (error) console.log({ url, data, error });
-    if (error) return <div className="weather-widget error">
+    if (error) return <div className="widget weather-widget error">
         <p>error</p>
-        // TODO: error and loading
     </div>
-    if (!data) return <div className="weather-widget loading">
+    if (!data) return <div className="widget weather-widget loading">
         <p>loading</p>
     </div>
 
-    return <Link to="/pocasi" className="weather-widget widget"  >
+    return <Link to="/subpages/pocasi" className="widget weather-widget widget"  >
         <h2 className="weather-title widget-title">
             {`${getTemp(data)} °C`}
         </h2>
