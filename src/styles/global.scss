@@ -78,13 +78,13 @@ h5 {
 p,
 li {
     display: block;
-    font-family: "HelveticaNeue", sans-serif;
+    font-family: "Liberation Sans", "HelveticaNeue", sans-serif;
     font-size: clamp(14px, 1.8vw, 20px);
-    font-weight: 300;
+    font-weight: normal;
     color: var(--text-black);
     text-align: justify;
     strong {
-        font-weight: 600;
+        font-weight: bold;
     }
 }
 
@@ -96,9 +96,9 @@ ol {
 }
 
 a {
-    font-family: "HelveticaNeue", sans-serif;
+    font-family: "Liberation Sans", "HelveticaNeue", sans-serif;
     // font-size: clamp(20px, 1.5vw, 15px);
-    font-weight: 300;
+    font-weight: normal;
     color: var(--text-black);
     text-decoration: none;
 }
@@ -106,19 +106,31 @@ a {
 table {
     border-collapse: collapse;
     overflow-x: auto;
+
+    th,
+    tr:nth-of-type(2n) {
+        background-color: var(--background-blue-darker);
+    }
+    tr:nth-of-type(2n-1) {
+        background-color: var(--background-blue);
+    }
     th,
     td {
-        font-family: "HelveticaNeue", sans-serif;
+        font-family: "Liberation Sans", "HelveticaNeue", sans-serif;
         font-size: clamp(14px, 1.6vw, 20px);
-        font-weight: 300;
+        font-weight: normal;
         color: var(--text-black);
 
         padding: 0.5em 1.2em;
 
+        // text-align: end;
         border: var(--text-black-light) 1px solid;
     }
+    td.price {
+        text-align: end;
+    }
     th {
-        font-weight: 600;
+        font-weight: bold;
     }
 }
 
@@ -288,8 +300,18 @@ table {
 
 .section-aktuality {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    @media screen and (min-width: 901px) {
+        flex-direction: row;
+    }
+    @media screen and (max-width: 900px) {
+        flex-direction: column;
+        & > *:not(:first-child) {
+            display: none;
+        }
+    }
+
+    flex-wrap: nowrap;
+    align-items: center;
     gap: 2em;
     background-image: url("../../assets/servis.jpg");
     padding: 2em;
@@ -309,10 +331,10 @@ table {
         gap: 5em;
         padding-left: clamp(20px, 10vw, 5em);
         padding-right: clamp(20px, 10vw, 5em);
-        @media screen and(min-width: 700px) {
+        @media screen and(min-width: 901px) {
             flex-direction: row;
         }
-        @media screen and(max-width: 700px) {
+        @media screen and(max-width: 900px) {
             flex-direction: column;
         }
     }
