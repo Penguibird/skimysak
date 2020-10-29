@@ -265,6 +265,10 @@ table {
     padding: 40px;
     // padding-top: 4vw;
 
+    h1 {
+        margin-top: 0;
+        margin-bottom: 3vw;
+    }
     h2 + * {
         margin-top: 3.5vw;
     }
@@ -282,6 +286,7 @@ table {
         max-width: 65ch;
     }
 }
+
 
 /* Section */
 
@@ -317,6 +322,15 @@ table {
     padding: 2em;
 }
 
+.sluzby-item {
+    @media screen and (min-width: 901px) {
+        width: 25vw;
+    }
+    @media screen and (max-width: 900px) {
+        width: 80vw;
+    }
+}
+
 /* Section */
 
 .section-sluzby {
@@ -340,7 +354,9 @@ table {
     }
     img {
         width: 100%;
-        border-radius: 0.2vw;
+        border-radius: 1vw;
+        object-fit: cover;
+        height: 15vw;
     }
     article {
         & > * + * {

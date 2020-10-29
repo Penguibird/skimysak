@@ -21,8 +21,34 @@ export default function Contact(props) {
         <Header />
         <main>
             <section className="section-hero-image section">
-                <h1>Lyžování na Myšáku</h1>
-                <img className="hero-image" src={image} alt="Ski slope" />
+                <Media queries={{
+                    small: "(max-width: 599px)",
+                    medium: "(min-width: 600px) and (max-width:999px)",
+                    large: "(min-width: 1000px)"
+                }}>
+                    {matches => (
+                        <Fragment>
+                            {matches.large
+                                ? <video className="hero-image" muted autoPlay loop  >
+                                    <source src={videoMp4} type="video/mp4" />
+                                    {/* <source src={image} type="image/jpg" media={"all"} /> */}
+                                </video>
+                                : <img className="hero-image" src={image} alt="Ski slope" />
+                            }
+                        </Fragment>
+                    )}
+                </Media>
+                <div className="flexbox-column main-title-wrap">
+                    <h1 className="big title-white hero-image-title">
+                        Lyžování na Myšáku
+                    </h1>
+                    <a className="scroll-down" href="#mainSection">
+                        <svg width="50" height="25" viewBox="0 0 50 25" className="custom-svg">
+                            <line x1="5" x2="25" y1="5" y2="20" />
+                            <line x1="45" x2="25" y1="5" y2="20" />
+                        </svg>
+                    </a>
+                </div>
             </section>
             <section className="section section-text section-areal-main">
                 <div className="areal-main">

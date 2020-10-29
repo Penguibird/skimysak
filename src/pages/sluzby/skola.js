@@ -6,7 +6,7 @@ import { Fragment, useState, useEffect } from 'react';
 import { Helmet } from "react-helmet";
 import Header from '../../components/header'
 import Footer from '../../components/footer'
-import image from '../../../assets/servis.jpg';
+import image from '../../../assets/skolaFoto.jpg';
 import videoMp4 from '../../../assets/video.mp4'
 
 export default function page(props) {
@@ -21,33 +21,17 @@ export default function page(props) {
         <Header />
         <main>
             <section className="section-hero-image section">
-                <Media queries={{
-                    small: "(max-width: 599px)",
-                    medium: "(min-width: 600px) and (max-width:999px)",
-                    large: "(min-width: 1000px)"
-                }}>
-                    {matches => (
-                        <Fragment>
-                            {matches.large
-                                ? <video className="hero-image" muted autoPlay loop  >
-                                    <source src={videoMp4} type="video/mp4" />
-                                    {/* <source src={image} type="image/jpg" media={"all"} /> */}
-                                </video>
-                                : <img className="hero-image" src={image} alt="Ski slope" />
-                            }
-                        </Fragment>
-                    )}
-                </Media>
+                <img className="hero-image" src={image} alt="Ski slope" />
                 <div className="flexbox-column main-title-wrap">
-                    <h1 className="big-title title-white hero-image-title">
+                    <h1 className="big-title title-blue hero-image-title">
                         Lyžařská škola
                     </h1>
-                    <a className="scroll-down" href="#mainSection">
+                    {/* <a className="scroll-down" href="#mainSection">
                         <svg width="50" height="25" viewBox="0 0 50 25" className="custom-svg">
                             <line x1="5" x2="25" y1="5" y2="20" />
                             <line x1="45" x2="25" y1="5" y2="20" />
                         </svg>
-                    </a>
+                    </a> */}
                 </div>
             </section>
             <section className="section section-text">
