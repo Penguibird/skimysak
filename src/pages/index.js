@@ -13,7 +13,8 @@ import image from '../../assets/photo.jpg'
 import kamery from '../../assets/kamery.jpg'
 import kamery_ico from '../../assets/kamery_ico.jpg'
 import servis from '../../assets/servis.jpg'
-
+import skolaFoto from '../../assets/skolaFoto.jpg';
+import servisFoto from '../../assets/servisFoto.jpg'
 export default function Home() {
     const scrollDown = () => {
         window.scroll({
@@ -52,7 +53,7 @@ export default function Home() {
                 </Media>
                 <div className="flexbox-column main-title-wrap">
                     <h1 className="big title-white hero-image-title">
-                        Parádní lyžování v jeseníkách
+                        Vítejte na Myšáku
                     </h1>
                     <a className="scroll-down" href="#mainSection">
                         <svg width="50" height="25" viewBox="0 0 50 25" className="custom-svg">
@@ -64,12 +65,12 @@ export default function Home() {
             </section>
 
             <section className="section-icons section">
+                <Weather />
+
                 <Link to="/subpages/kamery" className="widget widget-kamery" >
                     {/* <img src={kamery_ico} alt="kamery" /> */}
                     <h2 className="widget-title">KAMERY</h2>
                 </Link>
-
-                <Weather />
 
                 <a href="https://www.skikarlov.cz/lyzovani/ceny-skipasu" className="widget widget-skipasy" >
                     {/* <img src={kamery_ico} alt="kamery" /> */}
@@ -79,9 +80,9 @@ export default function Home() {
             </section>
 
             <section id="mainSection" className="flexbox-column section section-main-text" >
-                <h2>
-                    Vítejte na Myšáku!
-                </h2>
+                <h1 className="title-blue">
+                    Parádní lyžování v jeseníkách!
+                </h1>
                 <p>
                     Ski Myšák je součástí <strong>Ski arény Karlov pod Pradědem </strong> a nabízí 4 místnou sedačkovou lanovku s bublinou a skvělý sešup po modré nebo dvou červených - o celkové délce skoro 2,5 km.
                 </p>
@@ -114,12 +115,12 @@ export default function Home() {
                 </h1>
                 <div className="flexbox-row sluzby-wrap">
                     <Link to="/sluzby/servis"><article className="sluzby-item" >
-                        <img src={servis} alt="snowy mountain" />
+                        <img src={servisFoto} alt="snowy mountain" />
                         <h3>Půjčovna/Servis</h3>
                         <p>Přijeďte lyžovat! Pokud nemáte výbavu, svěřte se do rukou servismanů v půjčovně Myšák. Komplet výstroj pro lyžaře, snowboarďáky i alpinisty.</p>
                     </article></Link>
                     <Link to="/sluzby/skola"><article className="sluzby-item" >
-                        <img src={servis} />
+                        <img src={skolaFoto} />
                         <h3>Lyžařská škola</h3>
                         <p>Chcete se zdokonalit v lyžování? Učíme lyžaře i snowboardisty všech věkových kategorií a všech úrovní.
                 Bez stresu a na pohodu!</p>
