@@ -4,7 +4,7 @@
     align-items: flex-start;
     padding: 1.5em;
     @media screen and (min-width: 901px) {
-        width: 30vw;
+        width: 25vw;
     }
     @media screen and (max-width: 900px) {
         width: 70vw;
@@ -15,6 +15,7 @@
     img {
         width: 100%;
         object-fit: cover;
+        // height: ;
         @media screen and (max-width: 900px) {
             height: 35vw;   
         }

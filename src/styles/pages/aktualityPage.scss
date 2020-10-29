@@ -1,5 +1,27 @@
+h1 {
+    color: var(--title-blue);
+    margin-top: 2vw;
+}
+
 main.aktuality {
     display: flex;
     flex-direction: column;
     align-items: center;
+    // background-image: url("../../../assets/servis.jpg");
+    // background-size: cover;
+    // background-repeat: no-repeat;
+}
+
+main.aktuality section.section-aktuality {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3.5em;
+    justify-content: center;
+    padding: 2em;
+
+    align-items: center;
+    & > * {
+        flex: 0 auto;
+    }
 }

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Fragment, useState, useEffect } from 'react';
-import '../../styles/pages/kamery.scss';
+import '../../styles/pages/aktualityPage.scss';
 import '../../styles/global.scss';
 
 import { Helmet } from "react-helmet";
@@ -28,8 +28,6 @@ export default function page(props) {
 
             </section>
             <section className="section-aktuality">
-                <h1>Aktuality</h1>
-
                 <Aktualita image={servis} title="PODĚKOVÁNÍ za sezónu 2019/20" date="29.3. 2020" url="ASnDASie2"
                     rawText="Za normálních okolností bychom teď, na konci března, pravděpodobně oznamovali konec další lyžařské sezóny v karlovském údolí. Tato zima ale 'normální' nebyla, a to nemáme na mysli jen její předčasný konec...                    "
                 />
