@@ -1,36 +1,40 @@
 header {
     /* width: 100%; */
-    display: block
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .logo {
     // flex-grow: 2;
     // z-index: 2;
-    div {
-        // margin: 10px;
+    &.logo-mysak div {
         margin-top: -4.5em;
-        // margin: 1vw;
         margin-left: 1.5vw;
         width: 12vw;
-        max-width: 200px;    }
+        max-width: 200px;
+    }
+
+    &.logo-karlov {
+        align-self: flex-end;
+        div {
+            margin-top: -5em;
+            margin-right: 1em;
+            width: 12vw;
+            max-width: 200px;
+        }
+    }
     img {
         width: inherit;
     }
-    // position: relative;
-    // top: 0;
 }
 
 nav {
-    // z-index: 1;
-    // position: relative;
-    // top: 0;
-    
-    // flex-grow: 1;
-    padding-right: 5em;
-    width: 100%;
+    // align-self: center;
+    padding-right: 2em;
     display: flex;
-    flex-direction: row;
-    justify-content: right;
+    flex-direction: row-reverse;
+    justify-content: center;
     transition: background-color cubic-bezier(0.65, 0.05, 0.36, 1) 0.3s;
     &:hover {
         background-color: var(--background-blue);
@@ -44,7 +48,8 @@ nav {
         &:hover {
             background-color: var(--background-blue-darker);
         }
-        * { //the text inside it, might be h1 later
+        * {
+            //the text inside it, might be h1 later
             font-size: clamp(10px, 1.8vw, 20px);
             display: inline;
             font-family: "Montserrat", sans-serif;

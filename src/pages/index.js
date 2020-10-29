@@ -64,16 +64,16 @@ export default function Home() {
             </section>
 
             <section className="section-icons section">
-                <Weather />
-                {/* <Weather /> */}
-                {/* <Weather /> */}
                 <Link to="/subpages/kamery" className="widget widget-kamery" >
                     {/* <img src={kamery_ico} alt="kamery" /> */}
                     <h2 className="widget-title">KAMERY</h2>
                 </Link>
+
+                <Weather />
+
                 <a href="https://www.skikarlov.cz/lyzovani/ceny-skipasu" className="widget widget-skipasy" >
-                    {/* //TODO: Test */}
                     {/* <img src={kamery_ico} alt="kamery" /> */}
+                    {/* TODO Vymenit obrazek */}
                     <h2 className="widget-title">Skipasy</h2>
                 </a>
             </section>
@@ -114,11 +114,9 @@ export default function Home() {
                 </h1>
                 <div className="flexbox-row sluzby-wrap">
                     <Link to="/sluzby/servis"><article className="sluzby-item" >
-                        {/* //TODO all of these */}
                         <img src={servis} alt="snowy mountain" />
                         <h3>Půjčovna/Servis</h3>
-                        <p>Mauris id fermentum nulla. Vivamus a ante congue, porta nunc nec, hendrerit turpis.
-                            Aliquam bibendum, turpis eu mattis iaculis, ex lorem mollis sem, ut sollicitudin risus orci quis tellus.</p>
+                        <p>Přijeďte lyžovat! Pokud nemáte výbavu, svěřte se do rukou servismanů v půjčovně Myšák. Komplet výstroj pro lyžaře, snowboarďáky i alpinisty.</p>
                     </article></Link>
                     <Link to="/sluzby/skola"><article className="sluzby-item" >
                         <img src={servis} />

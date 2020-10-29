@@ -1,0 +1,26 @@
+.section-areal-main {
+    h2 {
+        text-align: start;
+    }
+    strong {
+        margin-inline-start: 2ch;
+        color: var(--title-blue);
+    }
+}
+
+.trat.red .trat-title {
+    border-bottom: 0.15em #be3030 solid;
+}
+
+.trat.blue .trat-title {
+    border-bottom: 0.15em #3c49eb solid;
+}
+
+.trat {
+    .trat-title {
+        text-align: left;
+        width: fit-content;
+        margin-bottom: 0.5em;
+        padding: 0.1em;
+    }
+}

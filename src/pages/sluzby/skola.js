@@ -53,9 +53,8 @@ export default function page(props) {
             <section className="section section-text">
                 {/* <h2></h2> */}
                 <h2> Chcete se zdokonalit v lyžování?</h2>
-                <p>Nebo máte čerstvé lyžaře – začátečníky a svěříte výuku
-                nám? <br />Učíme lyžaře i snowboardisty všech věkových kategorií a všech úrovní.
-                Bez stresu a na pohodu!</p> 
+                <p>.Nebo jste se rozhodli  svěřit nám výuku svých dětí ? <br />Učíme lyžaře i snowboardisty všech věkových kategorií a všech úrovní.
+                Bez stresu a na pohodu!</p>
                 <p>1 výuková hodina (lekce) trvá 50 min. V ceně výuky je skipas po dobu výuky.</p>
                 <table>
                     <thead>
