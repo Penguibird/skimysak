@@ -14,7 +14,7 @@ import kamery from '../../assets/kamery.jpg'
 import kamery_ico from '../../assets/kamery_ico.jpg'
 import servis from '../../assets/servis.jpg'
 import skolaFoto from '../../assets/skolaFoto.jpg';
-import servisFoto from '../../assets/servisFoto.JPG'
+import servisFoto from '../../assets/servisFoto.jpg'
 export default function Home() {
     const scrollDown = () => {
         window.scroll({
