@@ -3,12 +3,15 @@ import '../../styles/pages/areal.scss'
 import '../../styles/global.scss'
 import { Fragment, useState, useEffect } from 'react';
 import { Helmet } from "react-helmet";
+import Media from 'react-media'
 
 import Header from '../../components/header';
 import Footer from '../../components/footer';
 
 import image from '../../../assets/servis.jpg'
 
+import videoMp4 from '../../../assets/video.mp4';
+import photo from '../../../assets/photo.jpg'
 export default function Contact(props) {
 
     return <Fragment>
@@ -33,7 +36,7 @@ export default function Contact(props) {
                                     <source src={videoMp4} type="video/mp4" />
                                     {/* <source src={image} type="image/jpg" media={"all"} /> */}
                                 </video>
-                                : <img className="hero-image" src={image} alt="Ski slope" />
+                                : <img className="hero-image" src={photo} alt="Ski slope" />
                             }
                         </Fragment>
                     )}
