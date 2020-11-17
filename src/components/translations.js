@@ -1,4 +1,4 @@
-export default translations = {
+const translations = {
     clearsky_day: "jasno",
     clearsky_night: "jasno",
     clearsky_polartwilight: "",
@@ -83,3 +83,4 @@ export default translations = {
     snowshowers_night: "",
     snowshowers_polartwilight: "",
 }
+export default translations;
