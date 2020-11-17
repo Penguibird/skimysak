@@ -35,9 +35,9 @@
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
-  "eslintConfig" : {
-      "rules" : {
-          "no-unused-vars": "off"
-      }
+  "eslintConfig": {
+    "rules": {
+      "no-unused-vars": "off"
+    }
   }
 }

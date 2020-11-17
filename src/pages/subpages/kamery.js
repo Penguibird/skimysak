@@ -21,6 +21,7 @@ export default function page(props) {
             <Header />
                 <section className="section-hero-image section">
                 {/* //TODO Jsou kamery dobry nazev? Webkamery? */}
+                {/* //TODO design this */}
                 <h1>Kamery</h1>
                 <img className="hero-image" src={image} alt="Ski slope" />
                 <section className="section section-kamery" >

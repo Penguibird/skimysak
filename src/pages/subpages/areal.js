@@ -55,9 +55,9 @@ export default function Contact(props) {
             </section>
             <section className="section section-text section-areal-main">
                 <div className="areal-main">
-                    <h2>Celková délka sjezdovek <strong>2 450 metrů	</strong></h2>
-                    <h2>Převýšení <strong>160 metrů	</strong></h2>
-                    <h2>Zasněžování <strong>ANO	</strong></h2>
+                    <h2 className="header">Celková délka sjezdovek</h2> <h2 className="data"><strong>2&nbsp;450&nbsp;metrů</strong></h2>
+                    <h2 className="header">Převýšení</h2> <h2 className="data"><strong>160&nbsp;metrů</strong></h2>
+                    <h2 className="header">Zasněžování</h2> <h2 className="data"><strong>ANO</strong></h2>
                 </div>
             </section>
             <section className="section section-text section-trate">
@@ -67,24 +67,24 @@ export default function Contact(props) {
                 </h2>
                 <div className="trat blue">
                     <h2 className="trat-title">FAMILY</h2>
-                    <p>Sjezdová trať FAMILY je se svými 1 100 metry délky objektivně nejdelší sjezdovkou v karlovském údolí.
-                        Jde o příjemnou a nenáročnou sjezdovku pro pro ty, kdo si chtějí užít klidné a pohodové lyžování.</p>
+                    <p>Jedná se o&nbsp;nejdelší sjezdovku karlovského údolí. Je určena začátečníkům a&nbsp;všem, kdo&nbsp;vyhledávají klidné a&nbsp;pohodové lyžování.
+                         První částí trasy od&nbsp;horní stanice vede kolem lesa snow park. Vyberte si svou cestu!</p>
                 </div>
                 <div className="trat blue">
                     <h2 className="trat-title">Pod lesem</h2>
-                    <p>Sjezdová trať Pod lesem má svůj vlastní vlek typu Poma. Je dlouhá 200 metrů a je určena pro děti a začínající lyžaře.</p>
+                    <p>Sjezdová trať Pod lesem má svůj vlastní vlek typu Poma. Je dlouhá 200&nbsp;metrů a&nbsp;je určena pro&nbsp;děti a&nbsp;začínající lyžaře. Pohodový trénink!</p>
                 </div>
                 <div className="trat blue">
                     <h2 className="trat-title">Myšáček</h2>
-                    <p>Sjezdová trať pro ty nejmenší. Součást lyžařské školy. Délka 50 metrů, obslužnost lanovým vlekem.</p>
+                    <p>Sjezdová trať pro nejmenší je součástí lyžařské školy. Délka 50&nbsp;metrů, obslužnost lanovým vlekem a&nbsp;poznávací znamení – hemžení malých, rychlých i&nbsp;méněrychlých lyžaříčků!</p>
                 </div>
                 <div className="trat red">
                     <h2 className="trat-title">FIS</h2>
-                    <p>Sjezdová trať FIS má délku 650 metrů. Už mnoho let se na této sjezdovce jezdí lyžařské závody. V roce 2012 byla trať rozšířena a upravena do současné podoby.</p>
+                    <p>Trať FIS má délku 650&nbsp;metrů. Už mnoho let se&nbsp;na&nbsp;této sjezdovce jezdí lyžařské závody. V&nbsp;roce 2012 byla rozšířena a&nbsp;upravena. Vzhůru dolů po&nbsp;červené!</p>
                 </div>
                 <div className="trat red">
                     <h2 className="trat-title">FAMILY</h2>
-                    <p>Sjezdová trať Rukáv je služebně nejmladší tratí, která vznikla při modernizaci a úpravách areálu v roce 2012. Jde o červenou závodní sjezdovku.</p>
+                    <p>Sjezdová trať Rukáv vznikla při&nbsp;modernizaci a&nbsp;úpravách areálu v&nbsp;roce 2012. Jde&nbsp;o&nbsp;červenou závodní sjezdovku, služebně nejmladší, o&nbsp;celkové délce 700m. Tohle už&nbsp;si&nbsp;žádá zkušenosti!</p>
                 </div>
             </section>
             <section className="section section-map">

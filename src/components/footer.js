@@ -6,9 +6,9 @@ export default function Footer(props) {
     return <footer>
         <div className="footer-wrapper">
             <p>
-                ©2020 - Ski myšák
-        </p>
-            <p>Weather forecast from Yr, delivered by the Norwegian Meteorological Institute and NRK</p>
+                ©2020 - Ski&nbsp;myšák
+            </p>
+            <p>Weather forecast from&nbsp;Yr, delivered by&nbsp;the&nbsp;Norwegian Meteorological Institute and NRK</p>
         </div>
     </footer>
 }

@@ -55,7 +55,7 @@ export default function Contact(props) {
                         </div>
                     </div>
                     <div className="kontakt-section">
-                        <h4 className="kontakt-section-title">Půjčovna a ski servis</h4>
+                        <h4 className="kontakt-section-title">Půjčovna a&nbsp;ski servis</h4>
                         <div className="kontakt">
                             <h5 className="kontakt-title">
                                 Informace a objednávky</h5>

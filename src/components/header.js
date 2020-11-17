@@ -1,7 +1,7 @@
 import * as React from 'react';
 import '../styles/components/header.scss';
 import { Link } from "gatsby";
-import logo from '../../assets/logo_old.png';
+import logo from '../../assets/logo_mysak_cropped_scaled.png';
 import logo2 from '../../assets/logo-arena.png';
 // import { Fragment, useState, useEffect } from 'react';
 
@@ -9,6 +9,10 @@ export default function Header(props) {
 
     return <header>
 
+
+        <Link to="/" className="logo logo-mysak">
+            <img src={logo} alt="Ski myšák logo" />
+        </Link>
         <nav className="navbar" >
             <Link to="/subpages/kontakt" ><p>
                 Kontakt
@@ -20,15 +24,9 @@ export default function Header(props) {
                 Areál
             </p></Link>
         </nav>
-        <Link to="/" className="logo logo-mysak">
-            <div>
-                <img src={logo} alt="Ski myšák logo" />
-            </div>
-        </Link>
-        <Link to="https://www.skikarlov.cz" className="logo logo-karlov">
-            <div>
-                <img src={logo2} alt="Ski Arena Karlov logo" />
-            </div>
-        </Link>
+
+        <a href="https://www.skikarlov.cz" className="logo logo-karlov">
+            <img src={logo2} alt="Ski Arena Karlov logo" />
+        </a>
     </header>
 }

@@ -36,20 +36,20 @@ export default function page(props) {
             </section>
             <section className="section section-text">
                 {/* <h2></h2> */}
-                <h2> Chcete se zdokonalit v lyžování?</h2>
-                <p>.Nebo jste se rozhodli  svěřit nám výuku svých dětí ? <br />Učíme lyžaře i snowboardisty všech věkových kategorií a všech úrovní.
-                Bez stresu a na pohodu!</p>
-                <p>1 výuková hodina (lekce) trvá 50 min. V ceně výuky je skipas po dobu výuky.</p>
+                <h2> Chcete se&nbsp;zdokonalit v&nbsp;lyžování?</h2>
+                <p>Nebo jste se&nbsp;rozhodli svěřit nám&nbsp;výuku svých dětí? <br />Učíme lyžaře i&nbsp;snowboardisty všech věkových kategorií a&nbsp;všech úrovní.
+                Bez&nbsp;stresu a&nbsp;na&nbsp;pohodu!</p>
+                <p>1&nbsp;výuková hodina (lekce) trvá 50&nbsp;min. V&nbsp;ceně výuky je&nbsp;skipas po&nbsp;dobu výuky.</p>
                 <table>
                     <thead>
                         <tr>
-                            <th>Individuální výuka </th>
-                            <th>1 osoba</th>
+                            <th>Individuální výuka</th>
+                            <th>1&nbsp;osoba</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>1 lekce</td>
+                            <td>1&nbsp;lekce</td>
                             <td class="align-right">  590 Kč</td>
                         </tr>
                         <tr>
@@ -73,24 +73,23 @@ export default function page(props) {
                         </tr>
                     </tbody>
                 </table>
-                <p>Objednávky na výuku přijímáme osobně v kanceláři lyžařské školy
-                (vedle pokladny na parkovišti u nástupní stanice lanové dráhy Myšák),
-                nebo na telefonním čísle <a href="tel:+420 734 824 493" className="a-tel telehpone-link">+420 734 824 493</a>.</p>
-                <h2>Zákazníci lyžařské školy Myšák si mohou v naší půjčovně zapůjčit lyžařské a snowboardové vybavení za zvýhodněné ceny:</h2>
+                <p>Objednávky na&nbsp;výuku přijímáme osobně v&nbsp;kanceláři lyžařské školy
+                (vedle pokladny na&nbsp;parkovišti u&nbsp;nástupní stanice lanové dráhy Myšák),
+                nebo na&nbsp;telefonním čísle <a href="tel:+420 734 824 493" className="a-tel telehpone-link">+420&nbsp;734&nbsp;824&nbsp;493</a>.</p>
+                <h2>Zákazníci lyžařské školy Myšák si&nbsp;mohou v&nbsp;naší půjčovně zapůjčit lyžařské a&nbsp;snowboardové vybavení za&nbsp;zvýhodněné ceny:</h2>
                 <ul>
                     <li>
-                        Lyžařský set dětský (lyže, hůlky, lyžáky, helma) <strong className="price">150 Kč/den</strong>
+                        Lyžařský set dětský (lyže, hůlky, lyžáky, helma) <strong className="price">150&nbsp;Kč/den</strong>
                     </li>
                     <li>
-                        Lyžařský set dospělí (lyže, hůlky, lyžáky, helma) <strong className="price">200 Kč/den</strong>
+                        Lyžařský set dospělí (lyže, hůlky, lyžáky, helma) <strong className="price">200&nbsp;Kč/den</strong>
                     </li>
                     <li>
-                        Snowboardový set dětský (prkno, boty, helma) <strong className="price">150 Kč/den</strong>
+                        Snowboardový set dětský (prkno, boty, helma) <strong className="price">150&nbsp;Kč/den</strong>
                     </li>
                     <li>
-                        Snowboardový set dospělí (prkno, boty, helma) <strong className="price">200 Kč/den</strong>
+                        Snowboardový set dospělí (prkno, boty, helma) <strong className="price">200&nbsp;Kč/den</strong>
                     </li>
-
                 </ul>
             </section>
         </main>

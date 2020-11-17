@@ -1,10 +1,22 @@
 .section-areal-main {
+}
+
+.areal-main {
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0.8em 2em;
     h2 {
         text-align: start;
+        font-size: 25px;
+        width: fit-content;
     }
-    strong {
-        margin-inline-start: 2ch;
-        color: var(--title-blue);
+    h2.header {
+        grid-column: 1 / 2;
+    }
+    h2.data {
+        grid-column: 2 / 3;
     }
 }
 

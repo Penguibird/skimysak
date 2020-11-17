@@ -40,7 +40,7 @@ export default function page(props) {
                 </Media>
                 <div className="flexbox-column main-title-wrap">
                     <h1 className="big-title title-white hero-image-title">
-                        Servis a půjčovna
+                        Servis a&nbsp;půjčovna
                         </h1>
                     <a className="scroll-down" href="#mainSection">
                         <svg width="50" height="25" viewBox="0 0 50 25" className="custom-svg">
@@ -51,15 +51,15 @@ export default function page(props) {
                 </div>
             </section>
             <section className="section section-text">
-                <h2>Potřebujete půjčit lyže nebo snowboard?</h2>
-                <p> Ski areál Myšák, český výrobce lyží SPORTEN a výrobce lyžařských bot ROXA připravili ojedinělým propojením výjimečnou nabídku.
-                Službu pro ty z Vás,  kteří nemáte vlastní vybavení, lyžujete jen občas nebo byste rádi vyzkoušeli novinky z dílny zmiňovaných značek.
-                Půjčujeme vybavení pro dospěláky i děti v setech i samostatně, včetně doplňků i výstroj na lyžařské kurzy / od 110,- Kč/den /. </p>
+                <h2>Potřebujete půjčit lyže nebo&nbsp;snowboard?</h2>
+                <p> Ski areál Myšák, český výrobce lyží SPORTEN a&nbsp;výrobce lyžařských bot&nbsp;ROXA připravili ojedinělým propojením výjimečnou nabídku.
+                Službu pro&nbsp;ty z&nbsp;Vás, kteří nemáte vlastní vybavení, lyžujete jen&nbsp;občas nebo&nbsp;byste rádi vyzkoušeli novinky z&nbsp;dílny zmiňovaných značek.
+                Půjčujeme vybavení pro&nbsp;dospěláky i&nbsp;děti v&nbsp;setech i&nbsp;samostatně, včetně doplňků i&nbsp;výstroj na&nbsp;lyžařské kurzy od&nbsp;110,-&nbsp;Kč/den. </p>
                 <p>
-                    Potěšíme i lyžařské fajnšmekry, kteří mohou zkoušet nejnovější novinky  sezóny,  vybavíme i  snowboarďáky a dobrodružnější skialpinisty.
-                    V prostorách půjčovny prodáváme také potřebné doplňky – brýle, kukly, rukavice apod. české značky RELAX.
+                    Potěšíme i&nbsp;lyžařské fajnšmekry, kteří mohou zkoušet nejnovější novinky sezóny,  vybavíme i&nbsp;snowboarďáky a&nbsp;dobrodružnější skialpinisty.
+                    V&nbsp;prostorách půjčovny prodáváme také potřebné doplňky –&nbsp;brýle, kukly, rukavice apod. české značky RELAX.
                 </p>
-                <p>Spolehněte se na odborné poradenství i bezpečnostní seřízení vybavení.</p>
+                <p>Spolehněte se na odborné poradenství i&nbsp;bezpečnostní seřízení vybavení.</p>
                 <h2>Ceník</h2>
                 <table>
                     <thead>
@@ -223,9 +223,9 @@ export default function page(props) {
                     </tbody>
                 </table>
                 <p className="explanation-line"><i>*komplet = lyže + boty + hole (prkno + boty)</i></p>
-                <h2>Vaše vlastní prkna a lyže Vám rádi seřídíme, opravíme, nabrousíme, připravíme…</h2>
+                <h2>Vaše vlastní prkna a&nbsp;lyže Vám rádi seřídíme, opravíme, nabrousíme, připravíme…</h2>
                 <h2>
-                    Ceník servisu lyží a snowboardů
+                    Ceník servisu lyží a&nbsp;snowboardů
                 </h2>
                 <table>
                     <tbody>
