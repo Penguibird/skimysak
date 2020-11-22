@@ -29,13 +29,13 @@ button {
 
 html {
     font-size: 15px;
+    overflow-x: hidden;
+    //! might interfere with table on mobile
 }
 
 body {
     background-color: var(--background-blue);
 }
-
-
 
 h1 {
     display: block;
@@ -45,9 +45,10 @@ h1 {
     color: var(--title-white);
     text-transform: uppercase;
     text-align: center;
+    margin-bottom: 1em;
 }
 h1.smaller {
-    font-size: clamp(25px, 5vw, 5vw);
+    font-size: clamp(20px, 4.5vw, 4.5vw);
 }
 
 h2 {
@@ -197,7 +198,7 @@ table {
     padding-bottom: 3em;
     h1.big {
         margin-top: 9vw;
-        margin-bottom: 10vw;
+        margin-bottom: 12vw;
     }
     h1.small {
         margin-top: 3vw;
@@ -324,22 +325,37 @@ table {
 /* Section */
 
 .section-aktuality {
+    padding-top: 0;
     display: flex;
-    @media screen and (min-width: 901px) {
-        flex-direction: row;
-    }
-    @media screen and (max-width: 900px) {
-        flex-direction: column;
-        & > *:not(:first-child) {
-            display: none;
-        }
-    }
-
-    flex-wrap: nowrap;
+    flex-direction: column;
     align-items: center;
-    gap: 2em;
+    justify-content: space-around;
+    gap: 0;
+
+    h1 {
+        margin: 0.5em;
+    }
+    .aktuality-wrapper {
+        max-width: 1400px;
+        display: flex;
+        @media screen and (min-width: 901px) {
+            flex-direction: row;
+        }
+        @media screen and (max-width: 900px) {
+            flex-direction: column;
+            & > *:not(:first-child) {
+                display: none;
+            }
+        }
+
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: 1.5em;
+    }
     background-image: url("../../assets/servis.jpg");
-    padding: 2em;
+    // background-color: var(--background-blue);
+    // padding: 2em;
 }
 
 .sluzby-item {
@@ -362,7 +378,7 @@ table {
     }
     div.flexbox-row {
         display: flex;
-        gap: 5em;
+        gap: 2em;
         padding-left: clamp(20px, 10vw, 5em);
         padding-right: clamp(20px, 10vw, 5em);
         @media screen and(min-width: 901px) {
@@ -371,12 +387,24 @@ table {
         @media screen and(max-width: 900px) {
             flex-direction: column;
         }
+        justify-content: space-around;
     }
-    img {
+    h4 {
+        font-weight: 500;
+        font-size: 25px;
         width: 100%;
-        border-radius: 1vw;
-        object-fit: cover;
-        height: 30vw;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .image-wrapper {
+        height: 15vw;
+        img {
+            width: 100%;
+            border-radius: 5px;
+            object-fit: cover;
+            // height: auto;
+            height: inherit;
+        }
     }
     article {
         & > * + * {

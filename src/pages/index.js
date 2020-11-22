@@ -65,7 +65,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="section-icons section">
+            <section id="mainSection" className="section-icons section">
 
                 <Link to="/subpages/kamery" className="widget widget-kamery" >
                     {/* <img src={kamery_ico} alt="kamery" /> */}
@@ -80,7 +80,7 @@ export default function Home() {
                 </a>
             </section>
 
-            <section id="mainSection" className="flexbox-column section section-main-text" >
+            <section  className="flexbox-column section section-main-text" >
                 <h1 className="smaller title-blue">
                     Parádní lyžování v jeseníkách!
                 </h1>
@@ -99,37 +99,45 @@ export default function Home() {
                 </h2>
             </section>
             <section className="section-aktuality section">
-                {/* <h2>Aktuality</h2> */}
-                {/* TODO Decide if h belongs here */}
-                <Aktualita image={servis} title="PODĚKOVÁNÍ za sezónu 2019/20" date="29.3. 2020" url="ASnDASie2"
-                    rawText="Za normálních okolností bychom teď, na&nbsp;konci března, pravděpodobně oznamovali konec další lyžařské sezóny v&nbsp;karlovském údolí. Tato zima ale 'normální' nebyla, a&nbsp;to&nbsp;nemáme na&nbsp;mysli jen její předčasný konec...                    "
-                />
-                <Aktualita image={servis} title="PODĚKOVÁNÍ za sezónu 2019/20" date="29.3. 2020" url="ASnDASie2"
-                    rawText="Za normálních okolností bychom teď, na&nbsp;konci března, pravděpodobně oznamovali konec další lyžařské sezóny v&nbsp;karlovském údolí. Tato zima ale 'normální' nebyla, a&nbsp;to&nbsp;nemáme na&nbsp;mysli jen její předčasný konec...                    "
-                />
-                <Aktualita image={servis} title="PODĚKOVÁNÍ za sezónu 2019/20" date="29.3. 2020" url="ASnDASie2"
-                    rawText="Za normálních okolností bychom teď, na&nbsp;konci března, pravděpodobně oznamovali konec další lyžařské sezóny v&nbsp;karlovském údolí. Tato zima ale 'normální' nebyla, a&nbsp;to&nbsp;nemáme na&nbsp;mysli jen její předčasný konec...                    "
-                />
+                <h1 className="title-blue smaller">Aktuality</h1>
+                <div className="aktuality-wrapper">
+                    {/* TODO Decide if h belongs here */}
+                    <Aktualita image={servis} title="PODĚKOVÁNÍ za sezónu 2019/20" date="29.3. 2020" url="ASnDASie2"
+                        rawText="Za normálních okolností bychom teď, na&nbsp;konci března, pravděpodobně oznamovali konec další lyžařské sezóny v&nbsp;karlovském údolí. Tato zima ale 'normální' nebyla, a&nbsp;to&nbsp;nemáme na&nbsp;mysli jen její předčasný konec...                    "
+                    />
+                    <Aktualita image={servis} title="PODĚKOVÁNÍ za sezónu 2019/20" date="29.3. 2020" url="ASnDASie2"
+                        rawText="Za normálních okolností bychom teď, na&nbsp;konci března, pravděpodobně oznamovali konec další lyžařské sezóny v&nbsp;karlovském údolí. Tato zima ale 'normální' nebyla, a&nbsp;to&nbsp;nemáme na&nbsp;mysli jen její předčasný konec...                    "
+                    />
+                    <Aktualita image={servis} title="PODĚKOVÁNÍ za sezónu 2019/20" date="29.3. 2020" url="ASnDASie2"
+                        rawText="Za normálních okolností bychom teď, na&nbsp;konci března, pravděpodobně oznamovali konec další lyžařské sezóny v&nbsp;karlovském údolí. Tato zima ale 'normální' nebyla, a&nbsp;to&nbsp;nemáme na&nbsp;mysli jen její předčasný konec...                    "
+                    />
+                </div>
             </section>
             <section className="flexbox-column section section-sluzby" >
-                <h1 className="big-title title-blue " >
+                <h1 className=" smaller title-blue " >
                     SLUŽBY
                 </h1>
                 <div className="flexbox-row sluzby-wrap">
                     <Link to="/sluzby/servis"><article className="sluzby-item" >
-                        <img src={servisFoto} alt="snowy mountain" />
-                        <h3>Půjčovna/Servis</h3>
+                        <div className="image-wrapper">
+                            <img src={servisFoto} alt="snowy mountain" />
+                        </div>
+                        <h4>Půjčovna/Servis</h4>
                         <p>Přijeďte lyžovat! Pokud nemáte výbavu, svěřte se do&nbsp;rukou servismanů v&nbsp;půjčovně Myšák. Komplet výstroj pro&nbsp;lyžaře, snowboarďáky i&nbsp;alpinisty.</p>
                     </article></Link>
                     <Link to="/sluzby/skola"><article className="sluzby-item" >
-                        <img src={skolaFoto} />
-                        <h3>Lyžařská škola</h3>
+                        <div className="image-wrapper">
+                            <img src={skolaFoto} />
+                        </div>
+                        <h4>Lyžařská škola</h4>
                         <p>Chcete se&nbsp;zdokonalit v&nbsp;lyžování? Učíme lyžaře i&nbsp;snowboardisty všech věkových kategorií a&nbsp;všech úrovní.
                 Bez&nbsp;stresu a&nbsp;na&nbsp;pohodu!</p>
                     </article></Link>
                     <Link to="/servis"><article className="sluzby-item" >
-                        <img src={servis} />
-                        <h3>Občerstvení</h3>
+                        <div className="image-wrapper">
+                            <img src={servis} />
+                        </div>
+                        <h4>Občerstvení</h4>
                         <p>Domácí kuchyně pro&nbsp;děti i&nbsp;dospělé, polévky na&nbsp;zahřátí a&nbsp;místní speciality!</p>
                     </article></Link>
                 </div>

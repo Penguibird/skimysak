@@ -1,29 +1,36 @@
 .aktualita {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(150, 149, 149, 0.4);
     padding: 1.5em;
+    gap: 1em;
     @media screen and (min-width: 901px) {
         width: 25vw;
     }
     @media screen and (max-width: 900px) {
         width: 70vw;
-        
     }
-    background-color: var(--background-blue);
-    border-radius: 1em;
-    img {
-        width: 100%;
-        object-fit: cover;
-        // height: ;
-        @media screen and (max-width: 900px) {
-            height: 35vw;   
+
+    .image-wrapper {
+        margin-bottom: 0.5em;
+        max-height: 15vw;
+        // width;
+        img {
+            border-radius: 2px;
+            width: 100%;
+            object-fit: cover;
+            height: auto;
+            max-height: inherit;
         }
     }
     .title {
+        font-weight: 500;
+        font-size: 22px;
     }
     p.date {
         font-style: italic;
+        padding-top: 0.2em;
+        padding-bottom: 0.6em;
     }
     p {
     }

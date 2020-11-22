@@ -57,7 +57,8 @@ export default function Contact(props) {
                 <div className="areal-main">
                     <h2 className="header">Celková délka sjezdovek</h2> <h2 className="data"><strong>2&nbsp;450&nbsp;metrů</strong></h2>
                     <h2 className="header">Převýšení</h2> <h2 className="data"><strong>160&nbsp;metrů</strong></h2>
-                    <h2 className="header">Zasněžování</h2> <h2 className="data"><strong>ANO</strong></h2>
+                    {/* <h2 className="header">Zasněžování</h2> <h2 className="data"><strong>ANO</strong></h2> */} 
+                    {/* //?keep this out */}
                 </div>
             </section>
             <section className="section section-text section-trate">

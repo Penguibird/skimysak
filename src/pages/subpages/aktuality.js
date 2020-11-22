@@ -27,7 +27,7 @@ export default function page(props) {
                 {/* <img className="hero-image" src={image} alt="Ski slope" /> */}
 
             </section>
-            <section className="section-aktuality">
+            <section className="section-page-aktuality">
                 <Aktualita image={servis} title="PODĚKOVÁNÍ za sezónu 2019/20" date="29.3. 2020" url="ASnDASie2"
                     rawText="Za normálních okolností bychom teď, na&nbsp;konci března, pravděpodobně oznamovali konec další lyžařské sezóny v&nbsp;karlovském údolí. Tato zima ale 'normální' nebyla, a&nbsp;to&nbsp;nemáme na&nbsp;mysli jen její předčasný konec...                    "
                 />

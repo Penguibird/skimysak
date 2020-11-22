@@ -7,16 +7,16 @@ main.aktuality {
     display: flex;
     flex-direction: column;
     align-items: center;
-    // background-image: url("../../../assets/servis.jpg");
-    // background-size: cover;
-    // background-repeat: no-repeat;
+    background-image: url("../../../assets/servis.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-main.aktuality section.section-aktuality {
+main.aktuality section.section-page-aktuality {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 3.5em;
+    gap: 2em;
     justify-content: center;
     padding: 2em;
 
