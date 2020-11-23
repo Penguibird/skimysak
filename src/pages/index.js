@@ -127,7 +127,7 @@ export default function Home() {
                 <div className="container-sluzby skola">
                     <div className="sluzby-text-wrapper">
                         <h4>Lyžařská škola</h4>
-                        <p>Chcete se&nbsp;zdokonalit v&nbsp;lyžování? Učíme lyžaře i&nbsp;snowboardisty všech věkových kategorií a&nbsp;všech úrovní.Bez&nbsp;stresu a&nbsp;na&nbsp;pohodu!</p>
+                        <p>Chcete se&nbsp;zdokonalit v&nbsp;lyžování? Učíme lyžaře i&nbsp;snowboardisty všech věkových kategorií a&nbsp;všech úrovní. Bez&nbsp;stresu a&nbsp;na&nbsp;pohodu!</p>
                         <Link to="/sluzby/skola"> <p>Více</p></Link>
                     </div>
                 </div>

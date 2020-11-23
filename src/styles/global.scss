@@ -245,7 +245,7 @@ table {
         cursor: pointer;
         transition: transform 170ms ease-out, opacity 170ms ease-out;
         &:hover {
-            transform: translateY(0.3em);
+            transform: translateY(0.5em);
         }
     }
     svg {
@@ -362,6 +362,7 @@ table {
     & > * + * {
         margin-left: 3vw;
     }
+    padding-bottom: 0;
 }
 
 /* Section */
@@ -412,18 +413,36 @@ table {
 /* Section */
 
 .section-sluzby {
-    background-color: var(--background-blue);
     padding: 0;
 
     .container-sluzby {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        padding: 10em;
         width: 100%;
+        @media screen and(min-width: 901px) {
+            padding: 10em;
+            .sluzby-text-wrapper {
+                width: 40vw;
+            }
+        }
+        @media screen and(max-width: 900px) {
+            padding: 5em 0em;
+            .sluzby-text-wrapper {
+                width: 100%;
+                h4 {
+                    text-align: center;
+                }
+                p {
+                    text-align: left;
+                }
+            }
+        }
+
+        //todo this is overflowing on mobile
         .sluzby-text-wrapper {
-            width: 40vw;
-            background-color: #6e95be77; //var(--background-blue-transparent);
+            max-width: 95vw;
+            background-color: #6e95be77;
             padding: 1em;
             h4 {
                 color: #f8f8f8;
@@ -436,7 +455,7 @@ table {
             }
             p {
                 color: white;
-                font-size: 25px;
+                font-size: 21px;
             }
             a > p {
                 width: 100%;
@@ -444,11 +463,14 @@ table {
                 font-weight: 700;
                 color: var(--title-blue) !important;
                 &::after {
-                    content: "...";
+                    content: " ...";
+                }
+                transition: transform 170ms ease-out, opacity 170ms ease-out;
+                &:hover {
+                    transform: translateX(0.4em);
                 }
             }
         }
-        //todo responsive 
         &.servis {
             .sluzby-text-wrapper {
                 float: right;
@@ -459,6 +481,11 @@ table {
             background-image: url("../../assets/servisFoto.jpg");
             p {
                 text-align: right;
+            }
+            a > p {
+                &:hover {
+                    transform: translateX(-0.4em);
+                }
             }
         }
         &.skola {
