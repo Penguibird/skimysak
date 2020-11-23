@@ -8,8 +8,6 @@ import logo2 from '../../assets/logo-arena.png';
 export default function Header(props) {
 
     return <header>
-
-
         <Link to="/" className="logo logo-mysak">
             <img src={logo} alt="Ski myšák logo" />
         </Link>
@@ -24,7 +22,6 @@ export default function Header(props) {
                 Areál
             </p></Link>
         </nav>
-
         <a href="https://www.skikarlov.cz" className="logo logo-karlov">
             <img src={logo2} alt="Ski Arena Karlov logo" />
         </a>

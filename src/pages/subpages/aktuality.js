@@ -8,7 +8,7 @@ import Header from '../../components/header'
 import Footer from '../../components/footer'
 import Aktualita from '../../components/aktualita'
 
-import image from '../../../assets/servis.jpg';
+import image from '../../../assets/aktuality_hero.jpg';
 import servis from '../../../assets/servis.jpg'
 
 export default function page(props) {
@@ -22,7 +22,6 @@ export default function page(props) {
         <Header />
         <main className="aktuality">
             <section className="section-hero-image section">
-                {/* //TODO Jsou aktuality dobry h1? Webkamery? */}
                 <h1>Aktuality</h1>
                 {/* <img className="hero-image" src={image} alt="Ski slope" /> */}
 

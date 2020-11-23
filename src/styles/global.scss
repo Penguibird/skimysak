@@ -2,7 +2,8 @@
 
 :root {
     --background-blue: #dbe8f5;
-    --background-blue-darker: rgb(190, 202, 214);
+    --background-blue-darker: #b9d5f2;
+    --background-dark-blue: #143975;
     --text-black: #292929;
     --text-black-light: #3e3e3e;
     --title-blue: #103d87;
@@ -120,7 +121,6 @@ table {
     border-collapse: collapse;
     overflow-x: auto;
 
-    th,
     tr:nth-of-type(2n) {
         background-color: var(--background-blue-darker);
     }
@@ -130,20 +130,24 @@ table {
     th,
     td {
         font-family: "Liberation Sans", "HelveticaNeue", sans-serif;
-        font-size: clamp(14px, 1.6vw, 20px);
+        font-size: clamp(11px, 1vw, 16px);
+        border: #ffffff87 0.5px solid;
+    }
+    td {
         font-weight: normal;
+        padding: 0.5em 0.7em;
         color: var(--text-black);
-
-        padding: 0.5em 1.2em;
-
         // text-align: end;
-        border: var(--text-black-light) 1px solid;
+    }
+    th,
+    td.heading {
+        background-color: var(--background-dark-blue);
+        color: var(--title-white);
+        font-weight: 600;
+        padding: 1em;
     }
     td.price {
         text-align: end;
-    }
-    th {
-        font-weight: bold;
     }
 }
 
@@ -193,6 +197,11 @@ table {
 
 /*section*/
 
+.big-title {
+    margin-top: 9vw;
+    margin-bottom: 12vw;
+}
+
 .section-hero-image {
     text-align: center;
     padding-bottom: 3em;
@@ -210,12 +219,20 @@ table {
     }
 
     .hero-image {
-        width: 100%;
         display: block;
         position: absolute;
         top: 0;
         left: 0;
         z-index: -1;
+        width: 100%;
+        &.max-height {
+            max-height: 100vh;
+        }
+        img {
+            width: 100%;
+            // height: auto;
+            
+        }
     }
 
     .scroll-down {

@@ -47,7 +47,9 @@ export default function Home() {
                                     <source src={videoMp4} type="video/mp4" />
                                     {/* <source src={image} type="image/jpg" media={"all"} /> */}
                                 </video>
-                                : <img className="hero-image" src={image} alt="Ski slope" />
+                                : <div className="hero-image">
+                                    <img src={image} alt="Ski slope" />
+                                </div>
                             }
                         </Fragment>
                     )}
@@ -99,7 +101,7 @@ export default function Home() {
                 </h2>
             </section>
             <section className="section-aktuality section">
-                <h1 className="title-blue smaller">Aktuality</h1>
+                <h1 className="title-white smaller">Aktuality</h1>
                 <div className="aktuality-wrapper">
                     {/* TODO Decide if h belongs here */}
                     <Aktualita image={servis} title="PODĚKOVÁNÍ za sezónu 2019/20" date="29.3. 2020" url="ASnDASie2"
@@ -133,7 +135,7 @@ export default function Home() {
                         <p>Chcete se&nbsp;zdokonalit v&nbsp;lyžování? Učíme lyžaře i&nbsp;snowboardisty všech věkových kategorií a&nbsp;všech úrovní.
                 Bez&nbsp;stresu a&nbsp;na&nbsp;pohodu!</p>
                     </article></Link>
-                    <Link to="/servis"><article className="sluzby-item" >
+                    <Link to="/sluzby/obcerstveni"><article className="sluzby-item" >
                         <div className="image-wrapper">
                             <img src={servis} />
                         </div>

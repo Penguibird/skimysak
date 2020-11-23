@@ -23,7 +23,7 @@ export default function page(props) {
                 {/* //TODO Jsou kamery dobry nazev? Webkamery? */}
                 {/* //TODO design this */}
                 <h1>Kamery</h1>
-                <img className="hero-image" src={image} alt="Ski slope" />
+                <img className="hero-image max-height" src={image} alt="Ski slope" />
                 <section className="section section-kamery" >
                     <div className="kamera-wrapper">
                         <h2>Myšák horní stanice</h2>

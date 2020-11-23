@@ -1,12 +1,10 @@
-.section-areal-main {
-}
-
 .areal-main {
+    margin-top: 1em;
     align-self: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    gap: 0.8em 2em;
+    gap: 0.4em 2em;
     h2 {
         text-align: start;
         font-size: 25px;
@@ -21,7 +19,7 @@
 }
 
 .trat.red .trat-title {
-    border-bottom: 0.15em #be3030 solid;
+    border-bottom: 0.15em #de1b1b solid;
 }
 
 .trat.blue .trat-title {

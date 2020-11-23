@@ -34,7 +34,7 @@ export default function page(props) {
                     </a> */}
                 </div>
             </section>
-            <section className="section section-text">
+            <section className="section section-text section-skola">
                 {/* <h2></h2> */}
                 <h2> Chcete se&nbsp;zdokonalit v&nbsp;lyžování?</h2>
                 <p>Nebo jste se&nbsp;rozhodli svěřit nám&nbsp;výuku svých dětí? <br />Učíme lyžaře i&nbsp;snowboardisty všech věkových kategorií a&nbsp;všech úrovní.

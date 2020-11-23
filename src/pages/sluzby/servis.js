@@ -6,8 +6,8 @@ import { Helmet } from "react-helmet";
 import Header from '../../components/header'
 import Footer from '../../components/footer'
 import { Fragment, useState, useEffect } from 'react';
-import image from '../../../assets/servis.jpg';
-import videoMp4 from '../../../assets/video.mp4'
+import image from '../../../assets/servis_hero.png';
+import videoMp4 from '../../../assets/servis_video_crop.mp4'
 
 export default function page(props) {
 
@@ -19,7 +19,7 @@ export default function page(props) {
             <meta name="description" content="Parádní lyžování v jeseníkách" /> //TODO: description
         </Helmet>
         <Header />
-        <main>
+        <main className="servis">
             <section className="section-hero-image section">
                 <Media queries={{
                     small: "(max-width: 599px)",
@@ -61,7 +61,7 @@ export default function page(props) {
                 </p>
                 <p>Spolehněte se na odborné poradenství i&nbsp;bezpečnostní seřízení vybavení.</p>
                 <h2>Ceník</h2>
-                <table>
+                <table className="table-cenik">
                     <thead>
                         <tr>
                             <th></th>
@@ -78,8 +78,8 @@ export default function page(props) {
                     </thead>
                     <tbody>
                         <tr>
-                            <td>CARVINGOVÉ</td>
-                            <td className="price" >komplet*</td>
+                            <th>CARVINGOVÉ</th>
+                            <th  >komplet*</th>
                             <td className="price" >310,-</td>
                             <td className="price" >500,-</td>
                             <td className="price" >640,-</td>
@@ -90,8 +90,8 @@ export default function page(props) {
                             <td className="price" >1080,-</td>
                         </tr>
                         <tr>
-                            <td>LYŽE - TOP</td>
-                            <td>pouze lyže</td>
+                            <th>LYŽE - TOP</th>
+                            <th>pouze lyže</th>
                             <td className="price">270,-</td>
                             <td className="price">460,-</td>
                             <td className="price">600,-</td>
@@ -102,8 +102,8 @@ export default function page(props) {
                             <td className="price">980,-</td>
                         </tr>
                         <tr>
-                            <td>CARVINGOVÉ</td>
-                            <td>komplet*</td>
+                            <th>CARVINGOVÉ</th>
+                            <th>komplet*</th>
                             <td className="price">470,-</td>
                             <td className="price">700,-</td>
                             <td className="price">820,-</td>
@@ -114,8 +114,8 @@ export default function page(props) {
                             <td className="price">1580,-</td>
                         </tr>
                         <tr>
-                            <td>LYŽE - VIP</td>
-                            <td>pouze lyže</td>
+                            <th>LYŽE - VIP</th>
+                            <th>pouze lyže</th>
                             <td className="price">420,-</td>
                             <td className="price">640,-</td>
                             <td className="price">760,-</td>
@@ -126,8 +126,8 @@ export default function page(props) {
                             <td className="price">1520,-</td>
                         </tr>
                         <tr>
-                            <td>DĚTSKÉ SKI</td>
-                            <td className="price">komplet*</td>
+                            <th>DĚTSKÉ SKI</th>
+                            <th >komplet*</th>
                             <td className="price">230,-</td>
                             <td className="price">290,-</td>
                             <td className="price">380,-</td>
@@ -138,8 +138,8 @@ export default function page(props) {
                             <td className="price">660,-</td>
                         </tr>
                         <tr>
-                            <td>DO 135 cm</td>
-                            <td>pouze lyže</td>
+                            <th>DO 135 cm</th>
+                            <th>pouze lyže</th>
                             <td className="price">200,-</td>
                             <td className="price">230,-</td>
                             <td className="price">260,-</td>
@@ -150,8 +150,8 @@ export default function page(props) {
                             <td className="price">400,-</td>
                         </tr>
                         <tr>
-                            <td>SNOWBOARD</td>
-                            <td>komplet*</td>
+                            <th>SNOWBOARD</th>
+                            <th>komplet*</th>
                             <td className="price">290,-</td>
                             <td className="price">440,-</td>
                             <td className="price">570,-</td>
@@ -162,8 +162,8 @@ export default function page(props) {
                             <td className="price">920,-</td>
                         </tr>
                         <tr>
-                            <td> </td>
-                            <td>pouze SNB</td>
+                            <th> </th>
+                            <th>pouze SNB</th>
                             <td className="price">230,-</td>
                             <td className="price">290,-</td>
                             <td className="price">380,-</td>
@@ -174,7 +174,7 @@ export default function page(props) {
                             <td className="price">660,-</td>
                         </tr>
                         <tr>
-                            <td colspan="2">Lyžařské&nbsp;&nbsp;&nbsp;a běžecké boty</td>
+                            <th colspan="2">Lyžařské&nbsp;&nbsp;&nbsp;a běžecké boty</th>
                             <td rowspan="2" className="price">140,-</td>
                             <td rowspan="2" className="price">210,-</td>
                             <td rowspan="2" className="price">270,-</td>
@@ -185,10 +185,10 @@ export default function page(props) {
                             <td rowspan="2" className="price">480,-</td>
                         </tr>
                         <tr>
-                            <td colspan="2">Snowboardové&nbsp;&nbsp;&nbsp;boty</td>
+                            <th colspan="2">Snowboardové&nbsp;&nbsp;&nbsp;boty</th>
                         </tr>
                         <tr>
-                            <td colspan="2">Hole/helma/brýle</td>
+                            <th colspan="2">Hole/helma/brýle</th>
                             <td className="price">60,-</td>
                             <td className="price">100,-</td>
                             <td className="price">120,-</td>
@@ -199,7 +199,7 @@ export default function page(props) {
                             <td className="price">210,-</td>
                         </tr>
                         <tr>
-                            <td colspan="2">Běžecký&nbsp;&nbsp;&nbsp;komplet</td>
+                            <th colspan="2">Běžecký&nbsp;&nbsp;&nbsp;komplet</th>
                             <td className="price">270,-</td>
                             <td className="price">360,-</td>
                             <td className="price">430,-</td>
@@ -210,7 +210,7 @@ export default function page(props) {
                             <td className="price">660,-</td>
                         </tr>
                         <tr>
-                            <td colspan="2">Sněžnice</td>
+                            <th colspan="2">Sněžnice</th>
                             <td className="price">130,-</td>
                             <td className="price">200,-</td>
                             <td className="price">260,-</td>
@@ -230,30 +230,30 @@ export default function page(props) {
                 <table>
                     <tbody>
                         <tr>
-                            <td>voskování - lyže</td>
+                            <th>voskování - lyže</th>
                             <td className="price">100,-</td></tr>
                         <tr>
-                            <td>voskování - SNB</td>
+                            <th>voskování - SNB</th>
                             <td className="price">200,-</td>
                         </tr>
                         <tr>
-                            <td>seřízení vázání</td>
+                            <th>seřízení vázání</th>
                             <td className="price">50,-</td>
                         </tr>
                         <tr>
-                            <td>broušení hran</td>
+                            <th>broušení hran</th>
                             <td className="price">150,-</td>
                         </tr>
                         <tr>
-                            <td>broušení skluznice</td>
+                            <th>broušení skluznice</th>
                             <td className="price">150,-</td>
                         </tr>
                         <tr>
-                            <td>zalití děr ve skluznici</td>
+                            <th>zalití děr ve skluznici</th>
                             <td className="price">150,-</td>
                         </tr>
                         <tr>
-                            <td>velký servis</td>
+                            <th>velký servis</th>
                             <td className="price">500,-</td>
                         </tr>
                     </tbody>

@@ -24,23 +24,8 @@ export default function Contact(props) {
         <Header />
         <main>
             <section className="section-hero-image section">
-                <Media queries={{
-                    small: "(max-width: 599px)",
-                    medium: "(min-width: 600px) and (max-width:999px)",
-                    large: "(min-width: 1000px)"
-                }}>
-                    {matches => (
-                        <Fragment>
-                            {matches.large
-                                ? <video className="hero-image" muted autoPlay loop  >
-                                    <source src={videoMp4} type="video/mp4" />
-                                    {/* <source src={image} type="image/jpg" media={"all"} /> */}
-                                </video>
-                                : <img className="hero-image" src={photo} alt="Ski slope" />
-                            }
-                        </Fragment>
-                    )}
-                </Media>
+                <img className="hero-image" src={photo} alt="Ski slope" />
+
                 <div className="flexbox-column main-title-wrap">
                     <h1 className="big title-white hero-image-title">
                         Lyžování na Myšáku
@@ -53,18 +38,18 @@ export default function Contact(props) {
                     </a>
                 </div>
             </section>
-            <section className="section section-text section-areal-main">
-                <div className="areal-main">
-                    <h2 className="header">Celková délka sjezdovek</h2> <h2 className="data"><strong>2&nbsp;450&nbsp;metrů</strong></h2>
-                    <h2 className="header">Převýšení</h2> <h2 className="data"><strong>160&nbsp;metrů</strong></h2>
-                    {/* <h2 className="header">Zasněžování</h2> <h2 className="data"><strong>ANO</strong></h2> */} 
-                    {/* //?keep this out */}
-                </div>
-            </section>
+            {/* <section className="section section-text section-areal-main">
+                
+            </section> */}
             <section className="section section-text section-trate">
                 <h2>
                     Sjezdové tratě
-
+                    <div className="areal-main">
+                        <h2 className="header">Celková délka sjezdovek</h2> <h2 className="data"><strong>2&nbsp;450&nbsp;metrů</strong></h2>
+                        <h2 className="header">Převýšení</h2> <h2 className="data"><strong>160&nbsp;metrů</strong></h2>
+                        {/* <h2 className="header">Zasněžování</h2> <h2 className="data"><strong>ANO</strong></h2> */}
+                        {/* //?keep this out */}
+                    </div>
                 </h2>
                 <div className="trat blue">
                     <h2 className="trat-title">FAMILY</h2>
