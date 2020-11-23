@@ -17,11 +17,11 @@ export default function Contact(props) {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content="Parádní lyžování v jeseníkách" />
         </Helmet>
-        <Header />
-        <main>
+        <main className="main-kontakt">
+            <Header />
             <section className="section-hero-image section">
                 <h1>Napište nám</h1>
-                <img className="hero-image" src={image} alt="Ski slope" />
+                {/* <img className="hero-image" src={image} alt="Ski slope" /> */}
             </section>
             <section className="section section-kontakt">
                 <h2>

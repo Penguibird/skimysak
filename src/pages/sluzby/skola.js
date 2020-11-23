@@ -6,8 +6,7 @@ import { Fragment, useState, useEffect } from 'react';
 import { Helmet } from "react-helmet";
 import Header from '../../components/header'
 import Footer from '../../components/footer'
-import image from '../../../assets/skolaFoto.jpg';
-import videoMp4 from '../../../assets/video.mp4'
+import image from '../../../assets/random_hero_3.png';
 
 export default function page(props) {
 
@@ -23,7 +22,7 @@ export default function page(props) {
             <section className="section-hero-image section">
                 <img className="hero-image" src={image} alt="Ski slope" />
                 <div className="flexbox-column main-title-wrap">
-                    <h1 className="big-title title-blue hero-image-title">
+                    <h1 className="big-title title-white hero-image-title">
                         Lyžařská škola
                     </h1>
                     {/* <a className="scroll-down" href="#mainSection">
@@ -67,7 +66,7 @@ export default function page(props) {
                     </tbody>
                     <thead><tr><th colSpan={2}>Skupinová výuka  2-4 osoby</th></tr></thead>
                     <tbody>
-                        <tr>
+                        <tr className="cell-brighter">
                             <td>Cena za osobu</td>
                             <td>500 Kč</td>
                         </tr>

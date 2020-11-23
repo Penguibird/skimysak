@@ -187,7 +187,7 @@ export default function page(props) {
                         <tr>
                             <th colspan="2">Snowboardové&nbsp;&nbsp;&nbsp;boty</th>
                         </tr>
-                        <tr>
+                        <tr className="cell-brighter">
                             <th colspan="2">Hole/helma/brýle</th>
                             <td className="price">60,-</td>
                             <td className="price">100,-</td>
@@ -198,7 +198,7 @@ export default function page(props) {
                             <td className="price">210,-</td>
                             <td className="price">210,-</td>
                         </tr>
-                        <tr>
+                        <tr className="cell-normal">
                             <th colspan="2">Běžecký&nbsp;&nbsp;&nbsp;komplet</th>
                             <td className="price">270,-</td>
                             <td className="price">360,-</td>
@@ -209,7 +209,7 @@ export default function page(props) {
                             <td className="price">660,-</td>
                             <td className="price">660,-</td>
                         </tr>
-                        <tr>
+                        <tr className="cell-brighter">
                             <th colspan="2">Sněžnice</th>
                             <td className="price">130,-</td>
                             <td className="price">200,-</td>

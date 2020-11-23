@@ -93,7 +93,7 @@ p,
 li {
     display: block;
     font-family: "Liberation Sans", "HelveticaNeue", sans-serif;
-    font-size: clamp(14px, 1.8vw, 20px);
+    font-size: clamp(14px, 1.5vw, 18px);
     font-weight: normal;
     color: var(--text-black);
     text-align: justify;
@@ -126,6 +126,12 @@ table {
     }
     tr:nth-of-type(2n-1) {
         background-color: var(--background-blue);
+    }
+    .cell-brighter {
+        background-color: var(--background-blue-darker) !important;
+    }
+    .cell-normal {
+        background-color: var(--background-blue) !important;
     }
     th,
     td {
@@ -231,7 +237,6 @@ table {
         img {
             width: 100%;
             // height: auto;
-            
         }
     }
 

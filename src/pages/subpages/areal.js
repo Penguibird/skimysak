@@ -8,10 +8,8 @@ import Media from 'react-media'
 import Header from '../../components/header';
 import Footer from '../../components/footer';
 
-import image from '../../../assets/servis.jpg'
-
 import videoMp4 from '../../../assets/video.mp4';
-import photo from '../../../assets/photo.jpg'
+import image from '../../../assets/trate_hero.png'
 export default function Contact(props) {
 
     return <Fragment>
@@ -24,7 +22,7 @@ export default function Contact(props) {
         <Header />
         <main>
             <section className="section-hero-image section">
-                <img className="hero-image" src={photo} alt="Ski slope" />
+                <img className="hero-image max-height" src={image} alt="Ski slope" />
 
                 <div className="flexbox-column main-title-wrap">
                     <h1 className="big title-white hero-image-title">
@@ -38,19 +36,14 @@ export default function Contact(props) {
                     </a>
                 </div>
             </section>
-            {/* <section className="section section-text section-areal-main">
-                
-            </section> */}
             <section className="section section-text section-trate">
-                <h2>
-                    Sjezdové tratě
-                    <div className="areal-main">
-                        <h2 className="header">Celková délka sjezdovek</h2> <h2 className="data"><strong>2&nbsp;450&nbsp;metrů</strong></h2>
-                        <h2 className="header">Převýšení</h2> <h2 className="data"><strong>160&nbsp;metrů</strong></h2>
-                        {/* <h2 className="header">Zasněžování</h2> <h2 className="data"><strong>ANO</strong></h2> */}
-                        {/* //?keep this out */}
-                    </div>
-                </h2>
+                <h2>Sjezdové tratě</h2>
+                <div className="areal-main">
+                    <h2 className="header">Celková délka sjezdovek</h2> <h2 className="data"><strong>2&nbsp;450&nbsp;metrů</strong></h2>
+                    <h2 className="header">Převýšení</h2> <h2 className="data"><strong>160&nbsp;metrů</strong></h2>
+                    {/* <h2 className="header">Zasněžování</h2> <h2 className="data"><strong>ANO</strong></h2> */}
+                    {/* //?keep this out */}
+                </div>
                 <div className="trat blue">
                     <h2 className="trat-title">FAMILY</h2>
                     <p>Jedná se o&nbsp;nejdelší sjezdovku karlovského údolí. Je určena začátečníkům a&nbsp;všem, kdo&nbsp;vyhledávají klidné a&nbsp;pohodové lyžování.

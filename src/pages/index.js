@@ -9,12 +9,12 @@ import Weather from '../components/weather';
 import Aktualita from '../components/aktualita'
 
 import videoMp4 from '../../assets/video.mp4';
-import image from '../../assets/photo.jpg'
-import kamery from '../../assets/kamery.jpg'
-import kamery_ico from '../../assets/kamery_ico.jpg'
+import image from '../../assets/random_hero_1.png'
+// import kamery from '../../assets/kamery.jpg'
 import servis from '../../assets/servis.jpg'
 import skolaFoto from '../../assets/skolaFoto.jpg';
 import servisFoto from '../../assets/servisFoto.jpg'; //assets\servisFoto.jpg
+import jidloFoto from '../../assets/jidlo_hero.jpg'
 
 export default function Home() {
     const scrollDown = () => {
@@ -70,19 +70,16 @@ export default function Home() {
             <section id="mainSection" className="section-icons section">
 
                 <Link to="/subpages/kamery" className="widget widget-kamery" >
-                    {/* <img src={kamery_ico} alt="kamery" /> */}
                     <h2 className="widget-title">KAMERY</h2>
                 </Link>
                 <Weather />
 
                 <a href="https://www.skikarlov.cz/lyzovani/ceny-skipasu" className="widget widget-skipasy" >
-                    {/* <img src={kamery_ico} alt="kamery" /> */}
-                    {/* TODO Vymenit obrazek */}
                     <h2 className="widget-title">Skipasy</h2>
                 </a>
             </section>
 
-            <section  className="flexbox-column section section-main-text" >
+            <section className="flexbox-column section section-main-text" >
                 <h1 className="smaller title-blue">
                     Parádní lyžování v jeseníkách!
                 </h1>
@@ -137,7 +134,7 @@ export default function Home() {
                     </article></Link>
                     <Link to="/sluzby/obcerstveni"><article className="sluzby-item" >
                         <div className="image-wrapper">
-                            <img src={servis} />
+                            <img src={jidloFoto} />
                         </div>
                         <h4>Občerstvení</h4>
                         <p>Domácí kuchyně pro&nbsp;děti i&nbsp;dospělé, polévky na&nbsp;zahřátí a&nbsp;místní speciality!</p>
