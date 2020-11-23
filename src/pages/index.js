@@ -12,9 +12,9 @@ import videoMp4 from '../../assets/video.mp4';
 import image from '../../assets/random_hero_1.png'
 // import kamery from '../../assets/kamery.jpg'
 import servis from '../../assets/servis.jpg'
-import skolaFoto from '../../assets/skolaFoto.jpg';
-import servisFoto from '../../assets/servisFoto.jpg'; //assets\servisFoto.jpg
-import jidloFoto from '../../assets/jidlo_hero.jpg';
+// import skolaFoto from '../../assets/skolaFoto.jpg';
+// import servisFoto from '../../assets/servisFoto.jpg'; //assets\servisFoto.jpg
+// import jidloFoto from '../../assets/jidlo_hero.jpg';
 import fbIcon from '../../assets/fb_icon.png';
 
 export default function Home() {
@@ -124,32 +124,26 @@ export default function Home() {
                 </div>
             </section>
             <section className="flexbox-column section section-sluzby" >
-                <h1 className=" smaller title-blue " >
-                    SLUŽBY
-                </h1>
-                <div className="flexbox-row sluzby-wrap">
-                    <Link to="/sluzby/servis"><article className="sluzby-item" >
-                        <div className="image-wrapper">
-                            <img src={servisFoto} alt="snowy mountain" />
-                        </div>
+                <div className="container-sluzby skola">
+                    <div className="sluzby-text-wrapper">
+                        <h4>Lyžařská škola</h4>
+                        <p>Chcete se&nbsp;zdokonalit v&nbsp;lyžování? Učíme lyžaře i&nbsp;snowboardisty všech věkových kategorií a&nbsp;všech úrovní.Bez&nbsp;stresu a&nbsp;na&nbsp;pohodu!</p>
+                        <Link to="/sluzby/skola"> <p>Více</p></Link>
+                    </div>
+                </div>
+                <div className="container-sluzby servis">
+                    <div className="sluzby-text-wrapper">
                         <h4>Půjčovna/Servis</h4>
                         <p>Přijeďte lyžovat! Pokud nemáte výbavu, svěřte se do&nbsp;rukou servismanů v&nbsp;půjčovně Myšák. Komplet výstroj pro&nbsp;lyžaře, snowboarďáky i&nbsp;alpinisty.</p>
-                    </article></Link>
-                    <Link to="/sluzby/skola"><article className="sluzby-item" >
-                        <div className="image-wrapper">
-                            <img src={skolaFoto} />
-                        </div>
-                        <h4>Lyžařská škola</h4>
-                        <p>Chcete se&nbsp;zdokonalit v&nbsp;lyžování? Učíme lyžaře i&nbsp;snowboardisty všech věkových kategorií a&nbsp;všech úrovní.
-                Bez&nbsp;stresu a&nbsp;na&nbsp;pohodu!</p>
-                    </article></Link>
-                    <Link to="/sluzby/obcerstveni"><article className="sluzby-item" >
-                        <div className="image-wrapper">
-                            <img src={jidloFoto} />
-                        </div>
+                        <Link to="/sluzby/servis"> <p>Více</p></Link>
+                    </div>
+                </div>
+                <div className="container-sluzby jidlo">
+                    <div className="sluzby-text-wrapper">
                         <h4>Občerstvení</h4>
                         <p>Domácí kuchyně pro&nbsp;děti i&nbsp;dospělé, polévky na&nbsp;zahřátí a&nbsp;místní speciality!</p>
-                    </article></Link>
+                        <Link to="/sluzby/obcerstveni"> <p>Více</p></Link>
+                    </div>
                 </div>
             </section>
             {/* <section className="section-text section-socials">
@@ -157,12 +151,12 @@ export default function Home() {
             </section> */}
             <section className="section section-bottom" >
                 <h1 className="big-title title-white" >
-                    Sezóna 2020-21! <br/>
+                    Sezóna 2020-21! <br />
                     Těšíme se&nbsp;na&nbsp;Vás
                 </h1>
             </section>
         </main>
         <Footer />
-    </Fragment>
+    </Fragment >
 }
 
