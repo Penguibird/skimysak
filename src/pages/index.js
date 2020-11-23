@@ -14,7 +14,8 @@ import image from '../../assets/random_hero_1.png'
 import servis from '../../assets/servis.jpg'
 import skolaFoto from '../../assets/skolaFoto.jpg';
 import servisFoto from '../../assets/servisFoto.jpg'; //assets\servisFoto.jpg
-import jidloFoto from '../../assets/jidlo_hero.jpg'
+import jidloFoto from '../../assets/jidlo_hero.jpg';
+import fbIcon from '../../assets/fb_icon.png';
 
 export default function Home() {
     const scrollDown = () => {
@@ -58,6 +59,7 @@ export default function Home() {
                     <h1 className="big title-white hero-image-title">
                         Vítejte na&nbsp;Myšáku
                     </h1>
+
                     <a className="scroll-down" href="#mainSection">
                         <svg width="50" height="25" viewBox="0 0 50 25" className="custom-svg">
                             <line x1="5" x2="25" y1="5" y2="20" />
@@ -65,6 +67,7 @@ export default function Home() {
                         </svg>
                     </a>
                 </div>
+                
             </section>
 
             <section id="mainSection" className="section-icons section">
@@ -141,12 +144,13 @@ export default function Home() {
                     </article></Link>
                 </div>
             </section>
-            <section className="section-text section-socials">
+            {/* <section className="section-text section-socials">
                 <a href="https://www.facebook.com" className="facebook-link"><h2 className="facebook">Najděte nás i&nbsp;na&nbsp;facebooku!</h2></a>
-            </section>
+            </section> */}
             <section className="section section-bottom" >
                 <h1 className="big-title title-white" >
-                    U&nbsp;NÁS JE&nbsp;NÁDHERNĚ
+                    Sezóna 2020/21!
+                    Těšíme se&nbsp;na&nbsp;Vás
                 </h1>
             </section>
         </main>

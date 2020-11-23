@@ -255,6 +255,20 @@ table {
         fill: none;
         width: 5vw;
     }
+    .fb-icon {
+        position: relative;
+        // margin-right: 4vw;
+        // align-self: flex-end;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        width: 5vw;
+        align-self: flex-start;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
 }
 
 /* Section */
@@ -299,7 +313,7 @@ table {
     background-image: url("../../assets/kamery.jpg");
 }
 .widget-skipasy {
-    background-image: url("../../assets/skipas.jpg"); //url("../../../assets/skipasy.jpg");
+    background-image: url("../../assets/skipas.jpg");
 }
 
 /* Section */
@@ -375,7 +389,7 @@ table {
         align-items: center;
         gap: 1.5em;
     }
-    background-image: url("../../assets/servis.jpg");
+    background-image: url("../../assets/random_hero_2.png");
     // background-color: var(--background-blue);
     // padding: 2em;
 }
@@ -393,10 +407,10 @@ table {
 
 .section-sluzby {
     background-color: var(--background-blue);
-    padding: clamp(20px, 3em, 3em);
+    padding: 1em clamp(20px, 3em, 3em);
     // padding-top: 6vw;
     h1 {
-        margin-bottom: 1em;
+        margin-bottom: 0.8em;
     }
     div.flexbox-row {
         display: flex;
