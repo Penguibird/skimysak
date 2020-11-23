@@ -28,8 +28,6 @@ section.section-kontakt {
     flex-direction: column;
     align-items: flex-start; //maybe center?
     gap: 2em;
-    .kontakt-section-title {
-    }
 }
 .kontakt {
     display: flex;
@@ -38,8 +36,6 @@ section.section-kontakt {
     gap: 0.5em;
     .kontakt-title {
         border-bottom: 1px var(--text-black-light) solid;
-    }
-    p {
     }
 }
 
