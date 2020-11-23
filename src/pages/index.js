@@ -60,14 +60,22 @@ export default function Home() {
                         Vítejte na&nbsp;Myšáku
                     </h1>
 
-                    <a className="scroll-down" href="#mainSection">
-                        <svg width="50" height="25" viewBox="0 0 50 25" className="custom-svg">
-                            <line x1="5" x2="25" y1="5" y2="20" />
-                            <line x1="45" x2="25" y1="5" y2="20" />
-                        </svg>
-                    </a>
+                    <div className="icon-wrapper">
+                        <a className="scroll-down" href="#mainSection">
+                            <svg width="50" height="25" viewBox="0 0 50 25" className="custom-svg">
+                                <line x1="5" x2="25" y1="5" y2="20" />
+                                <line x1="45" x2="25" y1="5" y2="20" />
+                            </svg>
+                        </a>
+                        <div className="fb-icon">
+                            <a href="https://www.facebook.com/SkiMysak/">
+                                <img src={fbIcon} />
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
-                
+
             </section>
 
             <section id="mainSection" className="section-icons section">
@@ -149,7 +157,7 @@ export default function Home() {
             </section> */}
             <section className="section section-bottom" >
                 <h1 className="big-title title-white" >
-                    Sezóna 2020/21!
+                    Sezóna 2020-21! <br/>
                     Těšíme se&nbsp;na&nbsp;Vás
                 </h1>
             </section>

@@ -11,6 +11,8 @@ import WeatherCard from '../../components/weatherCard'
 import image from '../../../assets/servis.jpg'
 
 export default function Page(props) {
+    //todo den posunuty o jedno
+    //todo horni tri jsou divne
 
     const fetcher = (...args) => fetch(...args).then(res => res.json())
     const url = 'https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=50.018461&lon=17.295048' // process.env.WEATHER_API_URL;

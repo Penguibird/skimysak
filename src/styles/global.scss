@@ -255,14 +255,19 @@ table {
         fill: none;
         width: 5vw;
     }
+    .icon-wrapper {
+        display: block;
+        width: 100%;
+    }
     .fb-icon {
+        float: left;
         position: relative;
-        // margin-right: 4vw;
-        // align-self: flex-end;
+        // margin-right: 2vw;
         bottom: 0;
         left: 0;
         z-index: 10;
         width: 5vw;
+        margin-left: 2vw;
         align-self: flex-start;
         img {
             width: 100%;
