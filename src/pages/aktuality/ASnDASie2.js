@@ -9,7 +9,6 @@ import { Fragment, useState, useEffect } from 'react';
 // import image from '../../assets/servis.jpg';
 
 export default function page(props) {
-    // TODO Test
     return <Fragment>
         <Helmet>
             <title>Aktuality | Ski Myšák</title>

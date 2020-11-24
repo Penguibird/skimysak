@@ -101,8 +101,8 @@ export default function Home() {
                     Dřív, než vyrazíte, využijte náš <strong>servis</strong> nebo <strong>půjčovnu</strong> hned u&nbsp;lanovky a&nbsp;v&nbsp;případě zájmu si&nbsp;domluvte lekci <strong>v&nbsp;lyžařské škole</strong>, na&nbsp;kterou narazíte hned u&nbsp;pokladen.
                 </p>
                 <p>
-                    O&nbsp;pauze jste zváni do baru U&nbsp;Myšáka nebo na&nbsp;pizzu k&nbsp;Myšce. Parkování je zdarma! Aktuální zprávy o&nbsp;provozu najdete <Link to="/provoz" >zde</Link> nebo na&nbsp;<a href="fb.com">FB&nbsp;Ski Myšák</a>.
-                    {/* //todo add mysak fb */}
+                    O&nbsp;pauze jste zváni do&nbsp;ski baru s&nbsp;terasou a&nbsp;výhledem nebo do&nbsp;Bistra pod&nbsp;Myšákem. Parkování je&nbsp;zdarma hned pod&nbsp;sjezdovkou!
+                     Aktuální zprávy o&nbsp;provozu najdete <Link to="/provoz" >zde</Link> nebo na&nbsp;<a href="https://www.facebook.com/SkiMysak/">FB&nbsp;Ski Myšák</a>.
                 </p>
                 <h2>
                     Děláme svou práci rádi!
@@ -141,7 +141,7 @@ export default function Home() {
                 <div className="container-sluzby jidlo">
                     <div className="sluzby-text-wrapper">
                         <h4>Občerstvení</h4>
-                        <p>Domácí kuchyně pro&nbsp;děti i&nbsp;dospělé, polévky na&nbsp;zahřátí a&nbsp;místní speciality!</p>
+                        <p>Ski bar s&nbsp;terasou a&nbsp;výhledem nebo&nbsp;něco k&nbsp;jídlu v&nbsp;Bistur pod&nbsp;Myšákem. Domácí kuchyně pro&nbsp;děti i&nbsp;dospělé, polévky na&nbsp;zahřátí a&nbsp;místní speciality! Dobrou chuť!</p>
                         <Link to="/sluzby/obcerstveni"> <p>Více</p></Link>
                     </div>
                 </div>
