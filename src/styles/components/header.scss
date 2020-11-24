@@ -1,22 +1,63 @@
-// header * {
-//     margin: 0 !important;
-//     padding: 0 !important;
-//     border-radius: 0px !important;
-// }
-
+//todo refactor
 header {
+    position: fixed;
+    z-index: 2;
     width: 100%;
-    display: grid;
-    grid-template-rows: 2em 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    // display: grid;
+
     transition: background-color cubic-bezier(0.65, 0.05, 0.36, 1) 0.3s;
+    transition: box-shadow cubic-bezier(0.65, 0.05, 0.36, 1) 0.3s;
     &:hover {
         background-color: var(--background-blue);
+        box-shadow: 2px 2px 9px 1px #5f5f5f70;
+    }
+    // @media screen and(max-width: 600px) {
+    //     box-shadow: 2px 2px 9px 1px #5f5f5f70;
+    // }
+}
+main {
+    position: relative;
+    padding-top: 8em;
+}
+
+.navbar {
+    a,
+    button,
+    p {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        padding: 0.8em 1em !important;
+        &:not(.logo) {
+            &:hover {
+                background-color: var(--background-blue-darker);
+            }
+        }
+        transition: background-color cubic-bezier(0.65, 0.05, 0.36, 1) 0.1s;
+        * {
+            //*the text inside it, might be h1 later
+            font-size: clamp(10px, 1.8vw, 20px);
+            display: inline;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 700;
+            color: var(--title-white);
+        }
+    }
+    div.dropdown {
+        height: 100%;
+        button {
+            height: 100%;
+        }
+    }
+    .dropdown-menu {
+        background-color: var(--background-blue);
+        box-shadow: 2px 2px 9px 1px #5f5f5f70;
+
     }
 }
 
 .logo {
-    // padding: 1em;
+    height: 100%;
     display: block;
     width: 30vw;
     max-width: 250px;
@@ -25,48 +66,9 @@ header {
         height: auto;
     }
 }
-
-.logo-mysak {
-    grid-column: 1 span 1;
-    padding-left: 2em;
-}
-
-.logo-karlov {
-    grid-column: 3 span 1;
-    padding-right: 2em;
-}
-
-.navbar {
-    grid-column: 2 -2;
-    grid-row: 1 span 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    a,
-    p {
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        padding: 1em 1.5em !important;
-        &:hover {
-            background-color: var(--background-blue-darker);
-        }
-        transition: background-color cubic-bezier(0.65, 0.05, 0.36, 1) 0.1s;
-        * {
-            //the text inside it, might be h1 later
-            font-size: clamp(10px, 1.8vw, 20px);
-            display: inline;
-            font-family: "Montserrat", sans-serif;
-            font-weight: 700;
-            color: var(--title-white);
-        }
+@media screen and(min-width:601px) {
+    .logo-karlov {
+        order: 1;
     }
 }
-.dropdown {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    gap: 0;
-    grid-row: 1 span 2;
-}
+

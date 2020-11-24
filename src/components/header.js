@@ -1,93 +1,126 @@
 import * as React from 'react';
 import '../styles/components/header.scss';
+
+import '../styles/bootstrap/dropdown.scss';
+import '../styles/bootstrap/navbar.scss';
+import '../styles/bootstrap/nav.scss';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
-
 import { Link } from "gatsby";
+import { Fragment, useState, useEffect } from 'react';
+import Media from "react-media";
+import {
+    Collapse,
+    Navbar,
+    NavbarToggler,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    NavLink,
+    UncontrolledDropdown,
+    Dropdown,
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem,
+    NavbarText
+} from 'reactstrap';
 import logo from '../../assets/logo_mysak_cropped_scaled.png';
 import logo2 from '../../assets/logo-arena.png';
-import { Fragment, useState, useEffect } from 'react';
-// import {
-//     Collapse,
-//     Navbar,
-//     NavbarToggler,
-//     NavbarBrand,
-//     Nav,
-//     NavItem,
-//     NavLink,
-//     UncontrolledDropdown,
-//     Dropdown,
-//     DropdownToggle,
-//     DropdownMenu,
-//     DropdownItem,
-//     NavbarText
-// } from 'reactstrap';
+
 export default function Header(props) {
     const [isOpen, setIsOpen] = useState(false);
-
     const toggle = () => setIsOpen(!isOpen);
+
+    const sluzby = [
+        {
+            title: "Půjčovna a Servis",
+            link: "/sluzby/servis"
+        },
+        {
+            title: "Škola",
+            link: "/sluzby/servis"
+        },
+        {
+            title: "Občerstvení",
+            link: "/sluzby/obcerstveni"
+        }
+    ]
+
+    return <header className="navbar">
+        <Navbar color="light" light expand="md" className="clearfix">
+            <Link to="/" className="logo logo-mysak">
+                <img src={logo} />
+            </Link>
+            <a href="https://www.skikarlov.cz/" className="logo logo-karlov">
+                <img src={logo2} />
+            </a>
+            <NavbarToggler onClick={toggle} className="float-right" />
+            <Collapse isOpen={isOpen} navbar>
+                <Nav className="mr-auto" navbar>
+                    <NavItem>
+                        <Link to="/subpages/aktuality">
+                            <p>Aktuality</p>
+                        </Link>
+                    </NavItem>
+                    <NavItem>
+                        <Link to="/subpages/aktuality">
+                            <p>Aktuality</p>
+                        </Link>
+                    </NavItem>
+
+                    <NavItem>
+                        <BetterDropDown title="Služby" listOfLinks={sluzby} />
+                    </NavItem>
+                    <NavItem>
+                        <Link to="/subpages/aktuality">
+                            <p>Aktuality</p>
+                        </Link>
+                    </NavItem>
+                </Nav>
+            </Collapse>
+        </Navbar>
+    </header>
+}
+
+function BetterDropDown({ title, listOfLinks }) {
+    //list of links = [{link, title}]
 
     const [isDropDown, setDropDown] = useState(false);
     const toggleDropDown = () => setDropDown(!isDropDown);
 
-    return <Fragment>
-        <header>
-            <Link to="/" className="logo logo-mysak">
-                <img src={logo} alt="Ski myšák logo" />
-            </Link>
-            <div className="navbar">
-                <Link to="/subpages/kontakt" >
-                    <p>Kontakt</p>
-                </Link>
-                <Link to="/subpages/aktuality" >
-                    <p>Aktuality</p>
-                </Link>
-                <Link to="/subpages/areal" >
-                    <p>Areál</p>
-                </Link>
-                <div className="dropdown" onMouseEnter={e => setDropDown(true)} onMouseLeave={e => setDropDown(false)}>
-                    <p>Služby</p>
-                    {isDropDown
-                        && <div className="dropdown-menu">
-                            <Link to="/subpages/skola" >
-                                <p>Skola</p>
+    return <Media queries={{
+        small: "(max-width: 599px)",
+        medium: "(min-width: 600px)"
+    }}>
+        {matches => (<Fragment> {matches.medium
+            ? <Dropdown isOpen={isDropDown} toggle={toggleDropDown} caret onMouseEnter={e => setDropDown(true)} onMouseLeave={e => setDropDown(false)}>
+                <DropdownToggle>
+                    <Link>
+                        <p>{title}</p>
+                    </Link>
+                </DropdownToggle>
+                <DropdownMenu>
+                    {listOfLinks.map(({ link, title }, i) => (
+                        <DropdownItem key={i}>
+                            <Link to={link} >
+                                <p>{title} </p>
                             </Link>
-                        </div>}
-                </div>
-            </div>
-            <a href="https://www.skikarlov.cz" className="logo logo-karlov">
-                <img src={logo2} alt="Ski Arena Karlov logo" />
-            </a>
-        </header >
-
-    </Fragment>
+                        </DropdownItem>
+                    ))}
+                </DropdownMenu>
+            </Dropdown>
+            : <Fragment>
+                <button onClick={toggleDropDown} >
+                    <p>{title}</p>
+                </button>
+                <Collapse isOpen={isDropDown} >
+                    {listOfLinks.map(({ link, title }, i) => (
+                        <Link to={link} >
+                            <p>{title} </p>
+                        </Link>
+                    ))}
+                </Collapse>
+            </Fragment>
+        } </Fragment>)}
+    </Media>
 }
-
-{/* <header>
-
-{/* <Navbar expand="md">
-            <Link to="/" className="logo logo-mysak">
-                <img src={logo} alt="Ski myšák logo" />
-            </Link>
-            <a href="https://www.skikarlov.cz" className="logo logo-karlov">
-                <img src={logo2} alt="Ski Arena Karlov logo" />
-            </a>
-            <NavbarToggler onClick={toggle} />
-            <Collapse isOpen={isOpen} navbar>
-                <Nav navbar>
-                    {/* kamery, pocasi, skipasy, aktuality , sjezdovky */}
-{/* <Dropdown isOpen={isDropDown} toggle={toggleDropDown} onMouseEnter={e => setDropDown(true)} onMouseLeave={e => setDropDown(false)} caret>
-                        <DropdownToggle>
-                            Služby
-                        </DropdownToggle>
-                        <DropdownMenu>
-                            <DropdownItem>Pujcovna/Servis</DropdownItem>
-                            <DropdownItem>Skola</DropdownItem>
-                            <DropdownItem>obcerstveni</DropdownItem>
-                        </DropdownMenu>
-                    </Dropdown>
-                    <NavItem>Kontakt</NavItem>
-
-                </Nav>
-            </Collapse>
-        </Navbar> */}

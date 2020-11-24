@@ -104,7 +104,8 @@ li {
 ul,
 ol {
     & > * + * {
-        padding-top: 0.5em;
+        // padding-top: 0.5em;
+        //todo somehow make this better, this breaks bootstrap
     }
 }
 
