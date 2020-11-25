@@ -60,15 +60,16 @@ export default function Header({ mainSectionRef }) {
             link: "/subpages/kamery"
         }
     ]
-    useEffect(() => { console.log(mainSectionRef) }, []);
+    useEffect(() => {
+        window.addEventListener("scroll", e => {
+            if (mainSectionRef && mainSectionRef.current) console.log(window.pageYOffset, mainSectionRef.current.offsetTop);
+            setIsBackground(mainSectionRef && mainSectionRef.current && (window.pageYOffset > (mainSectionRef.current.offsetTop + offset)));
+        })
+     }, []);
 
     const offset = -100;
     const [isBackground, setIsBackground] = useState(false)
-    useEffect(() => { }, [window.pageYOffset])
-    window.addEventListener("scroll", e => {
-        if (mainSectionRef && mainSectionRef.current) console.log(window.pageYOffset, mainSectionRef.current.offsetTop);
-        setIsBackground(mainSectionRef && mainSectionRef.current && (window.pageYOffset > (mainSectionRef.current.offsetTop + offset)));
-    })
+    
 
     //aktuality, areal, kamery, pocasi
     return <header className={`navbar ${isOpen ? 'open' : ''} ${isBackground ? 'background' : ''} `}>
