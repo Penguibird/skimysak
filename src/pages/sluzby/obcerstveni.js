@@ -6,8 +6,7 @@ import { Helmet } from "react-helmet";
 import Header from '../../components/header'
 import Footer from '../../components/footer'
 import { Fragment, useState, useEffect } from 'react';
-import image from '../../../assets/servis.jpg';
-import videoMp4 from '../../../assets/video.mp4'
+import image from '../../../assets/jidlo_hero.jpg';
 
 export default function page(props) {
 
@@ -21,23 +20,8 @@ export default function page(props) {
         <Header />
         <main>
             <section className="section-hero-image section">
-                <Media queries={{
-                    small: "(max-width: 599px)",
-                    medium: "(min-width: 600px) and (max-width:999px)",
-                    large: "(min-width: 1000px)"
-                }}>
-                    {matches => (
-                        <Fragment>
-                            {matches.large
-                                ? <video className="hero-image" muted autoPlay loop  >
-                                    <source src={videoMp4} type="video/mp4" />
-                                    {/* <source src={image} type="image/jpg" media={"all"} /> */}
-                                </video>
-                                : <img className="hero-image" src={image} alt="Ski slope" />
-                            }
-                        </Fragment>
-                    )}
-                </Media>
+                <img className="hero-image max-height" src={image} alt="Ski slope" />
+
                 <div className="flexbox-column main-title-wrap">
                     <h1 className="big-title title-white hero-image-title small">
                         Skvělé jídlo na&nbsp;Myšáku!
@@ -54,6 +38,9 @@ export default function page(props) {
                 <p>Ze&nbsp;Ski Baru pod&nbsp;Myšákem a&nbsp;přilehlé terasy sledujete pohyb přímo na&nbsp;sjezdovce a&nbsp;vidíte i&nbsp;na&nbsp;nejmenší lyžaře.
                     Stavte se&nbsp;posedět nad&nbsp;výbornou kávou, alkoholickými nebo&nbsp;nealkoholickými drinky a&nbsp;dejte si&nbsp;něco na&nbsp;zub.</p>
 
+            </section>
+            <section className="section section-text section-spacer">
+                <p></p>
             </section>
         </main>
         <Footer />

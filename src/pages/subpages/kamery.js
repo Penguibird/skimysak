@@ -7,7 +7,6 @@ import Header from '../../components/header'
 import Footer from '../../components/footer'
 import { Fragment, useState, useEffect } from 'react';
 
-import image from '../../../assets/servis.jpg'
 export default function page(props) {
 
     return <Fragment>
@@ -20,10 +19,8 @@ export default function page(props) {
         <main className="kamery">
             <Header />
                 <section className="section-hero-image section">
-                {/* //TODO Jsou kamery dobry nazev? Webkamery? */}
                 {/* //TODO design this */}
-                <h1>Kamery</h1>
-                <img className="hero-image" src={image} alt="Ski slope" />
+                <h1 className="title-white">Kamery</h1>
                 <section className="section section-kamery" >
                     <div className="kamera-wrapper">
                         <h2>Myšák horní stanice</h2>

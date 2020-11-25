@@ -1,0 +1,9 @@
+main.servis {
+    overflow-x: scroll;
+    @media screen and(max-width: 650px) {
+        .table-cenik {
+            align-self: flex-start;
+            margin-left: 0.5em;
+        }
+    }
+}
