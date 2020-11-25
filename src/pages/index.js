@@ -12,9 +12,9 @@ import videoMp4 from '../../assets/video.mp4';
 import image from '../../assets/random_hero_1.png'
 // import kamery from '../../assets/kamery.jpg'
 import servis from '../../assets/servis.jpg'
-// import skolaFoto from '../../assets/skolaFoto.jpg';
-// import servisFoto from '../../assets/servisFoto.jpg'; //assets\servisFoto.jpg
-// import jidloFoto from '../../assets/jidlo_hero.jpg';
+import skolaFoto from '../../assets/skolaFoto.jpg';
+import servisFoto from '../../assets/servisFoto.jpg'; //assets\servisFoto.jpg
+import jidloFoto from '../../assets/jidlo_hero.jpg';
 import fbIcon from '../../assets/fb_icon.png';
 
 export default function Home() {
