@@ -15,6 +15,7 @@ import kamery_ico from '../../assets/kamery_ico.jpg'
 import servis from '../../assets/servis.jpg'
 import skolaFoto from '../../assets/skolaFoto.jpg';
 import servisFoto from '../../assets/servisFoto.jpg'; //assets\servisFoto.jpg
+import { useRef } from "react";
 
 export default function Home() {
     const scrollDown = () => {
@@ -24,6 +25,7 @@ export default function Home() {
             behavior: 'smooth',
         });
     }
+    let ref = useRef();
 
     return <Fragment>
         <Helmet>
@@ -32,7 +34,7 @@ export default function Home() {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content="Parádní lyžování v jeseníkách" />
         </Helmet>
-        <Header />
+        <Header mainSectionRef={ref} />
         <main>
             <section className="section-hero-image section">
                 <Media queries={{
@@ -65,11 +67,11 @@ export default function Home() {
                 </div>
             </section>
 
-            <section id="mainSection" className="section-icons section">
+            <section id="mainSection" className="section-icons section" ref={ref}>
 
                 <Link to="/subpages/kamery" className="widget widget-kamery" >
                     {/* <img src={kamery_ico} alt="kamery" /> */}
-                    <h2 className="widget-title">KAMERY</h2>
+                    <h2 className="widget-title">KAMERY</h2>    
                 </Link>
                 <Weather />
 
@@ -80,7 +82,7 @@ export default function Home() {
                 </a>
             </section>
 
-            <section  className="flexbox-column section section-main-text" >
+            <section className="flexbox-column section section-main-text" >
                 <h1 className="smaller title-blue">
                     Parádní lyžování v jeseníkách!
                 </h1>

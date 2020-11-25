@@ -21,13 +21,14 @@ import {
     Dropdown,
     DropdownToggle,
     DropdownMenu,
+
     DropdownItem,
     NavbarText
 } from 'reactstrap';
 import logo from '../../assets/logo_mysak_cropped_scaled.png';
 import logo2 from '../../assets/logo-arena.png';
 
-export default function Header(props) {
+export default function Header({ mainSectionRef }) {
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
 
@@ -45,8 +46,18 @@ export default function Header(props) {
             link: "/sluzby/obcerstveni"
         }
     ]
+    useEffect(() => { console.log(mainSectionRef) }, []);
 
-    return <header className="navbar">
+    const offset = -100;
+    const [isBackground, setIsBackground] = useState(false)
+    useEffect(() => { }, [window.pageYOffset])
+    window.addEventListener("scroll", e => {
+        if (mainSectionRef && mainSectionRef.current) console.log(window.pageYOffset, mainSectionRef.current.offsetTop);
+        setIsBackground(mainSectionRef && mainSectionRef.current && (window.pageYOffset > (mainSectionRef.current.offsetTop + offset)));
+    })
+
+
+    return <header className={`navbar ${isOpen ? 'open' : ''} ${isBackground ? 'background' : ''} `}>
         <Navbar color="light" light expand="md" className="clearfix">
             <Link to="/" className="logo logo-mysak">
                 <img src={logo} />
@@ -113,7 +124,7 @@ function BetterDropDown({ title, listOfLinks }) {
                 <button onClick={toggleDropDown} >
                     <p>{title}</p>
                 </button>
-                <Collapse isOpen={isDropDown} >
+                <Collapse isOpen={isDropDown} className="shift-right">
                     {listOfLinks.map(({ link, title }, i) => (
                         <Link to={link} >
                             <p>{title} </p>
