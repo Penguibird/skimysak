@@ -46,6 +46,20 @@ export default function Header({ mainSectionRef }) {
             link: "/sluzby/obcerstveni"
         }
     ]
+    const areal = [
+        {
+            title: "Svahy",
+            link: "/subpages/areal"
+        },
+        {
+            title: "Počasí",
+            link: "/subpages/pocasi"
+        },
+        {
+            title: "Kamery",
+            link: "/subpages/kamery"
+        }
+    ]
     useEffect(() => { console.log(mainSectionRef) }, []);
 
     const offset = -100;
@@ -56,7 +70,7 @@ export default function Header({ mainSectionRef }) {
         setIsBackground(mainSectionRef && mainSectionRef.current && (window.pageYOffset > (mainSectionRef.current.offsetTop + offset)));
     })
 
-
+    //aktuality, areal, kamery, pocasi
     return <header className={`navbar ${isOpen ? 'open' : ''} ${isBackground ? 'background' : ''} `}>
         <Navbar color="light" light expand="md" className="clearfix">
             <Link to="/" className="logo logo-mysak">
@@ -74,17 +88,15 @@ export default function Header({ mainSectionRef }) {
                         </Link>
                     </NavItem>
                     <NavItem>
-                        <Link to="/subpages/aktuality">
-                            <p>Aktuality</p>
-                        </Link>
+                        <BetterDropDown title="Areál" listOfLinks={areal} />
                     </NavItem>
 
                     <NavItem>
                         <BetterDropDown title="Služby" listOfLinks={sluzby} />
                     </NavItem>
                     <NavItem>
-                        <Link to="/subpages/aktuality">
-                            <p>Aktuality</p>
+                        <Link to="/subpages/kontakt">
+                            <p>Kontakt</p>
                         </Link>
                     </NavItem>
                 </Nav>
