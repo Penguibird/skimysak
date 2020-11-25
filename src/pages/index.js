@@ -13,9 +13,9 @@ import image from '../../assets/random_hero_1.png'
 // import kamery from '../../assets/kamery.jpg'
 import servis from '../../assets/servis.jpg'
 
-// import skolaFoto from '../../assets/skolaFoto.jpg';
-// import servisFoto from '../../assets/servisFoto.jpg'; //assets\servisFoto.jpg
-// import jidloFoto from '../../assets/jidlo_hero.jpg';
+import skolaFoto from '../../assets/skolaFoto.jpg';
+import servisFoto from '../../assets/servisFoto.jpg'; //assets\servisFoto.jpg
+import jidloFoto from '../../assets/jidlo_hero.jpg';
 import fbIcon from '../../assets/fb_icon.png';
 import { useRef } from "react";
 
@@ -129,26 +129,26 @@ export default function Home() {
                 </div>
             </section>
             <section className="flexbox-column section section-sluzby" >
-                <div className="container-sluzby skola">
-                    <div className="sluzby-text-wrapper">
-                        <h4>Lyžařská škola</h4>
-                        <p>Chcete se&nbsp;zdokonalit v&nbsp;lyžování? Učíme lyžaře i&nbsp;snowboardisty všech věkových kategorií a&nbsp;všech úrovní. Bez&nbsp;stresu a&nbsp;na&nbsp;pohodu!</p>
-                        <Link to="/sluzby/skola"> <p>Více</p></Link>
-                    </div>
-                </div>
-                <div className="container-sluzby servis">
-                    <div className="sluzby-text-wrapper">
-                        <h4>Půjčovna/Servis</h4>
-                        <p>Přijeďte lyžovat! Pokud nemáte výbavu, svěřte se do&nbsp;rukou servismanů v&nbsp;půjčovně Myšák. Komplet výstroj pro&nbsp;lyžaře, snowboarďáky i&nbsp;alpinisty.</p>
-                        <Link to="/sluzby/servis"> <p>Více</p></Link>
-                    </div>
-                </div>
-                <div className="container-sluzby jidlo">
-                    <div className="sluzby-text-wrapper">
-                        <h4>Občerstvení</h4>
-                        <p>Ski bar s&nbsp;terasou a&nbsp;výhledem nebo&nbsp;něco k&nbsp;jídlu v&nbsp;Bistur pod&nbsp;Myšákem. Domácí kuchyně pro&nbsp;děti i&nbsp;dospělé, polévky na&nbsp;zahřátí a&nbsp;místní speciality! Dobrou chuť!</p>
-                        <Link to="/sluzby/obcerstveni"> <p>Více</p></Link>
-                    </div>
+                <h1 className="big-title title-blue " >
+                    SLUŽBY
+                </h1>
+                <div className="flexbox-row sluzby-wrap">
+                    <Link to="/sluzby/servis"><article className="sluzby-item" >
+                        <img src={servisFoto} alt="snowy mountain" />
+                        <h3>Půjčovna/Servis</h3>
+                        <p>Přijeďte lyžovat! Pokud nemáte výbavu, svěřte se do rukou servismanů v půjčovně Myšák. Komplet výstroj pro lyžaře, snowboarďáky i alpinisty.</p>
+                    </article></Link>
+                    <Link to="/sluzby/skola"><article className="sluzby-item" >
+                        <img src={skolaFoto} />
+                        <h3>Lyžařská škola</h3>
+                        <p>Chcete se zdokonalit v lyžování? Učíme lyžaře i snowboardisty všech věkových kategorií a všech úrovní.
+                Bez stresu a na pohodu!</p>
+                    </article></Link>
+                    <Link to="/servis"><article className="sluzby-item" >
+                        <img src={servis} />
+                        <h3>Občerstvení</h3>
+                        <p>Mauris id fermentum nulla. Vivamus a ante congue, porta nunc nec, hendrerit turpis. Aliquam bibendum, turpis eu mattis iaculis, ex lorem mollis sem, ut sollicitudin risus orci quis tellus.</p>
+                    </article></Link>
                 </div>
             </section>
             {/* <section className="section-text section-socials">
