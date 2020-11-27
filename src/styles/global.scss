@@ -42,7 +42,7 @@ body {
 
 h1 {
     display: block;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif !important;
     font-size: clamp(25px, 6vw, 6vw);
     font-weight: 800;
     color: var(--title-white);
@@ -56,7 +56,7 @@ h1.smaller {
 
 h2 {
     display: block;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif !important;
     font-size: clamp(20px, 4vw, 35px);
     font-weight: 400;
     color: var(--text-black);
@@ -65,7 +65,7 @@ h2 {
 
 h3 {
     display: block;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif !important;
     font-size: clamp(18px, 1vw, 1vw);
     font-weight: 400;
     color: var(--text-black);
@@ -74,7 +74,7 @@ h3 {
 }
 h4 {
     display: block;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif !important;
     font-size: clamp(18px, 1.4vw, 1.4vw);
     font-weight: 600;
     color: var(--title-blue);
@@ -83,7 +83,7 @@ h4 {
 }
 h5 {
     display: block;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif !important;
     font-size: clamp(18px, 1.2vw, 1.2vw);
     font-weight: 600;
     color: var(--text-black);
@@ -94,7 +94,7 @@ h5 {
 p,
 li {
     display: block;
-    font-family: "Liberation Sans", sans-serif;
+    font-family: 'Liberation Sans', sans-serif !important;
     font-size: clamp(14px, 1.5vw, 18px);
     font-weight: normal;
     color: var(--text-black);
@@ -113,7 +113,7 @@ ol {
 }
 
 a {
-    font-family: "Liberation Sans", "HelveticaNeue", sans-serif;
+    font-family: 'Liberation Sans', 'HelveticaNeue', sans-serif;
     // font-size: clamp(20px, 1.5vw, 15px);
     font-weight: normal;
     color: var(--text-black);
@@ -138,7 +138,7 @@ table {
     }
     th,
     td {
-        font-family: "Liberation Sans", "HelveticaNeue", sans-serif;
+        font-family: 'Liberation Sans', 'HelveticaNeue', sans-serif;
         font-size: clamp(11px, 1vw, 16px);
         border: #ffffff87 0.5px solid;
     }
@@ -303,7 +303,7 @@ table {
         font-size: clamp(14px, 2.2vw, 25px);
         font-weight: 700;
         color: var(--title-white);
-        font-family: "Montserrat", sans-serif;
+        font-family: 'Montserrat', sans-serif;
         text-align: center;
         text-transform: uppercase;
         // margin: 0.3em 0px;
@@ -318,10 +318,10 @@ table {
 }
 
 .widget-kamery {
-    background-image: url("../../assets/kamery.jpg");
+    background-image: url('../../assets/kamery.jpg');
 }
 .widget-skipasy {
-    background-image: url("../../assets/skipas.jpg");
+    background-image: url('../../assets/skipas.jpg');
 }
 
 /* Section */
@@ -398,7 +398,7 @@ table {
         align-items: center;
         gap: 1.5em;
     }
-    background-image: url("../../assets/random_hero_2.png");
+    background-image: url('../../assets/random_hero_2.png');
     // background-color: var(--background-blue);
     // padding: 2em;
 }
@@ -455,7 +455,7 @@ table {
 
 .section-bottom {
     padding: 2em;
-    background-image: url("../../assets/servis.jpg");
+    background-image: url('../../assets/servis.jpg');
     h1 {
         margin: 2.5em 10px;
     }
