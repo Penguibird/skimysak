@@ -92,7 +92,7 @@ export default function WeatherCard({ title, data }) {
                     {title}
                 </h2>
                 <p className="card-date title-date">
-                    {date.getDate()}.&nbsp;{MONTHS[date.getMonth() - 1]} {date.getFullYear()}
+                    {date.getDate()}.&nbsp;{MONTHS[date.getMonth()]} {date.getFullYear()}
                 </p>
                 <h1 className="card-temperature">
                     {getTemperatureDay(data)}°C

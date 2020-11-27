@@ -21,24 +21,16 @@ export default function Page(props) {
     if (error) console.error(error)
     let dataByDays = [];
     if (data) {
-        dataByDays = Object.values(data.properties.timeseries.sort(compareDates).reduce((acc, obj) => {
-            let key = new Date(obj.time).getUTCDate();
+        dataByDays = Object.entries(data.properties.timeseries.reduce((acc, obj) => { //.sort(compareDates)
+            let key = + new Date(obj.time).getMonth() * 100 + new Date(obj.time).getDate() + '';
             if (!acc[key]) {
                 acc[key] = []
             }
             acc[key].push(obj)
+            console.log("accumulator", acc)
             return acc;
-        }, {}));
+        }, {})).sort((a, b) => a[0] - b[0]).map(x => x[1]);
 
-        //     (prevVal, currVal, i) => {
-        //     console.log("data", prevVal, currVal);
-        //     if (i == 0) dataByDays.push([prevVal])
-        //     if (new Date(prevVal.time).getDate() == new Date(currVal.time).getDate()) {
-        //         dataByDays[dataByDays.length - 1].push(currVal)
-        //     } else {
-        //         dataByDays.push([currVal]);
-        //     }
-        // })
     }
     console.log("databydays", dataByDays);
 
