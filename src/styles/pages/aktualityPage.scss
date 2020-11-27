@@ -25,3 +25,14 @@ main.aktuality section.section-page-aktuality {
         flex: 0 auto;
     }
 }
+
+.aktualita-img {
+    max-width: 800px;
+    margin: 1em;
+}
+.back {
+    align-self: flex-start;
+    img {
+        transform: rotate(90);
+    }
+}

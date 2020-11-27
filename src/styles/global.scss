@@ -192,7 +192,7 @@ table {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2em 0px;
+    padding: 2em 1em;
     h2 {
         max-width: 40ch;
     }
@@ -444,6 +444,7 @@ table {
         border-radius: 1vw;
         object-fit: cover;
         height: 30vw;
+        object-position: right;
     }
     article {
         & > * + * {

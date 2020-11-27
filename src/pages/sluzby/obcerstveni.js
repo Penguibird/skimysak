@@ -19,8 +19,12 @@ export default function page(props) {
         </Helmet>
         <Header />
         <main>
-            <section className="section-hero-image section">
-                <img className="hero-image max-height" src={image} alt="Ski slope" />
+            <section className="section-hero-image section" style={{ paddingTop: '5em', paddingBottom: '7em' }}>
+
+                <img className="hero-image max-height" src={image} alt="Ski slope" style={{
+                    filter: "brightness(0.85)",
+                    top: '-10%'
+                }} />
 
                 <div className="flexbox-column main-title-wrap">
                     <h1 className="big-title title-white hero-image-title small">

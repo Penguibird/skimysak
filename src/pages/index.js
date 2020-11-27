@@ -18,6 +18,7 @@ import servisFoto from '../../assets/servisFoto.jpg'; //assets\servisFoto.jpg
 import jidloFoto from '../../assets/jidlo_hero.jpg';
 import fbIcon from '../../assets/fb_icon.png';
 import { useRef } from "react";
+import ctSport from '../../assets/ctSport1.jpg'
 
 
 export default function Home() {
@@ -51,7 +52,7 @@ export default function Home() {
                             {/* <source src={image} type="image/jpg" media={"all"} /> */}
                         </video>
                         : <div className="hero-image " id="hero-image-wrapper">
-                            <img src={image} alt="Ski slope" className="hero-image-image"/>
+                            <img src={image} alt="Ski slope" className="hero-image-image" />
                         </div>
                     }</Fragment>)}
                 </Media>
@@ -117,12 +118,12 @@ export default function Home() {
                     <Aktualita image={servis} title="PODĚKOVÁNÍ za sezónu 2019/20" date="29.3. 2020" url="ASnDASie2"
                         rawText="Za normálních okolností bychom teď, na&nbsp;konci března, pravděpodobně oznamovali konec další lyžařské sezóny v&nbsp;karlovském údolí. Tato zima ale 'normální' nebyla, a&nbsp;to&nbsp;nemáme na&nbsp;mysli jen její předčasný konec...                    "
                     />
-                    <Aktualita image={servis} title="PODĚKOVÁNÍ za sezónu 2019/20" date="29.3. 2020" url="ASnDASie2"
-                        rawText="Za normálních okolností bychom teď, na&nbsp;konci března, pravděpodobně oznamovali konec další lyžařské sezóny v&nbsp;karlovském údolí. Tato zima ale 'normální' nebyla, a&nbsp;to&nbsp;nemáme na&nbsp;mysli jen její předčasný konec...                    "
+                    <Aktualita image={ctSport} title="ČT sport NA VRCHOL" date="15.11. 2020" url="JBus3Nas"
+                        rawText="Vzpomínáte? Takhle to&nbsp;na&nbsp;Myšáku žilo s&nbsp;ČT&nbsp;sport na&nbsp;vrchol 22.&nbsp;ledna 2019. Už máme termín pro&nbsp;závod letošní sezóny. Zapište si&nbsp;do&nbsp;diářů 5.&nbsp;–&nbsp;7.&nbsp;února 2021! Tak ať&nbsp;dojedeme s&nbsp;ČT&nbsp;sport až&nbsp;na&nbsp;vrchol!"
                     />
-                    <Aktualita image={servis} title="PODĚKOVÁNÍ za sezónu 2019/20" date="29.3. 2020" url="ASnDASie2"
+                    {/* <Aktualita image={servis} title="PODĚKOVÁNÍ za sezónu 2019/20" date="29.3. 2020" url="ASnDASie2"
                         rawText="Za normálních okolností bychom teď, na&nbsp;konci března, pravděpodobně oznamovali konec další lyžařské sezóny v&nbsp;karlovském údolí. Tato zima ale 'normální' nebyla, a&nbsp;to&nbsp;nemáme na&nbsp;mysli jen její předčasný konec...                    "
-                    />
+                    /> */}
                 </div>
             </section>
             <section className="flexbox-column section section-sluzby" >
@@ -132,7 +133,7 @@ export default function Home() {
                 <div className="flexbox-row sluzby-wrap">
                     <Link to="/sluzby/servis"><article className="sluzby-item" >
                         <img src={servisFoto} alt="snowy mountain" />
-                        <h3>Půjčovna/Servis</h3>
+                        <h3>Servis a půjčovna</h3>
                         <p>Přijeďte lyžovat! Pokud nemáte výbavu, svěřte se do rukou servismanů v půjčovně Myšák. Komplet výstroj pro lyžaře, snowboarďáky i alpinisty.</p>
                     </article></Link>
                     <Link to="/sluzby/skola"><article className="sluzby-item" >

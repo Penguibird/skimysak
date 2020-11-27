@@ -25,7 +25,7 @@ export default function page(props) {
                 <p>Celou zimu se&nbsp;jezdilo na&nbsp;technickém sněhu: zasněžovali jsme dvojnásobný počet hodin než loni. A&nbsp;to&nbsp;platí skoro pro&nbsp;všechno: mnohem více práce, aby vše bylo jako "normálně". Nestěžujeme si. Tak&nbsp;to&nbsp;prostě bylo. :-)</p>
                 <p>Tyto řádky píšeme hlavně proto, abychom vám&nbsp;všem poděkovali. V&nbsp;překotných událostech posledních týdnů jsme na&nbsp;to&nbsp;zapomněli. Omlouváme&nbsp;se... DĚKUJEME vám všem, kteří jste se&nbsp;u&nbsp;nás tuto zimu alespoň jednou sklouzli. Díky. Děláme to pro&nbsp;vás. Máme vás rádi. :-)</p>
                 <p>Máme teď všichni trochu jiné starosti a&nbsp;další zima je ještě daleko. Přejeme vám/nám všem, abychom se&nbsp;na&nbsp;karlovských svazích opět ve&nbsp;zdraví a&nbsp;pohodě potkali. SKOL!</p>
-                <Link to="/aktuality" ><h2>Zpátky na aktuality</h2></Link>
+                <Link to="/subpages/aktuality" ><h2>Zpátky na aktuality</h2></Link>
             </section>
         </main>
         <Footer />

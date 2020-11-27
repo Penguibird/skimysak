@@ -223,7 +223,9 @@ export default function page(props) {
                     </tbody>
                 </table>
                 <p className="explanation-line"><i>*komplet = lyže + boty + hole (prkno + boty)</i></p>
-                <h2>Vaše vlastní prkna a&nbsp;lyže Vám rádi seřídíme, opravíme, nabrousíme, připravíme…</h2>
+                <h2 style={{
+                    fontSize: '23px',
+                }}>Vaše vlastní prkna a&nbsp;lyže Vám rádi seřídíme, opravíme, nabrousíme, připravíme…</h2>
                 <h2>
                     Ceník servisu lyží a&nbsp;snowboardů
                 </h2>

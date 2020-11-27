@@ -34,7 +34,7 @@ export default function Header({ mainSectionRef }) {
 
     const sluzby = [
         {
-            title: "Půjčovna a Servis",
+            title: "Servis a půjčovna",
             link: "/sluzby/servis"
         },
         {
