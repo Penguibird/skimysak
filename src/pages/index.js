@@ -46,11 +46,11 @@ export default function Home() {
                     large: "(min-width: 1000px)"
                 }}>
                     {matches => (<Fragment>{matches.large
-                        ? <video className="hero-image" muted autoPlay loop  className="hero-image-image">
+                        ? <video className="hero-image" muted autoPlay loop >
                             <source src={videoMp4} type="video/mp4" />
                             {/* <source src={image} type="image/jpg" media={"all"} /> */}
                         </video>
-                        : <div className="hero-image">
+                        : <div className="hero-image " id="hero-image-wrapper">
                             <img src={image} alt="Ski slope" className="hero-image-image"/>
                         </div>
                     }</Fragment>)}
@@ -142,7 +142,7 @@ export default function Home() {
                 Bez stresu a na pohodu!</p>
                     </article></Link>
                     <Link to="/servis"><article className="sluzby-item" >
-                        <img src={servis} />
+                        <img src={jidloFoto} />
                         <h3>Občerstvení</h3>
                         <p>Ski&nbsp;bar s&nbsp;terasou a&nbsp;výhledem nebo něco k&nbsp;jídlu v&nbsp;Bistru pod&nbsp;Myšákem! Domácí kuchyně pro&nbsp;děti i&nbsp;dospělé, polévky na&nbsp;zahřátí a&nbsp;místní speciality. Dobrou chuť!</p>
                     </article></Link>
