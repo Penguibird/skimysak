@@ -96,6 +96,12 @@ export default function Header({ mainSectionRef }) {
                         <BetterDropDown title="Služby" listOfLinks={sluzby} />
                     </NavItem>
                     <NavItem>
+                        <a href="https://www.skikarlov.cz/lyzovani/ceny-skipasu">
+                            <p>Skipasy</p>
+                            {/* //todo Would be really cool if it stood out */}
+                        </a>
+                    </NavItem>
+                    <NavItem>
                         <Link to="/subpages/kontakt">
                             <p>Kontakt</p>
                         </Link>
