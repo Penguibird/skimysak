@@ -46,12 +46,12 @@ export default function Home() {
                     large: "(min-width: 1000px)"
                 }}>
                     {matches => (<Fragment>{matches.large
-                        ? <video className="hero-image" muted autoPlay loop  >
+                        ? <video className="hero-image" muted autoPlay loop  className="hero-image-image">
                             <source src={videoMp4} type="video/mp4" />
                             {/* <source src={image} type="image/jpg" media={"all"} /> */}
                         </video>
                         : <div className="hero-image">
-                            <img src={image} alt="Ski slope" />
+                            <img src={image} alt="Ski slope" className="hero-image-image"/>
                         </div>
                     }</Fragment>)}
                 </Media>
