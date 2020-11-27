@@ -14,6 +14,6 @@ module.exports = {
             options: {
                 dictionary: 'bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ0123456789',
                 enableOnDevelopment: false,
-            },
+            }
         ]
 }
