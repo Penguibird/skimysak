@@ -57,7 +57,7 @@ export default function WeatherCard({ title, data }) {
     const getOccurrences = (arr, func) => arr
         .filter(data => new Date(data.time).getHours() >= 8 || new Date(data.time).getHours() <= 18)
         .reduce(({ sum, count }, b) => {
-            console.log("inside", sum, count)
+            // console.log("inside", sum, count)
             return { sum: sum + func(b), count: count + 1 }
         }, { sum: 0, count: 0 })
 

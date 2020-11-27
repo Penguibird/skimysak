@@ -22,7 +22,7 @@ export default function Page(props) {
     let dataByDays = [];
     if (data) {
         dataByDays = Object.values(data.properties.timeseries.sort(compareDates).reduce((acc, obj) => {
-            let key = new Date(obj.time).getDate();
+            let key = new Date(obj.time).getUTCDate();
             if (!acc[key]) {
                 acc[key] = []
             }
@@ -65,20 +65,20 @@ export default function Page(props) {
                 </div>
             </section>  */}
             <section className="section-predpoved section-background">
-                <div className="row">
+                <div className="my-row">
                     {error ? <div className="error">Error</div>
                         : !data
                             ? <div className="loading">Loading</div>
                             : dataByDays.slice(0, 3).map((data, i) => <WeatherCard key={i} title={i == 0 ? "dnes" : i == 1 && "zítra"} data={data} />)}
                 </div>
                 <div className="super-row">
-                    <div className="row">
+                    <div className="my-row">
                         {error ? <div className="error">Error</div>
                             : !data
                                 ? <div className="loading">Loading</div>
                                 : dataByDays.slice(3, 5).map((data, i) => <WeatherCard key={i + 3} data={data} />)}
                     </div>
-                    <div className="row">
+                    <div className="my-row">
                         {error ? <div className="error">Error</div>
                             : !data
                                 ? <div className="loading">Loading</div>

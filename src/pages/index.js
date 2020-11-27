@@ -19,7 +19,7 @@ import jidloFoto from '../../assets/jidlo_hero.jpg';
 import fbIcon from '../../assets/fb_icon.png';
 import { useRef } from "react";
 import ctSport from '../../assets/ctSport1.jpg'
-
+import mapaFoto from '../../assets/mapa.png'
 
 export default function Home() {
     const scrollDown = () => {
@@ -134,18 +134,18 @@ export default function Home() {
                     <Link to="/sluzby/servis"><article className="sluzby-item" >
                         <img src={servisFoto} alt="snowy mountain" />
                         <h3>Servis a půjčovna</h3>
-                        <p>Přijeďte lyžovat! Pokud nemáte výbavu, svěřte se do rukou servismanů v půjčovně Myšák. Komplet výstroj pro lyžaře, snowboarďáky i alpinisty.</p>
+                        <p><strong>Přijeďte lyžovat!</strong> Pokud nemáte výbavu, svěřte se do rukou servismanů v půjčovně Myšák. Komplet výstroj pro lyžaře, snowboarďáky i alpinisty.</p>
                     </article></Link>
                     <Link to="/sluzby/skola"><article className="sluzby-item" >
                         <img src={skolaFoto} />
                         <h3>Lyžařská škola</h3>
-                        <p>Chcete se zdokonalit v lyžování? Učíme lyžaře i snowboardisty všech věkových kategorií a všech úrovní.
+                        <p><strong>Chcete se zdokonalit v lyžování?</strong> Učíme lyžaře i snowboardisty všech věkových kategorií a všech úrovní.
                 Bez stresu a na pohodu!</p>
                     </article></Link>
-                    <Link to="/servis"><article className="sluzby-item" >
+                    <Link to="/sluzby/obcerstveni"><article className="sluzby-item" >
                         <img src={jidloFoto} />
                         <h3>Občerstvení</h3>
-                        <p>Ski&nbsp;bar s&nbsp;terasou a&nbsp;výhledem nebo něco k&nbsp;jídlu v&nbsp;Bistru pod&nbsp;Myšákem! Domácí kuchyně pro&nbsp;děti i&nbsp;dospělé, polévky na&nbsp;zahřátí a&nbsp;místní speciality. Dobrou chuť!</p>
+                        <p><strong>Ski&nbsp;bar s&nbsp;terasou a&nbsp;výhledem nebo bistro pod&nbsp;Myšákem?</strong> Drinky a&nbsp;něco na&nbsp;zahřátí, domácí kuchyně pro&nbsp;děti i&nbsp;dospělé, polévky a&nbsp;místní speciality. Dobrou chuť!</p>
                     </article></Link>
                 </div>
             </section>
@@ -153,10 +153,11 @@ export default function Home() {
                 <a href="https://www.facebook.com" className="facebook-link"><h2 className="facebook">Najděte nás i&nbsp;na&nbsp;facebooku!</h2></a>
             </section> */}
             <section className="section section-bottom" >
-                <h1 className="big-title title-white" >
+                {/* <h1 className="big-title title-white" >
                     Sezóna 2020-21! <br />
                     Těšíme se&nbsp;na&nbsp;Vás
-                </h1>
+                </h1> */}
+                <img src={mapaFoto} alt="Mapa Ski Karlov" style={{width: '100%'}}/>
             </section>
         </main>
         <Footer />
