@@ -45,19 +45,15 @@ export default function Home() {
                     medium: "(min-width: 600px) and (max-width:999px)",
                     large: "(min-width: 1000px)"
                 }}>
-                    {matches => (
-                        <Fragment>
-                            {matches.large
-                                ? <video className="hero-image" muted autoPlay loop  >
-                                    <source src={videoMp4} type="video/mp4" />
-                                    {/* <source src={image} type="image/jpg" media={"all"} /> */}
-                                </video>
-                                : <div className="hero-image">
-                                    <img src={image} alt="Ski slope" />
-                                </div>
-                            }
-                        </Fragment>
-                    )}
+                    {matches => (<Fragment>{matches.large
+                        ? <video className="hero-image" muted autoPlay loop  >
+                            <source src={videoMp4} type="video/mp4" />
+                            {/* <source src={image} type="image/jpg" media={"all"} /> */}
+                        </video>
+                        : <div className="hero-image">
+                            <img src={image} alt="Ski slope" />
+                        </div>
+                    }</Fragment>)}
                 </Media>
                 <div className="flexbox-column main-title-wrap">
                     <h1 className="big title-white hero-image-title">
@@ -79,6 +75,7 @@ export default function Home() {
                     </div>
 
                 </div>
+
 
             </section>
 
