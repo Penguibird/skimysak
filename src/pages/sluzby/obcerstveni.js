@@ -9,7 +9,7 @@ import { Fragment, useState, useEffect } from 'react';
 import image from '../../../assets/jidlo_hero.jpg';
 
 export default function page(props) {
-
+let ref = React.useRef();
     return <Fragment>
         <Helmet>
             <title>Občerstvení | Ski myšák</title>
@@ -17,7 +17,7 @@ export default function page(props) {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content="Parádní lyžování v jeseníkách" /> //TODO: description
         </Helmet>
-        <Header />
+        <Header mainSectionRef={ref} />
         <main>
             <section className="section-hero-image section" style={{ paddingTop: '5em', paddingBottom: '7em' }}>
 
@@ -32,7 +32,7 @@ export default function page(props) {
                         </h1>
                 </div>
             </section>
-            <section className="section section-text">
+            <section ref={ref} className="section section-text">
                 <h2>To&nbsp;nejlepší místo na&nbsp;pauzu!</h2>
 
                 <p>Bistro na&nbsp;Myšáku nabízí příjemné posezení s&nbsp;výhledem na&nbsp;lanovku a&nbsp;kvalitní domácí kuchyni pro&nbsp;děti i&nbsp;dospělé.

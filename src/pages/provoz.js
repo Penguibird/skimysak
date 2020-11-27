@@ -7,7 +7,7 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 
 export default function Provoz(props) {
-
+    ref = React.useRef()
     return <Fragment>
         <Helmet>
             <title>Ski Myšák</title>
@@ -15,8 +15,8 @@ export default function Provoz(props) {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content="Parádní lyžování v jeseníkách" />
         </Helmet>
-        <Header />
-        <main>
+        <Header mainSectionRef={ref} />
+        <main ref={ref}>
             TBD
             {/*     // TODO: provoz */}
         </main>

@@ -11,6 +11,7 @@ import Footer from '../../components/footer';
 import videoMp4 from '../../../assets/video.mp4';
 import image from '../../../assets/trate_hero.png'
 export default function Contact(props) {
+    let ref = React.useRef();
 
     return <Fragment>
         <Helmet>
@@ -19,7 +20,7 @@ export default function Contact(props) {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content="Parádní lyžování v jeseníkách" />
         </Helmet>
-        <Header />
+        <Header mainSectionRef={ref} />
         <main>
             <section className="section-hero-image section">
                 <img className="hero-image max-height" src={image} alt="Ski slope" />
@@ -36,7 +37,7 @@ export default function Contact(props) {
                     </a>
                 </div>
             </section>
-            <section className="section section-text section-trate">
+            <section ref={ref} className="section section-text section-trate">
                 <h2>Sjezdové tratě</h2>
                 <div className="areal-main">
                     <h2 className="header">Celková délka sjezdovek</h2> <h2 className="data"><strong>2&nbsp;450&nbsp;metrů</strong></h2>

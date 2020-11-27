@@ -8,6 +8,7 @@ import Footer from '../../components/footer'
 import { Fragment, useState, useEffect } from 'react';
 
 export default function page(props) {
+    let ref = React.useRef();
 
     return <Fragment>
         <Helmet>
@@ -17,9 +18,9 @@ export default function page(props) {
             <meta name="description" content="Parádní lyžování v jeseníkách" />
         </Helmet>
         <main className="kamery">
-            <Header />
-                <section className="section-hero-image section">
-                {/* //TODO design this */}
+            <Header mainSectionRef={ref} />
+                <section ref={ref} className="section-hero-image section">
+                {/* //TODO test this */}
                 <h1 className="title-white">Kamery</h1>
                 <section className="section section-kamery" >
                     <div className="kamera-wrapper">

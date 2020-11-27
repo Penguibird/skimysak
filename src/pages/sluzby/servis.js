@@ -10,6 +10,7 @@ import image from '../../../assets/servis_hero.png';
 import videoMp4 from '../../../assets/servis_video_crop.mp4'
 
 export default function page(props) {
+    let ref = React.useRef();
 
     return <Fragment>
         <Helmet>
@@ -18,7 +19,7 @@ export default function page(props) {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content="Parádní lyžování v jeseníkách" /> //TODO: description
         </Helmet>
-        <Header />
+        <Header mainSectionRef={ref} />
         <main className="servis">
             <section className="section-hero-image section">
                 <Media queries={{
@@ -50,7 +51,7 @@ export default function page(props) {
                     </a>
                 </div>
             </section>
-            <section className="section section-text">
+            <section ref={ref} className="section section-text">
                 <h2>Potřebujete půjčit lyže nebo&nbsp;snowboard?</h2>
                 <p> Ski areál Myšák, český výrobce lyží SPORTEN a&nbsp;výrobce lyžařských bot&nbsp;ROXA připravili ojedinělým propojením výjimečnou nabídku.
                 Službu pro&nbsp;ty z&nbsp;Vás, kteří nemáte vlastní vybavení, lyžujete jen&nbsp;občas nebo&nbsp;byste rádi vyzkoušeli novinky z&nbsp;dílny zmiňovaných značek.

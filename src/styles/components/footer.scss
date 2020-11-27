@@ -1,12 +1,14 @@
 footer {
     background-color: var(--background-blue);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 7vw 1fr 7vw;
+    // grid-template-rows: 1fr;
     position: relative;
     bottom: 0px;
     .footer-wrapper {
+        grid-column: 2/3;
         // border-top: 1px var(--text-black-light) solid;
+        justify-self: center;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -18,5 +20,16 @@ footer {
     }
     & > * + * {
         margin-top: 0.3em;
+    }
+}
+.footer-logo {
+    grid-column: 3/4;
+    // float: right;
+    justify-self: end;
+    // width: 7vw;
+    margin: 0.3em;
+    img {
+        width: 100%;
+        height: auto;
     }
 }

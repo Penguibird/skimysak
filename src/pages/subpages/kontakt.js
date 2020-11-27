@@ -9,6 +9,7 @@ import Footer from '../../components/footer';
 import image from '../../../assets/servis.jpg'
 
 export default function Contact(props) {
+    let ref = React.useRef();
 
     return <Fragment>
         <Helmet>
@@ -18,12 +19,12 @@ export default function Contact(props) {
             <meta name="description" content="Parádní lyžování v jeseníkách" />
         </Helmet>
         <main className="main-kontakt">
-            <Header />
+            <Header mainSectionRef={ref} />
             <section className="section-hero-image section">
                 <h1>Napište nám</h1>
                 {/* <img className="hero-image" src={image} alt="Ski slope" /> */}
             </section>
-            <section className="section section-kontakt">
+            <section ref={ref} className="section section-kontakt">
                 <h2>
                     Kontakt
                 </h2>

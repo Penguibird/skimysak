@@ -5,10 +5,11 @@ import '../styles/global.scss'
 import { Helmet } from "react-helmet";
 import Header from '../components/header'
 import Footer from '../components/footer'
-import { Fragment, useState, useEffect } from 'react';
+import { Fragment, useState, useEffect, useRef } from 'react';
 import image from '../../assets/servis.jpg';
 
 export default function page(props) {
+    let ref = useRef();
     return <Fragment>
         <Helmet>
             <title>404 | Ski Myšák</title>
@@ -16,9 +17,9 @@ export default function page(props) {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content="Parádní lyžování v jeseníkách" />
         </Helmet>
-        <Header />
+        <Header mainSectionRef={ref} />
         <main>
-            <section className="section section-hero-image">
+            <section ref={ref} className="section section-hero-image">
                 <img className="hero-image" src={image} alt="Ski slope" />
                 <h1>Error 404: Stránka nenalezena</h1>
             </section>

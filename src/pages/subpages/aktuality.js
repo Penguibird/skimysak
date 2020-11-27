@@ -13,6 +13,7 @@ import servis from '../../../assets/servis.jpg'
 import ctSport from '../../../assets/ctSport1.jpg'
 
 export default function page(props) {
+    let ref = React.useRef();
     return <Fragment>
         <Helmet>
             <title>Aktuality | Ski Myšák</title>
@@ -20,14 +21,15 @@ export default function page(props) {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content="Parádní lyžování v jeseníkách" />
         </Helmet>
-        <Header />
-        <main className="aktuality">
+        <Header mainSectionRef={ref} />
+        <main  className="aktuality">
             <section className="section-hero-image section" style={{ paddingBottom: '0px' }}>
                 <h1>Aktuality</h1>
                 {/* <img className="hero-image" src={image} alt="Ski slope" /> */}
 
             </section>
-            <section className="section-page-aktuality">
+            <section ref={ref} className="section-page-aktuality">
+                {/* //todo test this */}
                 <Aktualita image={servis} title="PODĚKOVÁNÍ za sezónu 2019/20" date="29.3. 2020" url="ASnDASie2"
                     rawText="Za normálních okolností bychom teď, na&nbsp;konci března, pravděpodobně oznamovali konec další lyžařské sezóny v&nbsp;karlovském údolí. Tato zima ale 'normální' nebyla, a&nbsp;to&nbsp;nemáme na&nbsp;mysli jen její předčasný konec...                    "
                 />
