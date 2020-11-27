@@ -211,6 +211,7 @@ table {
 }
 
 .section-hero-image {
+    width: 100vw; //should help responsivity
     text-align: center;
     padding-bottom: 3em;
     h1.big {
@@ -268,7 +269,6 @@ table {
         // margin-right: 2vw;
         bottom: 0;
         left: 0;
-        z-index: 10;
         width: 5vw;
         margin-right: 2vw;
         img {
@@ -431,6 +431,10 @@ table {
         @media screen and(max-width: 900px) {
             flex-direction: column;
         }
+    }
+    h3 {
+        font-weight: 600;
+        color: #103d87;
     }
     img {
         width: 100%;

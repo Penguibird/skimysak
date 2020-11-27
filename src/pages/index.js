@@ -147,7 +147,7 @@ export default function Home() {
                     <Link to="/servis"><article className="sluzby-item" >
                         <img src={servis} />
                         <h3>Občerstvení</h3>
-                        <p>Mauris id fermentum nulla. Vivamus a ante congue, porta nunc nec, hendrerit turpis. Aliquam bibendum, turpis eu mattis iaculis, ex lorem mollis sem, ut sollicitudin risus orci quis tellus.</p>
+                        <p>Ski&nbsp;bar s&nbsp;terasou a&nbsp;výhledem nebo něco k&nbsp;jídlu v&nbsp;Bistru pod&nbsp;Myšákem! Domácí kuchyně pro&nbsp;děti i&nbsp;dospělé, polévky na&nbsp;zahřátí a&nbsp;místní speciality. Dobrou chuť!</p>
                     </article></Link>
                 </div>
             </section>
