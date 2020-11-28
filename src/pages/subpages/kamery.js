@@ -18,9 +18,8 @@ export default function page(props) {
             <meta name="description" content="Parádní lyžování v jeseníkách" />
         </Helmet>
         <main className="kamery">
-            <Header mainSectionRef={ref} />
+            <Header mainSectionRef={ref} always/>
                 <section ref={ref} className="section-hero-image section">
-                {/* //TODO test this */}
                 <h1 className="title-white">Kamery</h1>
                 <section className="section section-kamery" >
                     <div className="kamera-wrapper">

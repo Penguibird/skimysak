@@ -9,7 +9,6 @@ export default function Footer(props) {
                 ©2020 - Ski&nbsp;Myšák
             </p>
             <p>Weather forecast from&nbsp;Yr, delivered by&nbsp;the&nbsp;Norwegian Meteorological Institute and NRK</p>
-            {/* //todo velke logo mysaku */}
         </div>
         <div className="footer-logo">
             <img src={logo} alt="logo ski mysak" />

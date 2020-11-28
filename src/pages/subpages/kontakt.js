@@ -18,8 +18,8 @@ export default function Contact(props) {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content="Parádní lyžování v jeseníkách" />
         </Helmet>
-        <main className="main-kontakt">
-            <Header mainSectionRef={ref} />
+        <Header mainSectionRef={ref} />
+        <main className="main-kontakt" style={{ paddingTop: '0' }}>
             <section className="section-hero-image section">
                 <h1>Napište nám</h1>
                 {/* <img className="hero-image" src={image} alt="Ski slope" /> */}

@@ -7,7 +7,6 @@ export default function Aktualita({ title, imageName, image, url, rawText, date 
     return <Link to={`/aktuality/${url}`} className={`aktualita ${(image || imageName) ? 'aktualita-img' : 'aktualita-no-img'}`}>
         <div className="image-wrapper">
             {(image || imageName) && <img src={image ? image : require(`../../assets/${imageName}.jpg`)} alt={imageName ? imageName : ""} />}
-            {/* //todo placeholder img or w/e */}
         </div>
         <h4 className="title" >{title}</h4>
         {date && <p className="date">{date}</p>}

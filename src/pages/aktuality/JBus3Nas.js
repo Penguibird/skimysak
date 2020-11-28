@@ -11,6 +11,7 @@ import ctSport2 from '../../../assets/ctSport2.jpg'
 import arrow from '../../../assets/arrow.png'
 
 export default function page(props) {
+    let ref = React.useRef();
     return <Fragment>
         <Helmet>
             <title>Aktuality | Ski Myšák</title>
@@ -18,11 +19,14 @@ export default function page(props) {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content="Parádní lyžování v jeseníkách" />
         </Helmet>
-        <Header />
-        <main>
-            <section className="section-text section">
-                <Link to="/subpages/aktuality" class="back">
-                    <img src={arrow} />
+        <Header mainSectionRef={ref} always />
+        <main className="main-aktualita-text">
+            <section className="section-text section" ref={ref}>
+                <Link to="/subpages/aktuality" className="back">
+                    <svg width="20" height="40" viewBox="0 0 20 45" className="custom-svg">
+                        <line x1="3" x2="17" y1="20" y2="37" />
+                        <line x1="3" x2="17" y1="20" y2="3" />
+                    </svg>
                     <h2>Zpět</h2>
                 </Link>
 
@@ -32,7 +36,13 @@ export default function page(props) {
                      Tak ať&nbsp;dojedeme s&nbsp;ČT&nbsp;sport až&nbsp;na&nbsp;vrchol!</p>
                 <img src={ctSport1} alt="Stupen vitezu" className="aktuality-img" />
                 <img src={ctSport2} alt="S ct sport na vrchol" className="aktuality-img" />
-                <Link to="/subpages/aktuality" ><h2>Zpátky na aktuality</h2></Link>
+                <Link to="/subpages/aktuality" className='back center   ' >
+                    <svg width="20" height="40" viewBox="0 0 20 40" className="custom-svg">
+                        <line x1="3" x2="17" y1="20" y2="37" />
+                        <line x1="3" x2="17" y1="20" y2="3" />
+                    </svg>
+                    <h2>Zpátky na aktuality</h2>
+                </Link>
             </section>
         </main>
         <Footer />

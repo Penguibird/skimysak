@@ -18,7 +18,11 @@ import servisFoto from '../../assets/servisFoto.jpg'; //assets\servisFoto.jpg
 import jidloFoto from '../../assets/jidlo_hero.jpg';
 import fbIcon from '../../assets/fb_icon.png';
 import { useRef } from "react";
-import ctSport from '../../assets/ctSport1.jpg'
+// import ctSport from '../../assets/ctSport1.jpg'
+import parking from '../../assets/parking1.jpeg'
+import lyzTest from '../../assets/testLyzi.png'
+import sezona from '../../assets/snih1.jpg'
+
 import mapaFoto from '../../assets/mapa.png'
 
 export default function Home() {
@@ -101,12 +105,15 @@ export default function Home() {
                     Ski Myšák je součástí <strong>Ski arény Karlov pod Pradědem </strong> a&nbsp;nabízí 4&nbsp;místnou sedačkovou lanovku s&nbsp;bublinou a&nbsp;skvělý sešup po&nbsp;modré nebo dvou červených -&nbsp;o&nbsp;celkové délce skoro 2,5&nbsp;km.
                 </p>
                 <p>
-                    Dřív, než vyrazíte, využijte náš <strong>servis</strong> nebo <strong>půjčovnu</strong> hned u&nbsp;lanovky a&nbsp;v&nbsp;případě zájmu si&nbsp;domluvte lekci <strong>v&nbsp;lyžařské škole</strong>, na&nbsp;kterou narazíte hned u&nbsp;pokladen.
+                    Než vyrazíte, využijte náš <strong>servis</strong> nebo <strong>půjčovnu</strong> hned u&nbsp;lanovky a&nbsp;v&nbsp;případě zájmu si&nbsp;domluvte lekci <strong>v&nbsp;lyžařské škole</strong>, na&nbsp;kterou narazíte hned u&nbsp;pokladen.
                 </p>
                 <p>
-                    O&nbsp;pauze jste zváni do&nbsp;ski baru s&nbsp;terasou a&nbsp;výhledem nebo do&nbsp;Bistra pod&nbsp;Myšákem. Parkování je&nbsp;zdarma hned pod&nbsp;sjezdovkou!
-                     Aktuální zprávy o&nbsp;provozu najdete <Link to="/provoz" >zde</Link> nebo na&nbsp;<a href="https://www.facebook.com/SkiMysak/">FB&nbsp;Ski Myšák</a>.
+                    O&nbsp;pauze jste zváni do&nbsp;<strong>SKI baru</strong> s&nbsp;terasou a&nbsp;výhledem nebo do&nbsp;<strong>Bistra pod&nbsp;Myšákem</strong>. Parkování je&nbsp;zdarma hned pod&nbsp;sjezdovkou!
                 </p>
+                <p>
+                    Aktuální zprávy o&nbsp;provozu najdete <Link to="/subpages/aktuality" ><strong>zde</strong></Link> nebo na <a href="https://www.facebook.com/SkiMysak/"><strong>FB&nbsp;Ski Myšák</strong></a>.
+                </p>
+
                 <h2>
                     Děláme svou práci rádi!
                 </h2>
@@ -115,15 +122,15 @@ export default function Home() {
                 <h1 className="title-white smaller">Aktuality</h1>
                 <div className="aktuality-wrapper">
                     {/* TODO Decide if h belongs here */}
-                    <Aktualita image={servis} title="PODĚKOVÁNÍ za sezónu 2019/20" date="29.3. 2020" url="ASnDASie2"
-                        rawText="Za normálních okolností bychom teď, na&nbsp;konci března, pravděpodobně oznamovali konec další lyžařské sezóny v&nbsp;karlovském údolí. Tato zima ale 'normální' nebyla, a&nbsp;to&nbsp;nemáme na&nbsp;mysli jen její předčasný konec...                    "
+                    <Aktualita image={parking} title="Parkování" date="15.11. 2020" url="parkovani"
+                        rawText="Přijeďte si&nbsp;užít lyžovačku! Parkování je u&nbsp;nás ZDARMA  a&nbsp;hned pod&nbsp;Myšákem. Přijíždějící auta organizujeme, aby bylo vše v&nbsp;pohodě, a&nbsp;aby další a&nbsp;další lyžaři našli místo. Mezi jednotlivými areály se&nbsp;můžete přemisťovat i&nbsp;bezplatnými SKI busy a SKI taxi. Jízdní řády připravujeme."
                     />
-                    <Aktualita image={ctSport} title="ČT sport NA VRCHOL" date="15.11. 2020" url="JBus3Nas"
-                        rawText="Vzpomínáte? Takhle to&nbsp;na&nbsp;Myšáku žilo s&nbsp;ČT&nbsp;sport na&nbsp;vrchol 22.&nbsp;ledna 2019. Už máme termín pro&nbsp;závod letošní sezóny. Zapište si&nbsp;do&nbsp;diářů 5.&nbsp;–&nbsp;7.&nbsp;února 2021! Tak ať&nbsp;dojedeme s&nbsp;ČT&nbsp;sport až&nbsp;na&nbsp;vrchol!"
+                    <Aktualita image={lyzTest} title="Testování lyží" date="16.11. 2020" url="lyzTest"
+                        rawText=""
                     />
-                    {/* <Aktualita image={servis} title="PODĚKOVÁNÍ za sezónu 2019/20" date="29.3. 2020" url="ASnDASie2"
-                        rawText="Za normálních okolností bychom teď, na&nbsp;konci března, pravděpodobně oznamovali konec další lyžařské sezóny v&nbsp;karlovském údolí. Tato zima ale 'normální' nebyla, a&nbsp;to&nbsp;nemáme na&nbsp;mysli jen její předčasný konec...                    "
-                    /> */}
+                    <Aktualita image={sezona} title="Nová sezóna" date="16.11. 2020" url="novaSezona"
+                        rawText="Tak co&nbsp;myslíte? Jaká bude? Zahájili jsme zasněžování! Počasí a&nbsp;vláda rozhodne, kdy&nbsp;se uvidíme&nbsp;😊"
+                    />
                 </div>
             </section>
             <section className="flexbox-column section section-sluzby" >
@@ -134,7 +141,7 @@ export default function Home() {
                     <Link to="/sluzby/servis"><article className="sluzby-item" >
                         <img src={servisFoto} alt="snowy mountain" />
                         <h3>Servis a půjčovna</h3>
-                        <p><strong>Přijeďte lyžovat!</strong> Pokud nemáte výbavu, svěřte se do rukou servismanů v půjčovně Myšák. Komplet výstroj pro lyžaře, snowboarďáky i alpinisty.</p>
+                        <p><strong>Přijeďte lyžovat!</strong> Pokud nemáte výbavu, svěřte se do rukou servismanů v půjčovně Myšák. Komplet výstroj pro <strong>lyžaře, snowboarďáky i alpinisty</strong> .</p>
                     </article></Link>
                     <Link to="/sluzby/skola"><article className="sluzby-item" >
                         <img src={skolaFoto} />
@@ -157,7 +164,7 @@ export default function Home() {
                     Sezóna 2020-21! <br />
                     Těšíme se&nbsp;na&nbsp;Vás
                 </h1> */}
-                <img src={mapaFoto} alt="Mapa Ski Karlov" style={{width: '100%'}}/>
+                <img src={mapaFoto} alt="Mapa Ski Karlov" style={{ width: '90%', maxWidth: '1500px' }} />
             </section>
         </main>
         <Footer />

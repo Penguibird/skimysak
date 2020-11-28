@@ -28,7 +28,7 @@ import {
 import logo from '../../assets/logo_mysak_cropped_scaled.png';
 import logo2 from '../../assets/logo-arena.png';
 
-export default function Header({ mainSectionRef }) {
+export default function Header({ mainSectionRef, always }) {
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
 
@@ -39,7 +39,7 @@ export default function Header({ mainSectionRef }) {
         },
         {
             title: "Škola",
-            link: "/sluzby/servis"
+            link: "/sluzby/skola"
         },
         {
             title: "Občerstvení",
@@ -65,14 +65,14 @@ export default function Header({ mainSectionRef }) {
             if (mainSectionRef && mainSectionRef.current) console.log(window.pageYOffset, mainSectionRef.current.offsetTop);
             setIsBackground(mainSectionRef && mainSectionRef.current && (window.pageYOffset > (mainSectionRef.current.offsetTop + offset)));
         })
-     }, []);
+    }, []);
 
     const offset = -100;
     const [isBackground, setIsBackground] = useState(false)
-    
+
 
     //aktuality, areal, kamery, pocasi
-    return <header className={`navbar ${isOpen ? 'open' : ''} ${isBackground ? 'background' : ''} `}>
+    return <header className={`navbar ${isOpen ? 'open' : ''} ${isBackground || always ? 'background' : ''} `}>
         <Navbar color="light" light expand="md" className="clearfix">
             <Link to="/" className="logo logo-mysak">
                 <img src={logo} />
@@ -91,7 +91,6 @@ export default function Header({ mainSectionRef }) {
                     <NavItem>
                         <BetterDropDown title="Areál" listOfLinks={areal} />
                     </NavItem>
-
                     <NavItem>
                         <BetterDropDown title="Služby" listOfLinks={sluzby} />
                     </NavItem>

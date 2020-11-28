@@ -17,7 +17,7 @@ export default function page(props) {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content="Parádní lyžování v jeseníkách" />
         </Helmet>
-        <Header mainSectionRef={ref} />
+        <Header mainSectionRef={ref} always/>
         <main>
             <section ref={ref} className="section section-hero-image">
                 <img className="hero-image" src={image} alt="Ski slope" />

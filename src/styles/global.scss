@@ -101,6 +101,7 @@ li {
     text-align: justify;
     strong {
         font-weight: bold;
+        color: #0d3169;
     }
 }
 
@@ -344,9 +345,14 @@ table {
         margin-top: 1em;
     }
     a {
+        // text-decoration: underline;
+        cursor: pointer;
         color: var(--text-black);
         &:hover {
             color: (--text-black-light);
+        }
+        strong:hover {
+            color: #1d53aa !important;
         }
     }
     p {
@@ -386,10 +392,10 @@ table {
         max-width: 1400px;
         display: flex;
         @media screen and (min-width: 901px) {
-            flex-direction: row;
+            flex-direction: row-reverse;
         }
         @media screen and (max-width: 900px) {
-            flex-direction: column;
+            flex-direction: column-reverse;
             & > *:not(:first-child) {
                 display: none;
             }
@@ -397,7 +403,7 @@ table {
 
         flex-wrap: nowrap;
         justify-content: space-around;
-        align-items: center;
+        // align-items: center;
         gap: 1.5em;
     }
     background-image: url("../../assets/random_hero_2.png");
@@ -421,6 +427,7 @@ table {
     padding: clamp(20px, 3em, 3em);
     // padding-top: 6vw;
     h1 {
+        margin-top: 0.1em;
         margin-bottom: 1em;
     }
     div.flexbox-row {
