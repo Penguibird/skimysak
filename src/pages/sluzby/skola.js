@@ -9,7 +9,7 @@ import Footer from '../../components/footer'
 import image from '../../../assets/random_hero_3.png';
 
 export default function page(props) {
-
+    let ref = React.useRef()
     return <Fragment>
         <Helmet>
             <title>Lyžařská škola | Ski myšák</title>
@@ -19,7 +19,7 @@ export default function page(props) {
         </Helmet>
         <Header mainSectionRef={ref} />
         <main>
-            <section className="section-hero-image section">
+            <section className="section-hero-image section" >
                 <img className="hero-image" src={image} alt="Ski slope" />
                 <div className="flexbox-column main-title-wrap">
                     <h1 className="big-title title-white hero-image-title">
@@ -33,7 +33,7 @@ export default function page(props) {
                     </a> */}
                 </div>
             </section>
-            <section className="section section-text section-skola">
+            <section className="section section-text section-skola" ref={ref}>
                 {/* <h2></h2> */}
                 <h2> Chcete se&nbsp;zdokonalit v&nbsp;lyžování?</h2>
                 <p>Nebo jste se&nbsp;rozhodli svěřit nám&nbsp;výuku svých dětí? <br />Učíme lyžaře i&nbsp;snowboardisty všech věkových kategorií a&nbsp;všech úrovní.
@@ -64,7 +64,11 @@ export default function page(props) {
                             <td className="align-right" >2 000 Kč</td>
                         </tr>
                     </tbody>
-                    <thead><tr><th colSpan={2}>Skupinová výuka  2-4 osoby</th></tr></thead>
+                    <thead>
+                        <tr>
+                            <th colSpan={2}>Skupinová výuka  2-4 osoby</th>
+                        </tr>
+                    </thead>
                     <tbody>
                         <tr className="cell-brighter">
                             <td>Cena za osobu</td>
@@ -76,20 +80,25 @@ export default function page(props) {
                 (vedle pokladny na&nbsp;parkovišti u&nbsp;nástupní stanice lanové dráhy Myšák),
                 nebo na&nbsp;telefonním čísle <a href="tel:+420 734 824 493" className="a-tel telehpone-link">+420&nbsp;734&nbsp;824&nbsp;493</a>.</p>
                 <h2>Zákazníci lyžařské školy Myšák si&nbsp;mohou v&nbsp;naší půjčovně zapůjčit lyžařské a&nbsp;snowboardové vybavení za&nbsp;zvýhodněné ceny:</h2>
-                <ul>
-                    <li>
-                        Lyžařský set dětský (lyže, hůlky, lyžáky, helma) <strong className="price">150&nbsp;Kč/den</strong>
-                    </li>
-                    <li>
-                        Lyžařský set dospělí (lyže, hůlky, lyžáky, helma) <strong className="price">200&nbsp;Kč/den</strong>
-                    </li>
-                    <li>
-                        Snowboardový set dětský (prkno, boty, helma) <strong className="price">150&nbsp;Kč/den</strong>
-                    </li>
-                    <li>
-                        Snowboardový set dospělí (prkno, boty, helma) <strong className="price">200&nbsp;Kč/den</strong>
-                    </li>
-                </ul>
+                <table className="skola-last-talbe">
+                    <tr className="cell-brighter">
+                        <td>Lyžařský set dětský (lyže, hůlky, lyžáky, helma)</td>
+                        <td className="align-right">150&nbsp;Kč/den</td>
+                    </tr>
+                    <tr>
+                        <td>Lyžařský set dospělí (lyže, hůlky, lyžáky, helma)</td>
+                        <td className="align-right">200&nbsp;Kč/den</td>
+                    </tr>
+                    <tr className="cell-brighter">
+                        <td>Snowboardový set dětský (prkno, boty, helma) </td>
+                        <td className="align-right">150&nbsp;Kč/den</td>
+                    </tr>
+                    <tr>
+                        <td>Snowboardový set dospělí (prkno, boty, helma)</td>
+                        <td className="align-right">200&nbsp;Kč/den</td>
+                    </tr>
+                </table>
+
             </section>
         </main>
         <Footer />
