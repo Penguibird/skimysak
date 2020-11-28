@@ -62,7 +62,7 @@ export default function Header({ mainSectionRef, always }) {
     ]
     useEffect(() => {
         window.addEventListener("scroll", e => {
-            if (mainSectionRef && mainSectionRef.current) console.log(window.pageYOffset, mainSectionRef.current.offsetTop);
+            // if (mainSectionRef && mainSectionRef.current) console.log(window.pageYOffset, mainSectionRef.current.offsetTop);
             setIsBackground(mainSectionRef && mainSectionRef.current && (window.pageYOffset > (mainSectionRef.current.offsetTop + offset)));
         })
     }, []);

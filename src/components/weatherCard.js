@@ -18,11 +18,11 @@ export default function WeatherCard({ title, data }) {
     // let temperature = getTemp(data) //get highest for the day
 
     const translateSymbolCode = symbolCode => translations[symbolCode];
-    console.log(data)
+    (data)
     let date = new Date(data[0].time);
     //todo refactor
     if (!title) title = DAYS[date.getDay()];
-    console.log("title", date.getDay())
+    // console.log("title", date.getDay())
     const getRain = data => {
         if (data.next_1_hours) return data.next_1_hours.details.precipitation_amount
         if (data.next_6_hours) return data.next_6_hours.details.precipitation_amount;
@@ -37,14 +37,14 @@ export default function WeatherCard({ title, data }) {
 
     let thing = Object.entries(data.reduce((acc, obj) => {
         let key = getSymbolCode(obj.data);
-        console.log(key)
+        // console.log(key)
         if (!acc[key]) {
             acc[key] = []
         }
         acc[key].push(obj)
         return acc;
     }, {})).sort((a, b) => a[1].length - b[1].length)[0]
-    console.log(thing)
+    // console.log(thing)
     const weatherSymbol = getSymbol(thing[0]);
 
     console.log("icons", icons);

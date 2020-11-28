@@ -6,7 +6,7 @@ export const compareDates = (a, b) => {
     return Math.abs(new Date(a.time).getTime() - now.getTime()) - Math.abs(new Date(a.time).getTime() - now.getTime())
 }
 export const getTemp = (data) => {
-    console.log(data)
+    // console.log(data)
     return data.properties.timeseries.sort(compareDates)[0].data.instant.details.air_temperature;
 }
 
