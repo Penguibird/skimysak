@@ -15,7 +15,7 @@ let ref = React.useRef();
             <title>Občerstvení | Ski myšák</title>
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <meta name="description" content="Parádní lyžování v jeseníkách" /> //TODO: description
+            <meta name="description" content="Parádní lyžování v jeseníkách" />
         </Helmet>
         <Header mainSectionRef={ref} />
         <main>

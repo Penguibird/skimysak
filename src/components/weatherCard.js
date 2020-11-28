@@ -47,7 +47,7 @@ export default function WeatherCard({ title, data }) {
     // console.log(thing)
     const weatherSymbol = getSymbol(thing[0]);
 
-    console.log("icons", icons);
+    // console.log("icons", icons);
     const getPrettyPic = symbolCode => icons[symbolCode];
 
     const getAverage = (arr, func) => {
