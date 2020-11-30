@@ -8,7 +8,7 @@ export default function Aktualita({ title, imageName, image, url, rawText, date 
         <div className="image-wrapper">
             {(image || imageName) && <img src={image ? image : require(`../../assets/${imageName}.jpg`)} alt={imageName ? imageName : ""} />}
         </div>
-        <h4 className="title" >{title}</h4>
+        <h3 className="title" >{title}</h3>
         {date && <p className="date">{date}</p>}
         <p>{rawText}</p>
         <p className="show-more-link">Zobrazit Více</p>
