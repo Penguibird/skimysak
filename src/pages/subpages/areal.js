@@ -10,6 +10,8 @@ import Footer from '../../components/footer';
 
 import videoMp4 from '../../../assets/video.mp4';
 import image from '../../../assets/trate_hero.png'
+import mapaFoto from '../../../assets/mapa.png'
+
 export default function Contact(props) {
     let ref = React.useRef();
 
