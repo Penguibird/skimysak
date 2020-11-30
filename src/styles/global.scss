@@ -105,16 +105,8 @@ li {
     }
 }
 
-ul,
-ol {
-    & > * + * {
-        // padding-top: 0.5em;
-        //todo somehow make this better, this breaks bootstrap
-    }
-}
-
 a {
-    font-family: "Liberation Sans", "HelveticaNeue", sans-serif;
+    font-family: "Liberation Sans", sans-serif !important;
     // font-size: clamp(20px, 1.5vw, 15px);
     font-weight: normal;
     color: var(--text-black);
@@ -206,6 +198,10 @@ table {
 }
 
 /*section*/
+
+h1.colorful {
+    color: rgb(174, 36, 36);
+}
 
 .big-title {
     margin-top: 9vw;
@@ -406,18 +402,10 @@ table {
         // align-items: center;
         gap: 1.5em;
     }
+
     background-image: url("../../assets/random_hero_2.png");
     // background-color: var(--background-blue);
     // padding: 2em;
-}
-
-.sluzby-item {
-    @media screen and (min-width: 901px) {
-        width: 25vw;
-    }
-    @media screen and (max-width: 900px) {
-        width: 80vw;
-    }
 }
 
 /* Section */
@@ -432,7 +420,8 @@ table {
     }
     div.flexbox-row {
         display: flex;
-        gap: 5em;
+        justify-content: space-around;
+        gap: 1.5em;
         padding-left: clamp(20px, 10vw, 5em);
         padding-right: clamp(20px, 10vw, 5em);
         @media screen and(min-width: 901px) {
@@ -444,19 +433,33 @@ table {
     }
     h3 {
         font-weight: 600;
+        font-size: 23px;
         color: #103d87;
     }
     img {
         width: 100%;
-        border-radius: 1vw;
+        border-radius: 4px;
         object-fit: cover;
-        height: 30vw;
+        height: 22vw;
         object-position: right;
     }
     article {
         & > * + * {
-            margin-top: 0.5em;
+            margin-top: 0.7em;
         }
+    }
+}
+.sluzby-item {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 2px 3px 4px 1px rgba(150, 149, 149, 0.4);
+    padding: 1.5em;
+
+    @media screen and (min-width: 901px) {
+        width: 25vw;
+    }
+    @media screen and (max-width: 900px) {
+        width: 80vw;
     }
 }
 

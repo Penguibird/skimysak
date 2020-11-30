@@ -61,7 +61,8 @@ export default function Home() {
                     }</Fragment>)}
                 </Media>
                 <div className="flexbox-column main-title-wrap">
-                    <h1 className="big title-white hero-image-title">
+                    <h1 className="big title-white hero-image-title "> 
+                    {/* colorful */}
                         Vítejte na&nbsp;Myšáku
                     </h1>
 
