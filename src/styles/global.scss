@@ -105,7 +105,13 @@ li {
     }
 }
 
-
+ul,
+ol {
+    & > * + * {
+        // padding-top: 0.5em;
+        //todo somehow make this better, this breaks bootstrap
+    }
+}
 
 a {
     font-family: "Liberation Sans", "HelveticaNeue", sans-serif;

@@ -13,7 +13,7 @@ export default function page(props) {
     let ref = React.useRef();
     return <Fragment>
         <Helmet>
-            <title>Aktuality | Ski Myšák</title>
+            <title>Nová sezóna | Aktuality | Ski Myšák</title>
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content="Parádní lyžování v jeseníkách" />
@@ -30,7 +30,7 @@ export default function page(props) {
                 </Link>
 
                 <h2>Nová sezóna</h2>
-                <p className="date">16.11.2020</p>
+                <p className="date">26.11.2020</p>
                 <p>Tak co&nbsp;myslíte? Jaká bude? Zahájili jsme zasněžování! Počasí a&nbsp;vláda rozhodne, kdy&nbsp;se uvidíme&nbsp;😊</p>
                 <img src={sezona} alt="Snehove delo" className="aktuality-img" />
                 <img src={snih} alt="Snehove delo" className="aktuality-img" />

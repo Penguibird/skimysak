@@ -14,7 +14,7 @@ export default function page(props) {
     let ref = React.useRef();
     return <Fragment>
         <Helmet>
-            <title>Aktuality | Ski Myšák</title>
+            <title> PODĚKOVÁNÍ za&nbsp;sezónu | Aktuality | Ski Myšák</title>
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content="Parádní lyžování v jeseníkách" />
