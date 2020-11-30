@@ -1,7 +1,8 @@
 footer {
     background-color: var(--background-blue);
     display: grid;
-    grid-template-columns: 6em 1fr 6em;
+    grid-template-columns: 10em 1fr 10em;
+    align-items: center;
     // grid-template-rows: 1fr;
     position: relative;
     bottom: 0px;
@@ -27,7 +28,8 @@ footer {
     // float: right;
     justify-self: end;
     // width: 7vw;
-    margin: 0.3em;
+    margin-right: 4em;
+    margin-bottom: 1.3em;
     img {
         width: 100%;
         height: auto;

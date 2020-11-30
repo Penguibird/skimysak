@@ -99,17 +99,11 @@ li {
     font-weight: normal;
     color: var(--text-black);
     text-align: justify;
+    text-justify: auto;
+    // text-align: left;
     strong {
         font-weight: bold;
         color: #0d3169;
-    }
-}
-
-ul,
-ol {
-    & > * + * {
-        // padding-top: 0.5em;
-        //todo somehow make this better, this breaks bootstrap
     }
 }
 

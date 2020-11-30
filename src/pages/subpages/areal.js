@@ -37,7 +37,16 @@ export default function Contact(props) {
                     </a>
                 </div>
             </section>
-            <section ref={ref} className="section section-text section-trate">
+            <section>
+                <section ref={ref} className="section section-bottom" >
+                    {/* <h1 className="big-title title-white" >
+                    Sezóna 2020-21! <br />
+                    Těšíme se&nbsp;na&nbsp;Vás
+                </h1> */}
+                    <img src={mapaFoto} alt="Mapa Ski Karlov" style={{ width: '90%', maxWidth: '1500px' }} />
+                </section>
+            </section>
+            <section className="section section-text section-trate">
                 <h2>Sjezdové tratě</h2>
                 <div className="areal-main">
                     <h2 className="header">Celková délka sjezdovek</h2> <h2 className="data"><strong>2&nbsp;450&nbsp;metrů</strong></h2>

@@ -131,6 +131,16 @@ export default function Home() {
                     <Aktualita image={sezona} title="Nová sezóna" date="26.11. 2020" url="novaSezona"
                         rawText="Tak co&nbsp;myslíte? Jaká bude? Zahájili jsme zasněžování! Počasí a&nbsp;vláda rozhodne, kdy&nbsp;se uvidíme&nbsp;😊"
                     />
+                    {/* filler */}
+                    {/* <Aktualita image={sezona} title="Nová sezóna" date="26.11. 2020" url="novaSezona"
+                        rawText="Tak co&nbsp;myslíte? Jaká bude? Zahájili jsme zasněžování! Počasí a&nbsp;vláda rozhodne, kdy&nbsp;se uvidíme&nbsp;😊"
+                    /><Aktualita image={sezona} title="Nová sezóna" date="26.11. 2020" url="novaSezona"
+                        rawText="Tak co&nbsp;myslíte? Jaká bude? Zahájili jsme zasněžování! Počasí a&nbsp;vláda rozhodne, kdy&nbsp;se uvidíme&nbsp;😊"
+                    /><Aktualita image={sezona} title="Nová sezóna" date="26.11. 2020" url="novaSezona"
+                        rawText="Tak co&nbsp;myslíte? Jaká bude? Zahájili jsme zasněžování! Počasí a&nbsp;vláda rozhodne, kdy&nbsp;se uvidíme&nbsp;😊"
+                    /><Aktualita image={sezona} title="Nová sezóna" date="26.11. 2020" url="novaSezona"
+                        rawText="Tak co&nbsp;myslíte? Jaká bude? Zahájili jsme zasněžování! Počasí a&nbsp;vláda rozhodne, kdy&nbsp;se uvidíme&nbsp;😊"
+                    /> */}
                 </div>
             </section>
             <section className="flexbox-column section section-sluzby" >
