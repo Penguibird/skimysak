@@ -153,9 +153,9 @@ export default function Home() {
                         l: "(min-width: 1000px)"
                     }}>{m => (<CarouselProvider
                         naturalSlideWidth={100}
-                        naturalSlideHeight={m.s ? 100 : m.m ? 150 : m.l ? 130 : 180}
+                        naturalSlideHeight={m.l ? 130 : m.s ? 100 : m.m ? 150 : 180}
                         totalSlides={5}
-                        visibleSlides={m.s ? 1 : m.m ? 2 : m.l ? 3 : 3}
+                        visibleSlides={m.l ? 3 : m.s ? 1 : m.m ? 2 : 3}
                     >
                         <Slider>
                             <Slide index={0} innerClassName="slide-inner" className="carousel-slide">
