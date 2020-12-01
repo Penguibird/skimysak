@@ -1,57 +1,51 @@
+.section-trate {
+    padding: 2.5em;
+//     :not(.trat) + .trat {
+//         margin-top: 2.5em;
+//     }
+// }
+    gap: 2.5em;
+}
+
 .areal-main {
     margin-top: 1em;
     align-self: center;
+    justify-content: center;
+    width: fit-content;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    // grid-template-columns: 1fr 1fr;
+    // grid-template-rows: 1fr 1fr;
+    grid-template-columns: auto;
     grid-template-rows: auto;
-    gap: 0.4em 2vw;
+    gap: 0.4em 10vw;
+    margin-left: -4%;
     h2 {
         text-align: start;
-        font-size: 25px;
         width: fit-content;
     }
     h2.header {
-        grid-column: 1 / 2;
+        grid-row: 1 / 2;
     }
     h2.data {
-        grid-column: 2 / 3;
+        grid-row: 2 / 3;
     }
 }
 
-
-.trat.red .trat-title {
-    border-bottom: 0.15em #de1b1b solid;
-}
-
-.trat.blue .trat-title {
-    border-bottom: 0.15em #3c49eb solid;
-}
-
-.section-trate {
-    padding: 1.5em;
-    :not(.trat) + .trat {
-        margin-top: 1.5em;
-    }
-}
-
-.trat {
+.trate-wrapper {
     display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: clamp(80px, 8vw, 110px) 1fr;
+    gap: 2em 1em;
     align-items: center;
-    justify-content: space-around;
-    grid-template-columns: 0.3fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 0.4em 1.5em;
-
-    .trat-title {
-        grid-column: 1 /2;
-        align-self: start;
-        text-align: left;
-        width: fit-content;
-        margin-bottom: 0.5em;
-        padding: 0.1em;
+    .trat-image {
+        grid-column: 1 / 2;
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
     p {
-        padding-top: 0.3em;
-        grid-column: 2 /3;
+        grid-column: 2 / 3;
+        text-align: left;
     }
 }

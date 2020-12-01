@@ -62,6 +62,9 @@ h2 {
     color: var(--text-black);
     text-align: center;
 }
+h2.smaller {
+    font-size: clamp(16 px, 2.8vw, 25px);
+}
 
 h3 {
     display: block;
@@ -199,15 +202,24 @@ table {
     }
 }
 
-/*section*/
+/* ------------------------------------ . ----------------------------------- */
+
+/* ------------------------------------ . ----------------------------------- */
+
+/* ------------------------------------ . ----------------------------------- */
 
 h1.colorful {
     color: rgb(174, 36, 36);
 }
 
-.big-title {
+h1.big-title,
+h1.big {
     margin-top: 9vw;
     margin-bottom: 12vw;
+}
+h1.small {
+    margin-top: 3vw;
+    margin-bottom: 2vw;
 }
 .hero-image-image {
     width: 100%;
@@ -216,19 +228,15 @@ h1.colorful {
     width: 100vw; //should help responsivity
     text-align: center;
     padding-bottom: 3em;
-    h1.big {
-        margin-top: 9vw;
-        margin-bottom: 12vw;
-    }
-    h1.small {
-        margin-top: 3vw;
-        margin-bottom: 2vw;
-    }
-    h1 {
-        margin-top: 5vw;
-        margin-bottom: 6vw;
-    }
 
+    h1.hero-big {
+        margin-top: 5.5vw;
+        margin-bottom: 0px;
+    }
+    h1.hero-smaller {
+        margin-top: 1vw;
+        margin-bottom: 8.5vw;
+    }
     .hero-image {
         display: block;
         position: absolute;
@@ -387,7 +395,9 @@ h1.colorful {
         margin: 0.5em;
     }
     .aktuality-wrapper {
+        width: 100vw;
         max-width: 1400px;
+        //!
         display: flex;
         @media screen and (min-width: 901px) {
             flex-direction: row-reverse;
@@ -408,6 +418,64 @@ h1.colorful {
     background-image: url("../../assets/random_hero_2.png");
     // background-color: var(--background-blue);
     // padding: 2em;
+}
+
+.carousel {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: stretch;
+    gap: 0.1em;
+    & > *:not(button) {
+        flex-grow: 1000;
+    }
+}
+.carousel-back {
+    left: 0;
+    order: -1;
+}
+.carousel-next {
+    right: 0;
+    order: 1;
+}
+.carousel-back,
+.carousel-next {
+    height: 100%;
+    flex-grow: 1;
+    svg {
+        transform: scale(1);
+
+        stroke: #ffffff;
+        stroke-width: 3;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill: none;
+    }
+    &:disabled {
+        svg {
+            stroke: transparent;
+        }
+    }
+}
+.carousel-slide {
+    padding: 1em;
+    a {
+        box-shadow: none !important;
+        background: none !important;
+        width: 100% !important;
+        padding: 0;
+    }
+}
+.slide-inner {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(150, 149, 149, 0.4);
+    padding: 1.5em;
+    margin: 1.5em;
+    gap: 1em;
+    width: unset !important;
 }
 
 /* Section */

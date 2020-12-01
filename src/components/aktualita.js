@@ -11,6 +11,6 @@ export default function Aktualita({ title, imageName, image, url, rawText, date 
         <h3 className="title" >{title}</h3>
         {date && <p className="date">{date}</p>}
         <p>{rawText}</p>
-        <p className="show-more-link">Zobrazit Více</p>
+        <p className="show-more-link">Více...</p>
     </Link>
 }

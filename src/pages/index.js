@@ -1,24 +1,38 @@
 import * as React from "react";
-import { Fragment } from 'react';
+import { Fragment, useRef, useEffect } from 'react';
 import { Helmet } from "react-helmet";
 import Media from "react-media";
 import { Link } from 'gatsby';
+
+//SWIPER
+// import SwiperCore, { Navigation, A11y } from 'swiper';
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import 'swiper/swiper.scss';
+// import 'swiper/components/navigation/navigation.scss';
+
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
+
+
 import Header from '../components/header'
 import Footer from '../components/footer'
 import Weather from '../components/weather';
 import Aktualita from '../components/aktualita'
 
+import fbIcon from '../../assets/fb_icon.png';
+
+//hero image
 import videoMp4 from '../../assets/video.mp4';
 import image from '../../assets/random_hero_1.png'
-// import kamery from '../../assets/kamery.jpg'
-import servis from '../../assets/servis.jpg'
 
+//sluzby photos
 import skolaFoto from '../../assets/skolaFoto.jpg';
-import servisFoto from '../../assets/servisFoto.jpg'; //assets\servisFoto.jpg
+import servisFoto from '../../assets/servisFoto.jpg';
 import jidloFoto from '../../assets/jidlo_hero.jpg';
-import fbIcon from '../../assets/fb_icon.png';
-import { useRef } from "react";
-// import ctSport from '../../assets/ctSport1.jpg'
+
+//aktuality photos
+import servis from '../../assets/servis.jpg'
+import ctSport from '../../assets/ctSport1.jpg'
 import parking from '../../assets/parking1.jpeg'
 import lyzTest from '../../assets/testLyzi.png'
 import sezona from '../../assets/snih1.jpg'
@@ -26,14 +40,28 @@ import sezona from '../../assets/snih1.jpg'
 import mapaFoto from '../../assets/mapa.png'
 
 export default function Home() {
-    const scrollDown = () => {
-        window.scroll({
-            top: 1000,
-            left: 0,
-            behavior: 'smooth',
-        });
-    }
+    // const scrollDown = () => {
+    //     window.scroll({
+    //         top: 1000,
+    //         left: 0,
+    //         behavior: 'smooth',
+    //     });
+    // }
     let ref = useRef();
+
+    // useEffect(() => {
+    //     Swiper.use([Navigation]);
+
+    //     const swiper = new Swiper('.swiper-container', {
+    //         slidesPerView: 3,
+    //         spaceBetween: 30,
+    //         pagination: {
+    //             el: '.swiper-pagination',
+    //             clickable: true,
+    //         },
+    //     });
+    // }, [])
+
 
     return <Fragment>
         <Helmet>
@@ -61,11 +89,13 @@ export default function Home() {
                     }</Fragment>)}
                 </Media>
                 <div className="flexbox-column main-title-wrap">
-                    <h1 className="big title-white hero-image-title "> 
-                    {/* colorful */}
+                    <h1 className="hero-big title-white hero-image-title ">
+                        {/* colorful */}
                         Vítejte na&nbsp;Myšáku
                     </h1>
-
+                    <h1 className="title-white hero-smaller smaller">
+                        v&nbsp;Karlově pod&nbsp;Pradědem
+                    </h1>
                     <div className="icon-wrapper">
                         <a className="scroll-down" href="#mainSection">
                             <svg width="50" height="25" viewBox="0 0 50 25" className="custom-svg">
@@ -79,20 +109,14 @@ export default function Home() {
                             </a>
                         </div>
                     </div>
-
                 </div>
-
-
             </section>
 
             <section id="mainSection" className="section-icons section" ref={ref}>
-
                 <Link to="/subpages/kamery" className="widget widget-kamery" >
-
                     <h2 className="widget-title">KAMERY</h2>
                 </Link>
                 <Weather />
-
                 <a href="https://www.skikarlov.cz/lyzovani/ceny-skipasu" className="widget widget-skipasy" >
                     <h2 className="widget-title">Skipasy</h2>
                 </a>
@@ -121,27 +145,99 @@ export default function Home() {
             </section>
             <section className="section-aktuality section">
                 <h1 className="title-white smaller">Aktuality</h1>
-                <div className="aktuality-wrapper">
-                    {/* TODO Decide if h belongs here */}
-                    <Aktualita image={parking} title="Parkování" date="15.11. 2020" url="parkovani"
-                        rawText="Přijeďte si&nbsp;užít lyžovačku! Parkování je u&nbsp;nás ZDARMA  a&nbsp;hned pod&nbsp;Myšákem. Přijíždějící auta organizujeme, aby bylo vše v&nbsp;pohodě, a&nbsp;aby další a&nbsp;další lyžaři našli místo. Mezi jednotlivými areály se&nbsp;můžete přemisťovat i&nbsp;bezplatnými SKI busy a SKI taxi. Jízdní řády připravujeme."
-                    />
-                    <Aktualita image={lyzTest} title="Testování lyží" date="16.11. 2020" url="lyzTest"
-                        rawText=""
-                    />
-                    <Aktualita image={sezona} title="Nová sezóna" date="26.11. 2020" url="novaSezona"
-                        rawText="Tak co&nbsp;myslíte? Jaká bude? Zahájili jsme zasněžování! Počasí a&nbsp;vláda rozhodne, kdy&nbsp;se uvidíme&nbsp;😊"
-                    />
-                    {/* filler */}
-                    {/* <Aktualita image={sezona} title="Nová sezóna" date="26.11. 2020" url="novaSezona"
-                        rawText="Tak co&nbsp;myslíte? Jaká bude? Zahájili jsme zasněžování! Počasí a&nbsp;vláda rozhodne, kdy&nbsp;se uvidíme&nbsp;😊"
-                    /><Aktualita image={sezona} title="Nová sezóna" date="26.11. 2020" url="novaSezona"
-                        rawText="Tak co&nbsp;myslíte? Jaká bude? Zahájili jsme zasněžování! Počasí a&nbsp;vláda rozhodne, kdy&nbsp;se uvidíme&nbsp;😊"
-                    /><Aktualita image={sezona} title="Nová sezóna" date="26.11. 2020" url="novaSezona"
-                        rawText="Tak co&nbsp;myslíte? Jaká bude? Zahájili jsme zasněžování! Počasí a&nbsp;vláda rozhodne, kdy&nbsp;se uvidíme&nbsp;😊"
-                    /><Aktualita image={sezona} title="Nová sezóna" date="26.11. 2020" url="novaSezona"
-                        rawText="Tak co&nbsp;myslíte? Jaká bude? Zahájili jsme zasněžování! Počasí a&nbsp;vláda rozhodne, kdy&nbsp;se uvidíme&nbsp;😊"
-                    /> */}
+                <div className="aktuality-wrapper" style={{ width: '100vw' }}>
+
+                    <Media queries={{
+                        s: "(max-width: 599px)",
+                        m: "(min-width: 600px) and (max-width:999px)",
+                        l: "(min-width: 1000px)"
+                    }}>{m => (<CarouselProvider
+                        naturalSlideWidth={100}
+                        naturalSlideHeight={m.s ? 100 : m.m ? 150 : m.l ? 130 : 180}
+                        totalSlides={5}
+                        visibleSlides={m.s ? 1 : m.m ? 2 : m.l ? 3 : 3}
+                    >
+                        <Slider>
+                            <Slide index={0} innerClassName="slide-inner" className="carousel-slide">
+                                <Aktualita image={sezona} title="Nová sezóna" date="26.11. 2020" url="novaSezona" rawText="Tak co&nbsp;myslíte? Jaká bude? Zahájili jsme zasněžování! Počasí a&nbsp;vláda rozhodne, kdy&nbsp;se uvidíme&nbsp;😊" />
+                            </Slide>
+                            <Slide index={1} innerClassName="slide-inner" className="carousel-slide">
+                                <Aktualita image={lyzTest} title="Testování lyží" date="16.11. 2020" url="lyzTest" rawText="" />
+                            </Slide>
+                            <Slide index={2} innerClassName="slide-inner" className="carousel-slide">
+                                <Aktualita image={parking} title="Parkování" date="15.11. 2020" url="parkovani" rawText="Přijeďte si&nbsp;užít lyžovačku! Parkování je u&nbsp;nás ZDARMA  a&nbsp;hned pod&nbsp;Myšákem. Přijíždějící auta organizujeme, aby bylo vše v&nbsp;pohodě, a&nbsp;aby další a&nbsp;další lyžaři našli místo. Mezi jednotlivými areály se&nbsp;můžete přemisťovat i&nbsp;bezplatnými SKI busy a SKI taxi. Jízdní řády připravujeme." />
+                            </Slide>
+                            <Slide index={3} innerClassName="slide-inner" className="carousel-slide">
+                                <Aktualita image={ctSport} title="ČT sport NA VRCHOL" date="15.11. 2020" url="JBus3Nas" rawText="Vzpomínáte? Takhle to&nbsp;na&nbsp;Myšáku žilo s&nbsp;ČT&nbsp;sport na&nbsp;vrchol 22.&nbsp;ledna 2019. Už máme termín pro&nbsp;závod letošní sezóny. Zapište si&nbsp;do&nbsp;diářů 5.&nbsp;–&nbsp;7.&nbsp;února 2021! Tak ať&nbsp;dojedeme s&nbsp;ČT&nbsp;sport až&nbsp;na&nbsp;vrchol!" />
+                            </Slide>
+                            <Slide index={4} innerClassName="slide-inner" className="carousel-slide">
+                                <Aktualita image={servis} title="PODĚKOVÁNÍ za sezónu 2019/20" date="29.3. 2020" url="ASnDASie2" rawText="Za normálních okolností bychom teď, na&nbsp;konci března, pravděpodobně oznamovali konec další lyžařské sezóny v&nbsp;karlovském údolí. Tato zima ale 'normální' nebyla, a&nbsp;to&nbsp;nemáme na&nbsp;mysli jen její předčasný konec...                    " />
+                            </Slide>
+                        </Slider>
+                        <ButtonBack className="carousel-back">
+                            <svg width="20" height="40" viewBox="0 0 20 40" className="custom-svg">
+                                <line x1="3" x2="17" y1="20" y2="37" />
+                                <line x1="3" x2="17" y1="20" y2="3" />
+                            </svg>
+                        </ButtonBack>
+                        <ButtonNext className="carousel-next">
+                            <svg width="20" height="40" viewBox="0 0 20 40" className="custom-svg">
+                                <line x1="17" x2="3" y1="20" y2="37" />
+                                <line x1="17" x2="3" y1="20" y2="3" />
+                            </svg>
+                        </ButtonNext>
+                    </CarouselProvider>)}
+                    </Media>
+                    {/* <Swiper
+                        navigation  
+                        spaceBetween={50}
+                        slide
+                        slidesPerView={3}
+                        breakpoints={{
+                            // when window width is >= 320px
+                            320: {
+                                slidesPerView: 2,
+                                spaceBetween: 20
+                            },
+                            // when window width is >= 480px
+                            480: {
+                                slidesPerView: 3,
+                                spaceBetween: 30
+                            },
+                            // when window width is >= 640px
+                            640: {
+                                slidesPerView: 4,
+                                spaceBetween: 40
+                            }
+                        }}
+                    >
+                        <SwiperSlide>Hello World</SwiperSlide>
+                        <SwiperSlide>Hello World</SwiperSlide>
+                        <SwiperSlide>Hello World</SwiperSlide>
+                        <SwiperSlide>Hello World</SwiperSlide>
+                        <SwiperSlide>Hello World</SwiperSlide>
+                        <SwiperSlide>Hello World</SwiperSlide>
+                        <SwiperSlide>Hello World</SwiperSlide> */}
+                    {/* <SwiperSlide >
+                            <Aktualita image={sezona} title="Nová sezóna" date="26.11. 2020" url="novaSezona" rawText="Tak co&nbsp;myslíte? Jaká bude? Zahájili jsme zasněžování! Počasí a&nbsp;vláda rozhodne, kdy&nbsp;se uvidíme&nbsp;😊" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <Aktualita image={lyzTest} title="Testování lyží" date="16.11. 2020" url="lyzTest" rawText="" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <Aktualita image={parking} title="Parkování" date="15.11. 2020" url="parkovani" rawText="Přijeďte si&nbsp;užít lyžovačku! Parkování je u&nbsp;nás ZDARMA  a&nbsp;hned pod&nbsp;Myšákem. Přijíždějící auta organizujeme, aby bylo vše v&nbsp;pohodě, a&nbsp;aby další a&nbsp;další lyžaři našli místo. Mezi jednotlivými areály se&nbsp;můžete přemisťovat i&nbsp;bezplatnými SKI busy a SKI taxi. Jízdní řády připravujeme." />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <Aktualita image={ctSport} title="ČT sport NA VRCHOL" date="15.11. 2020" url="JBus3Nas" rawText="Vzpomínáte? Takhle to&nbsp;na&nbsp;Myšáku žilo s&nbsp;ČT&nbsp;sport na&nbsp;vrchol 22.&nbsp;ledna 2019. Už máme termín pro&nbsp;závod letošní sezóny. Zapište si&nbsp;do&nbsp;diářů 5.&nbsp;–&nbsp;7.&nbsp;února 2021! Tak ať&nbsp;dojedeme s&nbsp;ČT&nbsp;sport až&nbsp;na&nbsp;vrchol!" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <Aktualita image={servis} title="PODĚKOVÁNÍ za sezónu 2019/20" date="29.3. 2020" url="ASnDASie2" rawText="Za normálních okolností bychom teď, na&nbsp;konci března, pravděpodobně oznamovali konec další lyžařské sezóny v&nbsp;karlovském údolí. Tato zima ale 'normální' nebyla, a&nbsp;to&nbsp;nemáme na&nbsp;mysli jen její předčasný konec...                    " />
+                        </SwiperSlide> */}
+                    {/* </Swiper> */}
+
+                    {/* // <div class="swiper-button-prev"></div>
+                            // <div class="swiper-button-next"></div> */}
+
                 </div>
             </section>
             <section className="flexbox-column section section-sluzby" >

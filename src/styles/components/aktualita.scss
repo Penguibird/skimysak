@@ -1,4 +1,12 @@
-.aktualita {
+// .swiper-slide a {
+//     box-shadow: none !important;
+//     background: none !important;
+//     width: 18vw !important;
+//     padding: 0;
+// } 
+//unnecessary ?
+.aktualita,
+.swiper-slide {
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 1px 5px rgba(150, 149, 149, 0.4);
