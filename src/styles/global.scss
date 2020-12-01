@@ -230,12 +230,13 @@ h1.small {
     padding-bottom: 3em;
 
     h1.hero-big {
-        margin-top: 5.5vw;
+        margin-top: 5vw;
         margin-bottom: 0px;
     }
     h1.hero-smaller {
-        margin-top: 1vw;
+        margin-top: 3vw;
         margin-bottom: 8.5vw;
+        font-size: clamp(17px, 4vw, 4vw);
     }
     .hero-image {
         display: block;
