@@ -75,21 +75,12 @@ export default function Contact(props) {
                     <p><strong>Sjezdová trať Rukáv vznikla při&nbsp;modernizaci</strong> a&nbsp;úpravách areálu v&nbsp;roce 2012. Jde&nbsp;o&nbsp;červenou závodní sjezdovku, služebně nejmladší, o&nbsp;celkové<strong> délce 700m</strong>. <strong>Tohle už&nbsp;si&nbsp;žádá zkušenosti!</strong></p>
                 </div>
             </section>
-            {/* <section className="section section-map">
-                <iframe aria-hidden="true" frameborder="0" tabindex="-1"
-                    style={{ zIndex: -1, position: 'absolute', width: '100%', height: '100%', top: '0px', left: '0px', border: 'none' }}
-                >
-                </iframe>
-            </section> */}
+         
             <section ref={ref} className="section section-background section-bottom" id="mainSection" style={{padding: '0px'}}>
-                {/* <h1 className="big-title title-white" >
-                    Sezóna 2020-21! <br />
-                    Těšíme se&nbsp;na&nbsp;Vás
-                </h1> */}
+       
                 <img src={mapaFoto} alt="Mapa Ski Karlov" style={{ width: '80%', maxWidth: '1400px', marginTop: '3vw' }} />
 
             </section>
-            {/* TODO kontakt */}
         </main>
         <Footer />
     </Fragment >

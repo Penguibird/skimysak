@@ -42,19 +42,10 @@ export default function Page(props) {
         </Helmet>
         <Header mainSectionRef={ref} />
         <main>
-            {/* TODO: pocasi webpage */}
             <section className="section-hero-image section">
-                {/* TODO Find a nice weather related hero image here */}
                 <img className="hero-image" src={image} alt="Ski slope" />
                 <h1 className="title-white small">Počasí</h1>
             </section>
-            {/* <section className="section-aktualni-pocasi section-background">
-                <div className="aktualni-pocasi">
-                    <h2 className="card-title">
-                        //? Include this
-                    </h2>
-                </div>
-            </section>  */}
             <section className="section-predpoved section-background" ref={ref}>
                 <div className="my-row">
                     {error ? <div className="error">Error</div>

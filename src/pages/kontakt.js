@@ -22,7 +22,6 @@ export default function Contact(props) {
         <main className="main-kontakt" style={{ paddingTop: '0' }}>
             <section className="section-hero-image section">
                 <h1>Napište nám</h1>
-                {/* <img className="hero-image" src={image} alt="Ski slope" /> */}
             </section>
             <section ref={ref} className="section section-kontakt">
                 <h2>
@@ -62,17 +61,10 @@ export default function Contact(props) {
                                 Informace a objednávky</h5>
                             <p>Mobil: <strong> 734 358 181</strong></p>
                         </div>
-                        {/* TODO: Add the rest of the info */}
+                        {/* //TODO: Add the rest of the info */}
                     </div>
                 </div>
             </section>
-            <section className="section section-map">
-                <iframe aria-hidden="true" frameborder="0" tabindex="-1"
-                    style={{ zIndex: -1, position: 'absolute', width: '100%', height: '100%', top: '0px', left: '0px', border: 'none' }}
-                >
-                </iframe>
-            </section>
-            {/* TODO kontakt */}
         </main>
         <Footer />
     </Fragment >

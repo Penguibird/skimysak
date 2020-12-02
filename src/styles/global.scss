@@ -38,6 +38,8 @@ html {
 
 body {
     background-color: var(--background-blue);
+    overflow-x: hidden;
+    //! might interfere with table on mobile
 }
 
 h1 {
@@ -423,7 +425,8 @@ h1.small {
 }
 
 .carousel {
-    width: 100%;
+    // width: 100%;
+    padding: 0.5em;
 
     display: flex;
     flex-direction: row;
@@ -468,6 +471,11 @@ h1.small {
         background: none !important;
         width: 100% !important;
         padding: 0;
+    }
+}
+.small-width-carousel {
+    .slide-inner {
+        height: unset;
     }
 }
 .slide-inner {

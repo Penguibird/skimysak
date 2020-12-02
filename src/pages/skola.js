@@ -25,16 +25,9 @@ export default function page(props) {
                     <h1 className="big-title title-white hero-image-title">
                         Lyžařská škola
                     </h1>
-                    {/* <a className="scroll-down" href="#mainSection">
-                        <svg width="50" height="25" viewBox="0 0 50 25" className="custom-svg">
-                            <line x1="5" x2="25" y1="5" y2="20" />
-                            <line x1="45" x2="25" y1="5" y2="20" />
-                        </svg>
-                    </a> */}
                 </div>
             </section>
             <section className="section section-text section-skola" ref={ref}>
-                {/* <h2></h2> */}
                 <h2> Chcete se&nbsp;zdokonalit v&nbsp;lyžování?</h2>
                 <p>Nebo jste se&nbsp;rozhodli svěřit nám&nbsp;výuku svých dětí? <br />Učíme lyžaře i&nbsp;snowboardisty všech věkových kategorií a&nbsp;všech úrovní.
                 Bez&nbsp;stresu a&nbsp;na&nbsp;pohodu!</p>
