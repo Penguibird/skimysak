@@ -10,6 +10,7 @@ const myCustomQueries = {
     m: "(min-width: 600px) and (max-width:999px)",
     l: "(min-width: 1000px) and (max-width: 1536px)",
     xl: '(min-width: 1537px)',
+    dropM: "(min-width: 800px)",
     portrait: '(orientation: portrait)',
 };
 

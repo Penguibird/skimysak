@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Fragment, useRef, useEffect } from 'react';
 import { Helmet } from "react-helmet";
-import Media from "react-media";
+// import Media from "react-media";
 import { Link } from 'gatsby';
 
 //SWIPER

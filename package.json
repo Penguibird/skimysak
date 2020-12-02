@@ -25,7 +25,6 @@
         "react": "^16.12.0",
         "react-dom": "^16.12.0",
         "react-helmet": "^6.1.0",
-        "react-media": "^1.10.0",
         "reactstrap": "^8.7.1",
         "swr": "^0.3.5"
     },

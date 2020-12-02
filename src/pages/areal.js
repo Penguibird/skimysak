@@ -3,7 +3,7 @@ import '../styles/pages/areal.scss'
 import '../styles/global.scss'
 import { Fragment, useState, useEffect } from 'react';
 import { Helmet } from "react-helmet";
-import Media from 'react-media'
+// import Media from 'react-media'
 
 import Header from '../components/header';
 import Footer from '../components/footer';
