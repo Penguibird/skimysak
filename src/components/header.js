@@ -124,13 +124,12 @@ function BetterDropDown({ title, listOfLinks }) {
     const toggleDropDown = () => setDropDown(!isDropDown);
     const m = useBreakpoint();
 
-    return
     //  <Media queries={{
     //     small: "(max-width: 599px)",
     //     medium: "(min-width: 600px)"
     // }}>
-    //     {matches => (<Fragment> {
-    m.dropM
+    //     {matches => (
+    return <Fragment> {m.dropM
         ? <Dropdown isOpen={isDropDown} toggle={toggleDropDown} caret onMouseEnter={e => setDropDown(true)} onMouseLeave={e => setDropDown(false)}>
             <DropdownToggle>
                 <Link>
@@ -162,7 +161,7 @@ function BetterDropDown({ title, listOfLinks }) {
                 ))}
             </Collapse>
         </Fragment>
-} </Fragment >
+    } </Fragment >
     //     )}
     // </Media>
 }
