@@ -114,7 +114,7 @@ export default function Home() {
                 <div className="aktuality-wrapper" style={{ width: '100vw' }}>
                     <CarouselProvider
                         naturalSlideWidth={100}
-                        naturalSlideHeight={m.ll ? 135 : m.ls ? 150 : m.ml ? 125 : m.ms ? 150 : m.s ? 110 : 150} 
+                        naturalSlideHeight={m.ll ? 135 : m.ls ? 150 : m.ml ? 125 : m.ms ? 150 : m.s ? 110 : 150}
                         isIntrinsicHeight={m.s}
                         className={m.s ? 'small-width-carousel' : ' '}
                         totalSlides={5}
@@ -160,18 +160,19 @@ export default function Home() {
                     <Link to="/servis"><article className="sluzby-item" >
                         <img src={servisFoto} alt="snowy mountain" />
                         <h3>Servis a půjčovna</h3>
-                        <p><strong>Přijeďte lyžovat!</strong> Pokud nemáte výbavu, svěřte se do rukou servismanů v půjčovně Myšák. Komplet výstroj pro <strong>lyžaře, snowboarďáky i alpinisty</strong> .</p>
+                        <p><strong>Přijeďte lyžovat!</strong> Pokud nemáte výbavu, svěřte se do rukou servismanů v půjčovně Myšák.<strong> Komplet výstroj pro lyžaře, snowboarďáky i alpinisty</strong> .</p>
                     </article></Link>
                     <Link to="/skola"><article className="sluzby-item" >
                         <img src={skolaFoto} />
                         <h3>Lyžařská škola</h3>
                         <p><strong>Chcete se zdokonalit v lyžování?</strong> Učíme lyžaře i snowboardisty všech věkových kategorií a všech úrovní.
-                Bez stresu a na pohodu!</p>
+                <strong>Bez stresu a na pohodu!</strong></p>
                     </article></Link>
                     <Link to="/obcerstveni"><article className="sluzby-item" >
                         <img src={jidloFoto} />
                         <h3>Občerstvení</h3>
-                        <p><strong>Ski&nbsp;bar s&nbsp;terasou a&nbsp;výhledem nebo bistro pod&nbsp;Myšákem?</strong> Drinky a&nbsp;něco na&nbsp;zahřátí, domácí kuchyně pro&nbsp;děti i&nbsp;dospělé, polévky a&nbsp;místní speciality. Dobrou chuť!</p>
+                        <p><strong>Ski&nbsp;bar s&nbsp;terasou a&nbsp;výhledem nebo bistro pod&nbsp;Myšákem?</strong> Drinky a&nbsp;něco na&nbsp;zahřátí, 
+                        domácí kuchyně pro&nbsp;děti i&nbsp;dospělé, polévky a&nbsp;místní speciality. <strong>Dobrou chuť!</strong></p>
                     </article></Link>
                 </div>
             </section>
