@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Media from "react-media";
+// import Media from "react-media";
 import '../styles/pages/obcerstveni.scss';
 import '../styles/global.scss';
 import { Helmet } from "react-helmet";

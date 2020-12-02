@@ -1,7 +1,7 @@
 import * as React from 'react';
 import '../styles/pages/skola.scss';
 import '../styles/global.scss'
-import Media from "react-media";
+// import Media from "react-media";
 import { Fragment, useState, useEffect } from 'react';
 import { Helmet } from "react-helmet";
 import Header from '../components/header'

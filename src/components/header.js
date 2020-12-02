@@ -8,7 +8,8 @@ import '../styles/bootstrap/nav.scss';
 
 import { Link } from "gatsby";
 import { Fragment, useState, useEffect } from 'react';
-import Media from "react-media";
+// // import Media from "react-media";
+import { useBreakpoint } from 'gatsby-plugin-breakpoints'
 import {
     Collapse,
     Navbar,
@@ -121,43 +122,46 @@ function BetterDropDown({ title, listOfLinks }) {
 
     const [isDropDown, setDropDown] = useState(false);
     const toggleDropDown = () => setDropDown(!isDropDown);
+    const m = useBreakpoint();
 
-    return <Media queries={{
-        small: "(max-width: 599px)",
-        medium: "(min-width: 600px)"
-    }}>
-        {matches => (<Fragment> {matches.medium
-            ? <Dropdown isOpen={isDropDown} toggle={toggleDropDown} caret onMouseEnter={e => setDropDown(true)} onMouseLeave={e => setDropDown(false)}>
-                <DropdownToggle>
-                    <Link>
-                        <p>{title}</p>
-                    </Link>
-                </DropdownToggle>
-                <DropdownMenu>
-                    {listOfLinks.map(({ link, title, a }, i) => (
-                        <DropdownItem key={i}>
-                            {a ? <a href={link} target="_blank">
-                                <p>{title} </p>
-                            </a>
-                                : <Link to={link} >
-                                    <p>{title} </p>
-                                </Link>}
-                        </DropdownItem>
-                    ))}
-                </DropdownMenu>
-            </Dropdown>
-            : <Fragment>
-                <button onClick={toggleDropDown} >
+    //  <Media queries={{
+    //     small: "(max-width: 599px)",
+    //     medium: "(min-width: 600px)"
+    // }}>
+    //     {matches => (
+    return <Fragment> {m.dropM
+        ? <Dropdown isOpen={isDropDown} toggle={toggleDropDown} caret onMouseEnter={e => setDropDown(true)} onMouseLeave={e => setDropDown(false)}>
+            <DropdownToggle>
+                <Link>
                     <p>{title}</p>
-                </button>
-                <Collapse isOpen={isDropDown} className="shift-right">
-                    {listOfLinks.map(({ link, title }, i) => (
-                        <Link to={link} >
+                </Link>
+            </DropdownToggle>
+            <DropdownMenu>
+                {listOfLinks.map(({ link, title, a }, i) => (
+                    <DropdownItem key={i}>
+                        {a ? <a href={link} target="_blank">
                             <p>{title} </p>
-                        </Link>
-                    ))}
-                </Collapse>
-            </Fragment>
-        } </Fragment>)}
-    </Media>
+                        </a>
+                            : <Link to={link} >
+                                <p>{title} </p>
+                            </Link>}
+                    </DropdownItem>
+                ))}
+            </DropdownMenu>
+        </Dropdown>
+        : <Fragment>
+            <button onClick={toggleDropDown} >
+                <p>{title}</p>
+            </button>
+            <Collapse isOpen={isDropDown} className="shift-right">
+                {listOfLinks.map(({ link, title }, i) => (
+                    <Link to={link} >
+                        <p>{title} </p>
+                    </Link>
+                ))}
+            </Collapse>
+        </Fragment>
+    } </Fragment >
+    //     )}
+    // </Media>
 }
