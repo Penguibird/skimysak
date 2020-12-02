@@ -54,8 +54,6 @@ export default function Contact(props) {
                     <h2 className="smaller data"><strong>2&nbsp;450&nbsp;metrů</strong></h2>
                     <h2 className="smaller header">Převýšení</h2>
                     <h2 className="smaller data"><strong>160&nbsp;metrů</strong></h2>
-                    {/* <h2 className="header">Zasněžování</h2> <h2 className="data"><strong>ANO</strong></h2> */}
-                    {/* //?keep this out */}
                 </div>
 
                 <div className="trate-wrapper">
