@@ -74,7 +74,7 @@ export default function Contact(props) {
                 V&nbsp;roce 2012 byla rozšířena a&nbsp;upravena. <strong>Vzhůru dolů po&nbsp;červené!</strong></p>
 
                     <div className="trat-image"><img src={ikoRuk} alt="ikona trate" /></div>
-                    <p><strong>Sjezdová trať Rukáv vznikla při&nbsp;modernizaci</strong> a&nbsp;úpravách areálu v&nbsp;roce 2012. Jde&nbsp;o&nbsp;červenou závodní sjezdovku, služebně nejmladší, o&nbsp;celkové <strong>   délce 700m</strong>. <strong>Tohle už&nbsp;si&nbsp;žádá zkušenosti!</strong></p>
+                    <p><strong>Sjezdová trať Rukáv vznikla při&nbsp;modernizaci</strong> a&nbsp;úpravách areálu v&nbsp;roce 2012. Jde&nbsp;o&nbsp;červenou závodní sjezdovku, služebně nejmladší, o&nbsp;celkové<strong> délce 700m</strong>. <strong>Tohle už&nbsp;si&nbsp;žádá zkušenosti!</strong></p>
                 </div>
             </section>
             {/* <section className="section section-map">
@@ -83,7 +83,7 @@ export default function Contact(props) {
                 >
                 </iframe>
             </section> */}
-            <section ref={ref} className="section section-background section-bottom" id="mainSection" >
+            <section ref={ref} className="section section-background section-bottom" id="mainSection" style={{padding: '0px'}}>
                 {/* <h1 className="big-title title-white" >
                     Sezóna 2020-21! <br />
                     Těšíme se&nbsp;na&nbsp;Vás

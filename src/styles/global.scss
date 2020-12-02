@@ -230,12 +230,12 @@ h1.small {
     padding-bottom: 3em;
 
     h1.hero-big {
-        margin-top: 5vw;
+        margin-top: 6.5vw;
         margin-bottom: 0px;
     }
     h1.hero-smaller {
-        margin-top: 3vw;
-        margin-bottom: 8.5vw;
+        margin-top: 7vw;
+        margin-bottom: 4vw;
         font-size: clamp(17px, 4vw, 4vw);
     }
     .hero-image {
@@ -492,6 +492,7 @@ h1.small {
     div.flexbox-row {
         display: flex;
         justify-content: space-around;
+        align-items: stretch;
         gap: 1.5em;
         padding-left: clamp(20px, 10vw, 5em);
         padding-right: clamp(20px, 10vw, 5em);
@@ -522,6 +523,7 @@ h1.small {
 }
 .sluzby-item {
     background-color: white;
+    height: 92%;
     border-radius: 5px;
     box-shadow: 2px 3px 4px 1px rgba(150, 149, 149, 0.4);
     padding: 1.5em;
