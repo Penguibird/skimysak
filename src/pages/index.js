@@ -114,11 +114,13 @@ export default function Home() {
                 <div className="aktuality-wrapper" style={{ width: '100vw' }}>
                     <CarouselProvider
                         naturalSlideWidth={100}
-                        naturalSlideHeight={m.l ? 130 : m.s ? 130 : m.m ? 150 : 180}
+                        naturalSlideHeight={m.ll ? 135 : m.ls ? 150 : m.ml ? 125 : m.ms ? 150 : m.s ? 110 : 150} 
+                        isIntrinsicHeight={m.s}
+                        className={m.s ? 'small-width-carousel' : ' '}
                         totalSlides={5}
-                        visibleSlides={m.l ? 3 : m.s ? 1 : m.m ? 2 : 3}
+                        visibleSlides={m.l ? 3 : m.m ? 2 : m.s ? 1 : 3}
                     >
-                        <Slider>
+                        <Slider width={m.ll ? '1300px' : null}>
                             <Slide index={0} innerClassName="slide-inner" className="carousel-slide">
                                 <Aktualita image={sezona} title="Nová sezóna" date="26.11. 2020" url="novaSezona" rawText="Tak co&nbsp;myslíte? Jaká bude? Zahájili jsme zasněžování! Počasí a&nbsp;vláda rozhodne, kdy&nbsp;se uvidíme&nbsp;😊" />
                             </Slide>
