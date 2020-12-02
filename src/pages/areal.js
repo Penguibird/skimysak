@@ -1,22 +1,22 @@
 import * as React from 'react';
-import '../../styles/pages/areal.scss'
-import '../../styles/global.scss'
+import '../styles/pages/areal.scss'
+import '../styles/global.scss'
 import { Fragment, useState, useEffect } from 'react';
 import { Helmet } from "react-helmet";
-import Media from 'react-media'
+// import Media from 'react-media'
 
-import Header from '../../components/header';
-import Footer from '../../components/footer';
+import Header from '../components/header';
+import Footer from '../components/footer';
 
-import videoMp4 from '../../../assets/video.mp4';
-import image from '../../../assets/trate_hero.png'
-import mapaFoto from '../../../assets/mapa.png'
+import videoMp4 from '../../assets/video.mp4';
+import image from '../../assets/trate_hero.png'
+import mapaFoto from '../../assets/mapa.png'
 
-import ikoFam from '../../../assets/iko_Family.jpg';
-import ikoFis from '../../../assets/iko_FIS.jpg';
-import ikoMys from '../../../assets/iko_Mysacek.jpg';
-import ikoPod from '../../../assets/iko_Pod-lesem.jpg';
-import ikoRuk from '../../../assets/iko_Rukav.jpg';
+import ikoFam from '../../assets/iko_Family.jpg';
+import ikoFis from '../../assets/iko_FIS.jpg';
+import ikoMys from '../../assets/iko_Mysacek.jpg';
+import ikoPod from '../../assets/iko_Pod-lesem.jpg';
+import ikoRuk from '../../assets/iko_Rukav.jpg';
 
 export default function Contact(props) {
     let ref = React.useRef();
@@ -54,8 +54,6 @@ export default function Contact(props) {
                     <h2 className="smaller data"><strong>2&nbsp;450&nbsp;metrů</strong></h2>
                     <h2 className="smaller header">Převýšení</h2>
                     <h2 className="smaller data"><strong>160&nbsp;metrů</strong></h2>
-                    {/* <h2 className="header">Zasněžování</h2> <h2 className="data"><strong>ANO</strong></h2> */}
-                    {/* //?keep this out */}
                 </div>
 
                 <div className="trate-wrapper">
@@ -74,7 +72,7 @@ export default function Contact(props) {
                 V&nbsp;roce 2012 byla rozšířena a&nbsp;upravena. <strong>Vzhůru dolů po&nbsp;červené!</strong></p>
 
                     <div className="trat-image"><img src={ikoRuk} alt="ikona trate" /></div>
-                    <p><strong>Sjezdová trať Rukáv vznikla při&nbsp;modernizaci</strong> a&nbsp;úpravách areálu v&nbsp;roce 2012. Jde&nbsp;o&nbsp;červenou závodní sjezdovku, služebně nejmladší, o&nbsp;celkové <strong>   délce 700m</strong>. <strong>Tohle už&nbsp;si&nbsp;žádá zkušenosti!</strong></p>
+                    <p><strong>Sjezdová trať Rukáv vznikla při&nbsp;modernizaci</strong> a&nbsp;úpravách areálu v&nbsp;roce 2012. Jde&nbsp;o&nbsp;červenou závodní sjezdovku, služebně nejmladší, o&nbsp;celkové<strong> délce 700m</strong>. <strong>Tohle už&nbsp;si&nbsp;žádá zkušenosti!</strong></p>
                 </div>
             </section>
             {/* <section className="section section-map">
@@ -83,7 +81,7 @@ export default function Contact(props) {
                 >
                 </iframe>
             </section> */}
-            <section ref={ref} className="section section-background section-bottom" id="mainSection" >
+            <section ref={ref} className="section section-background section-bottom" id="mainSection" style={{padding: '0px'}}>
                 {/* <h1 className="big-title title-white" >
                     Sezóna 2020-21! <br />
                     Těšíme se&nbsp;na&nbsp;Vás

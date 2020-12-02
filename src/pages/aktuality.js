@@ -1,19 +1,19 @@
 import * as React from 'react';
 import { Fragment, useState, useEffect } from 'react';
-import '../../styles/pages/aktualityPage.scss';
-import '../../styles/global.scss';
+import '../styles/pages/aktualityPage.scss';
+import '../styles/global.scss';
 
 import { Helmet } from "react-helmet";
-import Header from '../../components/header'
-import Footer from '../../components/footer'
-import Aktualita from '../../components/aktualita'
+import Header from '../components/header'
+import Footer from '../components/footer'
+import Aktualita from '../components/aktualita'
 
-import image from '../../../assets/aktuality_hero.jpg';
-import servis from '../../../assets/servis.jpg'
-import ctSport from '../../../assets/ctSport1.jpg'
-import parking from '../../../assets/parking1.jpeg'
-import lyzTest from '../../../assets/testLyzi.png'
-import sezona from '../../../assets/snih1.jpg'
+import image from '../../assets/aktuality_hero.jpg';
+import servis from '../../assets/servis.jpg'
+import ctSport from '../../assets/ctSport1.jpg'
+import parking from '../../assets/parking1.jpeg'
+import lyzTest from '../../assets/testLyzi.png'
+import sezona from '../../assets/snih1.jpg'
 export default function page(props) {
     let ref = React.useRef();
     return <Fragment>

@@ -1,17 +1,18 @@
 import * as React from 'react';
-import Media from "react-media";
-import '../../styles/pages/servis.scss';
-import '../../styles/global.scss';
+// import Media from "react-media";
+import '../styles/pages/servis.scss';
+import '../styles/global.scss';
 import { Helmet } from "react-helmet";
-import Header from '../../components/header'
-import Footer from '../../components/footer'
+import Header from '../components/header'
+import Footer from '../components/footer'
 import { Fragment, useState, useEffect } from 'react';
-import image from '../../../assets/servis_hero.png';
-import videoMp4 from '../../../assets/servis_video_crop.mp4'
+import image from '../../assets/servis_hero.png';
+import videoMp4 from '../../assets/servis_video_crop.mp4'
+import { useBreakpoint } from "gatsby-plugin-breakpoints";
 
 export default function page(props) {
     let ref = React.useRef();
-
+    let m = useBreakpoint()
     return <Fragment>
         <Helmet>
             <title>Servis a půjčovna | Ski myšák</title>
@@ -22,14 +23,14 @@ export default function page(props) {
         <Header mainSectionRef={ref} />
         <main className="servis">
             <section className="section-hero-image section">
-                <Media queries={{
+                {/* <Media queries={{
                     small: "(max-width: 599px)",
                     medium: "(min-width: 600px) and (max-width:999px)",
                     large: "(min-width: 1000px)"
                 }}>
-                    {matches => (
+                    {matches => ( */}
                         <Fragment>
-                            {matches.large
+                            {m.l 
                                 ? <video className="hero-image" muted autoPlay loop  >
                                     <source src={videoMp4} type="video/mp4" />
                                     {/* <source src={image} type="image/jpg" media={"all"} /> */}
@@ -37,11 +38,11 @@ export default function page(props) {
                                 : <img className="hero-image" src={image} alt="Ski slope" />
                             }
                         </Fragment>
-                    )}
-                </Media>
+                    {/* )} */}
+                {/* </Media> */}
                 <div className="flexbox-column main-title-wrap">
                     <h1 className="big-title title-white hero-image-title">
-                        Servis a&nbsp;půjčovna
+                    Servis a&nbsp;půjčovna
                         </h1>
                     <a className="scroll-down" href="#mainSection">
                         <svg width="50" height="25" viewBox="0 0 50 25" className="custom-svg">
@@ -54,11 +55,11 @@ export default function page(props) {
             <section ref={ref} className="section section-text">
                 <h2>Potřebujete půjčit lyže nebo&nbsp;snowboard?</h2>
                 <p> Ski areál Myšák, český výrobce lyží SPORTEN a&nbsp;výrobce lyžařských bot&nbsp;ROXA připravili ojedinělým propojením výjimečnou nabídku.
-                Službu pro&nbsp;ty z&nbsp;Vás, kteří nemáte vlastní vybavení, lyžujete jen&nbsp;občas nebo&nbsp;byste rádi vyzkoušeli novinky z&nbsp;dílny zmiňovaných značek.
+            Službu pro&nbsp;ty z&nbsp;Vás, kteří nemáte vlastní vybavení, lyžujete jen&nbsp;občas nebo&nbsp;byste rádi vyzkoušeli novinky z&nbsp;dílny zmiňovaných značek.
                 Půjčujeme vybavení pro&nbsp;dospěláky i&nbsp;děti v&nbsp;setech i&nbsp;samostatně, včetně doplňků i&nbsp;výstroj na&nbsp;lyžařské kurzy od&nbsp;110,-&nbsp;Kč/den. </p>
                 <p>
-                    Potěšíme i&nbsp;lyžařské fajnšmekry, kteří mohou zkoušet nejnovější novinky sezóny,  vybavíme i&nbsp;snowboarďáky a&nbsp;dobrodružnější skialpinisty.
-                    V&nbsp;prostorách půjčovny prodáváme také potřebné doplňky –&nbsp;brýle, kukly, rukavice apod. české značky RELAX.
+                Potěšíme i&nbsp;lyžařské fajnšmekry, kteří mohou zkoušet nejnovější novinky sezóny,  vybavíme i&nbsp;snowboarďáky a&nbsp;dobrodružnější skialpinisty.
+                V&nbsp;prostorách půjčovny prodáváme také potřebné doplňky –&nbsp;brýle, kukly, rukavice apod. české značky RELAX.
                 </p>
                 <p>Spolehněte se na odborné poradenství i&nbsp;bezpečnostní seřízení vybavení.</p>
                 <h2>Ceník</h2>
@@ -228,7 +229,7 @@ export default function page(props) {
                     fontSize: '23px',
                 }}>Vaše vlastní prkna a&nbsp;lyže Vám rádi seřídíme, opravíme, nabrousíme, připravíme…</h2>
                 <h2>
-                    Ceník servisu lyží a&nbsp;snowboardů
+                Ceník servisu lyží a&nbsp;snowboardů
                 </h2>
                 <table>
                     <tbody>
@@ -262,13 +263,13 @@ export default function page(props) {
                     </tbody>
                 </table>
                 <p>
-                    Telefon: <a href="tel:+420 734 358 181" className="a-tel">+420 734 358 181</a>
+                Telefon: <a href="tel:+420 734 358 181" className="a-tel">+420 734 358 181</a>
                 </p>
                 <p>
-                    Email: <a href="mailto:pujcovna@skimysak.cz" className="a-mail">pujcovna@skimysak.cz</a>
+                Email: <a href="mailto:pujcovna@skimysak.cz" className="a-mail">pujcovna@skimysak.cz</a>
                 </p>
             </section>
         </main>
         <Footer />
-    </Fragment>
+    </Fragment >
 }

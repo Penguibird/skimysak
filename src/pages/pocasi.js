@@ -1,14 +1,14 @@
 import * as React from 'react';
-import '../../styles/pages/pocasi.scss';
+import '../styles/pages/pocasi.scss';
 import { Helmet } from "react-helmet";
-import Header from '../../components/header'
-import Footer from '../../components/footer'
+import Header from '../components/header'
+import Footer from '../components/footer'
 import { Fragment, useState, useEffect } from 'react';
 import useSWR from 'swr';
-import { getTemp, getImg, getSymbol, compareDates } from '../../components/weatherFunctions';
-import WeatherCard from '../../components/weatherCard'
+import { getTemp, getImg, getSymbol, compareDates } from '../components/weatherFunctions';
+import WeatherCard from '../components/weatherCard'
 
-import image from '../../../assets/servis.jpg'
+import image from '../../assets/servis.jpg'
 
 export default function Page(props) {
 

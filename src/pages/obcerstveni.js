@@ -1,12 +1,12 @@
 import * as React from 'react';
-import Media from "react-media";
-import '../../styles/pages/obcerstveni.scss';
-import '../../styles/global.scss';
+// import Media from "react-media";
+import '../styles/pages/obcerstveni.scss';
+import '../styles/global.scss';
 import { Helmet } from "react-helmet";
-import Header from '../../components/header'
-import Footer from '../../components/footer'
+import Header from '../components/header'
+import Footer from '../components/footer'
 import { Fragment, useState, useEffect } from 'react';
-import image from '../../../assets/jidlo_hero.jpg';
+import image from '../../assets/jidlo_hero.jpg';
 
 export default function page(props) {
 let ref = React.useRef();

@@ -13,13 +13,13 @@ header {
         background-color: var(--background-blue);
         box-shadow: 2px 2px 9px 1px #5f5f5f70;
     }
-    @media screen and(max-width: 600px) {
+    @media screen and(max-width: 800px) {
         &.open {
             background-color: var(--background-blue);
             box-shadow: 2px 2px 9px 1px #5f5f5f70;
         }
     }
-    @media screen and(min-width: 601px) {
+    @media screen and(min-width: 801px) {
         &:hover {
             background-color: var(--background-blue);
             box-shadow: 2px 2px 9px 1px #5f5f5f70;
@@ -38,7 +38,7 @@ header {
         padding: 0.8em 1em !important;
         &:not(.logo) {
             &:hover {
-                @media screen and(min-width: 601px) {
+                @media screen and(min-width: 801px) {
                     background-color: var(--background-blue-darker);
                 }
             }
@@ -65,7 +65,7 @@ header {
     }
 }
 
-@media screen and(max-width: 600px) {
+@media screen and(max-width: 800px) {
     .navbar .collapse *,
     .navbar .collapsing * {
         padding: 0.4em !important;
@@ -83,7 +83,7 @@ header {
         height: auto;
     }
 }
-@media screen and(min-width:601px) {
+@media screen and(min-width:801px) {
     .logo-karlov {
         order: 1;
     }
