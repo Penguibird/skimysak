@@ -1,12 +1,12 @@
 import * as React from 'react';
-import '../../styles/pages/skola.scss';
-import '../../styles/global.scss'
+import '../styles/pages/skola.scss';
+import '../styles/global.scss'
 import Media from "react-media";
 import { Fragment, useState, useEffect } from 'react';
 import { Helmet } from "react-helmet";
-import Header from '../../components/header'
-import Footer from '../../components/footer'
-import image from '../../../assets/random_hero_3.png';
+import Header from '../components/header'
+import Footer from '../components/footer'
+import image from '../../assets/random_hero_3.png';
 
 export default function page(props) {
     let ref = React.useRef()

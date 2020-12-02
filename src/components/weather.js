@@ -21,7 +21,7 @@ export default function Weather(props) {
         <p>loading</p>
     </div>
 
-    return <Link to="/subpages/pocasi" className="widget weather-widget widget"  >
+    return <Link to="/pocasi" className="widget weather-widget widget"  >
         <h2 className="weather-title widget-title">
             {`${getTemp(data)} °C`}
         </h2>

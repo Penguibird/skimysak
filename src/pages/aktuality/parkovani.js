@@ -21,7 +21,7 @@ export default function page(props) {
         <Header mainSectionRef={ref} always />
         <main className="main-aktualita-text">
             <section className="section-text section" ref={ref}>
-                <Link to="/subpages/aktuality" className="back">
+                <Link to="/aktuality" className="back">
                     <svg width="20" height="40" viewBox="0 0 20 45" className="custom-svg">
                         <line x1="3" x2="17" y1="20" y2="37" />
                         <line x1="3" x2="17" y1="20" y2="3" />
@@ -33,7 +33,7 @@ export default function page(props) {
                 <p className="date">15.11.2020</p>
                 <p>Přijeďte si&nbsp;užít lyžovačku! Parkování je u&nbsp;nás ZDARMA  a&nbsp;hned pod&nbsp;Myšákem. Přijíždějící auta organizujeme, aby bylo vše v&nbsp;pohodě, a&nbsp;aby další a&nbsp;další lyžaři našli místo. Mezi jednotlivými areály se&nbsp;můžete přemisťovat i&nbsp;bezplatnými SKI busy a SKI taxi. Jízdní řády připravujeme.</p>
                 <img src={parking} alt="Parkoviste" className="aktuality-img" />
-                <Link to="/subpages/aktuality" className='back center   ' >
+                <Link to="/aktuality" className='back center   ' >
                     <svg width="20" height="40" viewBox="0 0 20 40" className="custom-svg">
                         <line x1="3" x2="17" y1="20" y2="37" />
                         <line x1="3" x2="17" y1="20" y2="3" />

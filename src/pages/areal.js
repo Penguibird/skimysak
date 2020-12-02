@@ -1,22 +1,22 @@
 import * as React from 'react';
-import '../../styles/pages/areal.scss'
-import '../../styles/global.scss'
+import '../styles/pages/areal.scss'
+import '../styles/global.scss'
 import { Fragment, useState, useEffect } from 'react';
 import { Helmet } from "react-helmet";
 import Media from 'react-media'
 
-import Header from '../../components/header';
-import Footer from '../../components/footer';
+import Header from '../components/header';
+import Footer from '../components/footer';
 
-import videoMp4 from '../../../assets/video.mp4';
-import image from '../../../assets/trate_hero.png'
-import mapaFoto from '../../../assets/mapa.png'
+import videoMp4 from '../../assets/video.mp4';
+import image from '../../assets/trate_hero.png'
+import mapaFoto from '../../assets/mapa.png'
 
-import ikoFam from '../../../assets/iko_Family.jpg';
-import ikoFis from '../../../assets/iko_FIS.jpg';
-import ikoMys from '../../../assets/iko_Mysacek.jpg';
-import ikoPod from '../../../assets/iko_Pod-lesem.jpg';
-import ikoRuk from '../../../assets/iko_Rukav.jpg';
+import ikoFam from '../../assets/iko_Family.jpg';
+import ikoFis from '../../assets/iko_FIS.jpg';
+import ikoMys from '../../assets/iko_Mysacek.jpg';
+import ikoPod from '../../assets/iko_Pod-lesem.jpg';
+import ikoRuk from '../../assets/iko_Rukav.jpg';
 
 export default function Contact(props) {
     let ref = React.useRef();
