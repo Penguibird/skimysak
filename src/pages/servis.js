@@ -52,7 +52,7 @@ export default function page(props) {
                     Potěšíme i&nbsp;lyžařské fajnšmekry, kteří mohou zkoušet nejnovější novinky sezóny,  vybavíme i&nbsp;snowboarďáky a&nbsp;dobrodružnější skialpinisty.
                     V&nbsp;prostorách půjčovny prodáváme také potřebné doplňky –&nbsp;brýle, kukly, rukavice apod. české značky RELAX.
                 </p>
-                <p>Spolehněte se na odborné poradenství i&nbsp;bezpečnostní seřízení vybavení.</p>
+                <p><strong>Spolehněte se na odborné poradenství i&nbsp;bezpečnostní seřízení vybavení.</strong></p>
                 <h2>Ceník</h2>
                 <table className="table-cenik">
                     <thead>
@@ -216,7 +216,8 @@ export default function page(props) {
                     </tbody>
                 </table>
                 <p className="explanation-line"><i>*komplet = lyže + boty + hole (prkno + boty)</i></p>
-                <h2 style={{
+                <h2 className="blue"
+                style={{
                     fontSize: '23px',
                 }}>Vaše vlastní prkna a&nbsp;lyže Vám rádi seřídíme, opravíme, nabrousíme, připravíme…</h2>
                 <h2>

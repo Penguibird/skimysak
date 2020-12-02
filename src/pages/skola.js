@@ -28,10 +28,11 @@ export default function page(props) {
                 </div>
             </section>
             <section className="section section-text section-skola" ref={ref}>
+                {/* todo textalign center */}
                 <h2> Chcete se&nbsp;zdokonalit v&nbsp;lyžování?</h2>
-                <p>Nebo jste se&nbsp;rozhodli svěřit nám&nbsp;výuku svých dětí? <br />Učíme lyžaře i&nbsp;snowboardisty všech věkových kategorií a&nbsp;všech úrovní.
-                Bez&nbsp;stresu a&nbsp;na&nbsp;pohodu!</p>
-                <p>1&nbsp;výuková hodina (lekce) trvá 50&nbsp;min. V&nbsp;ceně výuky je&nbsp;skipas po&nbsp;dobu výuky.</p>
+                <p style={{ marginTop: 0 }}>Nebo jste se&nbsp;rozhodli svěřit nám&nbsp;výuku svých dětí?</p>
+                <p className="text-center">Učíme lyžaře i&nbsp;snowboardisty všech věkových kategorií a&nbsp;všech úrovní. Bez&nbsp;stresu a&nbsp;na&nbsp;pohodu!</p>
+                <p style={{ marginTop: 0 }} className="text-center"><strong>1&nbsp;výuková hodina (lekce) trvá 50&nbsp;min. V&nbsp;ceně výuky je&nbsp;skipas po&nbsp;dobu výuky.</strong></p>
                 <table>
                     <thead>
                         <tr>
@@ -72,7 +73,7 @@ export default function page(props) {
                 <p>Objednávky na&nbsp;výuku přijímáme osobně v&nbsp;kanceláři lyžařské školy
                 (vedle pokladny na&nbsp;parkovišti u&nbsp;nástupní stanice lanové dráhy Myšák),
                 nebo na&nbsp;telefonním čísle <a href="tel:+420 734 824 493" className="a-tel telehpone-link">+420&nbsp;734&nbsp;824&nbsp;493</a>.</p>
-                <h2>Zákazníci lyžařské školy Myšák si&nbsp;mohou v&nbsp;naší půjčovně zapůjčit lyžařské a&nbsp;snowboardové vybavení za&nbsp;zvýhodněné ceny:</h2>
+                <h2 className="smaller">Zákazníci lyžařské školy Myšák si&nbsp;mohou v&nbsp;naší půjčovně zapůjčit lyžařské a&nbsp;snowboardové vybavení za&nbsp;zvýhodněné ceny</h2>
                 <table className="skola-last-talbe">
                     <tr className="cell-brighter">
                         <td>Lyžařský set dětský (lyže, hůlky, lyžáky, helma)</td>
