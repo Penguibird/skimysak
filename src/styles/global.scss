@@ -55,7 +55,9 @@ h1 {
 h1.smaller {
     font-size: clamp(20px, 4.5vw, 4.5vw);
 }
-
+.text-center {
+    text-align: center !important;
+}
 h2 {
     display: block;
     font-family: "Montserrat", sans-serif !important;
@@ -65,7 +67,7 @@ h2 {
     text-align: center;
 }
 h2.smaller {
-    font-size: clamp(16 px, 2.8vw, 25px);
+    font-size: clamp(16px, 2.8vw, 25px);
 }
 
 h3 {
@@ -425,7 +427,7 @@ h1.small {
 }
 
 .carousel {
-    // width: 100%;
+    width: 100%;
     padding: 0.5em;
 
     display: flex;
