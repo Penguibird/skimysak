@@ -58,6 +58,11 @@ export default function Header({ mainSectionRef, always }) {
         {
             title: "Kamery",
             link: "/kamery"
+        },
+        {
+            title: "Mapa",
+            link: "/mapa.png",
+            a: true,
         }
     ]
     useEffect(() => {
@@ -77,7 +82,7 @@ export default function Header({ mainSectionRef, always }) {
             <Link to="/" className="logo logo-mysak">
                 <img src={logo} />
             </Link>
-            <a href="https://www.skikarlov.cz/" className="logo logo-karlov">
+            <a href="https://www.skikarlov.cz/" className="logo logo-karlov" target="_blank">
                 <img src={logo2} />
             </a>
             <NavbarToggler onClick={toggle} className="float-right" />
@@ -129,11 +134,14 @@ function BetterDropDown({ title, listOfLinks }) {
                     </Link>
                 </DropdownToggle>
                 <DropdownMenu>
-                    {listOfLinks.map(({ link, title }, i) => (
+                    {listOfLinks.map(({ link, title, a }, i) => (
                         <DropdownItem key={i}>
-                            <Link to={link} >
+                            {a ? <a href={link} target="_blank">
                                 <p>{title} </p>
-                            </Link>
+                            </a>
+                                : <Link to={link} >
+                                    <p>{title} </p>
+                                </Link>}
                         </DropdownItem>
                     ))}
                 </DropdownMenu>

@@ -9,7 +9,7 @@ import Footer from '../components/footer'
 import Aktualita from '../components/aktualita'
 
 import image from '../../assets/aktuality_hero.jpg';
-import servis from '../../assets/servis.jpg' //!
+import servis from '../../assets/servis.jpg'
 import ctSport from '../../assets/ctSport1.jpg'
 import parking from '../../assets/parking1.jpeg'
 import lyzTest from '../../assets/testLyzi.png'
