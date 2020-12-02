@@ -13,6 +13,7 @@ import { Link } from 'gatsby';
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
+import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 
 import Header from '../components/header'
 import Footer from '../components/footer'
@@ -61,7 +62,10 @@ export default function Home() {
     //         },
     //     });
     // }, [])
-
+    let m = useBreakpoint();
+    // useEffect(() => {
+    //     m = useBreakpoint();
+    // }, []);
 
     return <Fragment>
         <Helmet>
@@ -73,12 +77,13 @@ export default function Home() {
         <Header mainSectionRef={ref} />
         <main>
             <section className="section-hero-image section">
-                <Media queries={{
+                {/* <Media queries={{
                     small: "(max-width: 599px)",
                     medium: "(min-width: 600px) and (max-width:999px)",
                     large: "(min-width: 1000px)"
                 }}>
-                    {matches => (<Fragment>{matches.large
+                    {m => ( */}
+                    <Fragment>{m.l
                         ? <video className="hero-image" muted autoPlay loop >
                             <source src={videoMp4} type="video/mp4" />
                             {/* <source src={image} type="image/jpg" media={"all"} /> */}
@@ -86,8 +91,9 @@ export default function Home() {
                         : <div className="hero-image " id="hero-image-wrapper">
                             <img src={image} alt="Ski slope" className="hero-image-image" />
                         </div>
-                    }</Fragment>)}
-                </Media>
+                    }</Fragment>
+                    {/* )}
+                </Media> */}
                 <div className="flexbox-column main-title-wrap">
                     <h1 className="hero-big title-white hero-image-title ">
                         {/* colorful */}
@@ -146,12 +152,13 @@ export default function Home() {
             <section className="section-aktuality section">
                 <h1 className="title-white smaller">Aktuality</h1>
                 <div className="aktuality-wrapper" style={{ width: '100vw' }}>
-
+                    {/* 
                     <Media queries={{
                         s: "(max-width: 599px)",
                         m: "(min-width: 600px) and (max-width:999px)",
                         l: "(min-width: 1000px)"
-                    }}>{m => (<CarouselProvider
+                    }}>{m => ( */}
+                    <CarouselProvider
                         naturalSlideWidth={100}
                         naturalSlideHeight={m.l ? 130 : m.s ? 100 : m.m ? 150 : 180}
                         totalSlides={5}
@@ -186,8 +193,9 @@ export default function Home() {
                                 <line x1="17" x2="3" y1="20" y2="3" />
                             </svg>
                         </ButtonNext>
-                    </CarouselProvider>)}
-                    </Media>
+                    </CarouselProvider>
+                    {/* )} */}
+                    {/* </Media> */}
                     {/* <Swiper
                         navigation  
                         spaceBetween={50}
