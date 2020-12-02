@@ -1,12 +1,12 @@
 import * as React from 'react';
-import '../../styles/pages/skola.scss';
-import '../../styles/global.scss'
+import '../styles/pages/skola.scss';
+import '../styles/global.scss'
 import Media from "react-media";
 import { Fragment, useState, useEffect } from 'react';
 import { Helmet } from "react-helmet";
-import Header from '../../components/header'
-import Footer from '../../components/footer'
-import image from '../../../assets/random_hero_3.png';
+import Header from '../components/header'
+import Footer from '../components/footer'
+import image from '../../assets/random_hero_3.png';
 
 export default function page(props) {
     let ref = React.useRef()
@@ -49,19 +49,19 @@ export default function page(props) {
                     <tbody>
                         <tr>
                             <td>1&nbsp;lekce</td>
-                            <td className="align-right">  590 Kč</td>
+                            <td className="align-right ">  590 Kč</td>
                         </tr>
                         <tr>
                             <td>2 lekce</td>
-                            <td className="align-right" >1 050 Kč</td>
+                            <td className="align-right " >1 050 Kč</td>
                         </tr>
                         <tr>
                             <td>3 lekce</td>
-                            <td className="align-right" >1 580 Kč</td>
+                            <td className="align-right " >1 580 Kč</td>
                         </tr>
                         <tr>
                             <td>4 lekce</td>
-                            <td className="align-right" >2 000 Kč</td>
+                            <td className="align-right " >2 000 Kč</td>
                         </tr>
                     </tbody>
                     <thead>
@@ -83,19 +83,19 @@ export default function page(props) {
                 <table className="skola-last-talbe">
                     <tr className="cell-brighter">
                         <td>Lyžařský set dětský (lyže, hůlky, lyžáky, helma)</td>
-                        <td className="align-right">150&nbsp;Kč/den</td>
+                        <td className="align-right heading">150&nbsp;Kč/den</td>
                     </tr>
                     <tr>
                         <td>Lyžařský set dospělí (lyže, hůlky, lyžáky, helma)</td>
-                        <td className="align-right">200&nbsp;Kč/den</td>
+                        <td className="align-right heading">200&nbsp;Kč/den</td>
                     </tr>
                     <tr className="cell-brighter">
                         <td>Snowboardový set dětský (prkno, boty, helma) </td>
-                        <td className="align-right">150&nbsp;Kč/den</td>
+                        <td className="align-right heading">150&nbsp;Kč/den</td>
                     </tr>
                     <tr>
                         <td>Snowboardový set dospělí (prkno, boty, helma)</td>
-                        <td className="align-right">200&nbsp;Kč/den</td>
+                        <td className="align-right heading">200&nbsp;Kč/den</td>
                     </tr>
                 </table>
 

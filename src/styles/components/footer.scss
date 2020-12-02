@@ -1,7 +1,7 @@
 footer {
     background-color: var(--background-blue);
     display: grid;
-    grid-template-columns: 10em 1fr 10em;
+    grid-template-columns: 12vw 1fr 12vw;
     align-items: center;
     // grid-template-rows: 1fr;
     position: relative;
@@ -26,9 +26,9 @@ footer {
 .footer-logo {
     grid-column: 3/4;
     // float: right;
-    justify-self: end;
+    justify-self: start;
     // width: 7vw;
-    margin-right: 4em;
+    margin-right: 4vw;
     margin-bottom: 1.3em;
     img {
         width: 100%;

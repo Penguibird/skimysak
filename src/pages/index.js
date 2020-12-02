@@ -113,7 +113,7 @@ export default function Home() {
             </section>
 
             <section id="mainSection" className="section-icons section" ref={ref}>
-                <Link to="/subpages/kamery" className="widget widget-kamery" >
+                <Link to="/kamery" className="widget widget-kamery" >
                     <h2 className="widget-title">KAMERY</h2>
                 </Link>
                 <Weather />
@@ -136,7 +136,7 @@ export default function Home() {
                     O&nbsp;pauze jste zváni do&nbsp;<strong>SKI baru</strong> s&nbsp;terasou a&nbsp;výhledem nebo do&nbsp;<strong>Bistra pod&nbsp;Myšákem</strong>. Parkování je&nbsp;zdarma hned pod&nbsp;sjezdovkou!
                 </p>
                 <p>
-                    Aktuální zprávy o&nbsp;provozu najdete <Link to="/subpages/aktuality" ><strong>zde</strong></Link> nebo na <a href="https://www.facebook.com/SkiMysak/"><strong>FB&nbsp;Ski Myšák</strong></a>.
+                    Aktuální zprávy o&nbsp;provozu najdete <Link to="/aktuality" ><strong>zde</strong></Link> nebo na <a href="https://www.facebook.com/SkiMysak/"><strong>FB&nbsp;Ski Myšák</strong></a>.
                 </p>
 
                 <h2>
@@ -245,18 +245,18 @@ export default function Home() {
                     SLUŽBY
                 </h1>
                 <div className="flexbox-row sluzby-wrap">
-                    <Link to="/sluzby/servis"><article className="sluzby-item" >
+                    <Link to="/servis"><article className="sluzby-item" >
                         <img src={servisFoto} alt="snowy mountain" />
                         <h3>Servis a půjčovna</h3>
                         <p><strong>Přijeďte lyžovat!</strong> Pokud nemáte výbavu, svěřte se do rukou servismanů v půjčovně Myšák. Komplet výstroj pro <strong>lyžaře, snowboarďáky i alpinisty</strong> .</p>
                     </article></Link>
-                    <Link to="/sluzby/skola"><article className="sluzby-item" >
+                    <Link to="/skola"><article className="sluzby-item" >
                         <img src={skolaFoto} />
                         <h3>Lyžařská škola</h3>
                         <p><strong>Chcete se zdokonalit v lyžování?</strong> Učíme lyžaře i snowboardisty všech věkových kategorií a všech úrovní.
                 Bez stresu a na pohodu!</p>
                     </article></Link>
-                    <Link to="/sluzby/obcerstveni"><article className="sluzby-item" >
+                    <Link to="/obcerstveni"><article className="sluzby-item" >
                         <img src={jidloFoto} />
                         <h3>Občerstvení</h3>
                         <p><strong>Ski&nbsp;bar s&nbsp;terasou a&nbsp;výhledem nebo bistro pod&nbsp;Myšákem?</strong> Drinky a&nbsp;něco na&nbsp;zahřátí, domácí kuchyně pro&nbsp;děti i&nbsp;dospělé, polévky a&nbsp;místní speciality. Dobrou chuť!</p>

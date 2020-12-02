@@ -35,29 +35,29 @@ export default function Header({ mainSectionRef, always }) {
     const sluzby = [
         {
             title: "Servis a půjčovna",
-            link: "/sluzby/servis"
+            link: "/servis"
         },
         {
             title: "Škola",
-            link: "/sluzby/skola"
+            link: "/skola"
         },
         {
             title: "Občerstvení",
-            link: "/sluzby/obcerstveni"
+            link: "/obcerstveni"
         }
     ]
     const areal = [
         {
             title: "Svahy",
-            link: "/subpages/areal"
+            link: "/areal"
         },
         {
             title: "Počasí",
-            link: "/subpages/pocasi"
+            link: "/pocasi"
         },
         {
             title: "Kamery",
-            link: "/subpages/kamery"
+            link: "/kamery"
         }
     ]
     useEffect(() => {
@@ -84,7 +84,7 @@ export default function Header({ mainSectionRef, always }) {
             <Collapse isOpen={isOpen} navbar>
                 <Nav className="mr-auto" navbar>
                     <NavItem>
-                        <Link to="/subpages/aktuality">
+                        <Link to="/aktuality">
                             <p>Aktuality</p>
                         </Link>
                     </NavItem>
@@ -101,7 +101,7 @@ export default function Header({ mainSectionRef, always }) {
                         </a>
                     </NavItem>
                     <NavItem>
-                        <Link to="/subpages/kontakt">
+                        <Link to="/kontakt">
                             <p>Kontakt</p>
                         </Link>
                     </NavItem>

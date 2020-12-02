@@ -1,13 +1,13 @@
 import * as React from 'react';
 import Media from "react-media";
-import '../../styles/pages/servis.scss';
-import '../../styles/global.scss';
+import '../styles/pages/servis.scss';
+import '../styles/global.scss';
 import { Helmet } from "react-helmet";
-import Header from '../../components/header'
-import Footer from '../../components/footer'
+import Header from '../components/header'
+import Footer from '../components/footer'
 import { Fragment, useState, useEffect } from 'react';
-import image from '../../../assets/servis_hero.png';
-import videoMp4 from '../../../assets/servis_video_crop.mp4'
+import image from '../../assets/servis_hero.png';
+import videoMp4 from '../../assets/servis_video_crop.mp4'
 
 export default function page(props) {
     let ref = React.useRef();
