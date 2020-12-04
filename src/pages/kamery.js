@@ -8,7 +8,7 @@ import Footer from '../components/footer'
 import { Fragment, useState, useEffect } from 'react';
 
 export default function page(props) {
-    let ref = React.useRef();
+    // let ref = React.useRef();
 
     return <Fragment>
         <Helmet>
@@ -17,9 +17,10 @@ export default function page(props) {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content="Parádní lyžování v jeseníkách" />
         </Helmet>
+        <Header always />
+
         <main className="kamery">
-            <Header mainSectionRef={ref} always/>
-                <section ref={ref} className="section-hero-image section">
+            <section className="section-hero-image section">
                 <h1 className="title-white">Kamery</h1>
                 <section className="section section-kamery" >
                     <div className="kamera-wrapper">
