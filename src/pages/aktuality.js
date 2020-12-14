@@ -32,10 +32,10 @@ export default function page(props) {
             </section>
             <section className="section-page-aktuality">
 
-                <Aktualita image={sezona} title="Nová sezóna" date="26.11. 2020" url="novaSezona"
+                <Aktualita image={sezona} title="Nová sezóna" date="5.12. 2020" url="novaSezona"
                     rawText="Tak co&nbsp;myslíte? Jaká bude? Zahájili jsme zasněžování! Počasí a&nbsp;vláda rozhodne, kdy&nbsp;se uvidíme&nbsp;😊"
                 />
-                <Aktualita image={lyzTest} title="Testování lyží" date="16.11. 2020" url="lyzTest"
+                <Aktualita image={lyzTest} title="Testování lyží" url="lyzTest"
                     rawText=""
                 />
                 <Aktualita image={parking} title="Parkování" date="15.11. 2020" url="parkovani"

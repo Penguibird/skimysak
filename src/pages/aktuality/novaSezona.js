@@ -30,7 +30,7 @@ export default function page(props) {
                 </Link>
 
                 <h2>Nová sezóna</h2>
-                <p className="date">26.11.2020</p>
+                <p className="date">5.12.2020</p>
                 <p>Tak co&nbsp;myslíte? Jaká bude? Zahájili jsme zasněžování! Počasí a&nbsp;vláda rozhodne, kdy&nbsp;se uvidíme&nbsp;😊</p>
                 <img src={sezona} alt="Snehove delo" className="aktuality-img" />
                 <img src={snih} alt="Snehove delo" className="aktuality-img" />

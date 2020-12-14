@@ -30,7 +30,7 @@ export default function page(props) {
                 </Link>
 
                 <h2>Testování lyží</h2>
-                <p className="date">16.11.2020</p>
+                {/* <p className="date">16.11.2020</p> */}
                
                 <img src={lyzTest} alt="Stupen vitezu" className="aktuality-img" />
                 <Link to="/aktuality" className='back center   ' >
