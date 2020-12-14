@@ -50,46 +50,39 @@ export default function Contact(props) {
                 <h2>Sjezdové tratě</h2>
 
                 <div className="areal-main">
-                    <h2 className="smaller header">Celková délka sjezdovek</h2>
-                    <h2 className="smaller data"><strong>2&nbsp;450&nbsp;metrů</strong></h2>
-                    <h2 className="smaller header">Převýšení</h2>
-                    <h2 className="smaller data"><strong>160&nbsp;metrů</strong></h2>
+                    <h2 className=" header">Celková délka sjezdovek</h2>
+                    <h2 className=" data">2&nbsp;450&nbsp;metrů</h2>
                 </div>
 
-                <div className="trate-wrapper">
+                <div className="trate-wrapper" style={{marginTop: '0'}}>
                     <div className="trat-image"><img src={ikoFam} alt="ikona trate" /></div>
-                    <p>Jedná se o&nbsp;<strong>nejdelší sjezdovku karlovského údolí</strong>. Je určena začátečníkům a&nbsp;všem, kdo&nbsp;vyhledávají klidné a&nbsp;pohodové lyžování.
-                První částí trasy od&nbsp;horní stanice vede kolem lesa snow park. Vyberte si svou cestu!</p>
+                    <p><strong>Jedná se o&nbsp;nejdelší sjezdovku karlovského údolí</strong>. Je určena začátečníkům a&nbsp;všem, kdo&nbsp;vyhledávají klidné a&nbsp;pohodové lyžování.
+                První částí trasy od&nbsp;horní stanice vede kolem lesa <strong>snow park</strong>. Vyberte si svou cestu!</p>
 
                     <div className="trat-image"><img src={ikoPod} alt="ikona trate" /></div>
-                    <p><strong>Sjezdová trať Pod lesem</strong> má svůj vlastní vlek typu Poma. Je dlouhá 200&nbsp;metrů a&nbsp;je určena pro&nbsp;děti a&nbsp;začínající lyžaře. <strong>Pohodový trénink!</strong></p>
+                    <p><strong>Sjezdová trať Pod lesem</strong> má svůj vlastní vlek typu Poma. <strong>Je dlouhá 200&nbsp;metrů</strong> a&nbsp;je určena pro&nbsp;děti a&nbsp;začínající lyžaře. Pohodový trénink!</p>
 
                     <div className="trat-image"><img src={ikoMys} alt="ikona trate" /></div>
-                    <p><strong>Sjezdová trať pro nejmenší</strong> je součástí lyžařské školy. Délka 50&nbsp;metrů, obslužnost lanovým vlekem a&nbsp;poznávací znamení – hemžení <strong>malých, rychlých i&nbsp;méněrychlých lyžaříčků!</strong></p>
+                    <p><strong>Sjezdová trať pro nejmenší</strong> je součástí lyžařské školy. <strong>Délka 50&nbsp;metrů,</strong> obslužnost lanovým vlekem a&nbsp;poznávací znamení – hemžení malých, rychlých i&nbsp;méněrychlých lyžaříčků!</p>
 
                     <div className="trat-image"><img src={ikoFis} alt="ikona trate" /></div>
-                    <p>Trať FIS má délku 650&nbsp;metrů. Už mnoho let se&nbsp;na&nbsp;této sjezdovce jezdí <strong>lyžařské závody</strong>.
-                V&nbsp;roce 2012 byla rozšířena a&nbsp;upravena. <strong>Vzhůru dolů po&nbsp;červené!</strong></p>
+                    <p><strong>Trať FIS měří 650&nbsp;metrů.</strong> Už mnoho let se&nbsp;na&nbsp;této sjezdovce jezdí <strong>lyžařské závody</strong>. V&nbsp;roce 2012 byla rozšířena a&nbsp;upravena. Vzhůru dolů po&nbsp;červené!</p>
 
                     <div className="trat-image"><img src={ikoRuk} alt="ikona trate" /></div>
-                    <p><strong>Sjezdová trať Rukáv vznikla při&nbsp;modernizaci</strong> a&nbsp;úpravách areálu v&nbsp;roce 2012. Jde&nbsp;o&nbsp;červenou závodní sjezdovku, služebně nejmladší, o&nbsp;celkové<strong> délce 700m</strong>. <strong>Tohle už&nbsp;si&nbsp;žádá zkušenosti!</strong></p>
+                    <p><strong>Sjezdová trať Rukáv</strong> vznikla při&nbsp;modernizaci a&nbsp;úpravách areálu v&nbsp;roce 2012. Jde&nbsp;o&nbsp;červenou závodní sjezdovku, služebně nejmladší, <strong>o&nbsp;celkové délce 700m. Tohle už&nbsp;si&nbsp;žádá zkušenosti!</strong></p>
+                </div>
+
+                <div className="areal-main" style={{marginTop: '0'}}>
+                    <h2 className=" header">Převýšení</h2>
+                    <h2 className=" data">160&nbsp;metrů</h2>
                 </div>
             </section>
-            {/* <section className="section section-map">
-                <iframe aria-hidden="true" frameborder="0" tabindex="-1"
-                    style={{ zIndex: -1, position: 'absolute', width: '100%', height: '100%', top: '0px', left: '0px', border: 'none' }}
-                >
-                </iframe>
-            </section> */}
-            <section ref={ref} className="section section-background section-bottom" id="mainSection" style={{padding: '0px'}}>
-                {/* <h1 className="big-title title-white" >
-                    Sezóna 2020-21! <br />
-                    Těšíme se&nbsp;na&nbsp;Vás
-                </h1> */}
+
+            <section ref={ref} className="section section-background section-bottom" id="mainSection" style={{ padding: '0px' }}>
+
                 <img src={mapaFoto} alt="Mapa Ski Karlov" style={{ width: '80%', maxWidth: '1400px', marginTop: '3vw' }} />
 
             </section>
-            {/* TODO kontakt */}
         </main>
         <Footer />
     </Fragment >

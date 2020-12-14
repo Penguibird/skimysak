@@ -23,26 +23,17 @@ export default function page(props) {
         <Header mainSectionRef={ref} />
         <main className="servis">
             <section className="section-hero-image section">
-                {/* <Media queries={{
-                    small: "(max-width: 599px)",
-                    medium: "(min-width: 600px) and (max-width:999px)",
-                    large: "(min-width: 1000px)"
-                }}>
-                    {matches => ( */}
-                        <Fragment>
-                            {m.l 
-                                ? <video className="hero-image" muted autoPlay loop  >
-                                    <source src={videoMp4} type="video/mp4" />
-                                    {/* <source src={image} type="image/jpg" media={"all"} /> */}
-                                </video>
-                                : <img className="hero-image" src={image} alt="Ski slope" />
-                            }
-                        </Fragment>
-                    {/* )} */}
-                {/* </Media> */}
+                <Fragment>
+                    {m.l
+                        ? <video className="hero-image" muted autoPlay loop  >
+                            <source src={videoMp4} type="video/mp4" />
+                        </video>
+                        : <img className="hero-image" src={image} alt="Ski slope" />
+                    }
+                </Fragment>
                 <div className="flexbox-column main-title-wrap">
                     <h1 className="big-title title-white hero-image-title">
-                    Servis a&nbsp;půjčovna
+                        Servis a&nbsp;půjčovna
                         </h1>
                     <a className="scroll-down" href="#mainSection">
                         <svg width="50" height="25" viewBox="0 0 50 25" className="custom-svg">
@@ -55,13 +46,13 @@ export default function page(props) {
             <section ref={ref} className="section section-text">
                 <h2>Potřebujete půjčit lyže nebo&nbsp;snowboard?</h2>
                 <p> Ski areál Myšák, český výrobce lyží SPORTEN a&nbsp;výrobce lyžařských bot&nbsp;ROXA připravili ojedinělým propojením výjimečnou nabídku.
-            Službu pro&nbsp;ty z&nbsp;Vás, kteří nemáte vlastní vybavení, lyžujete jen&nbsp;občas nebo&nbsp;byste rádi vyzkoušeli novinky z&nbsp;dílny zmiňovaných značek.
+                Službu pro&nbsp;ty z&nbsp;Vás, kteří nemáte vlastní vybavení, lyžujete jen&nbsp;občas nebo&nbsp;byste rádi vyzkoušeli novinky z&nbsp;dílny zmiňovaných značek.
                 Půjčujeme vybavení pro&nbsp;dospěláky i&nbsp;děti v&nbsp;setech i&nbsp;samostatně, včetně doplňků i&nbsp;výstroj na&nbsp;lyžařské kurzy od&nbsp;110,-&nbsp;Kč/den. </p>
                 <p>
-                Potěšíme i&nbsp;lyžařské fajnšmekry, kteří mohou zkoušet nejnovější novinky sezóny,  vybavíme i&nbsp;snowboarďáky a&nbsp;dobrodružnější skialpinisty.
-                V&nbsp;prostorách půjčovny prodáváme také potřebné doplňky –&nbsp;brýle, kukly, rukavice apod. české značky RELAX.
+                    Potěšíme i&nbsp;lyžařské fajnšmekry, kteří mohou zkoušet nejnovější novinky sezóny,  vybavíme i&nbsp;snowboarďáky a&nbsp;dobrodružnější skialpinisty.
+                    V&nbsp;prostorách půjčovny prodáváme také potřebné doplňky –&nbsp;brýle, kukly, rukavice apod. české značky RELAX.
                 </p>
-                <p>Spolehněte se na odborné poradenství i&nbsp;bezpečnostní seřízení vybavení.</p>
+                <p><strong>Spolehněte se na odborné poradenství i&nbsp;bezpečnostní seřízení vybavení.</strong></p>
                 <h2>Ceník</h2>
                 <table className="table-cenik">
                     <thead>
@@ -225,11 +216,12 @@ export default function page(props) {
                     </tbody>
                 </table>
                 <p className="explanation-line"><i>*komplet = lyže + boty + hole (prkno + boty)</i></p>
-                <h2 style={{
+                <h2 className="blue"
+                style={{
                     fontSize: '23px',
                 }}>Vaše vlastní prkna a&nbsp;lyže Vám rádi seřídíme, opravíme, nabrousíme, připravíme…</h2>
                 <h2>
-                Ceník servisu lyží a&nbsp;snowboardů
+                    Ceník servisu lyží a&nbsp;snowboardů
                 </h2>
                 <table>
                     <tbody>
@@ -263,10 +255,10 @@ export default function page(props) {
                     </tbody>
                 </table>
                 <p>
-                Telefon: <a href="tel:+420 734 358 181" className="a-tel">+420 734 358 181</a>
+                    Telefon: <a href="tel:+420 734 358 181" className="a-tel">+420 734 358 181</a>
                 </p>
                 <p>
-                Email: <a href="mailto:pujcovna@skimysak.cz" className="a-mail">pujcovna@skimysak.cz</a>
+                    Email: <a href="mailto:pujcovna@skimysak.cz" className="a-mail">pujcovna@skimysak.cz</a>
                 </p>
             </section>
         </main>

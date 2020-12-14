@@ -1,14 +1,7 @@
 import * as React from "react";
 import { Fragment, useRef, useEffect } from 'react';
 import { Helmet } from "react-helmet";
-// import Media from "react-media";
 import { Link } from 'gatsby';
-
-//SWIPER
-// import SwiperCore, { Navigation, A11y } from 'swiper';
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// import 'swiper/swiper.scss';
-// import 'swiper/components/navigation/navigation.scss';
 
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
@@ -41,31 +34,8 @@ import sezona from '../../assets/snih1.jpg'
 import mapaFoto from '../../assets/mapa.png'
 
 export default function Home() {
-    // const scrollDown = () => {
-    //     window.scroll({
-    //         top: 1000,
-    //         left: 0,
-    //         behavior: 'smooth',
-    //     });
-    // }
     let ref = useRef();
-
-    // useEffect(() => {
-    //     Swiper.use([Navigation]);
-
-    //     const swiper = new Swiper('.swiper-container', {
-    //         slidesPerView: 3,
-    //         spaceBetween: 30,
-    //         pagination: {
-    //             el: '.swiper-pagination',
-    //             clickable: true,
-    //         },
-    //     });
-    // }, [])
     let m = useBreakpoint();
-    // useEffect(() => {
-    //     m = useBreakpoint();
-    // }, []);
 
     return <Fragment>
         <Helmet>
@@ -77,26 +47,16 @@ export default function Home() {
         <Header mainSectionRef={ref} />
         <main>
             <section className="section-hero-image section">
-                {/* <Media queries={{
-                    small: "(max-width: 599px)",
-                    medium: "(min-width: 600px) and (max-width:999px)",
-                    large: "(min-width: 1000px)"
-                }}>
-                    {m => ( */}
-                    <Fragment>{m.l
-                        ? <video className="hero-image" muted autoPlay loop >
-                            <source src={videoMp4} type="video/mp4" />
-                            {/* <source src={image} type="image/jpg" media={"all"} /> */}
-                        </video>
-                        : <div className="hero-image " id="hero-image-wrapper">
-                            <img src={image} alt="Ski slope" className="hero-image-image" />
-                        </div>
-                    }</Fragment>
-                    {/* )}
-                </Media> */}
+                <Fragment>{m.l
+                    ? <video className="hero-image" muted autoPlay loop >
+                        <source src={videoMp4} type="video/mp4" />
+                    </video>
+                    : <div className="hero-image " id="hero-image-wrapper">
+                        <img src={image} alt="Ski slope" className="hero-image-image" />
+                    </div>
+                }</Fragment>
                 <div className="flexbox-column main-title-wrap">
                     <h1 className="hero-big title-white hero-image-title ">
-                        {/* colorful */}
                         Vítejte na&nbsp;Myšáku
                     </h1>
                     <h1 className="title-white hero-smaller smaller">
@@ -152,19 +112,15 @@ export default function Home() {
             <section className="section-aktuality section">
                 <h1 className="title-white smaller">Aktuality</h1>
                 <div className="aktuality-wrapper" style={{ width: '100vw' }}>
-                    {/* 
-                    <Media queries={{
-                        s: "(max-width: 599px)",
-                        m: "(min-width: 600px) and (max-width:999px)",
-                        l: "(min-width: 1000px)"
-                    }}>{m => ( */}
                     <CarouselProvider
                         naturalSlideWidth={100}
-                        naturalSlideHeight={m.l ? 130 : m.s ? 130 : m.m ? 150 : 180}
+                        naturalSlideHeight={m.ll ? 135 : m.ls ? 150 : m.ml ? 125 : m.ms ? 150 : m.s ? 110 : 150}
+                        isIntrinsicHeight={m.s}
+                        className={m.s ? 'small-width-carousel' : ' '}
                         totalSlides={5}
-                        visibleSlides={m.l ? 3 : m.s ? 1 : m.m ? 2 : 3}
+                        visibleSlides={m.l ? 3 : m.m ? 2 : m.s ? 1 : 3}
                     >
-                        <Slider>
+                        <Slider width={m.ll ? '1300px' : null}>
                             <Slide index={0} innerClassName="slide-inner" className="carousel-slide">
                                 <Aktualita image={sezona} title="Nová sezóna" date="26.11. 2020" url="novaSezona" rawText="Tak co&nbsp;myslíte? Jaká bude? Zahájili jsme zasněžování! Počasí a&nbsp;vláda rozhodne, kdy&nbsp;se uvidíme&nbsp;😊" />
                             </Slide>
@@ -194,58 +150,6 @@ export default function Home() {
                             </svg>
                         </ButtonNext>
                     </CarouselProvider>
-                    {/* )} */}
-                    {/* </Media> */}
-                    {/* <Swiper
-                        navigation  
-                        spaceBetween={50}
-                        slide
-                        slidesPerView={3}
-                        breakpoints={{
-                            // when window width is >= 320px
-                            320: {
-                                slidesPerView: 2,
-                                spaceBetween: 20
-                            },
-                            // when window width is >= 480px
-                            480: {
-                                slidesPerView: 3,
-                                spaceBetween: 30
-                            },
-                            // when window width is >= 640px
-                            640: {
-                                slidesPerView: 4,
-                                spaceBetween: 40
-                            }
-                        }}
-                    >
-                        <SwiperSlide>Hello World</SwiperSlide>
-                        <SwiperSlide>Hello World</SwiperSlide>
-                        <SwiperSlide>Hello World</SwiperSlide>
-                        <SwiperSlide>Hello World</SwiperSlide>
-                        <SwiperSlide>Hello World</SwiperSlide>
-                        <SwiperSlide>Hello World</SwiperSlide>
-                        <SwiperSlide>Hello World</SwiperSlide> */}
-                    {/* <SwiperSlide >
-                            <Aktualita image={sezona} title="Nová sezóna" date="26.11. 2020" url="novaSezona" rawText="Tak co&nbsp;myslíte? Jaká bude? Zahájili jsme zasněžování! Počasí a&nbsp;vláda rozhodne, kdy&nbsp;se uvidíme&nbsp;😊" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Aktualita image={lyzTest} title="Testování lyží" date="16.11. 2020" url="lyzTest" rawText="" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Aktualita image={parking} title="Parkování" date="15.11. 2020" url="parkovani" rawText="Přijeďte si&nbsp;užít lyžovačku! Parkování je u&nbsp;nás ZDARMA  a&nbsp;hned pod&nbsp;Myšákem. Přijíždějící auta organizujeme, aby bylo vše v&nbsp;pohodě, a&nbsp;aby další a&nbsp;další lyžaři našli místo. Mezi jednotlivými areály se&nbsp;můžete přemisťovat i&nbsp;bezplatnými SKI busy a SKI taxi. Jízdní řády připravujeme." />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Aktualita image={ctSport} title="ČT sport NA VRCHOL" date="15.11. 2020" url="JBus3Nas" rawText="Vzpomínáte? Takhle to&nbsp;na&nbsp;Myšáku žilo s&nbsp;ČT&nbsp;sport na&nbsp;vrchol 22.&nbsp;ledna 2019. Už máme termín pro&nbsp;závod letošní sezóny. Zapište si&nbsp;do&nbsp;diářů 5.&nbsp;–&nbsp;7.&nbsp;února 2021! Tak ať&nbsp;dojedeme s&nbsp;ČT&nbsp;sport až&nbsp;na&nbsp;vrchol!" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Aktualita image={servis} title="PODĚKOVÁNÍ za sezónu 2019/20" date="29.3. 2020" url="ASnDASie2" rawText="Za normálních okolností bychom teď, na&nbsp;konci března, pravděpodobně oznamovali konec další lyžařské sezóny v&nbsp;karlovském údolí. Tato zima ale 'normální' nebyla, a&nbsp;to&nbsp;nemáme na&nbsp;mysli jen její předčasný konec...                    " />
-                        </SwiperSlide> */}
-                    {/* </Swiper> */}
-
-                    {/* // <div class="swiper-button-prev"></div>
-                            // <div class="swiper-button-next"></div> */}
-
                 </div>
             </section>
             <section className="flexbox-column section section-sluzby" >
@@ -256,29 +160,23 @@ export default function Home() {
                     <Link to="/servis"><article className="sluzby-item" >
                         <img src={servisFoto} alt="snowy mountain" />
                         <h3>Servis a půjčovna</h3>
-                        <p><strong>Přijeďte lyžovat!</strong> Pokud nemáte výbavu, svěřte se do rukou servismanů v půjčovně Myšák. Komplet výstroj pro <strong>lyžaře, snowboarďáky i alpinisty</strong> .</p>
+                        <p><strong>Přijeďte lyžovat!</strong> Pokud nemáte výbavu, svěřte se do rukou servismanů v půjčovně Myšák.<strong> Komplet výstroj pro lyžaře, snowboarďáky i alpinisty</strong> .</p>
                     </article></Link>
                     <Link to="/skola"><article className="sluzby-item" >
                         <img src={skolaFoto} />
                         <h3>Lyžařská škola</h3>
                         <p><strong>Chcete se zdokonalit v lyžování?</strong> Učíme lyžaře i snowboardisty všech věkových kategorií a všech úrovní.
-                Bez stresu a na pohodu!</p>
+                <strong>Bez stresu a na pohodu!</strong></p>
                     </article></Link>
                     <Link to="/obcerstveni"><article className="sluzby-item" >
                         <img src={jidloFoto} />
                         <h3>Občerstvení</h3>
-                        <p><strong>Ski&nbsp;bar s&nbsp;terasou a&nbsp;výhledem nebo bistro pod&nbsp;Myšákem?</strong> Drinky a&nbsp;něco na&nbsp;zahřátí, domácí kuchyně pro&nbsp;děti i&nbsp;dospělé, polévky a&nbsp;místní speciality. Dobrou chuť!</p>
+                        <p><strong>Ski&nbsp;bar s&nbsp;terasou a&nbsp;výhledem nebo bistro pod&nbsp;Myšákem?</strong> Drinky a&nbsp;něco na&nbsp;zahřátí, 
+                        domácí kuchyně pro&nbsp;děti i&nbsp;dospělé, polévky a&nbsp;místní speciality. <strong>Dobrou chuť!</strong></p>
                     </article></Link>
                 </div>
             </section>
-            {/* <section className="section-text section-socials">
-                <a href="https://www.facebook.com" className="facebook-link"><h2 className="facebook">Najděte nás i&nbsp;na&nbsp;facebooku!</h2></a>
-            </section> */}
             <section className="section section-bottom" >
-                {/* <h1 className="big-title title-white" >
-                    Sezóna 2020-21! <br />
-                    Těšíme se&nbsp;na&nbsp;Vás
-                </h1> */}
                 <img src={mapaFoto} alt="Mapa Ski Karlov" style={{ width: '90%', maxWidth: '1500px' }} />
             </section>
         </main>
