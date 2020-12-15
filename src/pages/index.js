@@ -30,6 +30,7 @@ import ctSport from '../../assets/ctSport1.jpg'
 import parking from '../../assets/parking1.jpeg'
 import lyzTest from '../../assets/testLyzi.png'
 import sezona from '../../assets/snih1.jpg'
+import zahajeniSezony from '../../assets/zahajeniSezony.jpg'
 
 import mapaFoto from '../../assets/mapa.png'
 
@@ -90,7 +91,7 @@ export default function Home() {
 
             <section className="flexbox-column section section-main-text" >
                 <h1 className="smaller title-blue">
-                    Parádní lyžování v jeseníkách!
+                    V pátek 18.12. zahajujeme provoz!
                 </h1>
                 <p>
                     Ski Myšák je součástí <strong>Ski arény Karlov pod Pradědem </strong> a&nbsp;nabízí 4&nbsp;místnou sedačkovou lanovku s&nbsp;bublinou a&nbsp;skvělý sešup po&nbsp;modré nebo dvou červených -&nbsp;o&nbsp;celkové délce skoro 2,5&nbsp;km.
@@ -117,24 +118,27 @@ export default function Home() {
                         naturalSlideHeight={m.ll ? 135 : m.ls ? 150 : m.ml ? 125 : m.ms ? 150 : m.s ? 110 : 150}
                         isIntrinsicHeight={m.s}
                         className={m.s ? 'small-width-carousel' : ' '}
-                        totalSlides={5}
+                        totalSlides={6}
                         visibleSlides={m.l ? 3 : m.m ? 2 : m.s ? 1 : 3}
                     >
                         <Slider width={m.ll ? '1300px' : null}>
                             <Slide index={0} innerClassName="slide-inner" className="carousel-slide">
-                                <Aktualita image={sezona} title="Nová sezóna" date="5.12. 2020" url="novaSezona" rawText="Tak co&nbsp;myslíte? Jaká bude? Zahájili jsme zasněžování! Počasí a&nbsp;vláda rozhodne, kdy&nbsp;se uvidíme&nbsp;😊" />
+                                <Aktualita image={zahajeniSezony} title="ZAČÍNÁME V PÁTEK 🏂" date="15.12. 2020" url="zahajujemeProvoz" rawText="Ski&nbsp;Aréna Karlov otevře sezónu v&nbsp;pátek 18.&nbsp;prosince 2020 v&nbsp;8.30 hodin. Lyžovat se bude i&nbsp;v&nbsp;sobotu a&nbsp;v&nbsp;neděli (další provoz upřesníme). K&nbsp;dispozici bude modrá 💙sjezdovka Family u&nbsp;čtyřsedadlové lanovky Myšák 🐭 a&nbsp;jedna ze&nbsp;sjezdovek u&nbsp;čtyřsedadlové lanovky Karlov Ski&nbsp;Express, kde&nbsp;bude i&nbsp;večerní lyžování..." />
                             </Slide>
                             <Slide index={1} innerClassName="slide-inner" className="carousel-slide">
-                                <Aktualita image={lyzTest} title="Testování lyží" url="lyzTest" rawText="" />
+                                <Aktualita image={sezona} title="Nová sezóna" date="5.12. 2020" url="novaSezona" rawText="Tak co&nbsp;myslíte? Jaká bude? Zahájili jsme zasněžování! Počasí a&nbsp;vláda rozhodne, kdy&nbsp;se uvidíme&nbsp;😊" />
                             </Slide>
                             <Slide index={2} innerClassName="slide-inner" className="carousel-slide">
-                                <Aktualita image={parking} title="Parkování" date="18.11. 2020" url="parkovani" rawText="Přijeďte si&nbsp;užít lyžovačku! Parkování je u&nbsp;nás ZDARMA  a&nbsp;hned pod&nbsp;Myšákem. Přijíždějící auta organizujeme, aby bylo vše v&nbsp;pohodě, a&nbsp;aby další a&nbsp;další lyžaři našli místo. Mezi jednotlivými areály se&nbsp;můžete přemisťovat i&nbsp;bezplatnými SKI busy a SKI taxi. Jízdní řády připravujeme." />
+                                <Aktualita image={lyzTest} title="Testování lyží" url="lyzTest" rawText="" />
                             </Slide>
                             <Slide index={3} innerClassName="slide-inner" className="carousel-slide">
-                                <Aktualita image={ctSport} title="ČT sport NA VRCHOL" date="15.11. 2020" url="JBus3Nas" rawText="Vzpomínáte? Takhle to&nbsp;na&nbsp;Myšáku žilo s&nbsp;ČT&nbsp;sport na&nbsp;vrchol 22.&nbsp;ledna 2019. Už máme termín pro&nbsp;závod letošní sezóny. Zapište si&nbsp;do&nbsp;diářů 5.&nbsp;–&nbsp;7.&nbsp;února 2021! Tak ať&nbsp;dojedeme s&nbsp;ČT&nbsp;sport až&nbsp;na&nbsp;vrchol!" />
+                                <Aktualita image={parking} title="Parkování" date="18.11. 2020" url="parkovani" rawText="Přijeďte si&nbsp;užít lyžovačku! Parkování je u&nbsp;nás ZDARMA  a&nbsp;hned pod&nbsp;Myšákem. Přijíždějící auta organizujeme, aby bylo vše v&nbsp;pohodě, a&nbsp;aby další a&nbsp;další lyžaři našli místo. Mezi jednotlivými areály se&nbsp;můžete přemisťovat i&nbsp;bezplatnými SKI busy a SKI taxi. Jízdní řády připravujeme." />
                             </Slide>
                             <Slide index={4} innerClassName="slide-inner" className="carousel-slide">
-                                <Aktualita image={servis} title="PODĚKOVÁNÍ za sezónu 2019/20" date="29.3. 2020" url="ASnDASie2" rawText="Za normálních okolností bychom teď, na&nbsp;konci března, pravděpodobně oznamovali konec další lyžařské sezóny v&nbsp;karlovském údolí. Tato zima ale 'normální' nebyla, a&nbsp;to&nbsp;nemáme na&nbsp;mysli jen její předčasný konec...                    " />
+                                <Aktualita image={ctSport} title="ČT sport NA VRCHOL" date="15.11. 2020" url="JBus3Nas" rawText="Vzpomínáte? Takhle to&nbsp;na&nbsp;Myšáku žilo s&nbsp;ČT&nbsp;sport na&nbsp;vrchol 22.&nbsp;ledna 2019. Už máme termín pro&nbsp;závod letošní sezóny. Zapište si&nbsp;do&nbsp;diářů 5.&nbsp;–&nbsp;7.&nbsp;února 2021! Tak ať&nbsp;dojedeme s&nbsp;ČT&nbsp;sport až&nbsp;na&nbsp;vrchol!" />
+                            </Slide>
+                            <Slide index={5} innerClassName="slide-inner" className="carousel-slide">
+                                <Aktualita image={servis} title="PODĚKOVÁNÍ za sezónu 2019/20" date="29.3. 2020" url="ASnDASie2" rawText="Za normálních okolností bychom teď, na&nbsp;konci března, pravděpodobně oznamovali konec další lyžařské sezóny v&nbsp;karlovském údolí. Tato zima ale 'normální' nebyla, a&nbsp;to&nbsp;nemáme na&nbsp;mysli jen její předčasný konec... " />
                             </Slide>
                         </Slider>
                         <ButtonBack className="carousel-back">
@@ -171,7 +175,7 @@ export default function Home() {
                     <Link to="/obcerstveni"><article className="sluzby-item" >
                         <img src={jidloFoto} />
                         <h3>Občerstvení</h3>
-                        <p><strong>Ski&nbsp;bar s&nbsp;terasou a&nbsp;výhledem nebo bistro pod&nbsp;Myšákem?</strong> Drinky a&nbsp;něco na&nbsp;zahřátí, 
+                        <p><strong>Ski&nbsp;bar s&nbsp;terasou a&nbsp;výhledem nebo bistro pod&nbsp;Myšákem?</strong> Drinky a&nbsp;něco na&nbsp;zahřátí,
                         domácí kuchyně pro&nbsp;děti i&nbsp;dospělé, polévky a&nbsp;místní speciality. <strong>Dobrou chuť!</strong></p>
                     </article></Link>
                 </div>

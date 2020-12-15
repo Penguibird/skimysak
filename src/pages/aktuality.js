@@ -14,6 +14,8 @@ import ctSport from '../../assets/ctSport1.jpg'
 import parking from '../../assets/parking1.jpeg'
 import lyzTest from '../../assets/testLyzi.png'
 import sezona from '../../assets/snih1.jpg'
+import zahajeniSezony from '../../assets/zahajeniSezony.jpg'
+
 export default function page(props) {
     let ref = React.useRef();
     return <Fragment>
@@ -31,6 +33,7 @@ export default function page(props) {
 
             </section>
             <section className="section-page-aktuality">
+                <Aktualita image={zahajeniSezony} title="ZAČÍNÁME V PÁTEK 🏂" date="15.12. 2020" url="zahajujemeProvoz" rawText="Ski&nbsp;Aréna Karlov otevře sezónu v&nbsp;pátek 18.&nbsp;prosince 2020 v&nbsp;8.30 hodin. Lyžovat se bude i&nbsp;v&nbsp;sobotu a&nbsp;v&nbsp;neděli (další provoz upřesníme). K&nbsp;dispozici bude modrá 💙sjezdovka Family u&nbsp;čtyřsedadlové lanovky Myšák 🐭 a&nbsp;jedna ze&nbsp;sjezdovek u&nbsp;čtyřsedadlové lanovky Karlov Ski&nbsp;Express, kde&nbsp;bude i&nbsp;večerní lyžování..." />
 
                 <Aktualita image={sezona} title="Nová sezóna" date="5.12. 2020" url="novaSezona"
                     rawText="Tak co&nbsp;myslíte? Jaká bude? Zahájili jsme zasněžování! Počasí a&nbsp;vláda rozhodne, kdy&nbsp;se uvidíme&nbsp;😊"
