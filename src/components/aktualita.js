@@ -6,7 +6,7 @@ import '../styles/components/aktualita.scss';
 export default function Aktualita({ title, imageName, image, url, rawText, date }) {
     return <Link to={`/aktuality/${url}`} className={`aktualita ${(image || imageName) ? 'aktualita-img' : 'aktualita-no-img'}`}>
         <div className="image-wrapper">
-            {(image || imageName) && <img src={image ? image : require(`../../assets/${imageName}.jpg`)} alt={imageName ? imageName : ""} />}
+            {(image || imageName) && <img src={image ? image : require(`../../assets/${imageName}.jpg`)} alt={imageName ? imageName : ""} style={{maxHeight: '250px', objectPosition: 'top'}}/>}
         </div>
         <h3 className="title" >{title}</h3>
         {date && <p className="date" style={{color: '#757575', fontSize: '14px'}} >{date}</p>}
