@@ -33,7 +33,7 @@ export default function page(props) {
                 <p>...&nbsp;s&nbsp;výjimkou Štědrého dne&nbsp;🎄 (24.&nbsp;12.). Od&nbsp;8:30 do 16&nbsp;hodin. V&nbsp;provozu půjčovna, servis&nbsp;🛠 i&nbsp;lyžařská škola (rezervace a&nbsp;objednávky na&nbsp;čísle&nbsp;734&nbsp;824&nbsp;493). Občerstvení&nbsp;🥪🧃 přes&nbsp;okénko.</p>
 
                 <p>Samozřejmostí je&nbsp;ochrana nosu a&nbsp;úst 😊 rouška, kukla, šátek...). Těšíme se&nbsp;na&nbsp;Vás a&nbsp;předem děkujeme za&nbsp;respektovaní nastavených pravidel, za&nbsp;spolupráci a&nbsp;sdílení této informace. 👍</p>
-                <img src={zahajeniSezony} alt="Sjezdovka" className="aktuality-img" />
+                <img src={doKonceRoku} alt="Sjezdovka" className="aktuality-img" />
                 <Link to="/aktuality" className='back center   ' >
                     <svg width="20" height="40" viewBox="0 0 20 40" className="custom-svg">
                         <line x1="3" x2="17" y1="20" y2="37" />
