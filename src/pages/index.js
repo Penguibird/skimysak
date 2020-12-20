@@ -32,7 +32,7 @@ import lyzTest from '../../assets/testLyzi.png'
 import sezona from '../../assets/snih1.jpg'
 import zahajeniSezony from '../../assets/zahajeniSezony.jpg'
 import informace from '../../assets/informace.jpg'
-import doKonceRoku from '../../../assets/do_konce_roku.jpg';
+import doKonceRoku from '../../assets/do_konce_roku.jpg';
 
 import mapaFoto from '../../assets/mapa.png'
 
