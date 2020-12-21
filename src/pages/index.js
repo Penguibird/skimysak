@@ -93,7 +93,7 @@ export default function Home() {
 
             <section className="flexbox-column section section-main-text" >
                 <h1 className="smaller title-blue">
-                    V pátek 18.12. zahajujeme provoz!
+                    Jedemeéé! do&nbsp;konce roku provoz denně 8:30&nbsp;-&nbsp;16:00 mimo 24.12
                 </h1>
                 <p>
                     Ski Myšák je součástí <strong>Ski arény Karlov pod Pradědem </strong> a&nbsp;nabízí 4&nbsp;místnou sedačkovou lanovku s&nbsp;bublinou a&nbsp;skvělý sešup po&nbsp;modré nebo dvou červených -&nbsp;o&nbsp;celkové délce skoro 2,5&nbsp;km.
