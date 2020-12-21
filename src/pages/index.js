@@ -46,7 +46,7 @@ export default function Home() {
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content="Parádní lyžování v jeseníkách" />
-            
+
         </Helmet>
         <Header mainSectionRef={ref} />
         <main>
@@ -93,24 +93,27 @@ export default function Home() {
             </section>
 
             <section className="flexbox-column section section-main-text" >
-                <h1 className="smaller title-blue">
-                    Jedemeéé! do&nbsp;konce roku provoz denně 8:30&nbsp;-&nbsp;16:00 mimo 24.12
+                <h1 className="smaller title-blue" style={{marginBottom: '1vw'}}>
+                    Jedemeéé!
+                </h1>
+                <h1 className="smaller title-blue" style={{fontSize: 'clamp(18px, 3.8vw, 3.8vw)', maxWidth: '1300px'}}>
+                do&nbsp;konce roku provoz<br/>denně 8:30&nbsp;-&nbsp;16:00 mimo 24.12
                 </h1>
                 <p>
-                    Ski Myšák je součástí <strong>Ski arény Karlov pod Pradědem </strong> a&nbsp;nabízí 4&nbsp;místnou sedačkovou lanovku s&nbsp;bublinou a&nbsp;skvělý sešup po&nbsp;modré nebo dvou červených -&nbsp;o&nbsp;celkové délce skoro 2,5&nbsp;km.
+                Ski Myšák je součástí <strong>Ski arény Karlov pod Pradědem </strong> a&nbsp;nabízí 4&nbsp;místnou sedačkovou lanovku s&nbsp;bublinou a&nbsp;skvělý sešup po&nbsp;modré nebo dvou červených -&nbsp;o&nbsp;celkové délce skoro 2,5&nbsp;km.
                 </p>
                 <p>
-                    Než vyrazíte, využijte náš <strong>servis</strong> nebo <strong>půjčovnu</strong> hned u&nbsp;lanovky a&nbsp;v&nbsp;případě zájmu si&nbsp;domluvte lekci <strong>v&nbsp;lyžařské škole</strong>, na&nbsp;kterou narazíte hned u&nbsp;pokladen.
+                Než vyrazíte, využijte náš <strong>servis</strong> nebo <strong>půjčovnu</strong> hned u&nbsp;lanovky a&nbsp;v&nbsp;případě zájmu si&nbsp;domluvte lekci <strong>v&nbsp;lyžařské škole</strong>, na&nbsp;kterou narazíte hned u&nbsp;pokladen.
                 </p>
                 <p>
-                    O&nbsp;pauze jste zváni do&nbsp;<strong>SKI baru</strong> s&nbsp;terasou a&nbsp;výhledem nebo do&nbsp;<strong>Bistra pod&nbsp;Myšákem</strong>. Parkování je&nbsp;zdarma hned pod&nbsp;sjezdovkou!
+                O&nbsp;pauze jste zváni do&nbsp;<strong>SKI baru</strong> s&nbsp;terasou a&nbsp;výhledem nebo do&nbsp;<strong>Bistra pod&nbsp;Myšákem</strong>. Parkování je&nbsp;zdarma hned pod&nbsp;sjezdovkou!
                 </p>
                 <p>
-                    Aktuální zprávy o&nbsp;provozu najdete <Link to="/aktuality" ><strong>zde</strong></Link> nebo na <a href="https://www.facebook.com/SkiMysak/"><strong>FB&nbsp;Ski Myšák</strong></a>.
+                Aktuální zprávy o&nbsp;provozu najdete <Link to="/aktuality" ><strong>zde</strong></Link> nebo na <a href="https://www.facebook.com/SkiMysak/"><strong>FB&nbsp;Ski Myšák</strong></a>.
                 </p>
 
                 <h2>
-                    Děláme svou práci rádi!
+                Děláme svou práci rádi!
                 </h2>
             </section>
             <section className="section-aktuality section">
@@ -168,7 +171,7 @@ export default function Home() {
             </section>
             <section className="flexbox-column section section-sluzby" >
                 <h1 className="big-title title-blue " >
-                    SLUŽBY
+                SLUŽBY
                 </h1>
                 <div className="flexbox-row sluzby-wrap">
                     <Link to="/servis"><article className="sluzby-item" >
