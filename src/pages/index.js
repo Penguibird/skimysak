@@ -46,15 +46,7 @@ export default function Home() {
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content="Parádní lyžování v jeseníkách" />
-            {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
-            {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-7HFCN7FM66"></script>
-            <script>
-                window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7HFCN7FM66');
-</script> */}
+            
         </Helmet>
         <Header mainSectionRef={ref} />
         <main>
