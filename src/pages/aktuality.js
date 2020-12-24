@@ -17,6 +17,7 @@ import sezona from '../../assets/snih1.jpg'
 import zahajeniSezony from '../../assets/zahajeniSezony.jpg'
 import informace from '../../assets/informace.jpg'
 import doKonceRoku from '../../assets/do_konce_roku.jpg';
+import infoKonec from '../../assets/infoKonec.jpg';
 
 export default function page(props) {
     let ref = React.useRef();
@@ -35,6 +36,9 @@ export default function page(props) {
 
             </section>
             <section className="section-page-aktuality">
+            <Aktualita image={infoKonec} title="NOVÉ INFORMACE O PROVOZU" date="23.12.2020" url="infoKonec"
+                    rawText=" Od&nbsp;27.&nbsp;prosince 2020 budou všechny lyžařské areály uzavřeny z&nbsp;důvodu přechodu na&nbsp;5.&nbsp;stupeň PES. Ski&nbsp;Aréna Karlov bude do&nbsp;té&nbsp;doby nabízet všechny své&nbsp;služby."
+                />
                 <Aktualita image={doKonceRoku} title="⛷ LYŽUJEME KAŽDÝ DEN DO KONCE ROKU 🏂" date="20.12.2020" url="doKonceRoku"
                     rawText="...&nbsp;s&nbsp;výjimkou Štědrého dne&nbsp;🎄 (24.&nbsp;12.). Od&nbsp;8:30 do 16&nbsp;hodin. V&nbsp;provozu půjčovna, servis&nbsp;🛠 i&nbsp;lyžařská škola (rezervace a&nbsp;objednávky na&nbsp;čísle&nbsp;734&nbsp;824&nbsp;493). Občerstvení&nbsp;🥪🧃 přes&nbsp;okénko."
                 />
