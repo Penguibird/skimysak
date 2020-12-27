@@ -32,7 +32,7 @@ export default function page(props) {
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                         </iframe>
                     </div>
-                    {/* <div className="kamera-wrapper">
+                    <div className="kamera-wrapper">
                         <h2>Myšák spodní stanice</h2>
                         <iframe
                             // width="560" height="315"
@@ -40,7 +40,7 @@ export default function page(props) {
                             frameborder="0" autoplay="1"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                         </iframe>
-                    </div> */}
+                    </div>
                 </section>
             </section>
         </main>
