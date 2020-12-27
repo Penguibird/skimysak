@@ -100,8 +100,11 @@ export default function Home() {
                 <h1 className="smaller title-blue" style={{fontSize: 'clamp(18px, 3.8vw, 3.8vw)', maxWidth: '1300px'}}>
                 do&nbsp;konce roku provoz<br/>denně 8:30&nbsp;-&nbsp;16:00 mimo 24.12
                 </h1> */}
+                {/* <h1 className="smaller title-blue">
+                    Parádní lyžování v&nbsp;jeseníkách!
+                </h1> */}
                 <h1 className="smaller title-blue">
-                    Parádní lyžování v jeseníkách!
+                    Areál dočasně uzavřen.
                 </h1>
                 <p>
                     Ski Myšák je součástí <strong>Ski arény Karlov pod Pradědem </strong> a&nbsp;nabízí 4&nbsp;místnou sedačkovou lanovku s&nbsp;bublinou a&nbsp;skvělý sešup po&nbsp;modré nebo dvou červených -&nbsp;o&nbsp;celkové délce skoro 2,5&nbsp;km.
