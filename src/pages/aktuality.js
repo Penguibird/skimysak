@@ -7,7 +7,6 @@ import { Helmet } from "react-helmet";
 import Header from '../components/header'
 import Footer from '../components/footer'
 import Aktualita from '../components/aktualita'
-
 import { StaticImage } from "gatsby-plugin-image";
 
 export const imageProps = {
@@ -35,7 +34,6 @@ export default function page(props) {
             <section className="section-hero-image section" style={{ paddingBottom: '0px' }}>
                 <h1 ref={ref}>Aktuality</h1>
                 {/* <img className="hero-image" src={image} alt="Ski slope" /> */}
-
             </section>
             <section className="section-page-aktuality">
                 <Aktualita title="NOVÉ INFORMACE O PROVOZU" date="23.12.2020" url="infoKonec"
@@ -43,8 +41,6 @@ export default function page(props) {
                 >
                     <StaticImage {...imageProps} src='../../assets/infoKonec.jpg' alt='Info o konci provozu' />
                 </Aktualita>
-
-
                 <Aktualita title="⛷ LYŽUJEME KAŽDÝ DEN DO KONCE ROKU 🏂" date="20.12.2020" url="doKonceRoku" rawText="...&nbsp;s&nbsp;výjimkou Štědrého dne&nbsp;🎄 (24.&nbsp;12.). Od&nbsp;8:30 do 16&nbsp;hodin. V&nbsp;provozu půjčovna, servis&nbsp;🛠 i&nbsp;lyžařská škola (rezervace a&nbsp;objednávky na&nbsp;čísle&nbsp;734&nbsp;824&nbsp;493). Občerstvení&nbsp;🥪🧃 přes&nbsp;okénko." >
                     <StaticImage {...imageProps} src='../../assets/do_konce_roku.jpg' alt='Foto horni stanice vleku' imgStyle={{ maxHeight: '250px', objectPosition: 'top' }} layout='constrained' />
                 </Aktualita>

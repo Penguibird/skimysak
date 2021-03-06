@@ -84,15 +84,15 @@ export default function Home() {
             <section id="mainSection" className="section-icons section" ref={ref}>
                 <Link to="/kamery" className="widget widget-kamery" >
                     <StaticImage
-                     aspectRatio={1} width={250}
-                     className="bckgrnd-image" src='../../assets/kamery.jpg' alt='Ikona kamery' layout='constrained' />
+                        aspectRatio={1} width={250}
+                        className="bckgrnd-image" src='../../assets/kamery.jpg' alt='Ikona kamery' layout='constrained' />
                     <h2 className="widget-title">KAMERY</h2>
                 </Link>
                 <Weather />
                 <a href="https://www.skikarlov.cz/lyzovani/ceny-skipasu" className="widget widget-skipasy" >
-                    <StaticImage 
-                    aspectRatio={1} width={250}
-                     className="bckgrnd-image" src='../../assets/skipas.jpg' alt='Ikona skipasy' layout='constrained' />
+                    <StaticImage
+                        aspectRatio={1} width={250}
+                        className="bckgrnd-image" src='../../assets/skipas.jpg' alt='Ikona skipasy' layout='constrained' />
                     <h2 className="widget-title">Skipasy</h2>
                 </a>
             </section>
@@ -121,7 +121,7 @@ export default function Home() {
             <section className="section-aktuality section">
                 <h1 className="title-white smaller">Aktuality</h1>
                 <div className="aktuality-wrapper" style={{ width: '100vw', maxWidth: 'unset' }}>
-                    <StaticImage style={{ zIndex: 0 }}  placeholder="blurred" src="../../assets/random_hero_2.png" alt='Zasnezene pozadi' layout='fullWidth' />
+                    <StaticImage style={{ zIndex: 0 }} placeholder="blurred" src="../../assets/random_hero_2.png" alt='Zasnezene pozadi' layout='fullWidth' />
                     <CarouselProvider
                         style={{ zIndex: 1, marginTop: '-50%' }}
                         naturalSlideWidth={100}
@@ -218,8 +218,8 @@ export default function Home() {
                     </article></Link>
                 </div>
             </section>
-            <section className="section section-bottom" >
-                <StaticImage formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/mapa.png' alt="Mapa Ski Karlov" style={{ width: '90%', maxWidth: '1500px', height: 'auto' }}
+            <section className="section section-bottom" style={{ width: '90%', maxWidth: '1500px', height: 'auto', margin: 'auto' }} >
+                <StaticImage formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/mapa.png' alt="Mapa Ski Karlov"
                     // imgStyle={{ width: '90%', maxWidth: '1500px' }} 
                     objectFit='contain'
                     layout='constrained' />
