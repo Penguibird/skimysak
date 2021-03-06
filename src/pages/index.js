@@ -11,11 +11,12 @@ import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 
 import { StaticImage } from "gatsby-plugin-image";
 
-const Header = loadable(() => import('../components/header'));
-// import Header from '../components/header'
-const Footer = loadable(() => import('../components/footer'));
-const Weather = loadable(() => import('../components/weather'));
+// const Header = loadable(() => import('../components/header'));
+import Header from '../components/header'
+// const Weather = loadable(() => import('../components/weather'));
+import Weather from '../components/weather'
 const Aktualita = loadable(() => import('../components/aktualita'));
+const Footer = loadable(() => import('../components/footer'));
 
 // import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 
