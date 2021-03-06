@@ -200,18 +200,27 @@ export default function Home() {
                 <div className="flexbox-row sluzby-wrap">
                     {/* TODO Aspect ratio in these  */}
                     <Link to="/servis"><article className="sluzby-item" >
-                        <StaticImage aspectRatio={4 / 3} width={900} formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/servisFoto.jpg' alt="Zasnezena hora" layout='constrained' />
+                        <StaticImage
+                            // aspectRatio={4 / 3} width={900} 
+                            formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/servisFoto.jpg' alt="Zasnezena hora" layout='constrained'
+                        />
                         <h3>Servis a půjčovna</h3>
                         <p><strong>Přijeďte lyžovat!</strong> Pokud nemáte výbavu, svěřte se do rukou servismanů v půjčovně Myšák.<strong> Komplet výstroj pro lyžaře, snowboarďáky i alpinisty</strong> .</p>
                     </article></Link>
                     <Link to="/skola"><article className="sluzby-item" >
-                        <StaticImage aspectRatio={4 / 3} width={900} formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/skolaFoto.jpg' alt='Male dite na lyzich' layout='constrained' />
+                        <StaticImage
+                            // aspectRatio={4 / 3} width={900} 
+                            formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/skolaFoto.jpg' alt='Male dite na lyzich' layout='constrained'
+                        />
                         <h3>Lyžařská škola</h3>
                         <p><strong>Chcete se zdokonalit v lyžování?</strong> Učíme lyžaře i snowboardisty všech věkových kategorií a všech úrovní.
                         <strong>Bez stresu a na pohodu!</strong></p>
                     </article></Link>
                     <Link to="/obcerstveni"><article className="sluzby-item" >
-                        <StaticImage aspectRatio={4 / 3} width={900} formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/jidlo_hero.jpg' alt='Horky napoj na horach' layout='constrained' />
+                        <StaticImage
+                            // aspectRatio={4 / 3} width={900} 
+                            formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/jidlo_hero.jpg' alt='Horky napoj na horach' layout='constrained'
+                        />
                         <h3>Občerstvení</h3>
                         <p><strong>Ski&nbsp;bar s&nbsp;terasou a&nbsp;výhledem nebo bistro pod&nbsp;Myšákem?</strong> Drinky a&nbsp;něco na&nbsp;zahřátí,
                         domácí kuchyně pro&nbsp;děti i&nbsp;dospělé, polévky a&nbsp;místní speciality. <strong>Dobrou chuť!</strong></p>
