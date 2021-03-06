@@ -101,7 +101,7 @@ export default function Home() {
                 <Link to="/kamery" className="widget widget-kamery" >
                     <StaticImage
                         transformOptions={{ outputPixelDensities: [0.05, 0.1, 0.15, 0.25, 0.5, 1, 2] }}
-
+                        loading="eager"
                         width={210}
                         height={210}
                         className="bckgrnd-image" src='../../assets/kamery.jpg' alt='Ikona kamery' layout='constrained' />
@@ -111,6 +111,8 @@ export default function Home() {
 
                 <a href="https://www.skikarlov.cz/lyzovani/ceny-skipasu" className="widget widget-skipasy" >
                     <StaticImage
+                        loading="eager"
+
                         transformOptions={{ outputPixelDensities: [0.05, 0.1, 0.15, 0.25, 0.5, 1, 2] }}
                         width={210}
                         height={210}
@@ -140,7 +142,7 @@ export default function Home() {
                     Děláme svou práci rádi!
                 </h2>
             </section>
-            <section className="section-aktuality section">
+            {/* <section className="section-aktuality section">
                 <h1 className="title-white smaller">Aktuality</h1>
                 <div className="aktuality-wrapper" style={{ width: '100vw', maxWidth: 'unset' }}>
                     {m.s
@@ -185,9 +187,7 @@ export default function Home() {
                                     <StaticImage {...imageProps} src='../../assets/informace.jpg' alt='Info o vstupu do ČR' />
                                 </Aktualita>
                             </Slide>
-                            {/* <Slide index={1} innerClassName="slide-inner" className="carousel-slide">
-                                <Aktualita image={sezona} title="Nová sezóna" date="5.12. 2020" url="novaSezona" rawText="Tak co&nbsp;myslíte? Jaká bude? Zahájili jsme zasněžování! Počasí a&nbsp;vláda rozhodne, kdy&nbsp;se uvidíme&nbsp;😊" />
-                            </Slide> */}
+                        
                             <Slide index={2 + 1 + 1} innerClassName="slide-inner" className="carousel-slide">
                                 <Aktualita title="Testování lyží" url="lyzTest" rawText="Další oblíbené testování Nixski proběhne 6.&nbsp;ledna, od&nbsp;9ti do&nbsp;16ti hodin na&nbsp;Myšáku. Vyzkoušejte novinkové ATOMIC, HEAD, DYNASTAR,STÖCKLI a&nbsp;LUSTI." >
                                     <StaticImage {...imageProps} src='../../assets/testLyzi.png' alt='Letak test lyzi' />
@@ -224,6 +224,7 @@ export default function Home() {
                     </CarouselProvider>
                 </div>
             </section>
+             */}
             <section className="flexbox-column section section-sluzby" >
                 <h1 className="big-title title-blue " >
                     SLUŽBY
