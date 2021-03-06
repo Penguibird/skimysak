@@ -20,15 +20,15 @@ import videoMp4 from '../../assets/video.mp4';
 
 
 
-//aktuality photos
-import servis from '../../assets/servis.jpg'
-import ctSport from '../../assets/ctSport1.jpg'
-import parking from '../../assets/parking1.jpeg'
-import lyzTest from '../../assets/testLyzi.png'
-import sezona from '../../assets/snih1.jpg'
-import zahajeniSezony from '../../assets/zahajeniSezony.jpg'
-import informace from '../../assets/informace.jpg'
-import doKonceRoku from '../../assets/do_konce_roku.jpg';
+// //aktuality photos
+// import servis from '../../assets/servis.jpg'
+// import ctSport from '../../assets/ctSport1.jpg'
+// import parking from '../../assets/parking1.jpeg'
+// import lyzTest from '../../assets/testLyzi.png'
+// import sezona from '../../assets/snih1.jpg'
+// import zahajeniSezony from '../../assets/zahajeniSezony.jpg'
+// import informace from '../../assets/informace.jpg'
+// import doKonceRoku from '../../assets/do_konce_roku.jpg';
 // import infoKonec from '../../assets/infoKonec.jpg';
 
 // export const query = graphql`
