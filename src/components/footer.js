@@ -13,7 +13,9 @@ export default function Footer(props) {
             <p>Weather forecast from&nbsp;Yr, delivered by&nbsp;the&nbsp;Norwegian Meteorological Institute and NRK</p>
         </div>
         <div className="footer-logo">
-            <StaticImage formats={["jpg", "webp"]} width={100} aspectRatio={124/134} placeholder="blurred" src='../../assets/logo_old.png' alt="logo ski mysak" layout="constrained" />
+            <StaticImage formats={["jpg", "webp"]}
+            //  width={100} aspectRatio={124/134} 
+             placeholder="tracedSVG" src='../../assets/logo_old.png' alt="logo ski mysak" layout="constrained" />
         </div>
     </footer>
 }

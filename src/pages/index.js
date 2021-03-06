@@ -84,14 +84,14 @@ export default function Home() {
             <section id="mainSection" className="section-icons section" ref={ref}>
                 <Link to="/kamery" className="widget widget-kamery" >
                     <StaticImage
-                        aspectRatio={1} width={250}
+                        aspectRatio={1} width={210}
                         className="bckgrnd-image" src='../../assets/kamery.jpg' alt='Ikona kamery' layout='constrained' />
                     <h2 className="widget-title">KAMERY</h2>
                 </Link>
                 <Weather />
                 <a href="https://www.skikarlov.cz/lyzovani/ceny-skipasu" className="widget widget-skipasy" >
                     <StaticImage
-                        aspectRatio={1} width={250}
+                        aspectRatio={1} width={210}
                         className="bckgrnd-image" src='../../assets/skipas.jpg' alt='Ikona skipasy' layout='constrained' />
                     <h2 className="widget-title">Skipasy</h2>
                 </a>
@@ -219,8 +219,11 @@ export default function Home() {
                 </div>
             </section>
             <section className="section section-bottom" style={{ width: '90%', maxWidth: '1500px', height: 'auto', margin: 'auto' }} >
-                <StaticImage formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/mapa.png' alt="Mapa Ski Karlov"
+                <StaticImage
+                    //  width={1500} height={960} 
+                    formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/mapa.png' alt="Mapa Ski Karlov"
                     // imgStyle={{ width: '90%', maxWidth: '1500px' }} 
+                    transformOptions={{ trim: true }}
                     objectFit='contain'
                     layout='constrained' />
             </section>
