@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Fragment, useRef, useEffect, lazy } from 'react';
+import { Fragment, useRef, useEffect, lazy, Suspense } from 'react';
 import { Helmet } from "react-helmet";
 import { Link, graphql } from 'gatsby';
 
