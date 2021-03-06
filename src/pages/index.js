@@ -128,7 +128,11 @@ export default function Home() {
             <section className="section-aktuality section">
                 <h1 className="title-white smaller">Aktuality</h1>
                 <div className="aktuality-wrapper" style={{ width: '100vw', maxWidth: 'unset' }}>
-                    {m.s ? <img width={600} height={338} src={randHero2Sm} alt='Zasnezene pozadi' />
+                    {m.s
+                        ? <StaticImage transformOptions={{ outputPixelDensities: [0.05, 0.1, 0.15, 0.25, 0.5, 1, 2] }}
+                            width={600}
+                            height={338}
+                            style={{ zIndex: 0 }} placeholder="blurred" src="../../assets/random_hero_2_sm.png" alt='Zasnezene pozadi' layout='fullWidth' />
                         : <StaticImage transformOptions={{ outputPixelDensities: [0.05, 0.1, 0.15, 0.25, 0.5, 1, 2] }}
                             width={1920}
                             height={1080}
