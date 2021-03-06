@@ -1,19 +1,28 @@
 import * as React from "react";
-import { Fragment, useRef, useEffect } from 'react';
+import { Fragment, useRef, useEffect, lazy } from 'react';
 import { Helmet } from "react-helmet";
 import { Link, graphql } from 'gatsby';
 
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
 import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 
 import { StaticImage } from "gatsby-plugin-image";
 
-import Header from '../components/header'
-import Footer from '../components/footer'
-import Weather from '../components/weather';
-import Aktualita from '../components/aktualita'
+const Header = lazy(() => import('../components/header'));
+const Footer = lazy(() => import('../components/footer'));
+const Weather = lazy(() => import('../components/weather'));
+const Aktualita = lazy(() => import('../components/aktualita'));
+
+// import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+
+const CarouselProvider = lazy(() => import('../carousel/carouselProvider'));
+const Slider = lazy(() => import('../carousel/slider'));
+const Slide = lazy(() => import('../carousel/slide'));
+const ButtonBack = lazy(() => import('../carousel/buttonBack'));
+const ButtonNext = lazy(() => import('../carousel/buttonNext'));
+
 
 //hero image
 import videoMp4 from '../../assets/video.mp4';
