@@ -92,7 +92,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <section id="mainSection" className="section-icons section" ref={ref}>
+            <section id="mainSection" className="section-icons section">
                 <Link to="/kamery" className="widget widget-kamery" >
                     <StaticImage
                         transformOptions={{ outputPixelDensities: [0.05, 0.1, 0.15, 0.25, 0.5, 1, 2] }}
