@@ -20,7 +20,7 @@ export default function page(props) {
         <Header mainSectionRef={ref} always/>
         <main>
             <section ref={ref} className="section section-hero-image">
-                <StaticImage placeholder="blurred" src='../../assets/servis.jpg' layout="fullWidth" alt="sjezdovka"/>
+                <StaticImage formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/servis.jpg' layout="fullWidth" alt="sjezdovka"/>
                 <h1>Error 404: Stránka nenalezena</h1>
             </section>
             <section className="section-text section">

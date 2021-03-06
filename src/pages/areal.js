@@ -24,7 +24,7 @@ export default function Contact(props) {
         <Header mainSectionRef={ref} />
         <main>
             <section className="section-hero-image section">
-                <StaticImage placeholder="blurred" src='../../assets/trate_hero.png' alt="Sjezdovka" layout='fullWidth' />
+                <StaticImage formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/trate_hero.png' alt="Sjezdovka" layout='fullWidth' />
 
                 <div className="flexbox-column main-title-wrap">
                     <h1 className="big title-white hero-image-title">
@@ -49,28 +49,28 @@ export default function Contact(props) {
 
                 <div className="trate-wrapper" style={{ marginTop: '0' }}>
                     <div className="trat-image">
-                        <StaticImage placeholder="blurred" src='../../assets/iko_Family.jpg' alt="ikona trate" layout='constrained' />
+                        <StaticImage formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/iko_Family.jpg' alt="ikona trate" layout='constrained' />
                     </div>
                     <p><strong>Jedná se o&nbsp;nejdelší sjezdovku karlovského údolí</strong>. Je určena začátečníkům a&nbsp;všem, kdo&nbsp;vyhledávají klidné a&nbsp;pohodové lyžování.
                 První částí trasy od&nbsp;horní stanice vede kolem lesa <strong>snow park</strong>. Vyberte si svou cestu!</p>
 
                     <div className="trat-image">
-                        <StaticImage placeholder="blurred" src='../../assets/iko_Pod-lesem.jpg' alt="ikona trate" layout='constrained' />
+                        <StaticImage formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/iko_Pod-lesem.jpg' alt="ikona trate" layout='constrained' />
                         <p><strong>Sjezdová trať Pod lesem</strong> má svůj vlastní vlek typu Poma. <strong>Je dlouhá 200&nbsp;metrů</strong> a&nbsp;je určena pro&nbsp;děti a&nbsp;začínající lyžaře. Pohodový trénink!</p>
                     </div>
 
                     <div className="trat-image">
-                        <StaticImage placeholder="blurred" src='../../assets/iko_Mysacek.jpg' alt="ikona trate" layout='constrained' />
+                        <StaticImage formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/iko_Mysacek.jpg' alt="ikona trate" layout='constrained' />
                         <p><strong>Sjezdová trať pro nejmenší</strong> je součástí lyžařské školy. <strong>Délka 50&nbsp;metrů,</strong> obslužnost lanovým vlekem a&nbsp;poznávací znamení – hemžení malých, rychlých i&nbsp;méněrychlých lyžaříčků!</p>
                     </div>
 
                     <div className="trat-image">
-                        <StaticImage placeholder="blurred" src='../../assets/iko_FIS.jpg' alt="ikona trate" layout='constrained' />
+                        <StaticImage formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/iko_FIS.jpg' alt="ikona trate" layout='constrained' />
                         <p><strong>Trať FIS měří 650&nbsp;metrů.</strong> Už mnoho let se&nbsp;na&nbsp;této sjezdovce jezdí <strong>lyžařské závody</strong>. V&nbsp;roce 2012 byla rozšířena a&nbsp;upravena. Vzhůru dolů po&nbsp;červené!</p>
                     </div>
 
                     <div className="trat-image">
-                        <StaticImage placeholder="blurred" src='../../assets/iko_Rukav.jpg' alt="ikona trate" layout='constrained' />
+                        <StaticImage formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/iko_Rukav.jpg' alt="ikona trate" layout='constrained' />
                         <p><strong>Sjezdová trať Rukáv</strong> vznikla při&nbsp;modernizaci a&nbsp;úpravách areálu v&nbsp;roce 2012. Jde&nbsp;o&nbsp;červenou závodní sjezdovku, služebně nejmladší, <strong>o&nbsp;celkové délce 700m. Tohle už&nbsp;si&nbsp;žádá zkušenosti!</strong></p>
                     </div>
                 </div>
@@ -82,7 +82,7 @@ export default function Contact(props) {
             </section>
 
             <section ref={ref} className="section section-background section-bottom" id="mainSection" style={{ padding: '0px' }}>
-                <StaticImage placeholder="blurred" src='../../assets/mapa.png' alt="Mapa" layout='constrained' imgStyle={{ width: '80%', maxWidth: '1400px', marginTop: '3vw' }} />
+                <StaticImage formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/mapa.png' alt="Mapa" layout='constrained' imgStyle={{ width: '80%', maxWidth: '1400px', marginTop: '3vw' }} />
 
 
             </section>

@@ -1,4 +1,4 @@
-import * as icons from "../../assets/weatherIcons.js";
+import * as icons from "../../assets/weatherIcons.mjs";
 
 
 export const compareDates = (a, b) => {

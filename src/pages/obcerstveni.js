@@ -22,7 +22,7 @@ export default function page(props) {
             <section className="section-hero-image section" style={{ paddingTop: '5em', paddingBottom: '7em' }}>
 
           
-                <StaticImage placeholder="blurred" src='../../assets/jidlo_hero.jpg' alt='Horky napoj na horach' imgStyle={{
+                <StaticImage formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/jidlo_hero.jpg' alt='Horky napoj na horach' imgStyle={{
                     filter: "brightness(0.85)",
                     top: '-10%'
                 }} layout='fullWidth' />
