@@ -42,7 +42,7 @@ import randHero2Sm from "../../assets/random_hero_2_sm.png"
 //     }
 // `
 
-const Aktuality = loadable(() => import('../components/aktuality'));
+const AktComponent = loadable(() => import('../components/aktComponent'));
 
 export default function Home() {
     let ref = useRef();
@@ -135,7 +135,7 @@ export default function Home() {
                     Děláme svou práci rádi!
                 </h2>
             </section>
-            <Aktuality />
+            <AktComponent />
 
             <section className="flexbox-column section section-sluzby" >
                 <h1 className="big-title title-blue " >

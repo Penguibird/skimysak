@@ -11,7 +11,7 @@ import styles from '../styles/global.scss';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
 // import Aktualita from '../components/aktualita'
-const Aktualita = loadable(() => import('../components/aktualita'));
+const Aktualita = loadable(() => import('./aktualita'));
 
 // import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 const CarouselProvider = loadable(() => import('../carousel/carouselProvider'));
@@ -20,7 +20,7 @@ const Slide = loadable(() => import('../carousel/slide'));
 const ButtonBack = loadable(() => import('../carousel/buttonBack'));
 const ButtonNext = loadable(() => import('../carousel/buttonNext'));
 
-export default function (props) {
+export default function aktComponent(props) {
     const m = useBreakpoint();
     return <section className="section-aktuality section">
         <h1 className="title-white smaller">Aktuality</h1>

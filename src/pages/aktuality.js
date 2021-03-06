@@ -20,7 +20,7 @@ export const imageProps = {
     layout: 'constrained',
 }
 
-export default function Aktuality(props) {
+export default function page(props) {
     let ref = React.useRef();
     return <Fragment>
         <Helmet>
