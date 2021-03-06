@@ -15,8 +15,10 @@ import { StaticImage } from "gatsby-plugin-image";
 import Header from '../components/header'
 // const Weather = loadable(() => import('../components/weather'));
 import Weather from '../components/weather'
-const Aktualita = loadable(() => import('../components/aktualita'));
-const Footer = loadable(() => import('../components/footer'));
+import Aktualita from '../components/aktualita'
+import Footer from '../components/footer'
+// const Aktualita = loadable(() => import('../components/aktualita'));
+// const Footer = loadable(() => import('../components/footer'));
 
 // import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 
