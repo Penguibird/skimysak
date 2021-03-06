@@ -65,14 +65,14 @@ export default function Home() {
         <Header mainSectionRef={ref} />
         <main>
             <section className="section-hero-image section">
-                <Fragment>{m.l
-                    ? <video className="hero-image" muted autoPlay loop >
+                {/* <Fragment>{m.l
+                    ? <video className="hero-image" muted autoPlay loop preload >
                         <source src={videoMp4} type="video/mp4" />
                     </video>
                     : <div className="hero-image " id="hero-image-wrapper">
-                        <StaticImage formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/random_hero_1.png' alt="Pohled z dronu na Karlov" layout='fullWidth' imgClassName="hero-image-image" />
+                        <StaticImage loading="eager" formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/random_hero_1.png' alt="Pohled z dronu na Karlov" layout='fullWidth' imgClassName="hero-image-image" />
                     </div>
-                }</Fragment>
+                }</Fragment> */}
                 <div className="flexbox-column main-title-wrap">
                     <h1 className="hero-big title-white hero-image-title ">
                         Vítejte na&nbsp;Myšáku
