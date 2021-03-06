@@ -576,3 +576,11 @@ h1.small {
         height: 30vw;
     }
 }
+
+header.navbar,
+header.navbar * {
+    max-height: 90px !important;
+    @media screen and (max-width: 600px) {
+        max-height: 65px !important;
+    }
+}
