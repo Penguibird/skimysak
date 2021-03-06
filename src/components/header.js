@@ -66,18 +66,18 @@ export default function Header({ mainSectionRef, always }) {
             a: true,
         }
     ]
-    useEffect(() => {
-        window.addEventListener("scroll", e => {
-            setIsBackground(mainSectionRef && mainSectionRef.current && (window.pageYOffset > (mainSectionRef.current.offsetTop + offset)));
-        })
-    }, []);
+    // useEffect(() => {
+    //     window.addEventListener("scroll", e => {
+    //         setIsBackground(mainSectionRef && mainSectionRef.current && (window.pageYOffset > (mainSectionRef.current.offsetTop + offset)));
+    //     })
+    // }, []);
 
     const offset = -100;
-    const [isBackground, setIsBackground] = useState(false)
-
+    // const [isBackground, setIsBackground] = useState(false)
+// ${isBackground || always ? 'background' : ''} 
 
     //aktuality, areal, kamery, pocasi
-    return <header className={`navbar ${isOpen ? 'open' : ''} ${isBackground || always ? 'background' : ''} `}>
+    return <header className={`navbar ${isOpen ? 'open' : ''} background`}>
         <Navbar color="light" light expand="md" className="clearfix">
             <Link to="/" className="logo logo-mysak">
                 <StaticImage formats={["jpg", "webp"]} placeholder="tracedSVG" src='../../assets/logo_mysak_cropped_scaled.png' layout='constrained' alt="Logo ski mysak" />

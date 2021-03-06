@@ -45,7 +45,7 @@ import randHero2Sm from "../../assets/random_hero_2_sm.png"
 const AktComponent = loadable(() => import('../components/aktComponent'));
 
 export default function Home() {
-    let ref = useRef();
+    // let ref = useRef();
     let m = useBreakpoint();
     return <Fragment>
         <Helmet>
@@ -55,7 +55,9 @@ export default function Home() {
             <meta name="description" content="Parádní lyžování v jeseníkách" />
         </Helmet>
 
-        <Header mainSectionRef={ref} />
+        <Header
+        //  mainSectionRef={ref} 
+        />
         <main>
             <section className="section-hero-image section">
                 <Fragment>{m.l
