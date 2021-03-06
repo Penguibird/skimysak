@@ -8,15 +8,8 @@ import { Helmet } from "react-helmet";
 import Header from '../components/header';
 import Footer from '../components/footer';
 
-import videoMp4 from '../../assets/video.mp4';
-import image from '../../assets/trate_hero.png'
-import mapaFoto from '../../assets/mapa.png'
 
-import ikoFam from '../../assets/iko_Family.jpg';
-import ikoFis from '../../assets/iko_FIS.jpg';
-import ikoMys from '../../assets/iko_Mysacek.jpg';
-import ikoPod from '../../assets/iko_Pod-lesem.jpg';
-import ikoRuk from '../../assets/iko_Rukav.jpg';
+import { StaticImage } from 'gatsby-plugin-image';
 
 export default function Contact(props) {
     let ref = React.useRef();
@@ -31,7 +24,7 @@ export default function Contact(props) {
         <Header mainSectionRef={ref} />
         <main>
             <section className="section-hero-image section">
-                <img className="hero-image max-height" src={image} alt="Ski slope" />
+                <StaticImage placeholder="blurred" src='../../assets/trate_hero.png' alt="Sjezdovka" layout='fullWidth' />
 
                 <div className="flexbox-column main-title-wrap">
                     <h1 className="big title-white hero-image-title">
@@ -54,33 +47,43 @@ export default function Contact(props) {
                     <h2 className=" data">2&nbsp;450&nbsp;metrů</h2>
                 </div>
 
-                <div className="trate-wrapper" style={{marginTop: '0'}}>
-                    <div className="trat-image"><img src={ikoFam} alt="ikona trate" /></div>
+                <div className="trate-wrapper" style={{ marginTop: '0' }}>
+                    <div className="trat-image">
+                        <StaticImage placeholder="blurred" src='../../assets/iko_Family.jpg' alt="ikona trate" layout='constrained' />
+                    </div>
                     <p><strong>Jedná se o&nbsp;nejdelší sjezdovku karlovského údolí</strong>. Je určena začátečníkům a&nbsp;všem, kdo&nbsp;vyhledávají klidné a&nbsp;pohodové lyžování.
                 První částí trasy od&nbsp;horní stanice vede kolem lesa <strong>snow park</strong>. Vyberte si svou cestu!</p>
 
-                    <div className="trat-image"><img src={ikoPod} alt="ikona trate" /></div>
-                    <p><strong>Sjezdová trať Pod lesem</strong> má svůj vlastní vlek typu Poma. <strong>Je dlouhá 200&nbsp;metrů</strong> a&nbsp;je určena pro&nbsp;děti a&nbsp;začínající lyžaře. Pohodový trénink!</p>
+                    <div className="trat-image">
+                        <StaticImage placeholder="blurred" src='../../assets/iko_Pod-lesem.jpg' alt="ikona trate" layout='constrained' />
+                        <p><strong>Sjezdová trať Pod lesem</strong> má svůj vlastní vlek typu Poma. <strong>Je dlouhá 200&nbsp;metrů</strong> a&nbsp;je určena pro&nbsp;děti a&nbsp;začínající lyžaře. Pohodový trénink!</p>
+                    </div>
 
-                    <div className="trat-image"><img src={ikoMys} alt="ikona trate" /></div>
-                    <p><strong>Sjezdová trať pro nejmenší</strong> je součástí lyžařské školy. <strong>Délka 50&nbsp;metrů,</strong> obslužnost lanovým vlekem a&nbsp;poznávací znamení – hemžení malých, rychlých i&nbsp;méněrychlých lyžaříčků!</p>
+                    <div className="trat-image">
+                        <StaticImage placeholder="blurred" src='../../assets/iko_Mysacek.jpg' alt="ikona trate" layout='constrained' />
+                        <p><strong>Sjezdová trať pro nejmenší</strong> je součástí lyžařské školy. <strong>Délka 50&nbsp;metrů,</strong> obslužnost lanovým vlekem a&nbsp;poznávací znamení – hemžení malých, rychlých i&nbsp;méněrychlých lyžaříčků!</p>
+                    </div>
 
-                    <div className="trat-image"><img src={ikoFis} alt="ikona trate" /></div>
-                    <p><strong>Trať FIS měří 650&nbsp;metrů.</strong> Už mnoho let se&nbsp;na&nbsp;této sjezdovce jezdí <strong>lyžařské závody</strong>. V&nbsp;roce 2012 byla rozšířena a&nbsp;upravena. Vzhůru dolů po&nbsp;červené!</p>
+                    <div className="trat-image">
+                        <StaticImage placeholder="blurred" src='../../assets/iko_FIS.jpg' alt="ikona trate" layout='constrained' />
+                        <p><strong>Trať FIS měří 650&nbsp;metrů.</strong> Už mnoho let se&nbsp;na&nbsp;této sjezdovce jezdí <strong>lyžařské závody</strong>. V&nbsp;roce 2012 byla rozšířena a&nbsp;upravena. Vzhůru dolů po&nbsp;červené!</p>
+                    </div>
 
-                    <div className="trat-image"><img src={ikoRuk} alt="ikona trate" /></div>
-                    <p><strong>Sjezdová trať Rukáv</strong> vznikla při&nbsp;modernizaci a&nbsp;úpravách areálu v&nbsp;roce 2012. Jde&nbsp;o&nbsp;červenou závodní sjezdovku, služebně nejmladší, <strong>o&nbsp;celkové délce 700m. Tohle už&nbsp;si&nbsp;žádá zkušenosti!</strong></p>
+                    <div className="trat-image">
+                        <StaticImage placeholder="blurred" src='../../assets/iko_Rukav.jpg' alt="ikona trate" layout='constrained' />
+                        <p><strong>Sjezdová trať Rukáv</strong> vznikla při&nbsp;modernizaci a&nbsp;úpravách areálu v&nbsp;roce 2012. Jde&nbsp;o&nbsp;červenou závodní sjezdovku, služebně nejmladší, <strong>o&nbsp;celkové délce 700m. Tohle už&nbsp;si&nbsp;žádá zkušenosti!</strong></p>
+                    </div>
                 </div>
 
-                <div className="areal-main" style={{marginTop: '0'}}>
+                <div className="areal-main" style={{ marginTop: '0' }}>
                     <h2 className=" header">Převýšení</h2>
                     <h2 className=" data">160&nbsp;metrů</h2>
                 </div>
             </section>
 
             <section ref={ref} className="section section-background section-bottom" id="mainSection" style={{ padding: '0px' }}>
+                <StaticImage placeholder="blurred" src='../../assets/mapa.png' alt="Mapa" layout='constrained' imgStyle={{ width: '80%', maxWidth: '1400px', marginTop: '3vw' }} />
 
-                <img src={mapaFoto} alt="Mapa Ski Karlov" style={{ width: '80%', maxWidth: '1400px', marginTop: '3vw' }} />
 
             </section>
         </main>

@@ -23,18 +23,38 @@ const myCustomQueries = {
 module.exports = {
     /* Your site config here */
     plugins: [
+        `gatsby-plugin-image`,
+        `gatsby-plugin-sharp`,
+        `gatsby-transformer-sharp`, // Needed for dynamic images
+
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-sass`,
+        {
+            resolve: "gatsby-source-filesystem",
+            options: {
+                name: 'img',
+                path: `${__dirname}/assets`,
+            }
+        },
         {
             resolve: "gatsby-plugin-breakpoints",
             options: {
                 queries: myCustomQueries,
             },
-        }, {
-            resolve: `gatsby-plugin-minify-classnames`,
+        }, 
+        // {
+        //     resolve: `gatsby-plugin-minify-classnames`,
+        //     options: {
+        //         dictionary: 'bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ0123456789',
+        //         enableOnDevelopment: true,
+        //     }
+        // },
+        {
+            resolve: `gatsby-plugin-google-gtag`,
             options: {
-                dictionary: 'bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ0123456789',
-                enableOnDevelopment: true,
+                trackingIds: [
+                    'G-7HFCN7FM66'
+                ]
             }
         }
     ]

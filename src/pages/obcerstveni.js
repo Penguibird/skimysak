@@ -6,10 +6,10 @@ import { Helmet } from "react-helmet";
 import Header from '../components/header'
 import Footer from '../components/footer'
 import { Fragment, useState, useEffect } from 'react';
-import image from '../../assets/jidlo_hero.jpg';
+import { StaticImage } from "gatsby-plugin-image";
 
 export default function page(props) {
-let ref = React.useRef();
+    let ref = React.useRef();
     return <Fragment>
         <Helmet>
             <title>Občerstvení | Ski myšák</title>
@@ -21,10 +21,11 @@ let ref = React.useRef();
         <main>
             <section className="section-hero-image section" style={{ paddingTop: '5em', paddingBottom: '7em' }}>
 
-                <img className="hero-image max-height" src={image} alt="Ski slope" style={{
+          
+                <StaticImage placeholder="blurred" src='../../assets/jidlo_hero.jpg' alt='Horky napoj na horach' imgStyle={{
                     filter: "brightness(0.85)",
                     top: '-10%'
-                }} />
+                }} layout='fullWidth' />
 
                 <div className="flexbox-column main-title-wrap">
                     <h1 className="big-title title-white hero-image-title small">

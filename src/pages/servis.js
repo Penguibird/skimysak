@@ -6,9 +6,9 @@ import { Helmet } from "react-helmet";
 import Header from '../components/header'
 import Footer from '../components/footer'
 import { Fragment, useState, useEffect } from 'react';
-import image from '../../assets/servis_hero.png';
 import videoMp4 from '../../assets/servis_video_crop.mp4'
 import { useBreakpoint } from "gatsby-plugin-breakpoints";
+import { StaticImage } from "gatsby-plugin-image";
 
 export default function page(props) {
     let ref = React.useRef();
@@ -28,7 +28,7 @@ export default function page(props) {
                         ? <video className="hero-image" muted autoPlay loop  >
                             <source src={videoMp4} type="video/mp4" />
                         </video>
-                        : <img className="hero-image" src={image} alt="Ski slope" />
+                        : <StaticImage placeholder="blurred" src='../../assets/servis_hero.png' alt='Foto z pujcovny' layout='fullWidth' />
                     }
                 </Fragment>
                 <div className="flexbox-column main-title-wrap">
@@ -217,9 +217,9 @@ export default function page(props) {
                 </table>
                 <p className="explanation-line"><i>*komplet = lyže + boty + hole (prkno + boty)</i></p>
                 <h2 className="blue"
-                style={{
-                    fontSize: '23px',
-                }}>Vaše vlastní prkna a&nbsp;lyže Vám rádi seřídíme, opravíme, nabrousíme, připravíme…</h2>
+                    style={{
+                        fontSize: '23px',
+                    }}>Vaše vlastní prkna a&nbsp;lyže Vám rádi seřídíme, opravíme, nabrousíme, připravíme…</h2>
                 <h2>
                     Ceník servisu lyží a&nbsp;snowboardů
                 </h2>

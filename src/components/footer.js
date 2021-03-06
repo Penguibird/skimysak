@@ -1,7 +1,9 @@
 import * as React from 'react';
 import '../styles/components/footer.scss';
 // import { Fragment, useState, useEffect } from 'react';
-import logo from '../../assets/logo_old.png'
+
+import { StaticImage } from "gatsby-plugin-image";
+
 export default function Footer(props) {
     return <footer>
         <div className="footer-wrapper">
@@ -11,7 +13,7 @@ export default function Footer(props) {
             <p>Weather forecast from&nbsp;Yr, delivered by&nbsp;the&nbsp;Norwegian Meteorological Institute and NRK</p>
         </div>
         <div className="footer-logo">
-            <img src={logo} alt="logo ski mysak" />
+            <StaticImage placeholder="blurred" src='../../assets/logo_old.png' alt="logo ski mysak" layout="constrained" />
         </div>
     </footer>
 }

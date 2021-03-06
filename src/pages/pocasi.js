@@ -8,7 +8,7 @@ import useSWR from 'swr';
 import { getTemp, getImg, getSymbol, compareDates } from '../components/weatherFunctions';
 import WeatherCard from '../components/weatherCard'
 
-import image from '../../assets/servis.jpg'
+import { StaticImage } from "gatsby-plugin-image";
 
 export default function Page(props) {
 
@@ -43,7 +43,7 @@ export default function Page(props) {
         <Header mainSectionRef={ref} />
         <main>
             <section className="section-hero-image section">
-                <img className="hero-image" src={image} alt="Ski slope" />
+                <StaticImage placeholder="blurred" src='../../assets/servis.jpg' imgClassName="hero-image" alt='Sjezdovka' layout='fullWidth' />
                 <h1 className="title-white small">Počasí</h1>
             </section>
             <section className="section-predpoved section-background" ref={ref}>

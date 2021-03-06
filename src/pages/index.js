@@ -1,28 +1,24 @@
 import * as React from "react";
 import { Fragment, useRef, useEffect } from 'react';
 import { Helmet } from "react-helmet";
-import { Link } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
 import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 
+import { StaticImage } from "gatsby-plugin-image";
+
 import Header from '../components/header'
 import Footer from '../components/footer'
 import Weather from '../components/weather';
 import Aktualita from '../components/aktualita'
 
-import fbIcon from '../../assets/fb_icon.png';
-
 //hero image
 import videoMp4 from '../../assets/video.mp4';
-import image from '../../assets/random_hero_1.png'
 
-//sluzby photos
-import skolaFoto from '../../assets/skolaFoto.jpg';
-import servisFoto from '../../assets/servisFoto.jpg';
-import jidloFoto from '../../assets/jidlo_hero.jpg';
+
 
 //aktuality photos
 import servis from '../../assets/servis.jpg'
@@ -30,8 +26,16 @@ import ctSport from '../../assets/ctSport1.jpg'
 import parking from '../../assets/parking1.jpeg'
 import lyzTest from '../../assets/testLyzi.png'
 import sezona from '../../assets/snih1.jpg'
+import zahajeniSezony from '../../assets/zahajeniSezony.jpg'
+import informace from '../../assets/informace.jpg'
+import doKonceRoku from '../../assets/do_konce_roku.jpg';
+// import infoKonec from '../../assets/infoKonec.jpg';
 
-import mapaFoto from '../../assets/mapa.png'
+// export const query = graphql`
+//     query {
+
+//     }
+// `
 
 export default function Home() {
     let ref = useRef();
@@ -52,7 +56,7 @@ export default function Home() {
                         <source src={videoMp4} type="video/mp4" />
                     </video>
                     : <div className="hero-image " id="hero-image-wrapper">
-                        <img src={image} alt="Ski slope" className="hero-image-image" />
+                        <StaticImage placeholder="blurred" src='../../assets/random_hero_1.png' alt="Pohled z dronu na Karlov" layout='fullWidth' imgClassName="hero-image-image" />
                     </div>
                 }</Fragment>
                 <div className="flexbox-column main-title-wrap">
@@ -71,7 +75,7 @@ export default function Home() {
                         </a>
                         <div className="fb-icon">
                             <a href="https://www.facebook.com/SkiMysak/">
-                                <img src={fbIcon} />
+                                <StaticImage placeholder="blurred" src='../../assets/fb_icon.png' alt="Ikona Facebook" layout='constrained' />
                             </a>
                         </div>
                     </div>
@@ -90,7 +94,7 @@ export default function Home() {
 
             <section className="flexbox-column section section-main-text" >
                 <h1 className="smaller title-blue">
-                    Parádní lyžování v jeseníkách!
+                    Areál dočasně uzavřen
                 </h1>
                 <p>
                     Ski Myšák je součástí <strong>Ski arény Karlov pod Pradědem </strong> a&nbsp;nabízí 4&nbsp;místnou sedačkovou lanovku s&nbsp;bublinou a&nbsp;skvělý sešup po&nbsp;modré nebo dvou červených -&nbsp;o&nbsp;celkové délce skoro 2,5&nbsp;km.
@@ -122,19 +126,49 @@ export default function Home() {
                     >
                         <Slider width={m.ll ? '1300px' : null}>
                             <Slide index={0} innerClassName="slide-inner" className="carousel-slide">
-                                <Aktualita image={sezona} title="Nová sezóna" date="26.11. 2020" url="novaSezona" rawText="Tak co&nbsp;myslíte? Jaká bude? Zahájili jsme zasněžování! Počasí a&nbsp;vláda rozhodne, kdy&nbsp;se uvidíme&nbsp;😊" />
+                                <Aktualita title="NOVÉ INFORMACE O PROVOZU" date="23.12.2020" url="infoKonec"
+                                    rawText=" Od&nbsp;27.&nbsp;prosince 2020 budou všechny lyžařské areály uzavřeny z&nbsp;důvodu přechodu na&nbsp;5.&nbsp;stupeň PES. Ski&nbsp;Aréna Karlov bude do&nbsp;té&nbsp;doby nabízet všechny své&nbsp;služby."
+                                >
+                                    <StaticImage src='../../assets/infoKonec.jpg' alt='Info o konci provozu' imgStyle={{ maxHeight: '250px', objectPosition: 'top' }} layout='constrained' />
+                                </Aktualita>
                             </Slide>
-                            <Slide index={1} innerClassName="slide-inner" className="carousel-slide">
-                                <Aktualita image={lyzTest} title="Testování lyží" date="16.11. 2020" url="lyzTest" rawText="" />
+                            <Slide index={0 + 1} innerClassName="slide-inner" className="carousel-slide">
+                                <Aktualita title="⛷ LYŽUJEME KAŽDÝ DEN DO KONCE ROKU 🏂" date="20.12.2020" url="doKonceRoku" rawText="...&nbsp;s&nbsp;výjimkou Štědrého dne&nbsp;🎄 (24.&nbsp;12.). Od&nbsp;8:30 do 16&nbsp;hodin. V&nbsp;provozu půjčovna, servis&nbsp;🛠 i&nbsp;lyžařská škola (rezervace a&nbsp;objednávky na&nbsp;čísle&nbsp;734&nbsp;824&nbsp;493). Občerstvení&nbsp;🥪🧃 přes&nbsp;okénko." >
+                                    <StaticImage src='../../assets/do_konce_roku.jpg' alt='Info o konci provozu' imgStyle={{ maxHeight: '250px', objectPosition: 'top' }} layout='constrained' />
+                                </Aktualita>
                             </Slide>
-                            <Slide index={2} innerClassName="slide-inner" className="carousel-slide">
-                                <Aktualita image={parking} title="Parkování" date="15.11. 2020" url="parkovani" rawText="Přijeďte si&nbsp;užít lyžovačku! Parkování je u&nbsp;nás ZDARMA  a&nbsp;hned pod&nbsp;Myšákem. Přijíždějící auta organizujeme, aby bylo vše v&nbsp;pohodě, a&nbsp;aby další a&nbsp;další lyžaři našli místo. Mezi jednotlivými areály se&nbsp;můžete přemisťovat i&nbsp;bezplatnými SKI busy a SKI taxi. Jízdní řády připravujeme." />
+                            <Slide index={0 + 1 + 1} innerClassName="slide-inner" className="carousel-slide">
+                                <Aktualita title="ZAČÍNÁME V PÁTEK 🏂" date="15.12. 2020" url="zahajujemeProvoz" rawText="Ski&nbsp;Aréna Karlov otevře sezónu v&nbsp;pátek 18.&nbsp;prosince 2020 v&nbsp;8.30 hodin. Lyžovat se bude i&nbsp;v&nbsp;sobotu a&nbsp;v&nbsp;neděli (další provoz upřesníme). K&nbsp;dispozici bude modrá 💙sjezdovka Family u&nbsp;čtyřsedadlové lanovky Myšák 🐭 a&nbsp;jedna ze&nbsp;sjezdovek u&nbsp;čtyřsedadlové lanovky Karlov Ski&nbsp;Express, kde&nbsp;bude i&nbsp;večerní lyžování..." >
+                                    <StaticImage src='../../assets/zahajeniSezony.jpg' alt='Info o konci provozu' imgStyle={{ maxHeight: '250px', objectPosition: 'top' }} layout='constrained' />
+                                </Aktualita>
                             </Slide>
-                            <Slide index={3} innerClassName="slide-inner" className="carousel-slide">
-                                <Aktualita image={ctSport} title="ČT sport NA VRCHOL" date="15.11. 2020" url="JBus3Nas" rawText="Vzpomínáte? Takhle to&nbsp;na&nbsp;Myšáku žilo s&nbsp;ČT&nbsp;sport na&nbsp;vrchol 22.&nbsp;ledna 2019. Už máme termín pro&nbsp;závod letošní sezóny. Zapište si&nbsp;do&nbsp;diářů 5.&nbsp;–&nbsp;7.&nbsp;února 2021! Tak ať&nbsp;dojedeme s&nbsp;ČT&nbsp;sport až&nbsp;na&nbsp;vrchol!" />
+                            <Slide index={1 + 1 + 1} innerClassName="slide-inner" className="carousel-slide">
+                                <Aktualita title="Nové vyhlášení o vstupu do ČR" date="17.12 2020" url="informaceVstup" rawText="Od&nbsp;18.&nbsp;prosince 2020 je&nbsp;omezen vstup a&nbsp;pohyb cizinců na&nbsp;území&nbsp;ČR. Podmínkou pro&nbsp;umožnění vstupu je&nbsp;negativní výsledek PCR testu. Dále není možné přicestovat za&nbsp;účelem návštěvy přátel či&nbsp;rekreace." >
+                                    <StaticImage src='../../assets/informace.jpg' alt='Info o konci provozu' imgStyle={{ maxHeight: '250px', objectPosition: 'top' }} layout='constrained' />
+                                </Aktualita>
                             </Slide>
-                            <Slide index={4} innerClassName="slide-inner" className="carousel-slide">
-                                <Aktualita image={servis} title="PODĚKOVÁNÍ za sezónu 2019/20" date="29.3. 2020" url="ASnDASie2" rawText="Za normálních okolností bychom teď, na&nbsp;konci března, pravděpodobně oznamovali konec další lyžařské sezóny v&nbsp;karlovském údolí. Tato zima ale 'normální' nebyla, a&nbsp;to&nbsp;nemáme na&nbsp;mysli jen její předčasný konec...                    " />
+                            {/* <Slide index={1} innerClassName="slide-inner" className="carousel-slide">
+                                <Aktualita image={sezona} title="Nová sezóna" date="5.12. 2020" url="novaSezona" rawText="Tak co&nbsp;myslíte? Jaká bude? Zahájili jsme zasněžování! Počasí a&nbsp;vláda rozhodne, kdy&nbsp;se uvidíme&nbsp;😊" />
+                            </Slide> */}
+                            <Slide index={2 + 1 + 1} innerClassName="slide-inner" className="carousel-slide">
+                                <Aktualita title="Testování lyží" url="lyzTest" rawText="Další oblíbené testování Nixski proběhne 6.&nbsp;ledna, od&nbsp;9ti do&nbsp;16ti hodin na&nbsp;Myšáku. Vyzkoušejte novinkové ATOMIC, HEAD, DYNASTAR,STÖCKLI a&nbsp;LUSTI." >
+                                    <StaticImage src='../../assets/testLyzi.png' alt='Info o konci provozu' imgStyle={{ maxHeight: '250px', objectPosition: 'top' }} layout='constrained' />
+                                </Aktualita>
+                            </Slide>
+                            <Slide index={3 + 1 + 1} innerClassName="slide-inner" className="carousel-slide">
+                                <Aktualita title="Parkování" date="18.11. 2020" url="parkovani" rawText="Přijeďte si&nbsp;užít lyžovačku! Parkování je u&nbsp;nás ZDARMA  a&nbsp;hned pod&nbsp;Myšákem. Přijíždějící auta organizujeme, aby bylo vše v&nbsp;pohodě, a&nbsp;aby další a&nbsp;další lyžaři našli místo. Mezi jednotlivými areály se&nbsp;můžete přemisťovat i&nbsp;bezplatnými SKI busy a SKI taxi. Jízdní řády připravujeme." >
+                                    <StaticImage src='../../assets/parking1.jpeg' alt='Info o konci provozu' imgStyle={{ maxHeight: '250px', objectPosition: 'top' }} layout='constrained' />
+                                </Aktualita>
+                            </Slide>
+                            <Slide index={4 + 1 + 1} innerClassName="slide-inner" className="carousel-slide">
+                                <Aktualita title="ČT sport NA VRCHOL" date="15.11. 2020" url="JBus3Nas" rawText="Vzpomínáte? Takhle to&nbsp;na&nbsp;Myšáku žilo s&nbsp;ČT&nbsp;sport na&nbsp;vrchol 22.&nbsp;ledna 2019. Už máme termín pro&nbsp;závod letošní sezóny. Zapište si&nbsp;do&nbsp;diářů 5.&nbsp;–&nbsp;7.&nbsp;února 2021! Tak ať&nbsp;dojedeme s&nbsp;ČT&nbsp;sport až&nbsp;na&nbsp;vrchol!" >
+                                    <StaticImage src='../../assets/ctSport1.jpg' alt='Info o konci provozu' imgStyle={{ maxHeight: '250px', objectPosition: 'top' }} layout='constrained' />
+                                </Aktualita>
+                            </Slide>
+                            <Slide index={5 + 1 + 1} innerClassName="slide-inner" className="carousel-slide">
+                                <Aktualita title="PODĚKOVÁNÍ za sezónu 2019/20" date="29.3. 2020" url="ASnDASie2" rawText="Za normálních okolností bychom teď, na&nbsp;konci března, pravděpodobně oznamovali konec další lyžařské sezóny v&nbsp;karlovském údolí. Tato zima ale 'normální' nebyla, a&nbsp;to&nbsp;nemáme na&nbsp;mysli jen její předčasný konec... " >
+                                    <StaticImage src='../../assets/servis.jpg' alt='Info o konci provozu' imgStyle={{ maxHeight: '250px', objectPosition: 'top' }} layout='constrained' />
+                                </Aktualita>
                             </Slide>
                         </Slider>
                         <ButtonBack className="carousel-back">
@@ -157,19 +191,20 @@ export default function Home() {
                     SLUŽBY
                 </h1>
                 <div className="flexbox-row sluzby-wrap">
+                    {/* TODO Aspect ratio in these  */}
                     <Link to="/servis"><article className="sluzby-item" >
-                        <img src={servisFoto} alt="snowy mountain" />
+                        <StaticImage placeholder="blurred" src='../../assets/servisFoto.jpg' alt="Zasnezena hora" layout='constrained' />
                         <h3>Servis a půjčovna</h3>
                         <p><strong>Přijeďte lyžovat!</strong> Pokud nemáte výbavu, svěřte se do rukou servismanů v půjčovně Myšák.<strong> Komplet výstroj pro lyžaře, snowboarďáky i alpinisty</strong> .</p>
                     </article></Link>
                     <Link to="/skola"><article className="sluzby-item" >
-                        <img src={skolaFoto} />
+                        <StaticImage placeholder="blurred" src='../../assets/skolaFoto.jpg' alt='Male dite na lyzich' layout='constrained' />
                         <h3>Lyžařská škola</h3>
                         <p><strong>Chcete se zdokonalit v lyžování?</strong> Učíme lyžaře i snowboardisty všech věkových kategorií a všech úrovní.
-                <strong>Bez stresu a na pohodu!</strong></p>
+                        <strong>Bez stresu a na pohodu!</strong></p>
                     </article></Link>
                     <Link to="/obcerstveni"><article className="sluzby-item" >
-                        <img src={jidloFoto} />
+                        <StaticImage placeholder="blurred" src='../../assets/jidlo_hero.jpg' alt='Horky napoj na horach' layout='constrained' />
                         <h3>Občerstvení</h3>
                         <p><strong>Ski&nbsp;bar s&nbsp;terasou a&nbsp;výhledem nebo bistro pod&nbsp;Myšákem?</strong> Drinky a&nbsp;něco na&nbsp;zahřátí, 
                         domácí kuchyně pro&nbsp;děti i&nbsp;dospělé, polévky a&nbsp;místní speciality. <strong>Dobrou chuť!</strong></p>
@@ -177,7 +212,7 @@ export default function Home() {
                 </div>
             </section>
             <section className="section section-bottom" >
-                <img src={mapaFoto} alt="Mapa Ski Karlov" style={{ width: '90%', maxWidth: '1500px' }} />
+                <StaticImage placeholder="blurred" src='../../assets/mapa.png' alt="Mapa Ski Karlov" imgStyle={{ width: '90%', maxWidth: '1500px' }} layout='constrained' />
             </section>
         </main>
         <Footer />

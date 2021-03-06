@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet";
 import Header from '../components/header'
 import Footer from '../components/footer'
 import { Fragment, useState, useEffect, useRef } from 'react';
-import image from '../../assets/servis.jpg';
+import { StaticImage } from "gatsby-plugin-image";
 
 export default function page(props) {
     let ref = useRef();
@@ -20,7 +20,7 @@ export default function page(props) {
         <Header mainSectionRef={ref} always/>
         <main>
             <section ref={ref} className="section section-hero-image">
-                <img className="hero-image" src={image} alt="Ski slope" />
+                <StaticImage placeholder="blurred" src='../../assets/servis.jpg' layout="fullWidth" alt="sjezdovka"/>
                 <h1>Error 404: Stránka nenalezena</h1>
             </section>
             <section className="section-text section">
