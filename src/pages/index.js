@@ -129,6 +129,8 @@ export default function Home() {
                 <h1 className="title-white smaller">Aktuality</h1>
                 <div className="aktuality-wrapper" style={{ width: '100vw', maxWidth: 'unset' }}>
                     <StaticImage transformOptions={{ outputPixelDensities: [0.05, 0.1, 0.15, 0.25, 0.5, 1, 2] }}
+                    width={1920}
+                    height={1080}
                         style={{ zIndex: 0 }} placeholder="blurred" src="../../assets/random_hero_2.png" alt='Zasnezene pozadi' layout='fullWidth' />
                     <CarouselProvider
                         style={{ zIndex: 1, marginTop: '-50%' }}
