@@ -80,10 +80,10 @@ export default function Header({ mainSectionRef, always }) {
     return <header className={`navbar ${isOpen ? 'open' : ''} background`}>
         <Navbar color="light" light expand="md" className="clearfix">
             <Link to="/" className="logo logo-mysak">
-                <StaticImage formats={["jpg", "webp"]} src='../../assets/logo_mysak_cropped_scaled.png' layout='constrained' alt="Logo ski mysak" />
+                <StaticImage style={{ maxHeight: '100%' }} imgStyle={{ maxHeight: '100%' }} height={90} formats={["auto", "webp"]} src='../../assets/logo_mysak_cropped_scaled.png' layout='constrained' alt="Logo ski mysak" />
             </Link>
             <a href="https://www.skikarlov.cz/" className="logo logo-karlov" target="_blank">
-                <StaticImage formats={["jpg", "webp"]} src='../../assets/logo-arena.png' layout='constrained' alt="Logo ski arena karlov" />
+                <StaticImage style={{ maxHeight: '100%' }} imgStyle={{ maxHeight: '100%' }} height={90} formats={["auto", "webp"]} src='../../assets/logo-arena.png' layout='constrained' alt="Logo ski arena karlov" />
             </a>
             <NavbarToggler onClick={toggle} className="float-right" />
             <Collapse isOpen={isOpen} navbar>
