@@ -1,5 +1,3 @@
-
-
 import * as React from 'react';
 import { Fragment, useState, useEffect } from 'react';
 import { StaticImage } from "gatsby-plugin-image";
