@@ -74,16 +74,16 @@ export default function Header({ mainSectionRef, always }) {
 
     const offset = -100;
     // const [isBackground, setIsBackground] = useState(false)
-// ${isBackground || always ? 'background' : ''} 
+    // ${isBackground || always ? 'background' : ''} 
 
     //aktuality, areal, kamery, pocasi
     return <header className={`navbar ${isOpen ? 'open' : ''} background`}>
         <Navbar color="light" light expand="md" className="clearfix">
             <Link to="/" className="logo logo-mysak">
-                <StaticImage formats={["jpg", "webp"]} placeholder="tracedSVG" src='../../assets/logo_mysak_cropped_scaled.png' layout='constrained' alt="Logo ski mysak" />
+                <StaticImage formats={["jpg", "webp"]} src='../../assets/logo_mysak_cropped_scaled.png' layout='constrained' alt="Logo ski mysak" />
             </Link>
             <a href="https://www.skikarlov.cz/" className="logo logo-karlov" target="_blank">
-                <StaticImage formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/logo-arena.png' layout='constrained' alt="Logo ski arena karlov" />
+                <StaticImage formats={["jpg", "webp"]} src='../../assets/logo-arena.png' layout='constrained' alt="Logo ski arena karlov" />
             </a>
             <NavbarToggler onClick={toggle} className="float-right" />
             <Collapse isOpen={isOpen} navbar>

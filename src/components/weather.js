@@ -24,10 +24,10 @@ export default function Weather(props) {
 
     return <Link to="/pocasi" className="widget weather-widget widget"  >
         <StaticImage transformOptions={{ outputPixelDensities: [0.05, 0.1, 0.15, 0.25, 0.5, 1, 2] }}
-            aspectRatio={1} width={250} className="bckgrnd-image" src='../../assets/pocasi_test.jpg' alt='Ikona skipasy' layout='constrained' />
+            aspectRatio={1} width={250} className="bckgrnd-image" src='../../assets/pocasi_test.jpg' alt='Oblacna obloha' layout='constrained' />
 
         <div class="flexbox-column">
-            <img src={data ? getImg(data) : loadingImage} width={125} height={120} />
+            <img src={data ? getImg(data) : loadingImage} width={125} height={120} alt="Ikona pocasi" />
             <h2 className="weather-title widget-title">
                 {data ? `${getTemp(data)} °C`
                     : error ? "Err" : "Load"}
