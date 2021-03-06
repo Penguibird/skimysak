@@ -1,7 +1,8 @@
 import * as React from "react";
-import { Fragment, useRef, useEffect, lazy, Suspense } from 'react';
+import { Fragment, useRef, useEffect, } from 'react';
 import { Helmet } from "react-helmet";
 import { Link, graphql } from 'gatsby';
+import loadable from '@loadable/component'
 
 
 import 'pure-react-carousel/dist/react-carousel.es.css';
@@ -10,19 +11,19 @@ import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 
 import { StaticImage } from "gatsby-plugin-image";
 
-const Header = lazy(() => import('../components/header'));
+const Header = loadable(() => import('../components/header'));
 // import Header from '../components/header'
-const Footer = lazy(() => import('../components/footer'));
-const Weather = lazy(() => import('../components/weather'));
-const Aktualita = lazy(() => import('../components/aktualita'));
+const Footer = loadable(() => import('../components/footer'));
+const Weather = loadable(() => import('../components/weather'));
+const Aktualita = loadable(() => import('../components/aktualita'));
 
 // import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 
-const CarouselProvider = lazy(() => import('../carousel/carouselProvider'));
-const Slider = lazy(() => import('../carousel/slider'));
-const Slide = lazy(() => import('../carousel/slide'));
-const ButtonBack = lazy(() => import('../carousel/buttonBack'));
-const ButtonNext = lazy(() => import('../carousel/buttonNext'));
+const CarouselProvider = loadable(() => import('../carousel/carouselProvider'));
+const Slider = loadable(() => import('../carousel/slider'));
+const Slide = loadable(() => import('../carousel/slide'));
+const ButtonBack = loadable(() => import('../carousel/buttonBack'));
+const ButtonNext = loadable(() => import('../carousel/buttonNext'));
 
 
 //hero image
