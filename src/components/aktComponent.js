@@ -19,7 +19,16 @@ const Slider = loadable(() => import('../carousel/slider'));
 const Slide = loadable(() => import('../carousel/slide'));
 const ButtonBack = loadable(() => import('../carousel/buttonBack'));
 const ButtonNext = loadable(() => import('../carousel/buttonNext'));
-
+const imageProps = {
+    placeholder: 'blurred',
+    objectPosition: 'top',
+    // height: 
+    // aspectRatio
+    formats: ["jpg", "webp"],
+    imgStyle: { maxHeight: '250px', objectPosition: 'top' },
+    style: { maxHeight: '250px' },
+    layout: 'constrained',
+}
 export default function aktComponent(props) {
     const m = useBreakpoint();
     return <section className="section-aktuality section">
