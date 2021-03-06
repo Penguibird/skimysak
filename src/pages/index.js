@@ -102,8 +102,11 @@ export default function Home() {
                         className="bckgrnd-image" src='../../assets/kamery.jpg' alt='Ikona kamery' layout='constrained' />
                     <h2 className="widget-title">KAMERY</h2>
                 </Link>
-                <Weather />
-
+                <Link to="/pocasi" className="widget weather-widget widget"  >
+                    <StaticImage transformOptions={{ outputPixelDensities: [0.05, 0.1, 0.15, 0.25, 0.5, 1, 2] }}
+                        aspectRatio={1} width={250} className="bckgrnd-image" src='../../assets/pocasi_test.jpg' alt='Oblacna obloha' layout='constrained' />
+                    <Weather />
+                </Link>
                 <a href="https://www.skikarlov.cz/lyzovani/ceny-skipasu" className="widget widget-skipasy" >
                     <StaticImage
                         loading="eager"
