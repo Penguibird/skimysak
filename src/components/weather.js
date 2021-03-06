@@ -23,7 +23,8 @@ export default function Weather(props) {
     </div>
 
     return <Link to="/pocasi" className="widget weather-widget widget"  >
-        <StaticImage aspectRatio={1} width={250} className="bckgrnd-image" src='../../assets/pocasi_test.jpg' alt='Ikona skipasy' layout='constrained' />
+        <StaticImage                 transformOptions={{ outputPixelDensities: [0.05, 0.1, 0.15, 0.25, 0.5, 1, 2] }}
+aspectRatio={1} width={250} className="bckgrnd-image" src='../../assets/pocasi_test.jpg' alt='Ikona skipasy' layout='constrained' />
 
         <div class="flexbox-column">
             <img src={getImg(data)} />

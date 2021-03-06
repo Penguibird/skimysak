@@ -74,7 +74,8 @@ export default function Home() {
                         </a>
                         <div className="fb-icon">
                             <a href="https://www.facebook.com/SkiMysak/">
-                                <StaticImage formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/fb_icon.png' alt="Ikona Facebook" layout='constrained' />
+                                <StaticImage transformOptions={{ outputPixelDensities: [0.05, 0.1, 0.15, 0.25, 0.5, 1, 2] }}
+                                    formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/fb_icon.png' alt="Ikona Facebook" layout='constrained' />
                             </a>
                         </div>
                     </div>
@@ -84,14 +85,20 @@ export default function Home() {
             <section id="mainSection" className="section-icons section" ref={ref}>
                 <Link to="/kamery" className="widget widget-kamery" >
                     <StaticImage
-                        aspectRatio={1} width={210}
+                        transformOptions={{ outputPixelDensities: [0.05, 0.1, 0.15, 0.25, 0.5, 1, 2] }}
+
+                         width={210}
+                         height={210}
                         className="bckgrnd-image" src='../../assets/kamery.jpg' alt='Ikona kamery' layout='constrained' />
                     <h2 className="widget-title">KAMERY</h2>
                 </Link>
                 <Weather />
                 <a href="https://www.skikarlov.cz/lyzovani/ceny-skipasu" className="widget widget-skipasy" >
                     <StaticImage
-                        aspectRatio={1} width={210}
+                        transformOptions={{ outputPixelDensities: [0.05, 0.1, 0.15, 0.25, 0.5, 1, 2] }}
+
+                         width={210}
+                         height={210}
                         className="bckgrnd-image" src='../../assets/skipas.jpg' alt='Ikona skipasy' layout='constrained' />
                     <h2 className="widget-title">Skipasy</h2>
                 </a>
@@ -121,7 +128,8 @@ export default function Home() {
             <section className="section-aktuality section">
                 <h1 className="title-white smaller">Aktuality</h1>
                 <div className="aktuality-wrapper" style={{ width: '100vw', maxWidth: 'unset' }}>
-                    <StaticImage style={{ zIndex: 0 }} placeholder="blurred" src="../../assets/random_hero_2.png" alt='Zasnezene pozadi' layout='fullWidth' />
+                    <StaticImage transformOptions={{ outputPixelDensities: [0.05, 0.1, 0.15, 0.25, 0.5, 1, 2] }}
+                        style={{ zIndex: 0 }} placeholder="blurred" src="../../assets/random_hero_2.png" alt='Zasnezene pozadi' layout='fullWidth' />
                     <CarouselProvider
                         style={{ zIndex: 1, marginTop: '-50%' }}
                         naturalSlideWidth={100}
@@ -200,16 +208,16 @@ export default function Home() {
                 <div className="flexbox-row sluzby-wrap">
                     {/* TODO Aspect ratio in these  */}
                     <Link to="/servis"><article className="sluzby-item" >
-                        <StaticImage
-                            // aspectRatio={4 / 3} width={900} 
+                        <StaticImage transformOptions={{ outputPixelDensities: [0.05, 0.1, 0.15, 0.25, 0.5, 1, 2] }}
+                            aspectRatio={3 / 2} width={600} 
                             formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/servisFoto.jpg' alt="Zasnezena hora" layout='constrained'
                         />
                         <h3>Servis a půjčovna</h3>
                         <p><strong>Přijeďte lyžovat!</strong> Pokud nemáte výbavu, svěřte se do rukou servismanů v půjčovně Myšák.<strong> Komplet výstroj pro lyžaře, snowboarďáky i alpinisty</strong> .</p>
                     </article></Link>
                     <Link to="/skola"><article className="sluzby-item" >
-                        <StaticImage
-                            // aspectRatio={4 / 3} width={900} 
+                        <StaticImage transformOptions={{ outputPixelDensities: [0.05, 0.1, 0.15, 0.25, 0.5, 1, 2] }}
+                            aspectRatio={3 / 2} width={600} 
                             formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/skolaFoto.jpg' alt='Male dite na lyzich' layout='constrained'
                         />
                         <h3>Lyžařská škola</h3>
@@ -217,8 +225,9 @@ export default function Home() {
                         <strong>Bez stresu a na pohodu!</strong></p>
                     </article></Link>
                     <Link to="/obcerstveni"><article className="sluzby-item" >
-                        <StaticImage
-                            // aspectRatio={4 / 3} width={900} 
+                        <StaticImage transformOptions={{ outputPixelDensities: [0.05, 0.1, 0.15, 0.25, 0.5, 1, 2] }}
+                            aspectRatio={3 / 2} width={600} 
+
                             formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/jidlo_hero.jpg' alt='Horky napoj na horach' layout='constrained'
                         />
                         <h3>Občerstvení</h3>
@@ -229,10 +238,12 @@ export default function Home() {
             </section>
             <section className="section section-bottom" style={{ width: '90%', maxWidth: '1500px', height: 'auto', margin: 'auto' }} >
                 <StaticImage
-                    //  width={1500} height={960} 
+                     width={1500} height={960} 
                     formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/mapa.png' alt="Mapa Ski Karlov"
                     // imgStyle={{ width: '90%', maxWidth: '1500px' }} 
                     // transformOptions={{ trim: 10 }}
+                    // transformOptions={{ outputPixelDensities: [0.05, 0.1, 0.15, 0.25, 0.5, 1, 2] }}
+
                     objectFit='contain'
                     layout='constrained' />
             </section>
