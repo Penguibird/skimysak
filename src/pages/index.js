@@ -65,14 +65,14 @@ export default function Home() {
         <Header mainSectionRef={ref} />
         <main>
             <section className="section-hero-image section">
-                {/* <Fragment>{m.l
+                <Fragment>{m.l
                     ? <video className="hero-image" muted autoPlay loop preload >
                         <source src={videoMp4} type="video/mp4" />
                     </video>
                     : <div className="hero-image " id="hero-image-wrapper">
                         <StaticImage loading="eager" formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/random_hero_1.png' alt="Pohled z dronu na Karlov" layout='fullWidth' imgClassName="hero-image-image" />
                     </div>
-                }</Fragment> */}
+                }</Fragment>
                 <div className="flexbox-column main-title-wrap">
                     <h1 className="hero-big title-white hero-image-title ">
                         Vítejte na&nbsp;Myšáku
@@ -107,7 +107,7 @@ export default function Home() {
                         className="bckgrnd-image" src='../../assets/kamery.jpg' alt='Ikona kamery' layout='constrained' />
                     <h2 className="widget-title">KAMERY</h2>
                 </Link>
-                <Weather />
+                {/* <Weather /> */}
 
                 <a href="https://www.skikarlov.cz/lyzovani/ceny-skipasu" className="widget widget-skipasy" >
                     <StaticImage
