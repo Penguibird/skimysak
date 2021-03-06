@@ -19,7 +19,7 @@ import Aktualita from '../components/aktualita'
 import videoMp4 from '../../assets/video.mp4';
 
 import imageProps from './aktuality'
-
+import randHero2Sm from "../../assets/random_hero_2_sm.png"
 // //aktuality photos
 // import servis from '../../assets/servis.jpg'
 // import ctSport from '../../assets/ctSport1.jpg'
@@ -87,8 +87,8 @@ export default function Home() {
                     <StaticImage
                         transformOptions={{ outputPixelDensities: [0.05, 0.1, 0.15, 0.25, 0.5, 1, 2] }}
 
-                         width={210}
-                         height={210}
+                        width={210}
+                        height={210}
                         className="bckgrnd-image" src='../../assets/kamery.jpg' alt='Ikona kamery' layout='constrained' />
                     <h2 className="widget-title">KAMERY</h2>
                 </Link>
@@ -97,8 +97,8 @@ export default function Home() {
                     <StaticImage
                         transformOptions={{ outputPixelDensities: [0.05, 0.1, 0.15, 0.25, 0.5, 1, 2] }}
 
-                         width={210}
-                         height={210}
+                        width={210}
+                        height={210}
                         className="bckgrnd-image" src='../../assets/skipas.jpg' alt='Ikona skipasy' layout='constrained' />
                     <h2 className="widget-title">Skipasy</h2>
                 </a>
@@ -128,10 +128,12 @@ export default function Home() {
             <section className="section-aktuality section">
                 <h1 className="title-white smaller">Aktuality</h1>
                 <div className="aktuality-wrapper" style={{ width: '100vw', maxWidth: 'unset' }}>
-                    <StaticImage transformOptions={{ outputPixelDensities: [0.05, 0.1, 0.15, 0.25, 0.5, 1, 2] }}
-                    width={1920}
-                    height={1080}
-                        style={{ zIndex: 0 }} placeholder="blurred" src="../../assets/random_hero_2.png" alt='Zasnezene pozadi' layout='fullWidth' />
+                    {m.s ? <img width={600} height={338} src={randHero2Sm} alt='Zasnezene pozadi' />
+                        : <StaticImage transformOptions={{ outputPixelDensities: [0.05, 0.1, 0.15, 0.25, 0.5, 1, 2] }}
+                            width={1920}
+                            height={1080}
+                            style={{ zIndex: 0 }} placeholder="blurred" src="../../assets/random_hero_2.png" alt='Zasnezene pozadi' layout='fullWidth' />
+                    }
                     <CarouselProvider
                         style={{ zIndex: 1, marginTop: '-50%' }}
                         naturalSlideWidth={100}
@@ -211,7 +213,7 @@ export default function Home() {
                     {/* TODO Aspect ratio in these  */}
                     <Link to="/servis"><article className="sluzby-item" >
                         <StaticImage transformOptions={{ outputPixelDensities: [0.05, 0.1, 0.15, 0.25, 0.5, 1, 2] }}
-                            aspectRatio={3 / 2} width={600} 
+                            aspectRatio={3 / 2} width={600}
                             formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/servisFoto.jpg' alt="Zasnezena hora" layout='constrained'
                         />
                         <h3>Servis a půjčovna</h3>
@@ -219,7 +221,7 @@ export default function Home() {
                     </article></Link>
                     <Link to="/skola"><article className="sluzby-item" >
                         <StaticImage transformOptions={{ outputPixelDensities: [0.05, 0.1, 0.15, 0.25, 0.5, 1, 2] }}
-                            aspectRatio={3 / 2} width={600} 
+                            aspectRatio={3 / 2} width={600}
                             formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/skolaFoto.jpg' alt='Male dite na lyzich' layout='constrained'
                         />
                         <h3>Lyžařská škola</h3>
@@ -228,7 +230,7 @@ export default function Home() {
                     </article></Link>
                     <Link to="/obcerstveni"><article className="sluzby-item" >
                         <StaticImage transformOptions={{ outputPixelDensities: [0.05, 0.1, 0.15, 0.25, 0.5, 1, 2] }}
-                            aspectRatio={3 / 2} width={600} 
+                            aspectRatio={3 / 2} width={600}
 
                             formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/jidlo_hero.jpg' alt='Horky napoj na horach' layout='constrained'
                         />
@@ -240,7 +242,7 @@ export default function Home() {
             </section>
             <section className="section section-bottom" style={{ width: '90%', maxWidth: '1500px', height: 'auto', margin: 'auto' }} >
                 <StaticImage
-                     width={1500} height={960} 
+                    width={1500} height={960}
                     formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/mapa.png' alt="Mapa Ski Karlov"
                     // imgStyle={{ width: '90%', maxWidth: '1500px' }} 
                     // transformOptions={{ trim: 10 }}
