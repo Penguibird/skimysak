@@ -223,7 +223,7 @@ export default function Home() {
                     //  width={1500} height={960} 
                     formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/mapa.png' alt="Mapa Ski Karlov"
                     // imgStyle={{ width: '90%', maxWidth: '1500px' }} 
-                    transformOptions={{ trim: true }}
+                    // transformOptions={{ trim: 10 }}
                     objectFit='contain'
                     layout='constrained' />
             </section>
