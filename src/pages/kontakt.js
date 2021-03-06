@@ -7,6 +7,7 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 
 import image from '../../assets/servis.jpg'
+import { StaticImage } from "gatsby-plugin-image";
 
 export default function Contact(props) {
     let ref = React.useRef();
@@ -19,6 +20,10 @@ export default function Contact(props) {
             <meta name="description" content="Parádní lyžování v jeseníkách" />
         </Helmet>
         <Header mainSectionRef={ref} />
+        <StaticImage src="../../assets/aktuality_hero.jpg" alt='' layout='fullWidth'
+            style={{ top: 0, left: 0, right: 0, bottom: 0, zIndex: -1, position: 'absolute'}} 
+            className="hero-image" imgClassName="hero-image"
+        />
         <main className="main-kontakt" style={{ paddingTop: '0' }}>
             <section className="section-hero-image section">
                 <h1>Napište nám</h1>

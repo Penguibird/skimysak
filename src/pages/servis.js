@@ -28,7 +28,7 @@ export default function page(props) {
                         ? <video className="hero-image" muted autoPlay loop  >
                             <source src={videoMp4} type="video/mp4" />
                         </video>
-                        : <StaticImage formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/servis_hero.png' alt='Foto z pujcovny' layout='fullWidth' />
+                        : <StaticImage formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/servis_hero.png' className="hero-image" imgClassName="hero-image" alt='Foto z pujcovny' layout='fullWidth' />
                     }
                 </Fragment>
                 <div className="flexbox-column main-title-wrap">

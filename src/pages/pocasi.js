@@ -43,7 +43,7 @@ export default function Page(props) {
         <Header mainSectionRef={ref} />
         <main>
             <section className="section-hero-image section">
-                <StaticImage formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/servis.jpg' imgClassName="hero-image" alt='Sjezdovka' layout='fullWidth' />
+                <StaticImage formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/servis.jpg' imgClassName="hero-image" className="hero-image" alt='Sjezdovka' layout='fullWidth' />
                 <h1 className="title-white small">Počasí</h1>
             </section>
             <section className="section-predpoved section-background" ref={ref}>

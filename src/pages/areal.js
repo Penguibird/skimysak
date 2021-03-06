@@ -24,7 +24,7 @@ export default function Contact(props) {
         <Header mainSectionRef={ref} />
         <main>
             <section className="section-hero-image section">
-                <StaticImage formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/trate_hero.png' alt="Sjezdovka" layout='fullWidth' />
+                <StaticImage formats={["jpg", "webp"]} placeholder="blurred" className="hero-image" imgClassName="hero-image" src='../../assets/trate_hero.png' alt="Sjezdovka" layout='fullWidth' />
 
                 <div className="flexbox-column main-title-wrap">
                     <h1 className="big title-white hero-image-title">
@@ -56,23 +56,23 @@ export default function Contact(props) {
 
                     <div className="trat-image">
                         <StaticImage formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/iko_Pod-lesem.jpg' alt="ikona trate" layout='constrained' />
-                        <p><strong>Sjezdová trať Pod lesem</strong> má svůj vlastní vlek typu Poma. <strong>Je dlouhá 200&nbsp;metrů</strong> a&nbsp;je určena pro&nbsp;děti a&nbsp;začínající lyžaře. Pohodový trénink!</p>
                     </div>
+                    <p><strong>Sjezdová trať Pod lesem</strong> má svůj vlastní vlek typu Poma. <strong>Je dlouhá 200&nbsp;metrů</strong> a&nbsp;je určena pro&nbsp;děti a&nbsp;začínající lyžaře. Pohodový trénink!</p>
 
                     <div className="trat-image">
                         <StaticImage formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/iko_Mysacek.jpg' alt="ikona trate" layout='constrained' />
-                        <p><strong>Sjezdová trať pro nejmenší</strong> je součástí lyžařské školy. <strong>Délka 50&nbsp;metrů,</strong> obslužnost lanovým vlekem a&nbsp;poznávací znamení – hemžení malých, rychlých i&nbsp;méněrychlých lyžaříčků!</p>
                     </div>
+                    <p><strong>Sjezdová trať pro nejmenší</strong> je součástí lyžařské školy. <strong>Délka 50&nbsp;metrů,</strong> obslužnost lanovým vlekem a&nbsp;poznávací znamení – hemžení malých, rychlých i&nbsp;méněrychlých lyžaříčků!</p>
 
                     <div className="trat-image">
                         <StaticImage formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/iko_FIS.jpg' alt="ikona trate" layout='constrained' />
-                        <p><strong>Trať FIS měří 650&nbsp;metrů.</strong> Už mnoho let se&nbsp;na&nbsp;této sjezdovce jezdí <strong>lyžařské závody</strong>. V&nbsp;roce 2012 byla rozšířena a&nbsp;upravena. Vzhůru dolů po&nbsp;červené!</p>
                     </div>
+                    <p><strong>Trať FIS měří 650&nbsp;metrů.</strong> Už mnoho let se&nbsp;na&nbsp;této sjezdovce jezdí <strong>lyžařské závody</strong>. V&nbsp;roce 2012 byla rozšířena a&nbsp;upravena. Vzhůru dolů po&nbsp;červené!</p>
 
                     <div className="trat-image">
                         <StaticImage formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/iko_Rukav.jpg' alt="ikona trate" layout='constrained' />
-                        <p><strong>Sjezdová trať Rukáv</strong> vznikla při&nbsp;modernizaci a&nbsp;úpravách areálu v&nbsp;roce 2012. Jde&nbsp;o&nbsp;červenou závodní sjezdovku, služebně nejmladší, <strong>o&nbsp;celkové délce 700m. Tohle už&nbsp;si&nbsp;žádá zkušenosti!</strong></p>
                     </div>
+                    <p><strong>Sjezdová trať Rukáv</strong> vznikla při&nbsp;modernizaci a&nbsp;úpravách areálu v&nbsp;roce 2012. Jde&nbsp;o&nbsp;červenou závodní sjezdovku, služebně nejmladší, <strong>o&nbsp;celkové délce 700m. Tohle už&nbsp;si&nbsp;žádá zkušenosti!</strong></p>
                 </div>
 
                 <div className="areal-main" style={{ marginTop: '0' }}>
@@ -82,7 +82,12 @@ export default function Contact(props) {
             </section>
 
             <section ref={ref} className="section section-background section-bottom" id="mainSection" style={{ padding: '0px' }}>
-                <StaticImage formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/mapa.png' alt="Mapa" layout='constrained' imgStyle={{ width: '80%', maxWidth: '1400px', marginTop: '3vw' }} />
+                <StaticImage formats={["jpg", "webp"]}
+                    // placeholder="blurred" 
+                    src='../../assets/mapa.png' alt="Mapa Ski Karlov" style={{ width: '90%', maxWidth: '1500px', height: 'auto' }}
+                    // imgStyle={{ width: '90%', maxWidth: '1500px' }} 
+                    objectFit='contain'
+                    layout='constrained' />
 
 
             </section>

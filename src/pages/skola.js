@@ -21,7 +21,7 @@ export default function page(props) {
         <Header mainSectionRef={ref} />
         <main>
             <section className="section-hero-image section" >
-                <StaticImage formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/random_hero_3.png' alt='Snowboardista na svahu' imgClassName="hero-image" layout='fullWidth' />
+                <StaticImage formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/random_hero_3.png' alt='Snowboardista na svahu' className="hero-image" imgClassName="hero-image" layout='fullWidth' />
                 <div className="flexbox-column main-title-wrap">
                     <h1 className="big-title title-white hero-image-title">
                         Lyžařská škola
