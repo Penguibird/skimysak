@@ -64,9 +64,13 @@ export default function Home() {
                     ? <video className="hero-image" muted autoPlay loop preload >
                         <source src={videoMp4} type="video/mp4" />
                     </video>
-                    : <div className="hero-image " id="hero-image-wrapper">
-                        <StaticImage breakpoints={[250, 350, 450, 650, 800, 1000]} loading="eager" formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/random_hero_1.png' alt="Pohled z dronu na Karlov" layout='fullWidth' imgClassName="hero-image-image" />
-                    </div>
+                    : m.s
+                        ? <div className="hero-image " id="hero-image-wrapper">
+                            <StaticImage breakpoints={[250, 350, 450, 650, 800, 1000]} loading="lazy" formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/random_hero_1_sm.png' alt="Pohled z dronu na Karlov" layout='fullWidth' imgClassName="hero-image-image" />
+                        </div>
+                        : <div className="hero-image " id="hero-image-wrapper">
+                            <StaticImage breakpoints={[250, 350, 450, 650, 800, 1000]} loading="lazy" formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/random_hero_1.png' alt="Pohled z dronu na Karlov" layout='fullWidth' imgClassName="hero-image-image" />
+                        </div>
                 }</Fragment>
                 <div className="flexbox-column main-title-wrap">
                     <h1 className="hero-big title-white hero-image-title ">
