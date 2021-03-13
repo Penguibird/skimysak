@@ -36,7 +36,10 @@ export default function page(props) {
 
             </section>
             <section className="section-page-aktuality">
-            <Aktualita image={infoKonec} title="NOVÉ INFORMACE O PROVOZU" date="23.12.2020" url="infoKonec"
+                <Aktualita title="Konec Sezóny" date="5.3.202+" url="konecSezony"
+                    rawText="Letošní sezóna nadělila kupy sněhu, ale k&nbsp;tomu taky hromady omezení. Nezbývá, než se&nbsp;těšit na&nbsp;NOVOU, příští, lepší. Buďte zdraví, všichni příznivci Ski&nbsp;arény Karlov, moc se&nbsp;na&nbsp;Vás těšíme 🙂"
+                />
+                <Aktualita image={infoKonec} title="NOVÉ INFORMACE O PROVOZU" date="23.12.2020" url="infoKonec"
                     rawText=" Od&nbsp;27.&nbsp;prosince 2020 budou všechny lyžařské areály uzavřeny z&nbsp;důvodu přechodu na&nbsp;5.&nbsp;stupeň PES. Ski&nbsp;Aréna Karlov bude do&nbsp;té&nbsp;doby nabízet všechny své&nbsp;služby."
                 />
                 <Aktualita image={doKonceRoku} title="⛷ LYŽUJEME KAŽDÝ DEN DO KONCE ROKU 🏂" date="20.12.2020" url="doKonceRoku"

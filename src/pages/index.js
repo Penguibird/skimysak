@@ -131,37 +131,42 @@ export default function Home() {
                         naturalSlideHeight={m.ll ? 135 : m.ls ? 150 : m.ml ? 125 : m.ms ? 150 : m.s ? 110 : 150}
                         isIntrinsicHeight={m.s}
                         className={m.s ? 'small-width-carousel' : ' '}
-                        totalSlides={6 + 1 + 1}
+                        totalSlides={1+6 + 1 + 1}
                         visibleSlides={m.l ? 3 : m.m ? 2 : m.s ? 1 : 3}
                     >
                         <Slider width={m.ll ? '1300px' : null}>
                             <Slide index={0} innerClassName="slide-inner" className="carousel-slide">
+                                <Aktualita  title="Konec Sezóny" date="5.3.202+" url="konecSezony"
+                                    rawText="Letošní sezóna nadělila kupy sněhu, ale k&nbsp;tomu taky hromady omezení. Nezbývá, než se&nbsp;těšit na&nbsp;NOVOU, příští, lepší. Buďte zdraví, všichni příznivci Ski&nbsp;arény Karlov, moc se&nbsp;na&nbsp;Vás těšíme 🙂"
+                                />
+                            </Slide>
+                            <Slide index={1+0} innerClassName="slide-inner" className="carousel-slide">
                                 <Aktualita image={infoKonec} title="NOVÉ INFORMACE O PROVOZU" date="23.12.2020" url="infoKonec"
                                     rawText=" Od&nbsp;27.&nbsp;prosince 2020 budou všechny lyžařské areály uzavřeny z&nbsp;důvodu přechodu na&nbsp;5.&nbsp;stupeň PES. Ski&nbsp;Aréna Karlov bude do&nbsp;té&nbsp;doby nabízet všechny své&nbsp;služby."
                                 />
                             </Slide>
-                            <Slide index={0 + 1} innerClassName="slide-inner" className="carousel-slide">
+                            <Slide index={1+0 + 1} innerClassName="slide-inner" className="carousel-slide">
                                 <Aktualita image={doKonceRoku} title="⛷ LYŽUJEME KAŽDÝ DEN DO KONCE ROKU 🏂" date="20.12.2020" url="doKonceRoku" rawText="...&nbsp;s&nbsp;výjimkou Štědrého dne&nbsp;🎄 (24.&nbsp;12.). Od&nbsp;8:30 do 16&nbsp;hodin. V&nbsp;provozu půjčovna, servis&nbsp;🛠 i&nbsp;lyžařská škola (rezervace a&nbsp;objednávky na&nbsp;čísle&nbsp;734&nbsp;824&nbsp;493). Občerstvení&nbsp;🥪🧃 přes&nbsp;okénko." />
                             </Slide>
-                            <Slide index={0 + 1 + 1} innerClassName="slide-inner" className="carousel-slide">
+                            <Slide index={1+0 + 1 + 1} innerClassName="slide-inner" className="carousel-slide">
                                 <Aktualita image={zahajeniSezony} title="ZAČÍNÁME V PÁTEK 🏂" date="15.12. 2020" url="zahajujemeProvoz" rawText="Ski&nbsp;Aréna Karlov otevře sezónu v&nbsp;pátek 18.&nbsp;prosince 2020 v&nbsp;8.30 hodin. Lyžovat se bude i&nbsp;v&nbsp;sobotu a&nbsp;v&nbsp;neděli (další provoz upřesníme). K&nbsp;dispozici bude modrá 💙sjezdovka Family u&nbsp;čtyřsedadlové lanovky Myšák 🐭 a&nbsp;jedna ze&nbsp;sjezdovek u&nbsp;čtyřsedadlové lanovky Karlov Ski&nbsp;Express, kde&nbsp;bude i&nbsp;večerní lyžování..." />
                             </Slide>
-                            <Slide index={1 + 1 + 1} innerClassName="slide-inner" className="carousel-slide">
+                            <Slide index={1+1 + 1 + 1} innerClassName="slide-inner" className="carousel-slide">
                                 <Aktualita image={informace} title="Nové vyhlášení o vstupu do ČR" date="17.12 2020" url="informaceVstup" rawText="Od&nbsp;18.&nbsp;prosince 2020 je&nbsp;omezen vstup a&nbsp;pohyb cizinců na&nbsp;území&nbsp;ČR. Podmínkou pro&nbsp;umožnění vstupu je&nbsp;negativní výsledek PCR testu. Dále není možné přicestovat za&nbsp;účelem návštěvy přátel či&nbsp;rekreace." />
                             </Slide>
                             {/* <Slide index={1} innerClassName="slide-inner" className="carousel-slide">
                                 <Aktualita image={sezona} title="Nová sezóna" date="5.12. 2020" url="novaSezona" rawText="Tak co&nbsp;myslíte? Jaká bude? Zahájili jsme zasněžování! Počasí a&nbsp;vláda rozhodne, kdy&nbsp;se uvidíme&nbsp;😊" />
                             </Slide> */}
-                            <Slide index={2 + 1 + 1} innerClassName="slide-inner" className="carousel-slide">
+                            <Slide index={1+2 + 1 + 1} innerClassName="slide-inner" className="carousel-slide">
                                 <Aktualita image={lyzTest} title="Testování lyží" url="lyzTest" rawText="Další oblíbené testování Nixski proběhne 6.&nbsp;ledna, od&nbsp;9ti do&nbsp;16ti hodin na&nbsp;Myšáku. Vyzkoušejte novinkové ATOMIC, HEAD, DYNASTAR,STÖCKLI a&nbsp;LUSTI." />
                             </Slide>
-                            <Slide index={3 + 1 + 1} innerClassName="slide-inner" className="carousel-slide">
+                            <Slide index={1+3 + 1 + 1} innerClassName="slide-inner" className="carousel-slide">
                                 <Aktualita image={parking} title="Parkování" date="18.11. 2020" url="parkovani" rawText="Přijeďte si&nbsp;užít lyžovačku! Parkování je u&nbsp;nás ZDARMA  a&nbsp;hned pod&nbsp;Myšákem. Přijíždějící auta organizujeme, aby bylo vše v&nbsp;pohodě, a&nbsp;aby další a&nbsp;další lyžaři našli místo. Mezi jednotlivými areály se&nbsp;můžete přemisťovat i&nbsp;bezplatnými SKI busy a SKI taxi. Jízdní řády připravujeme." />
                             </Slide>
-                            <Slide index={4 + 1 + 1} innerClassName="slide-inner" className="carousel-slide">
+                            <Slide index={1+4 + 1 + 1} innerClassName="slide-inner" className="carousel-slide">
                                 <Aktualita image={ctSport} title="ČT sport NA VRCHOL" date="15.11. 2020" url="JBus3Nas" rawText="Vzpomínáte? Takhle to&nbsp;na&nbsp;Myšáku žilo s&nbsp;ČT&nbsp;sport na&nbsp;vrchol 22.&nbsp;ledna 2019. Už máme termín pro&nbsp;závod letošní sezóny. Zapište si&nbsp;do&nbsp;diářů 5.&nbsp;–&nbsp;7.&nbsp;února 2021! Tak ať&nbsp;dojedeme s&nbsp;ČT&nbsp;sport až&nbsp;na&nbsp;vrchol!" />
                             </Slide>
-                            <Slide index={5 + 1 + 1} innerClassName="slide-inner" className="carousel-slide">
+                            <Slide index={1+5 + 1 + 1} innerClassName="slide-inner" className="carousel-slide">
                                 <Aktualita image={servis} title="PODĚKOVÁNÍ za sezónu 2019/20" date="29.3. 2020" url="ASnDASie2" rawText="Za normálních okolností bychom teď, na&nbsp;konci března, pravděpodobně oznamovali konec další lyžařské sezóny v&nbsp;karlovském údolí. Tato zima ale 'normální' nebyla, a&nbsp;to&nbsp;nemáme na&nbsp;mysli jen její předčasný konec... " />
                             </Slide>
                         </Slider>
