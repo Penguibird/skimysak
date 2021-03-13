@@ -136,7 +136,7 @@ export default function Home() {
                     >
                         <Slider width={m.ll ? '1300px' : null}>
                             <Slide index={0} innerClassName="slide-inner" className="carousel-slide">
-                                <Aktualita  title="Konec Sezóny" date="5.3.202+" url="konecSezony"
+                                <Aktualita  title="Konec Sezóny" date="5.3.2020" url="konecSezony"
                                     rawText="Letošní sezóna nadělila kupy sněhu, ale k&nbsp;tomu taky hromady omezení. Nezbývá, než se&nbsp;těšit na&nbsp;NOVOU, příští, lepší. Buďte zdraví, všichni příznivci Ski&nbsp;arény Karlov, moc se&nbsp;na&nbsp;Vás těšíme 🙂"
                                 />
                             </Slide>
