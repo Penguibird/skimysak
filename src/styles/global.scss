@@ -586,3 +586,12 @@ h1.small {
 script {
     display: none !important;
 }
+
+@media screen and (max-width: 430px) {
+    li.carousel-slide {
+        padding: 0 !important;
+    }
+    .slide-inner {
+        margin: 0 !important;
+    }
+}
