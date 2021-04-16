@@ -7,7 +7,7 @@ import '../styles/bootstrap/nav.scss';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Link } from "gatsby";
-import { Fragment, useState, useEffect } from 'react';
+import { Fragment, useState, useEffect, useRef } from 'react';
 // // import Media from "react-media";
 import { useBreakpoint } from 'gatsby-plugin-breakpoints'
 import {
@@ -66,24 +66,35 @@ export default function Header({ mainSectionRef, always }) {
             a: true,
         }
     ]
-    // useEffect(() => {
-    //     window.addEventListener("scroll", e => {
-    //         setIsBackground(mainSectionRef && mainSectionRef.current && (window.pageYOffset > (mainSectionRef.current.offsetTop + offset)));
-    //     })
-    // }, []);
 
-    const offset = -100;
-    // const [isBackground, setIsBackground] = useState(false)
-    // ${isBackground || always ? 'background' : ''} 
+    let toObserve = mainSectionRef;
+    useEffect(() => {
+        let i = new window.IntersectionObserver((entries) => {
+            // if ()
+            setIsBackground(entries[0].isIntersecting);
+        }, {
+            root: null,
+            rootMargin: '90vh'
+        });
+
+        if (toObserve.current) i.observe(toObserve.current);
+
+        return () => {
+            if (toObserve.current) i.unobserve(toObserve.current)
+        }
+    }, []);
+
+    // const offset = -100;
+    const [isBackground, setIsBackground] = useState(false)
 
     //aktuality, areal, kamery, pocasi
-    return <header className={`navbar ${isOpen ? 'open' : ''} background`}>
+    return <header className={`navbar ${isOpen ? 'open' : ''} ${isBackground || always ? 'background' : ''}`}>
         <Navbar color="light" light expand="md" className="clearfix">
             <Link to="/" className="logo logo-mysak">
-                <StaticImage placeholder="none" style={{ maxHeight: '100%' }} imgStyle={{ maxHeight: '100%' }} height={90} formats={["auto", "webp"]} src='../../assets/logo_mysak_cropped_scaled.png' layout='constrained' alt="Logo ski mysak" />
+                <StaticImage placeholder="blurred" style={{ maxHeight: '100%' }} imgStyle={{ maxHeight: '100%' }} height={90} formats={["auto", "webp"]} src='../../assets/logo_mysak_cropped_scaled.png' layout='constrained' alt="Logo ski mysak" />
             </Link>
             <a href="https://www.skikarlov.cz/" className="logo logo-karlov" target="_blank">
-                <StaticImage placeholder="none" style={{ maxHeight: '100%' }} imgStyle={{ maxHeight: '100%' }} height={90} formats={["auto", "webp"]} src='../../assets/logo-arena.png' layout='constrained' alt="Logo ski arena karlov" />
+                <StaticImage placeholder="blurred" style={{ maxHeight: '100%' }} imgStyle={{ maxHeight: '100%' }} height={90} formats={["auto", "webp"]} src='../../assets/logo-arena.png' layout='constrained' alt="Logo ski arena karlov" />
             </a>
             <NavbarToggler onClick={toggle} className="float-right" />
             <Collapse isOpen={isOpen} navbar>
