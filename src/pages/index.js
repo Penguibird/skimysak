@@ -45,7 +45,7 @@ import randHero2Sm from "../../assets/random_hero_2_sm.png"
 const AktComponent = loadable(() => import('../components/aktComponent'));
 
 export default function Home() {
-    // let ref = useRef();
+    let ref = useRef();
     let m = useBreakpoint();
     return <Fragment>
         <Helmet>
@@ -56,7 +56,7 @@ export default function Home() {
         </Helmet>
 
         <Header
-        //  mainSectionRef={ref} 
+            mainSectionRef={ref}
         />
         <main>
             <section className="section-hero-image section">
@@ -96,7 +96,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <section id="mainSection" className="section-icons section">
+            <section id="mainSection" ref={ref} className="section-icons section">
                 <Link to="/kamery" className="widget widget-kamery" >
                     <StaticImage
                         transformOptions={{ outputPixelDensities: [0.05, 0.1, 0.15, 0.25, 0.5, 1, 2] }}
@@ -107,11 +107,11 @@ export default function Home() {
                     <h2 className="widget-title">KAMERY</h2>
                 </Link>
 
-                <Link to="/pocasi" className="widget weather-widget widget"  >
-                    {/* <StaticImage transformOptions={{ outputPixelDensities: [0.05, 0.1, 0.15, 0.25, 0.5, 1, 2] }}
-                        aspectRatio={1} width={250} className="bckgrnd-image" src='../../assets/pocasi_test.jpg' alt='Oblacna obloha' layout='constrained' /> */}
+                {/* <Link to="/pocasi" className="widget weather-widget widget"  >
+                    <StaticImage transformOptions={{ outputPixelDensities: [0.05, 0.1, 0.15, 0.25, 0.5, 1, 2] }}
+                        aspectRatio={1} width={250} className="bckgrnd-image" src='../../assets/pocasi_test.jpg' alt='Oblacna obloha' layout='constrained' />
                     <Weather />
-                </Link>
+                </Link> */}
 
                 <a href="https://www.skikarlov.cz/lyzovani/ceny-skipasu" className="widget widget-skipasy" >
                     <StaticImage
