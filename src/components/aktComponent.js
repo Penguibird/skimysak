@@ -38,7 +38,7 @@ export default function aktComponent(props) {
             } */}
             <h1 className="title-white smaller">Aktuality</h1>
             <CarouselProvider
-                style={{ zIndex: 1, marginTop: '-50%' }}
+                // style={{ zIndex: 1, marginTop: '-50%' }}
                 naturalSlideWidth={100}
                 naturalSlideHeight={m.ll ? 135 : m.ls ? 150 : m.ml ? 125 : m.ms ? 150 : m.s ? 110 : 150}
                 isIntrinsicHeight={m.s}

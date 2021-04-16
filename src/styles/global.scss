@@ -401,12 +401,12 @@ h1.small {
         @media screen and (min-width: 901px) {
             flex-direction: row-reverse;
         }
-        @media screen and (max-width: 900px) {
-            flex-direction: column-reverse;
-            & > *:not(:first-child) {
-                display: none;
-            }
-        }
+        // @media screen and (max-width: 900px) {
+        //     flex-direction: column-reverse;
+        //     & > *:not(:first-child) {
+        //         display: none;
+        //     }
+        // }
 
         flex-wrap: nowrap;
         justify-content: space-around;
@@ -414,10 +414,13 @@ h1.small {
         // gap: 1.5em;
     }
 
-    background-image: url("../../assets/random_hero_2.png");
+    background-image: url("../../assets/random_hero_2.jpg");
     @media screen and (max-width: 600px) {
-        background-image: url("../../assets/random_hero_2_sm.png");
+        background-image: url("../../assets/random_hero_2_sm.jpg");
     }
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
     // background-color: var(--background-blue);
     // padding: 2em;
 }
