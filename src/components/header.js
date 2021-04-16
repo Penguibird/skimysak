@@ -131,13 +131,16 @@ function BetterDropDown({ title, listOfLinks }) {
     let dropdown = useRef();
 
     useEffect(() => {
-
-        dropdown.current.addEventListener("mouseenter", e => setDropDown(true), { passive: true })
-        dropdown.current.addEventListener("mouseleave", e => setDropDown(false), { passive: true })
+        if (dropdown.current) {
+            dropdown.current.addEventListener("mouseenter", e => setDropDown(true), { passive: true })
+            dropdown.current.addEventListener("mouseleave", e => setDropDown(false), { passive: true })
+        }
 
         return () => {
-            dropdown.current.removeEventListener("mouseenter", e => setDropDown(true), { passive: true })
-            dropdown.current.removeEventListener("mouseleave", e => setDropDown(false), { passive: true })
+            if (dropdown.current) {
+                dropdown.current.removeEventListener("mouseenter", e => setDropDown(true), { passive: true })
+                dropdown.current.removeEventListener("mouseleave", e => setDropDown(false), { passive: true })
+            }
         }
     }, [])
     //  <Media queries={{
