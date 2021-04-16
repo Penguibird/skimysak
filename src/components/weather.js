@@ -60,11 +60,13 @@ export default function Weather(props) {
                 : error ? "Weather" : "Weather"}
         </h2>
         <div class="flexbox-column" style={{
+            margin: 'auto',
+            width: '75%',
+            marginTop: '-110%',
             top: 0,
-            marginTop: '-90%'
         }}>
-            <img src={data ? getSymbol(data.properties.timeseries.sort(compareDates)[0].data.next_1_hours.summary.symbol_code) : loadingImage} width={125} height={120} alt="Ikona pocasi" />
+            <img className="weather-icon" src={data ? getSymbol(data.properties.timeseries.sort(compareDates)[0].data.next_1_hours.summary.symbol_code) : loadingImage} width={125} height={120} alt="Ikona pocasi" />
         </div>
-    </Fragment>
+    </Fragment >
 
 }

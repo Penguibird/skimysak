@@ -580,6 +580,10 @@ h1.small {
     @media screen and (max-width: 900px) {
         width: 30vw;
         height: 30vw;
+        .weather-icon {
+            margin-top: 10% !important;
+            width: 80% !important;
+        }
     }
 }
 
