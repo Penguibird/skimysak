@@ -4,7 +4,7 @@ import { Fragment, useState, useEffect } from 'react';
 import { Link } from "gatsby";
 // import * as icons from "../../assets/weatherIcons.mjs";
 import useSWR from 'swr';
-import { getTemp, getImg } from './weatherFunctions';
+import { getTemp, getImgm, compareDates } from './weatherFunctions';
 import { StaticImage } from "gatsby-plugin-image";
 import loadingImage from '../../assets/weatherIcons/cloudy.png';
 
