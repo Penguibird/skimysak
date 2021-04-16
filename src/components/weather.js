@@ -49,22 +49,22 @@ export default function Weather(props) {
     const { data, error } = useSWR(url, fetcher);
 
     // if (error) console.log({ url, data, error });
-    // if (error) return <div className="widget weather-widget error">
-    //     <p>error</p>
-    // </div>
+
     // if (!data) return <div className="widget weather-widget loading">
     //     <p>loading</p>
     // </div>
 
-    return <div class="flexbox-column" style={{
-        top: 0,
-        marginTop: '-90%'
-    }}>
-        <img src={data ? getSymbol(data.properties.timeseries.sort(compareDates)[0].data.next_1_hours.summary.symbol_code) : loadingImage} width={125} height={120} alt="Ikona pocasi" />
+    return <Fragment>
         <h2 className="weather-title widget-title">
             {data ? `${getTemp(data)} °C`
-                : error ? "Err" : "Load"}
+                : error ? "Weather" : "Weather"}
         </h2>
-    </div>
+        <div class="flexbox-column" style={{
+            top: 0,
+            marginTop: '-90%'
+        }}>
+            <img src={data ? getSymbol(data.properties.timeseries.sort(compareDates)[0].data.next_1_hours.summary.symbol_code) : loadingImage} width={125} height={120} alt="Ikona pocasi" />
+        </div>
+    </Fragment>
 
 }
