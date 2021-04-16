@@ -426,7 +426,7 @@ h1.small {
 }
 
 .carousel {
-    width: 100%;
+    // width: 100%;
     padding: 0.5em;
 
     display: flex;
@@ -580,13 +580,5 @@ h1.small {
     @media screen and (max-width: 900px) {
         width: 30vw;
         height: 30vw;
-    }
-}
-
-header.navbar,
-header.navbar * {
-    max-height: 90px !important;
-    @media screen and (max-width: 600px) {
-        max-height: unset !important;
     }
 }
