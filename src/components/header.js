@@ -49,7 +49,7 @@ export default function Header({ mainSectionRef, always }) {
     ]
     const areal = [
         {
-            title: "Svahy",
+            title: "Sjezdovky",
             link: "/areal"
         },
         {

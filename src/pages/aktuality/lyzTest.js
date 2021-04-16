@@ -30,8 +30,10 @@ export default function page(props) {
                 </Link>
 
                 <h2>Testování lyží</h2>
-                <p className="date">16.11.2020</p>
-               
+                {/* <p className="date">16.11.2020</p> */}
+               <p>
+               Další oblíbené testování Nixski proběhne 6.&nbsp;ledna, od&nbsp;9ti do&nbsp;16ti hodin na&nbsp;Myšáku. Vyzkoušejte novinkové ATOMIC, HEAD, DYNASTAR,STÖCKLI a&nbsp;LUSTI.
+               </p>
                 <img src={lyzTest} alt="Stupen vitezu" className="aktuality-img" />
                 <Link to="/aktuality" className='back center   ' >
                     <svg width="20" height="40" viewBox="0 0 20 40" className="custom-svg">

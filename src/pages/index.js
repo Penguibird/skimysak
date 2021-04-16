@@ -42,6 +42,7 @@ import randHero2Sm from "../../assets/random_hero_2_sm.png"
 //     }
 // `
 
+
 const AktComponent = loadable(() => import('../components/aktComponent'));
 
 export default function Home() {
@@ -53,6 +54,7 @@ export default function Home() {
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content="Parádní lyžování v jeseníkách" />
+
         </Helmet>
 
         <Header
@@ -128,8 +130,18 @@ export default function Home() {
             </section>
 
             <section className="flexbox-column section section-main-text" >
+                {/* <h1 className="smaller title-blue" style={{marginBottom: '1vw'}}>
+                    Jedemeéé!
+                </h1>
+                <h1 className="smaller title-blue" style={{fontSize: 'clamp(18px, 3.8vw, 3.8vw)', maxWidth: '1300px'}}>
+                do&nbsp;konce roku provoz<br/>denně 8:30&nbsp;-&nbsp;16:00 mimo 24.12
+                </h1> */}
+                {/* <h1 className="smaller title-blue">
+                    Parádní lyžování v&nbsp;jeseníkách!
+                </h1> */}
                 <h1 className="smaller title-blue">
-                    Areál dočasně uzavřen
+
+                    Vítejte na&nbsp;Myšáku
                 </h1>
                 <p>
                     Ski Myšák je součástí <strong>Ski arény Karlov pod Pradědem </strong> a&nbsp;nabízí 4&nbsp;místnou sedačkovou lanovku s&nbsp;bublinou a&nbsp;skvělý sešup po&nbsp;modré nebo dvou červených -&nbsp;o&nbsp;celkové délce skoro 2,5&nbsp;km.
@@ -149,6 +161,7 @@ export default function Home() {
                 </h2>
             </section>
             <AktComponent />
+
 
             <section className="flexbox-column section section-sluzby" >
                 <h1 className="big-title title-blue " >

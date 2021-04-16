@@ -11,6 +11,7 @@ export default function Aktualita({ title, imageName, image, url, rawText, date,
         </div>
         <h3 className="title" >{title}</h3>
         {date && <p className="date" style={{ color: '#757575', fontSize: '14px' }} >{date}</p>}
+
         <p>{rawText}</p>
         <p className="show-more-link">Více...</p>
     </Link>

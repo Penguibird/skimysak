@@ -6,14 +6,13 @@ import { Helmet } from "react-helmet";
 import Header from '../../components/header'
 import Footer from '../../components/footer'
 import { Fragment, useState, useEffect } from 'react';
-import sezona from '../../../assets/snih1.jpg'
-import snih from '../../../assets/snih2.jpg'
+import informace from '../../../assets/informace.jpg';
 
 export default function page(props) {
     let ref = React.useRef();
     return <Fragment>
         <Helmet>
-            <title>Nová sezóna | Aktuality | Ski Myšák</title>
+            <title>ZAČÍNÁME V PÁTEK | Aktuality | Ski Myšák</title>
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content="Parádní lyžování v jeseníkách" />
@@ -29,11 +28,14 @@ export default function page(props) {
                     <h2>Zpět</h2>
                 </Link>
 
-                <h2>Nová sezóna</h2>
-                <p className="date">5.12.2020</p>
-                <p>Tak co&nbsp;myslíte? Jaká bude? Zahájili jsme zasněžování! Počasí a&nbsp;vláda rozhodne, kdy&nbsp;se uvidíme&nbsp;😊</p>
-                <img src={sezona} alt="Snehove delo" className="aktuality-img" />
-                <img src={snih} alt="Snehove delo" className="aktuality-img" />
+                <h2>Nové vyhlášení o vstupu do ČR</h2>
+                <p className="date">17.12.2020</p>
+                <p><strong>CZ:</strong> Od&nbsp;18.&nbsp;prosince 2020 je&nbsp;omezen vstup a&nbsp;pohyb cizinců na&nbsp;území&nbsp;ČR. Podmínkou pro&nbsp;umožnění vstupu je&nbsp;negativní výsledek PCR testu. Dále není možné přicestovat za&nbsp;účelem návštěvy přátel či&nbsp;rekreace.
+                </p>
+                <p><strong>PL:</strong> Informacja Ministerstwa Spraw Wewnętrznych dotycząca ograniczenia wjazdu cudzoziemców do&nbsp;Czech: Do&nbsp;ośrodków narciarskich mają wstęp tylko&nbsp;te&nbsp;osoby, które&nbsp;po&nbsp;przyjeździe do&nbsp;Czech przedstawiły negatywny wynik testu PCR. 
+                    Jednocześnie informujemy, że&nbsp;przjazd do&nbsp;Czech w&nbsp;celach turystyczno-rekreacyjnych lub&nbsp;odwiedzin znajomych jest niemożliwy. Regulamin obowiązuje od&nbsp;piątku 18.&nbsp;grudnia 2020 do&nbsp;odwołania.
+</p>
+                <img src={informace} alt="Sjezdovka" className="aktuality-img" />
                 <Link to="/aktuality" className='back center   ' >
                     <svg width="20" height="40" viewBox="0 0 20 40" className="custom-svg">
                         <line x1="3" x2="17" y1="20" y2="37" />
