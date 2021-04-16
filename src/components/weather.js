@@ -8,6 +8,40 @@ import { getTemp, getImg } from './weatherFunctions';
 import { StaticImage } from "gatsby-plugin-image";
 import loadingImage from '../../assets/weatherIcons/cloudy.png';
 
+import cloudy from '../../assets/weatherIcons/cloudy.png';
+import partly_cloudy_day from '../../assets/weatherIcons/partly_cloudy_day.png';
+import partly_cloudy_night from '../../assets/weatherIcons/partly_cloudy_night.png';
+import rain_and_snow from '../../assets/weatherIcons/rain_and_snow.png';
+import rain_heavy from '../../assets/weatherIcons/rain_heavy.png';
+import rain_light from '../../assets/weatherIcons/rain_light.png';
+import snow_heavy from '../../assets/weatherIcons/snow_heavy.png';
+import snow_light from '../../assets/weatherIcons/snow_light.png';
+import sunny_day from '../../assets/weatherIcons/sunny_day.png';
+import sunny_night from '../../assets/weatherIcons/sunny_night.png';
+
+const getSymbol = (symbolCode) => {
+    if (symbolCode.includes("heavyrain")) return rain_heavy
+    if (symbolCode.includes("sleet")) return rain_and_snow
+    if (symbolCode.includes("heavysnow")) return snow_heavy
+    if (symbolCode.includes("rain")) return rain_light
+    if (symbolCode.includes("snow")) return snow_light
+    if (symbolCode.includes("cloudy") || symbolCode.includes("fog")) return cloudy
+
+    var date = new Date();
+    if (date.getHours() > 22 || date.getHours() < 6) {
+        //its night
+        if (symbolCode.includes("clearsky")) return sunny_night
+        if (symbolCode.includes("fair")) return partly_cloudy_night
+    } else {
+        //its day
+        if (symbolCode.includes("clearsky")) return sunny_day
+        if (symbolCode.includes("fair")) return partly_cloudy_day
+    }
+    console.error("There is no icon for symbol code:", symbolCode)
+    return cloudy;
+}
+
+
 export default function Weather(props) {
     // const [weather, setWeather] = useState();
     const fetcher = (...args) => fetch(...args).then(res => res.json())
@@ -26,7 +60,7 @@ export default function Weather(props) {
         top: 0,
         marginTop: '-90%'
     }}>
-        <img src={data ? getImg(data) : loadingImage} width={125} height={120} alt="Ikona pocasi" />
+        <img src={data ? getSymbol(data.properties.timeseries.sort(compareDates)[0].data.next_1_hours.summary.symbol_code) : loadingImage} width={125} height={120} alt="Ikona pocasi" />
         <h2 className="weather-title widget-title">
             {data ? `${getTemp(data)} °C`
                 : error ? "Err" : "Load"}
