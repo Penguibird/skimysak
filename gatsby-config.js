@@ -50,13 +50,13 @@ module.exports = {
         //         enableOnDevelopment: true,
         //     }
         // },
-        {
-            resolve: `gatsby-plugin-google-gtag`,
-            options: {
-                trackingIds: [
-                    'G-7HFCN7FM66'
-                ]
-            }
-        }
+        // {
+        //     resolve: `gatsby-plugin-google-gtag`,
+        //     options: {
+        //         trackingIds: [
+        //             'G-7HFCN7FM66'
+        //         ]
+        //     }
+        // }
     ]
 }
