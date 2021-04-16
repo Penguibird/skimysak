@@ -128,14 +128,25 @@ function BetterDropDown({ title, listOfLinks }) {
     const [isDropDown, setDropDown] = useState(false);
     const toggleDropDown = () => setDropDown(!isDropDown);
     const m = useBreakpoint();
+    let dropdown = useRef();
 
+    useEffect(() => {
+
+        dropdown.current.addEventListener("mouseenter", e => setDropDown(true), { passive: true })
+        dropdown.current.addEventListener("mouseleave", e => setDropDown(false), { passive: true })
+
+        return () => {
+            dropdown.current.removeEventListener("mouseenter", e => setDropDown(true), { passive: true })
+            dropdown.current.removeEventListener("mouseleave", e => setDropDown(false), { passive: true })
+        }
+    }, [])
     //  <Media queries={{
     //     small: "(max-width: 599px)",
     //     medium: "(min-width: 600px)"
     // }}>
     //     {matches => (
     return <Fragment> {m.dropM
-        ? <Dropdown isOpen={isDropDown} toggle={toggleDropDown} caret onMouseEnter={e => setDropDown(true)} onMouseLeave={e => setDropDown(false)}>
+        ? <Dropdown ref={dropdown} isOpen={isDropDown} toggle={toggleDropDown} caret >
             <DropdownToggle>
                 <Link>
                     <p>{title}</p>
