@@ -414,7 +414,10 @@ h1.small {
         // gap: 1.5em;
     }
 
-    // background-image: url("../../assets/random_hero_2.png");
+    background-image: url("../../assets/random_hero_2.png");
+    @media screen and (max-width: 600px) {
+        background-image: url("../../assets/random_hero_2_sm.png");
+    }
     // background-color: var(--background-blue);
     // padding: 2em;
 }
@@ -581,6 +584,6 @@ header.navbar,
 header.navbar * {
     max-height: 90px !important;
     @media screen and (max-width: 600px) {
-        max-height: unset;
+        max-height: unset !important;
     }
 }
