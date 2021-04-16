@@ -67,13 +67,15 @@ export default function Header({ mainSectionRef, always }) {
         }
     ]
 
+    let navbar = useRef();
+
     let toObserve = mainSectionRef;
     useEffect(() => {
         let i = new window.IntersectionObserver((entries) => {
             // if ()
             setIsBackground(entries[0].isIntersecting);
         }, {
-            root: null,
+            root: navbar.current,
             rootMargin: '90%'
         });
 
@@ -88,7 +90,7 @@ export default function Header({ mainSectionRef, always }) {
     const [isBackground, setIsBackground] = useState(false)
 
     //aktuality, areal, kamery, pocasi
-    return <header className={`navbar ${isOpen ? 'open' : ''} ${isBackground || always ? 'background' : ''}`}>
+    return <header ref={navbar} className={`navbar ${isOpen ? 'open' : ''} ${isBackground || always ? 'background' : ''}`}>
         <Navbar color="light" light expand="md" className="clearfix">
             <Link to="/" className="logo logo-mysak">
                 <StaticImage placeholder="tracedSVG" loading="eager" style={{ maxHeight: '100%' }} imgStyle={{ maxHeight: '100%' }} height={90} formats={["auto", "webp"]} src='../../assets/logo_mysak_cropped_scaled.png' layout='constrained' alt="Logo ski mysak" />
