@@ -69,14 +69,14 @@ export default function Header({ mainSectionRef, always }) {
 
 
     useEffect(() => {
-    
+
         document.addEventListener('scroll', e => {
             if (window.scrollY > 0) {
                 setIsBackground(true)
             } else {
                 setIsBackground(false);
             }
-        }, { passive: true });
+        }, { passive: true, });
     }, []);
 
     // const offset = -100;
