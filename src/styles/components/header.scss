@@ -14,13 +14,13 @@ header {
         background-color: var(--background-blue);
         box-shadow: 2px 2px 9px 1px #5f5f5f70;
     }
-    @media screen and(max-width: 800px) {
+    @media screen and(max-width: 768px) {
         &.open {
             background-color: var(--background-blue);
             box-shadow: 2px 2px 9px 1px #5f5f5f70;
         }
     }
-    @media screen and(min-width: 801px) {
+    @media screen and(min-width: 769px) {
         &:hover {
             background-color: var(--background-blue);
             box-shadow: 2px 2px 9px 1px #5f5f5f70;
@@ -51,7 +51,7 @@ header {
             display: inline;
             font-family: "Montserrat", sans-serif;
             font-weight: 700;
-            color: #105ae5; // var(--title-white);
+            color: #272727; // var(--title-white);
         }
     }
     div.dropdown {
@@ -66,7 +66,7 @@ header {
     }
 }
 
-@media screen and(max-width: 800px) {
+@media screen and(max-width: 768px) {
     .navbar .collapse *,
     .navbar .collapsing * {
         padding: 0.4em !important;
@@ -84,7 +84,7 @@ header {
         height: auto;
     }
 }
-@media screen and(min-width:801px) {
+@media screen and(min-width:769px) {
     .logo-karlov {
         order: 1;
     }

@@ -6,6 +6,7 @@ import { Helmet } from "react-helmet";
 import Header from '../components/header'
 import Footer from '../components/footer'
 import { Fragment, useState, useEffect } from 'react';
+import { StaticImage } from "gatsby-plugin-image";
 
 export default function page(props) {
     // let ref = React.useRef();
@@ -18,6 +19,7 @@ export default function page(props) {
             <meta name="description" content="Parádní lyžování v jeseníkách" />
         </Helmet>
         <Header always />
+        <StaticImage src="../../assets/trate_hero.png" alt='' layout='fullWidth' style={{ top: 0, left: 0, right: 0, bottom: 0, zIndex: -1, position: 'absolute'}} />
 
         <main className="kamery">
             <section className="section-hero-image section">

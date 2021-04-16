@@ -7,7 +7,7 @@ import '../styles/bootstrap/nav.scss';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Link } from "gatsby";
-import { Fragment, useState, useEffect } from 'react';
+import { Fragment, useState, useEffect, useRef } from 'react';
 // // import Media from "react-media";
 import { useBreakpoint } from 'gatsby-plugin-breakpoints'
 import {
@@ -26,8 +26,8 @@ import {
     DropdownItem,
     NavbarText
 } from 'reactstrap';
-import logo from '../../assets/logo_mysak_cropped_scaled.png';
-import logo2 from '../../assets/logo-arena.png';
+
+import { StaticImage } from "gatsby-plugin-image";
 
 export default function Header({ mainSectionRef, always }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -66,24 +66,30 @@ export default function Header({ mainSectionRef, always }) {
             a: true,
         }
     ]
+
+
     useEffect(() => {
-        window.addEventListener("scroll", e => {
-            setIsBackground(mainSectionRef && mainSectionRef.current && (window.pageYOffset > (mainSectionRef.current.offsetTop + offset)));
-        })
+
+        document.addEventListener('scroll', e => {
+            if (window.scrollY > 0) {
+                setIsBackground(true)
+            } else {
+                setIsBackground(false);
+            }
+        }, { passive: true, });
     }, []);
 
-    const offset = -100;
+    // const offset = -100;
     const [isBackground, setIsBackground] = useState(false)
 
-
     //aktuality, areal, kamery, pocasi
-    return <header className={`navbar ${isOpen ? 'open' : ''} ${isBackground || always ? 'background' : ''} `}>
+    return <header className={`navbar ${isOpen ? 'open' : ''} ${isBackground || always ? 'background' : ''}`}>
         <Navbar color="light" light expand="md" className="clearfix">
             <Link to="/" className="logo logo-mysak">
-                <img src={logo} />
+                <StaticImage placeholder="tracedSVG" loading="eager" style={{ maxHeight: '100%' }} imgStyle={{ maxHeight: '100%' }} height={90} formats={["auto", "webp"]} src='../../assets/logo_mysak_cropped_scaled.png' layout='constrained' alt="Logo ski mysak" />
             </Link>
             <a href="https://www.skikarlov.cz/" className="logo logo-karlov" target="_blank">
-                <img src={logo2} />
+                <StaticImage placeholder="tracedSVG" loading="eager" style={{ maxHeight: '100%' }} imgStyle={{ maxHeight: '100%' }} height={90} formats={["auto", "webp"]} src='../../assets/logo-arena.png' layout='constrained' alt="Logo ski arena karlov" />
             </a>
             <NavbarToggler onClick={toggle} className="float-right" />
             <Collapse isOpen={isOpen} navbar>
@@ -122,14 +128,28 @@ function BetterDropDown({ title, listOfLinks }) {
     const [isDropDown, setDropDown] = useState(false);
     const toggleDropDown = () => setDropDown(!isDropDown);
     const m = useBreakpoint();
+    let dropdown = useRef();
 
+    useEffect(() => {
+        if (dropdown.current) {
+            dropdown.current.addEventListener("mouseenter", e => setDropDown(true), { passive: true })
+            dropdown.current.addEventListener("mouseleave", e => setDropDown(false), { passive: true })
+        }
+
+        return () => {
+            if (dropdown.current) {
+                dropdown.current.removeEventListener("mouseenter", e => setDropDown(true), { passive: true })
+                dropdown.current.removeEventListener("mouseleave", e => setDropDown(false), { passive: true })
+            }
+        }
+    }, [])
     //  <Media queries={{
     //     small: "(max-width: 599px)",
     //     medium: "(min-width: 600px)"
     // }}>
     //     {matches => (
     return <Fragment> {m.dropM
-        ? <Dropdown isOpen={isDropDown} toggle={toggleDropDown} caret onMouseEnter={e => setDropDown(true)} onMouseLeave={e => setDropDown(false)}>
+        ? <Dropdown ref={dropdown} isOpen={isDropDown} toggle={toggleDropDown} caret >
             <DropdownToggle>
                 <Link>
                     <p>{title}</p>
@@ -147,7 +167,11 @@ function BetterDropDown({ title, listOfLinks }) {
                     </DropdownItem>
                 ))}
             </DropdownMenu>
+
+
+
         </Dropdown>
+
         : <Fragment>
             <button onClick={toggleDropDown} >
                 <p>{title}</p>

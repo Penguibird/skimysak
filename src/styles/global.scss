@@ -297,7 +297,7 @@ h1.small {
 /* Section */
 
 .widget {
-    display: flex;
+    // display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;
     align-items: center;
@@ -309,7 +309,7 @@ h1.small {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    img {
+    & > img {
         width: 7vw;
         margin: 1.2vw 1vw;
         border-radius: 0.2vw;
@@ -330,13 +330,6 @@ h1.small {
     &:active {
         filter: brightness(0.8);
     }
-}
-
-.widget-kamery {
-    background-image: url("../../assets/kamery.jpg");
-}
-.widget-skipasy {
-    background-image: url("../../assets/skipas.jpg");
 }
 
 /* Section */
@@ -404,30 +397,36 @@ h1.small {
         width: 100vw;
         max-width: 1400px;
         //!
-        display: flex;
+        // display: flex;
         @media screen and (min-width: 901px) {
             flex-direction: row-reverse;
         }
-        @media screen and (max-width: 900px) {
-            flex-direction: column-reverse;
-            & > *:not(:first-child) {
-                display: none;
-            }
-        }
+        // @media screen and (max-width: 900px) {
+        //     flex-direction: column-reverse;
+        //     & > *:not(:first-child) {
+        //         display: none;
+        //     }
+        // }
 
         flex-wrap: nowrap;
         justify-content: space-around;
         // align-items: center;
-        gap: 1.5em;
+        // gap: 1.5em;
     }
 
-    background-image: url("../../assets/random_hero_2.png");
+    background-image: url("../../assets/random_hero_2.webp");
+    @media screen and (max-width: 600px) {
+        background-image: url("../../assets/random_hero_2_sm.webp");
+    }
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
     // background-color: var(--background-blue);
     // padding: 2em;
 }
 
 .carousel {
-    width: 100%;
+    // width: 100%;
     padding: 0.5em;
 
     display: flex;
@@ -557,9 +556,50 @@ h1.small {
     align-items: center;
     img {
         border-radius: 45px;
-        width: 80%;
+        // width: 80%;
     }
     h1 {
         margin: 2.5em 10px;
+    }
+}
+
+.bckgrnd-image {
+    // position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+.bckgrnd-image ~ * {
+    position: relative;
+    top: -30%;
+}
+
+.widget {
+    @media screen and (max-width: 780px) {
+        width: 30vw;
+        height: 30vw;
+        .weather-icon {
+            margin-top: 10% !important;
+            width: 80% !important;
+        }
+    }
+    .weather-icon {
+        width: 100%;
+        height: auto;
+    }
+}
+
+script {
+    display: none !important;
+}
+
+@media screen and (max-width: 430px) {
+    li.carousel-slide {
+        padding: 0 !important;
+    }
+    .slide-inner {
+        margin: 0 !important;
     }
 }
