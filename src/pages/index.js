@@ -45,7 +45,7 @@ import randHero2Sm from "../../assets/random_hero_2_sm.png"
 const AktComponent = loadable(() => import('../components/aktComponent'));
 
 export default function Home() {
-    let ref = useRef();
+    // let ref = useRef();
     let m = useBreakpoint();
     return <Fragment>
         <Helmet>
@@ -56,7 +56,7 @@ export default function Home() {
         </Helmet>
 
         <Header
-            mainSectionRef={ref}
+            // mainSectionRef={ref}
         />
         <main>
             <section className="section-hero-image section">
@@ -96,7 +96,9 @@ export default function Home() {
                 </div>
             </section>
 
-            <section id="mainSection" ref={ref} className="section-icons section">
+            <section id="mainSection"
+            //  ref={ref}
+             className="section-icons section">
                 <Link to="/kamery" className="widget widget-kamery" >
                     <StaticImage
                         transformOptions={{ outputPixelDensities: [0.05, 0.1, 0.15, 0.25, 0.5, 1, 2] }}

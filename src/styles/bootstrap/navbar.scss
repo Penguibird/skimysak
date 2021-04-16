@@ -134,7 +134,7 @@
 // the default flexbox row orientation. Requires the use of `flex-wrap: wrap`
 // on the `.navbar` parent.
 .navbar-collapse {
-    // flex-basis: 100%;
+    flex-basis: 100%;
     //todo This could fuck sth up
     //!
     // flex-grow: 1;
