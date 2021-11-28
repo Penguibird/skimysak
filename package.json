@@ -8,10 +8,10 @@
         "build": "gatsby build",
         "develop": "gatsby develop",
         "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-        "start": "npm run develop",
+        "start": "gatsby clean && gatsby develop",
         "serve": "gatsby serve",
         "clean": "gatsby clean",
-        "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+        "test": "gatsby clean && gatsby build && gatsby serve"
     },
     "dependencies": {
         "@loadable/component": "^5.14.1",
