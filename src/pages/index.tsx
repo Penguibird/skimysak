@@ -10,44 +10,21 @@ import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 
 import { StaticImage } from "gatsby-plugin-image";
 
-// const Header = loadable(() => import('../components/header'));
 import Header from '../components/header'
-// const Weather = loadable(() => import('../components/weather'));
 import Weather from '../components/weather'
 import Footer from '../components/footer'
-// const Footer = loadable(() => import('../components/footer'));
 
 
 
 
 //hero image
-import videoMp4 from '../../assets/video.mp4';
-
-// import imageProps from './aktuality'
-import randHero2Sm from "../../assets/random_hero_2_sm.png"
-// //aktuality photos
-// import servis from '../../assets/servis.jpg'
-// import ctSport from '../../assets/ctSport1.jpg'
-// import parking from '../../assets/parking1.jpeg'
-// import lyzTest from '../../assets/testLyzi.png'
-// import sezona from '../../assets/snih1.jpg'
-// import zahajeniSezony from '../../assets/zahajeniSezony.jpg'
-// import informace from '../../assets/informace.jpg'
-// import doKonceRoku from '../../assets/do_konce_roku.jpg';
-// import infoKonec from '../../assets/infoKonec.jpg';
-
-// export const query = graphql`
-//     query {
-
-//     }
-// `
+import IndexVideoComponent from "../components/IndexVideoComponent";
 
 
 const AktComponent = loadable(() => import('../components/aktComponent'));
 
 export default function Home() {
     let ref = useRef();
-    let m = useBreakpoint();
     return <Fragment>
         <Helmet>
             <title>Ski Myšák</title>
@@ -62,18 +39,7 @@ export default function Home() {
         />
         <main>
             <section className="section-hero-image section">
-                <Fragment>{m.l
-                    ? <video className="hero-image" muted autoPlay loop preload="always" >
-                        <source src={videoMp4} type="video/mp4" />
-                    </video>
-                    : m.s
-                        ? <div className="hero-image " id="hero-image-wrapper">
-                            <StaticImage breakpoints={[250, 350, 450, 650, 800, 1000]} loading="eager" formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/random_hero_1_sm.png' alt="Pohled z dronu na Karlov" layout='fullWidth' imgClassName="hero-image-image" />
-                        </div>
-                        : <div className="hero-image " id="hero-image-wrapper">
-                            <StaticImage breakpoints={[250, 350, 450, 650, 800, 1000]} loading="eager" formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/random_hero_1.png' alt="Pohled z dronu na Karlov" layout='fullWidth' imgClassName="hero-image-image" />
-                        </div>
-                }</Fragment>
+                <IndexVideoComponent />
                 <div className="flexbox-column main-title-wrap">
                     <h1 className="hero-big title-white hero-image-title ">
                         Vítejte na&nbsp;Myšáku
