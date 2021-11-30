@@ -47,6 +47,7 @@ export default function Page(props) {
             <section className="section-page-aktuality">
                 {aktuality.map((akt, i) =>
                     <Aktualita
+                        key={i}
                         title={akt.title}
                         date={akt.date}
                         url={akt.url}

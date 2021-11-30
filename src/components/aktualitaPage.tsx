@@ -17,30 +17,34 @@ export default function AktualitaPage({ data }) {
             frontmatter: {
                 name,
                 date,
-                image: {
-                    image: {
-                        childImageSharp: {
-                            gatsbyImageData: image,
-                        }
-                    },
-                    imageAlt,
-                }
             }
         },
-        allFile: {
-            edges: imageEdges,
-        }
+        // allFile: {
+        //     edges: imageEdges,
+        // }
     } = data;
+    let image = null;
+
+    if (data.markdownRemark.frontmatter.image) {
+        image = {
+            data: data.markdownRemark.frontmatter.image.image,
+            alt: data.markdownRemark.frontmatter.image.imageAlt,
+        }
+    }
+
     const areObjectsEqual = (a: IGatsbyImageData, b: IGatsbyImageData) => {
+        if (!a || !b) {
+            return false
+        }
         if (a.images.fallback.src === b.images.fallback.src && a.images.fallback.src) {
             return true;
         }
         return false;
     }
-    const images: IGatsbyImageData[] = imageEdges
-        .map((edge: any) => edge?.node?.childrenImageSharp?.[0]?.gatsbyImageData)
-        .filter(Boolean)
-        .filter((_: IGatsbyImageData) => !areObjectsEqual(_, image));
+    // const images: IGatsbyImageData[] = imageEdges
+    //     .map((edge: any) => edge?.node?.childrenImageSharp?.[0]?.gatsbyImageData)
+    //     .filter(Boolean)
+    //     .filter((_: IGatsbyImageData) => !areObjectsEqual(_, image));
     return <Fragment>
         <Helmet>
             <title>{name}</title>
@@ -59,20 +63,20 @@ export default function AktualitaPage({ data }) {
                     <h2>Zpět</h2>
                 </Link>
                 <h2>{name}</h2>
-                <div className="dont-show-images-in-this-div" dangerouslySetInnerHTML={{ __html: html }}></div>
-                <GatsbyImage
+                <div className="" dangerouslySetInnerHTML={{ __html: html }}></div>
+                {image && <GatsbyImage
                     loading='lazy'
-                    alt={imageAlt}
-                    image={image}
-                />
-                {images.map((imageData, key) =>
+                    alt={image.alt}
+                    image={image.data}
+                />}
+                {/* {images.map((imageData, key) =>
                     <GatsbyImage
                         loading='lazy'
                         alt={""}
                         image={imageData}
                         key={key}
                     />
-                )}
+                )} */}
                 <Link to="/aktuality" className='back center   ' >
                     <svg width="20" height="40" viewBox="0 0 20 40" className="custom-svg">
                         <line x1="3" x2="17" y1="20" y2="37" />
