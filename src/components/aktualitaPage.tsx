@@ -27,20 +27,20 @@ export default function AktualitaPage({ data }) {
 
     if (data.markdownRemark.frontmatter.image) {
         image = {
-            data: data.markdownRemark.frontmatter.image.image,
+            data: data.markdownRemark.frontmatter.image.image.childImageSharp.gatsbyImageData,
             alt: data.markdownRemark.frontmatter.image.imageAlt,
         }
     }
 
-    const areObjectsEqual = (a: IGatsbyImageData, b: IGatsbyImageData) => {
-        if (!a || !b) {
-            return false
-        }
-        if (a.images.fallback.src === b.images.fallback.src && a.images.fallback.src) {
-            return true;
-        }
-        return false;
-    }
+    // const areObjectsEqual = (a: IGatsbyImageData, b: IGatsbyImageData) => {
+    //     if (!a || !b) {
+    //         return false
+    //     }
+    //     if (a.images.fallback.src === b.images.fallback.src && a.images.fallback.src) {
+    //         return true;
+    //     }
+    //     return false;
+    // }
     // const images: IGatsbyImageData[] = imageEdges
     //     .map((edge: any) => edge?.node?.childrenImageSharp?.[0]?.gatsbyImageData)
     //     .filter(Boolean)
