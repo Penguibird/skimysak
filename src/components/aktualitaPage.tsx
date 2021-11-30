@@ -9,16 +9,6 @@ import { Fragment, useState, useEffect } from 'react';
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 
 
-const areObjectsEqual = (a: IGatsbyImageData, b: IGatsbyImageData) => {
-  if (!a || !b) {
-    return false
-  }
-  if (a.images.fallback.src === b.images.fallback.src && a.images.fallback.src) {
-    return true;
-  }
-  return false;
-}
-
 export default function AktualitaPage({ data }) {
   let ref = React.useRef();
   console.log(data)
@@ -47,7 +37,6 @@ export default function AktualitaPage({ data }) {
   const images: IGatsbyImageData[] = imageEdges
     .map((edge: any) => edge?.node?.childrenImageSharp?.[0]?.gatsbyImageData)
     .filter(Boolean)
-    .filter((_: IGatsbyImageData) => !areObjectsEqual(_, image));
   return <Fragment>
     <Helmet>
       <title>{name}</title>
@@ -67,7 +56,7 @@ export default function AktualitaPage({ data }) {
         </Link>
         <h2>{name}</h2>
         <div className="" dangerouslySetInnerHTML={{ __html: html }}></div>
-        {image && <GatsbyImage
+        {image && !(images.length > 0) && <GatsbyImage
           loading='lazy'
           alt={image.alt}
           image={image.data}
