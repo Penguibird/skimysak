@@ -1,0 +1,55 @@
+// .swiper-slide a {
+//     box-shadow: none !important;
+//     background: none !important;
+//     width: 18vw !important;
+//     padding: 0;
+// } 
+//unnecessary ?
+.aktualita,
+.swiper-slide {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(150, 149, 149, 0.4);
+    padding: 1.5em;
+    gap: 1em;
+    @media screen and (min-width: 901px) {
+        width: 25vw;
+    }
+    @media screen and (max-width: 900px) {
+        width: 70vw;
+    }
+
+    .image-wrapper {
+        margin-bottom: 0.5em;
+        // max-height: 15vw;
+        // width;
+        img {
+            border-radius: 2px;
+            width: 100%;
+            object-fit: cover;
+            height: auto;
+            max-height: inherit;
+        }
+    }
+    h3 {
+        font-weight: 600;
+        font-size: 22px;
+        color: #103d87;
+        text-align: left;
+    }
+    p.date {
+        font-style: italic;
+        padding-top: 0.2em;
+        padding-bottom: 0.6em;
+    }
+    p {
+    }
+    .show-more-link {
+        color: var(--title-blue);
+        text-decoration: underline;
+    }
+
+    & > * + * {
+        padding-top: 0.5em;
+    }
+}

@@ -1,0 +1,36 @@
+backend:
+  name: github
+  repo: penguibird/skimysak
+  branch: main
+  # base_url: 'https://my-github-auth-provider.herokuapp.com'
+  site_domain: 'cms.netlify.com'
+
+
+locale: 'cs'
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: 'aktuality'
+    label: 'Aktuality'
+    folder: 'content/aktuality'
+    create: true
+    slug: 'index'
+    media_folder: ''
+    public_folder: ''
+    path: '{{name}}/index'
+    preview: true
+    identifier_field: 'name'
+    fields:
+    - { label: "ID", name: "id", widget: "id"}
+    - { label: "Nazev", name: 'name', widget: 'string'}
+    - {label: 'Datum', name: 'date', widget: 'datetime', format: 'DD-MM-YYYY'}
+    - {label: 'Text', name: 'body', widget: 'markdown'}
+    - label: 'Obrazek'
+      name: 'image'
+      widget: 'object'
+      collapsed: false
+      fields:
+      - {label: 'Obrazek', name: 'image', widget: 'image'}
+      - {label: 'Popis obrazku', name: 'imageAlt', widget: 'string'}
+ 

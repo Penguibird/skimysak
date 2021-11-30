@@ -1,0 +1,57 @@
+.section-trate {
+    padding: 2.5em;
+    //     :not(.trat) + .trat {
+    //         margin-top: 2.5em;
+    //     }
+    // }
+    gap: 2.5em;
+}
+
+.areal-main {
+    margin-top: 1em;
+    align-self: center;
+    width: fit-content;
+    // display: grid;
+    text-align: center;
+    // justify-content: center;
+    // gap: 0.4em 10vw;
+    // margin-left: -4%;
+    // grid-template-columns: 1fr 1fr;
+    // grid-template-rows: 1fr 1fr;
+    // grid-template-columns: auto;
+    // grid-template-rows: auto;
+    h2 {
+        text-align: center;
+        width: 100%;
+        font-size: clamp(18px, 3vw, 27px);
+
+    }
+    h2.header {
+        grid-row: 1 / 2;
+        text-transform: uppercase;
+        color: var(--title-blue);
+        font-weight: 700;
+    }
+    h2.data {
+        grid-row: 2 / 3;
+    }
+}
+
+.trate-wrapper {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: clamp(80px, 8vw, 110px) 1fr;
+    gap: 2em 1em;
+    align-items: center;
+    .trat-image {
+        grid-column: 1 / 2;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    p {
+        grid-column: 2 / 3;
+        text-align: left;
+    }
+}
