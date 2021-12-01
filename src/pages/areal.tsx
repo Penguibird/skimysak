@@ -12,7 +12,6 @@ import Footer from '../components/footer';
 import { StaticImage } from 'gatsby-plugin-image';
 
 export default function Contact(props) {
-    let ref = React.useRef();
 
     return <Fragment>
         <Helmet>
@@ -21,7 +20,7 @@ export default function Contact(props) {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content="Parádní lyžování v jeseníkách" />
         </Helmet>
-        <Header mainSectionRef={ref} />
+        <Header/>
         <main>
             <section className="section-hero-image section">
                 <StaticImage formats={["jpg", "webp"]} placeholder="blurred" className="hero-image" imgClassName="hero-image" src='../../assets/trate_hero.png' alt="Sjezdovka" layout='fullWidth' />
@@ -39,7 +38,7 @@ export default function Contact(props) {
                 </div>
             </section>
 
-            <section ref={ref} className="section section-text section-trate">
+            <section className="section section-text section-trate">
                 <h2>Sjezdové tratě</h2>
 
                 <div className="areal-main">

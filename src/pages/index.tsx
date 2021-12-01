@@ -25,7 +25,6 @@ import LayerWrapper from "../components/layer-wrapper";
 const AktComponent = loadable(() => import('../components/aktComponent'));
 
 export default function Home() {
-    let ref = useRef();
     return <Fragment>
         <Helmet>
             <title>Ski Myšák</title>
@@ -36,7 +35,6 @@ export default function Home() {
         </Helmet>
 
         <Header
-            mainSectionRef={ref}
         />
         <main>
             <section className="section-hero-image section">

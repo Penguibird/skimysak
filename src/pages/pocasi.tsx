@@ -13,7 +13,6 @@ import { WeatherApiResponse } from '../types/weatherApiResponse';
 
 export default function Page(props) {
 
-    let ref = React.useRef();
 
     const fetcher = (...args) => fetch.apply(null, args).then(res => res.json())
     const url = 'https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=50.018461&lon=17.295048' // process.env.WEATHER_API_URL;
@@ -45,13 +44,13 @@ export default function Page(props) {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content="Parádní lyžování v jeseníkách" />
         </Helmet>
-        <Header mainSectionRef={ref} />
+        <Header/>
         <main>
             <section className="section-hero-image section">
                 <StaticImage formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/servis.jpg' imgClassName="hero-image" className="hero-image" alt='Sjezdovka' layout='fullWidth' />
                 <h1 className="title-white small">Počasí</h1>
             </section>
-            <section className="section-predpoved section-background" ref={ref}>
+            <section className="section-predpoved section-background" >
                 <div className="my-row">
                     {error ? <div className="error">Error</div>
                         : !data
