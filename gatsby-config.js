@@ -1,7 +1,6 @@
 require('ts-node').register()
 
-
-const myCustomQueries = {
+export const myCustomQueries = {
   xs: '(max-width: 320px)',
   s: "(max-width: 599px)",
   m: "(min-width: 600px) and (max-width:999px)",
@@ -14,6 +13,8 @@ const myCustomQueries = {
   xl: '(min-width: 1537px)',
   dropM: "(min-width: 800px)",
   portrait: '(orientation: portrait)',
+  prefersReducedData: '(prefers-reduced-data: reduce)',
+  prefersReducedMotion: '(prefers-reduced-motion: reduce)',
 };
 
 
@@ -59,7 +60,7 @@ module.exports = {
               maxWidth: 900,
               withWebp: true,
               withAvif: true,
-              
+
             },
           },
         ],

@@ -18,7 +18,7 @@ export default function Page(props) {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content="Parádní lyžování v jeseníkách" />
         </Helmet>
-        <Header mainSectionRef={ref} always />
+        <Header ={ref}mainSectionRef always />
         <main className="main-aktualita-text">
             <section className="section-text section" ref={ref}>
                 <Link to="/aktuality" className="back">

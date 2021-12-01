@@ -54,19 +54,28 @@ export default function Weather(props) {
     //     <p>loading</p>
     // </div>
 
-    return <Fragment>
-        <h2 className="weather-title widget-title">
+    return <div
+        style={{
+            zIndex: 1,
+        }}
+    >
+        <h2
+            style={{
+                marginTop: '-34%',
+            }}
+            className="weather-title widget-title"
+        >
             {data ? `${getTemp(data)} °C`
                 : error ? "Weather" : "Weather"}
         </h2>
         <div className="flexbox-column" style={{
             margin: 'auto',
-            width: '75%',
-            marginTop: '-110%',
+            width: '55%',
+            marginTop: '-80%',
             top: 0,
         }}>
             <img className="weather-icon" src={data ? getSymbol(data.properties.timeseries.sort(compareDates)[0].data.next_1_hours.summary.symbol_code) : loadingImage} width={125} height={120} alt="Ikona pocasi" />
         </div>
-    </Fragment >
+    </div >
 
 }

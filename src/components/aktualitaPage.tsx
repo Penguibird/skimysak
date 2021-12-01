@@ -11,7 +11,7 @@ import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 
 export default function AktualitaPage({ data }) {
   let ref = React.useRef();
-  console.log(data)
+  // console.log(data)
   const {
     markdownRemark: {
       html,

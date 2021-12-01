@@ -37,6 +37,12 @@ header {
         align-items: center;
 
         padding: 0.8em 1em !important;
+        @media (max-width: 900px) {
+            padding: 0.8em 0.6em !important;
+            &.logo {
+                padding: 0 !important;
+            }
+        }
         &:not(.logo) {
             &:hover {
                 @media screen and(min-width: 801px) {

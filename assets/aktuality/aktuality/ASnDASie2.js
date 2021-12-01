@@ -11,7 +11,6 @@ import ctSport2 from '../../../assets/ctSport2.jpg'
 import arrow from '../../../assets/arrow.png'
 
 export default function Page(props) {
-    let ref = React.useRef();
     return <Fragment>
         <Helmet>
             <title> PODĚKOVÁNÍ za&nbsp;sezónu | Aktuality | Ski Myšák</title>
@@ -19,9 +18,9 @@ export default function Page(props) {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content="Parádní lyžování v jeseníkách" />
         </Helmet>
-        <Header mainSectionRef={ref} always />
+        <Header always />
         <main className="main-aktualita-text">
-            <section className="section-text section" ref={ref}>
+            <section className="section-text section" >
                 <Link to="/aktuality" className="back">
                     <svg width="20" height="40" viewBox="0 0 20 45" className="custom-svg">
                         <line x1="3" x2="17" y1="20" y2="37" />

@@ -6,7 +6,7 @@ import loadable from '@loadable/component'
 
 
 
-import { useBreakpoint } from 'gatsby-plugin-breakpoints';
+import { useBreakpoint, BreakpointsObject } from 'gatsby-plugin-breakpoints';
 
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -19,6 +19,7 @@ import Footer from '../components/footer'
 
 //hero image
 import IndexVideoComponent from "../components/IndexVideoComponent";
+import LayerWrapper from "../components/layer-wrapper";
 
 
 const AktComponent = loadable(() => import('../components/aktComponent'));
@@ -78,9 +79,11 @@ export default function Home() {
                 </Link>
 
                 <Link to="/pocasi" className="widget weather-widget widget"  >
-                    <StaticImage transformOptions={{ }}
-                        aspectRatio={1} width={250} className="bckgrnd-image" src='../../assets/pocasi_test.jpg' alt='Oblacna obloha' layout='constrained' />
-                    <Weather />
+                    <LayerWrapper>
+                        <StaticImage transformOptions={{ }}
+                            aspectRatio={1} width={250} className="bckgrnd-image" src='../../assets/pocasi_test.jpg' alt='Oblacna obloha' layout='constrained' />
+                        <Weather />
+                    </LayerWrapper>
                 </Link>
 
                 <a href="https://www.skikarlov.cz/lyzovani/ceny-skipasu" className="widget widget-skipasy" >
