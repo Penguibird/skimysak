@@ -11,6 +11,7 @@ import { StaticImage } from "gatsby-plugin-image";
 export default function Page(props) {
     // let ref = React.useRef();
 
+    
     return <Fragment>
         <Helmet>
             <title>Kamery | Ski Myšák</title>

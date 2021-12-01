@@ -29,7 +29,6 @@ const getShortText = (s: string) => {
 }
 
 export default function Page(props) {
-    let ref = React.useRef();
     const aktuality = useAktuality();
     return <Fragment>
         <Helmet>
@@ -38,10 +37,10 @@ export default function Page(props) {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content="Parádní lyžování v jeseníkách" />
         </Helmet>
-        <Header mainSectionRef={ref} />
+        <Header />
         <main className="aktuality">
             <section className="section-hero-image section" style={{ paddingBottom: '0px' }}>
-                <h1 ref={ref}>Aktuality</h1>
+                <h1 >Aktuality</h1>
                 {/* <img className="hero-image" src={image} alt="Ski slope" /> */}
             </section>
             <section className="section-page-aktuality">

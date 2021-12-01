@@ -40,7 +40,7 @@ export default function AktComponent(props) {
             >
                 <Slider style={{ width: breakPoints.ll ? '1300px' : null }}>
                     {aktuality.map((a, i) =>
-                        <Slide index={i} innerClassName="slide-inner" className="carousel-slide">
+                        <Slide index={i} key={i} innerClassName="slide-inner" className="carousel-slide">
                             <Aktualita
                                 title={a.title}
                                 date={a.date}

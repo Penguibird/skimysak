@@ -9,10 +9,10 @@ import { Fragment, useState, useEffect } from 'react';
 import videoMp4 from '../../assets/servis_video_crop.mp4'
 import { useBreakpoint } from "gatsby-plugin-breakpoints";
 import { StaticImage } from "gatsby-plugin-image";
+import { useBreakpointsType } from '../types/useBreakPointsType';
 
 export default function Page(props) {
-    let ref = React.useRef();
-    let m = useBreakpoint()
+    let m = useBreakpoint() as useBreakpointsType;
     return <Fragment>
         <Helmet>
             <title>Servis a půjčovna | Ski myšák</title>
@@ -20,7 +20,7 @@ export default function Page(props) {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content="Parádní lyžování v jeseníkách" />
         </Helmet>
-        <Header mainSectionRef={ref} />
+        <Header />
         <main className="servis">
             <section className="section-hero-image section">
                 <Fragment>

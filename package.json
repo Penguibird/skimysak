@@ -11,6 +11,7 @@
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
+    "test": "gatsby clean && gatsby build && gatsby serve",
     "lint": "eslint --fix",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
@@ -45,6 +46,7 @@
   },
   "devDependencies": {
     "@types/encodeurl": "^1.0.0",
+    "@types/gatsby-plugin-breakpoints": "^1.3.2",
     "@types/react-helmet": "^6.1.4",
     "babel-eslint": "^10.1.0",
     "eslint": "^8.3.0",

@@ -1,4 +1,4 @@
-@use './fontImport.scss';
+@use "./fontImport.scss";
 @import "./fontImport.scss";
 
 :root {
@@ -277,7 +277,7 @@ h1.small {
     }
     .icon-wrapper {
         display: block;
-        width: 100%;
+        width: 90vw;
     }
     .fb-icon {
         float: right;
@@ -329,6 +329,24 @@ h1.small {
     }
     &:active {
         filter: brightness(0.8);
+    }
+}
+
+.widget {
+    @media screen and (max-width: 780px) {
+        width: 30vw;
+        height: 30vw;
+        .weather-icon {
+            margin-top: 10% !important;
+            width: 80% !important;
+        }
+        .widget-title {
+            font-size: 5vw;
+        }
+    }
+    .weather-icon {
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -574,21 +592,6 @@ h1.small {
 .bckgrnd-image ~ * {
     position: relative;
     top: -30%;
-}
-
-.widget {
-    @media screen and (max-width: 780px) {
-        width: 30vw;
-        height: 30vw;
-        .weather-icon {
-            margin-top: 10% !important;
-            width: 80% !important;
-        }
-    }
-    .weather-icon {
-        width: 100%;
-        height: auto;
-    }
 }
 
 script {

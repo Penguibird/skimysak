@@ -6,11 +6,9 @@ import { Fragment, useState, useEffect } from 'react';
 import { Helmet } from "react-helmet";
 import Header from '../components/header'
 import Footer from '../components/footer'
-import image from '../../assets/random_hero_3.png';
 import { StaticImage } from "gatsby-plugin-image";
 
 export default function Page(props) {
-    let ref = React.useRef()
     return <Fragment>
         <Helmet>
             <title>Lyžařská škola | Ski myšák</title>
@@ -18,7 +16,7 @@ export default function Page(props) {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content="Parádní lyžování v jeseníkách" />
         </Helmet>
-        <Header mainSectionRef={ref} />
+        <Header />
         <main>
             <section className="section-hero-image section" >
                 <StaticImage formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/random_hero_3.png' alt='Snowboardista na svahu' className="hero-image" imgClassName="hero-image" layout='fullWidth' />
@@ -28,7 +26,7 @@ export default function Page(props) {
                     </h1>
                 </div>
             </section>
-            <section className="section section-text section-skola" ref={ref}>
+            <section className="section section-text section-skola" >
                 {/* todo textalign center */}
                 <h2> Chcete se&nbsp;zdokonalit v&nbsp;lyžování?</h2>
                 <p style={{ marginTop: 0 }}>Nebo jste se&nbsp;rozhodli svěřit nám&nbsp;výuku svých dětí?</p>
@@ -72,8 +70,8 @@ export default function Page(props) {
                     </tbody>
                 </table>
                 <p>Objednávky na&nbsp;výuku přijímáme osobně v&nbsp;kanceláři lyžařské školy
-                (vedle pokladny na&nbsp;parkovišti u&nbsp;nástupní stanice lanové dráhy Myšák),
-                nebo na&nbsp;telefonním čísle <a href="tel:+420 734 824 493" className="a-tel telehpone-link">+420&nbsp;734&nbsp;824&nbsp;493</a>.</p>
+                    (vedle pokladny na&nbsp;parkovišti u&nbsp;nástupní stanice lanové dráhy Myšák),
+                    nebo na&nbsp;telefonním čísle <a href="tel:+420 734 824 493" className="a-tel telehpone-link">+420&nbsp;734&nbsp;824&nbsp;493</a>.</p>
                 <h2 className="smaller">Zákazníci lyžařské školy Myšák si&nbsp;mohou v&nbsp;naší půjčovně zapůjčit lyžařské a&nbsp;snowboardové vybavení za&nbsp;zvýhodněné ceny</h2>
                 <table className="skola-last-talbe">
                     <tr className="cell-brighter">

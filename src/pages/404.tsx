@@ -9,7 +9,6 @@ import { Fragment, useState, useEffect, useRef } from 'react';
 import { StaticImage } from "gatsby-plugin-image";
 
 export default function Page(props) {
-    let ref = useRef();
     return <Fragment>
         <Helmet>
             <title>404 | Ski Myšák</title>
@@ -17,9 +16,9 @@ export default function Page(props) {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content="Parádní lyžování v jeseníkách" />
         </Helmet>
-        <Header mainSectionRef={ref} always/>
+        <Header always/>
         <main>
-            <section ref={ref} className="section section-hero-image">
+            <section className="section section-hero-image">
                 <StaticImage formats={["jpg", "webp"]} className="hero-image" imgClassName="hero-image" placeholder="blurred" src='../../assets/servis.jpg' layout="fullWidth" alt="sjezdovka"/>
                 <h1>Error 404: Stránka nenalezena</h1>
             </section>

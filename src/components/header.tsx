@@ -29,7 +29,7 @@ import {
 
 import { StaticImage } from "gatsby-plugin-image";
 
-export default function Header({ mainSectionRef, always }: {mainSectionRef: React.MutableRefObject<undefined>, always?: boolean}) {
+export default function Header({ always }: { always?: boolean }) {
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
 
@@ -128,7 +128,7 @@ function BetterDropDown({ title, listOfLinks }) {
     const [isDropDown, setDropDown] = useState(false);
     const toggleDropDown = () => setDropDown(!isDropDown);
     const m = useBreakpoint();
-    let dropdown = useRef();
+    let dropdown = useRef(null);
 
     useEffect(() => {
         if (dropdown.current) {
@@ -149,11 +149,13 @@ function BetterDropDown({ title, listOfLinks }) {
     // }}>
     //     {matches => (
     return <Fragment> {m.dropM
-        ? <Dropdown ref={dropdown} isOpen={isDropDown} toggle={toggleDropDown} caret >
+        ? <Dropdown ref={dropdown} isOpen={isDropDown} toggle={toggleDropDown}
+        // caret
+        >
             <DropdownToggle>
-                <Link>
+                <a >
                     <p>{title}</p>
-                </Link>
+                </a>
             </DropdownToggle>
             <DropdownMenu>
                 {listOfLinks.map(({ link, title, a }, i) => (
@@ -178,12 +180,12 @@ function BetterDropDown({ title, listOfLinks }) {
             </button>
             <Collapse isOpen={isDropDown} className="shift-right">
                 {listOfLinks.map(({ link, title }, i) => (
-                    <Link to={link} >
+                    <Link to={link} key={i}>
                         <p>{title} </p>
                     </Link>
                 ))}
             </Collapse>
-        </Fragment>
+        </Fragment >
     } </Fragment >
     //     )}
     // </Media>
