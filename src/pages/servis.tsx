@@ -43,7 +43,7 @@ export default function Page(props) {
                     </a>
                 </div>
             </section>
-            <section ref={ref} className="section section-text">
+            <section className="section section-text">
                 <h2>Potřebujete půjčit lyže nebo&nbsp;snowboard?</h2>
                 <p> Ski areál Myšák, český výrobce lyží SPORTEN a&nbsp;výrobce lyžařských bot&nbsp;ROXA připravili ojedinělým propojením výjimečnou nabídku.
                 Službu pro&nbsp;ty z&nbsp;Vás, kteří nemáte vlastní vybavení, lyžujete jen&nbsp;občas nebo&nbsp;byste rádi vyzkoušeli novinky z&nbsp;dílny zmiňovaných značek.
