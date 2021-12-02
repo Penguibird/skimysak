@@ -54,7 +54,7 @@ export default function AktualitaPage({ data }) {
           <h2>Zpět</h2>
         </Link>
         <h2>{name}</h2>
-        <div className="" dangerouslySetInnerHTML={{ __html: html }}></div>
+        <div className="dont-show-images-in-this-div" dangerouslySetInnerHTML={{ __html: html }}></div>
         {image && !(images.length > 0) && <GatsbyImage
           loading='lazy'
           alt={image.alt}

@@ -607,6 +607,7 @@ script {
     }
 }
 
-.dont-show-images-in-this-div img {
+.dont-show-images-in-this-div img,
+.dont-show-images-in-this-div .gatsby-resp-image-wrapper {
     display: none !important;
 }
