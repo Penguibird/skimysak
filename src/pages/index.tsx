@@ -64,7 +64,6 @@ export default function Home() {
             </section>
 
             <section id="mainSection"
-             ref={ref}
              className="section-icons section">
                 <Link to="/kamery" className="widget widget-kamery" >
                     <StaticImage
