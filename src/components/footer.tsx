@@ -9,8 +9,12 @@ export default function Footer(props) {
 
     return <footer>
         <div className="footer-logos-left">
-            <StaticImage className='img' src="../../assets/Safe Travel.jpeg" alt='Logo certifikace Safe Travels' layout='constrained' placeholder='blurred' />
-            <StaticImage className='img' src="../../assets/impuls.jpg" alt='Logo Impuls' layout='constrained' placeholder='blurred' />
+            <a href="https://wttc.org/COVID-19/SafeTravels-Global-Protocols-Stamp">
+                <StaticImage className='img' src="../../assets/Safe Travel.jpeg" alt='Logo certifikace Safe Travels' layout='constrained' placeholder='blurred' />
+            </a>
+            <a href="https://www.impuls.cz/">
+                <StaticImage className='img' src="../../assets/impuls.jpg" alt='Logo Impuls' layout='constrained' placeholder='blurred' />
+            </a>
         </div>
         <div className="footer-wrapper">
             <p>
