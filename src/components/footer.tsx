@@ -23,15 +23,24 @@ export default function Footer(props) {
             <p>Weather forecast from&nbsp;Yr, delivered by&nbsp;the&nbsp;Norwegian Meteorological Institute and NRK</p>
         </div>
         <div className="footer-logo">
-            <StaticImage
+            {m.s ? <StaticImage
                 formats={["jpg", "webp"]}
-                width={m.s ? 54 : 155} height={m.s ? 50 : 143}
+                width={54} height={50}
                 // transformOptions={{ outputPixelDensities: [0.05, 0.1, 0.15, 0.25, 0.5, 1, 2] }}
                 placeholder="tracedSVG"
                 src='../../assets/logo_old.png'
                 alt="logo ski mysak"
                 layout="constrained"
             />
+                : <StaticImage
+                    formats={["jpg", "webp"]}
+                    width={155} height={143}
+                    // transformOptions={{ outputPixelDensities: [0.05, 0.1, 0.15, 0.25, 0.5, 1, 2] }}
+                    placeholder="tracedSVG"
+                    src='../../assets/logo_old.png'
+                    alt="logo ski mysak"
+                    layout="constrained"
+                />}
         </div>
     </footer>
 }

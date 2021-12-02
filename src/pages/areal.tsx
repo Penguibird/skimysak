@@ -80,7 +80,7 @@ export default function Contact(props) {
                 </div>
             </section>
 
-            <section ref={ref} className="section section-background section-bottom" id="mainSection" style={{ padding: '0px' }}>
+            <section className="section section-background section-bottom" id="mainSection" style={{ padding: '0px' }}>
                 <StaticImage formats={["jpg", "webp"]}
                     // placeholder="blurred" 
                     src='../../assets/mapa.png' alt="Mapa Ski Karlov" style={{ width: '90%', maxWidth: '1500px', height: 'auto' }}
