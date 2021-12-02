@@ -13,6 +13,7 @@ import output_770 from '../../assets/output_770.mp4';
 //@ts-ignore
 import output_400 from '../../assets/output_400.mp4';
 import { useBreakpointsType } from '../types/useBreakPointsType';
+import "../styles/components/videoParalax.scss";
 
 interface IndexVideoComponentProps extends Partial<React.PropsWithoutRef<React.ReactHTMLElement<HTMLDivElement>>> {
 
@@ -140,18 +141,6 @@ const IndexVideoComponent: React.FC<IndexVideoComponentProps> = ({ ...props }) =
             </video>
         </div>}
     </React.Fragment>
-    // return <React.Fragment>{m.l
-    //     ? <video className="hero-image" muted autoPlay loop preload="always" >
-    //         <source src={videoMp4} type="video/mp4" />
-    //     </video>
-    //     : m.s
-    //         ? <div className="hero-image " id="hero-image-wrapper">
-    //             <StaticImage breakpoints={[250, 350, 450, 650, 800, 1000]} loading="eager" formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/random_hero_1_sm.png' alt="Pohled z dronu na Karlov" layout='fullWidth' imgClassName="hero-image-image" />
-    //         </div>
-    //         : <div className="hero-image " id="hero-image-wrapper">
-    //             <StaticImage breakpoints={[250, 350, 450, 650, 800, 1000]} loading="eager" formats={["jpg", "webp"]} placeholder="blurred" src='../../assets/random_hero_1.png' alt="Pohled z dronu na Karlov" layout='fullWidth' imgClassName="hero-image-image" />
-    //         </div>
-    // }</React.Fragment>
 }
 
 export default IndexVideoComponent;
