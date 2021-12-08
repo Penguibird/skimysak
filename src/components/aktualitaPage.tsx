@@ -25,9 +25,9 @@ export default function AktualitaPage({ data }) {
   } = data;
   let image = null;
 
-  if (data.markdownRemark.frontmatter.image) {
+  if (data.markdownRemark.frontmatter.image && data.markdownRemark.frontmatter.image?.image?.childImageSharp?.gatsbyImageData) {
     image = {
-      data: data.markdownRemark.frontmatter.image.image.childImageSharp.gatsbyImageData,
+      data: data.markdownRemark.frontmatter.image?.image?.childImageSharp?.gatsbyImageData,
       alt: data.markdownRemark.frontmatter.image.imageAlt,
     }
   }
