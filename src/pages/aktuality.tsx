@@ -22,10 +22,10 @@ const imageProps = {
 }
 
 const getShortText = (s: string) => {
-    if (s.length < 103)
+    if (s.length < 203)
         return s;
 
-    return s.slice(0, 100) + "...";
+    return s.slice(0, 200) + "...";
 }
 
 export default function Page(props) {
@@ -55,41 +55,6 @@ export default function Page(props) {
                         alt={akt.image.imageAlt}
                     />
                 )}
-                {/* <Aktualita title="⛷ LYŽUJEME KAŽDÝ DEN DO KONCE ROKU 🏂" date="20.12.2020" url="doKonceRoku" rawText="...&nbsp;s&nbsp;výjimkou Štědrého dne&nbsp;🎄 (24.&nbsp;12.). Od&nbsp;8:30 do 16&nbsp;hodin. V&nbsp;provozu půjčovna, servis&nbsp;🛠 i&nbsp;lyžařská škola (rezervace a&nbsp;objednávky na&nbsp;čísle&nbsp;734&nbsp;824&nbsp;493). Občerstvení&nbsp;🥪🧃 přes&nbsp;okénko." >
-                    <StaticImage {...imageProps} src='../../assets/do_konce_roku.jpg' alt='Foto horni stanice vleku' imgStyle={{ maxHeight: '250px', objectPosition: 'top' }} layout='constrained' />
-                </Aktualita>
-
-
-                <Aktualita title="ZAČÍNÁME V PÁTEK 🏂" date="15.12. 2020" url="zahajujemeProvoz" rawText="Ski&nbsp;Aréna Karlov otevře sezónu v&nbsp;pátek 18.&nbsp;prosince 2020 v&nbsp;8.30 hodin. Lyžovat se bude i&nbsp;v&nbsp;sobotu a&nbsp;v&nbsp;neděli (další provoz upřesníme). K&nbsp;dispozici bude modrá 💙sjezdovka Family u&nbsp;čtyřsedadlové lanovky Myšák 🐭 a&nbsp;jedna ze&nbsp;sjezdovek u&nbsp;čtyřsedadlové lanovky Karlov Ski&nbsp;Express, kde&nbsp;bude i&nbsp;večerní lyžování..." >
-                    <StaticImage {...imageProps} src='../../assets/zahajeniSezony.jpg' alt='Foto sjezdovku' imgStyle={{ maxHeight: '250px', objectPosition: 'top' }} layout='constrained' />
-                </Aktualita>
-
-
-                <Aktualita title="Nové vyhlášení o vstupu do ČR" date="17.12 2020" url="informaceVstup" rawText="Od&nbsp;18.&nbsp;prosince 2020 je&nbsp;omezen vstup a&nbsp;pohyb cizinců na&nbsp;území&nbsp;ČR. Podmínkou pro&nbsp;umožnění vstupu je&nbsp;negativní výsledek PCR testu. Dále není možné přicestovat za&nbsp;účelem návštěvy přátel či&nbsp;rekreace." >
-                    <StaticImage {...imageProps} src='../../assets/informace.jpg' alt='Info o vstupu do ČR' />
-                </Aktualita>
-
-
-                <Aktualita title="Testování lyží" url="lyzTest" rawText="Další oblíbené testování Nixski proběhne 6.&nbsp;ledna, od&nbsp;9ti do&nbsp;16ti hodin na&nbsp;Myšáku. Vyzkoušejte novinkové ATOMIC, HEAD, DYNASTAR,STÖCKLI a&nbsp;LUSTI." >
-                    <StaticImage {...imageProps} src='../../assets/testLyzi.png' alt='Letak test lyzi' />
-                </Aktualita>
-
-
-                <Aktualita title="Parkování" date="18.11. 2020" url="parkovani" rawText="Přijeďte si&nbsp;užít lyžovačku! Parkování je u&nbsp;nás ZDARMA  a&nbsp;hned pod&nbsp;Myšákem. Přijíždějící auta organizujeme, aby bylo vše v&nbsp;pohodě, a&nbsp;aby další a&nbsp;další lyžaři našli místo. Mezi jednotlivými areály se&nbsp;můžete přemisťovat i&nbsp;bezplatnými SKI busy a SKI taxi. Jízdní řády připravujeme." >
-                    <StaticImage {...imageProps} src='../../assets/parking1.jpeg' alt='Foto parkoviste z dronu' />
-                </Aktualita>
-
-
-                <Aktualita title="ČT sport NA VRCHOL" date="15.11. 2020" url="JBus3Nas" rawText="Vzpomínáte? Takhle to&nbsp;na&nbsp;Myšáku žilo s&nbsp;ČT&nbsp;sport na&nbsp;vrchol 22.&nbsp;ledna 2019. Už máme termín pro&nbsp;závod letošní sezóny. Zapište si&nbsp;do&nbsp;diářů 5.&nbsp;–&nbsp;7.&nbsp;února 2021! Tak ať&nbsp;dojedeme s&nbsp;ČT&nbsp;sport až&nbsp;na&nbsp;vrchol!" >
-                    <StaticImage {...imageProps} src='../../assets/ctSport1.jpg' alt='Foto vyhercu' />
-                </Aktualita>
-
-
-                <Aktualita title="PODĚKOVÁNÍ za sezónu 2019/20" date="29.3. 2020" url="ASnDASie2" rawText="Za normálních okolností bychom teď, na&nbsp;konci března, pravděpodobně oznamovali konec další lyžařské sezóny v&nbsp;karlovském údolí. Tato zima ale 'normální' nebyla, a&nbsp;to&nbsp;nemáme na&nbsp;mysli jen její předčasný konec... " >
-                    <StaticImage {...imageProps} src='../../assets/servis.jpg' alt='Sjezdovka' />
-                </Aktualita> */}
-
-
             </section>
         </main>
         <Footer />

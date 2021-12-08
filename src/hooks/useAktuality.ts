@@ -4,6 +4,32 @@ import moment from 'moment'
 import type Aktualita from '../types/aktualita'
 import encodeUrl from 'encodeurl';
 
+
+type HTMLAst = any;
+
+const flatten = (htmlAst: HTMLAst): (string[] | void) => {
+  if (htmlAst.type == "text") {
+    const x = htmlAst.value.replaceAll("\n", "");
+    const y = x;
+    if (y.replaceAll(" ", "").length == 0) {
+      // String empty
+      return;
+    }
+    return [x, " "];
+  } else if (htmlAst.children) {
+    // console.log(htmlAst.children.map(flatten))
+    return htmlAst.children.map(flatten).filter(Boolean)
+  }
+}
+
+export const getTextFromHtmlAst = (htmlAst: HTMLAst) => {
+  let x = flatten(htmlAst)
+  if (!x) return "";
+  // x.join(" ");
+  console.log(x)
+  return x;
+
+}
 export const aktualityQuery = graphql`query Aktuality {
   allFile(filter: {absolutePath: {regex: "/content.*aktuality//"}}) {
     edges {
@@ -12,6 +38,7 @@ export const aktualityQuery = graphql`query Aktuality {
         absolutePath
         childrenMarkdownRemark {
           html
+          htmlAst
           internal {
             content
           }
@@ -51,7 +78,8 @@ export const queryResultToAktualityArr = (qResult) => {
     .map((node: any) => ({
       title: node.frontmatter.name,
       body: (node.html as string).replace('/n', ''),
-      text: node.internal.content,
+      // text: node.internal.content,
+      text: getTextFromHtmlAst(node.htmlAst),
       //@ts-ignore
       date: moment(node.frontmatter.date, 'DD-MM-YYYY').toDate(),
       link: node.frontmatter.link
