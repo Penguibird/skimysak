@@ -1,6 +1,6 @@
 ---
 name: Stáhněte si aplikaci Záchranka!
-date: 10-12-2021
+date: 04-12-2021
 image:
   image: záchranka.png
   imageAlt: logo aplikace Záchranka
