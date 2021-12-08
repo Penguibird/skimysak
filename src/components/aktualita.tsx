@@ -33,7 +33,7 @@ export default function Aktualita({ title, url, rawText, date, children, data, a
         <h3 className="title" >{title}</h3>
         {date && <p className="date" style={{ wordBreak: 'break-all', color: '#757575', fontSize: '14px' }} >{date}</p>}
 
-        <p>{rawText}</p>
+        <p style={{ wordBreak: 'break-all' }}>{rawText}</p>
         <p className="show-more-link">Více...</p>
     </Link>
 }
