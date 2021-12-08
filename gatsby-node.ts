@@ -34,13 +34,15 @@ exports.createPages = async function ({ actions, graphql }: Props) {
             dir: edge.node?.dir,
         }))
         .filter((_: { name: string; dir: string; }) => _.name && _.dir)
-        .forEach(({ name, dir }: { name: string, dir: string }, i: number) => {
+        .forEach(({ name, dir }: { name: string, dir: string }, i: number, array: {name: string}[]) => {
             // console.log(name, encodeUrl(name))
             actions.createPage({
                 component: require.resolve(`./src/components/aktualitaPage.tsx`),
                 path: `/aktuality/${name}`,
                 context: {
                     title: name,
+                    nextUrl: array[i+1]?.name ?? null,
+                    prevUrl: array[i-1]?.name ?? null,
                     dir,
                 }
             })

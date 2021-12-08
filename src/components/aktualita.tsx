@@ -16,7 +16,7 @@ interface AktualitaProps {
 
 export default function Aktualita({ title, url, rawText, date, children, data, alt }: AktualitaProps) {
     return <Link to={`/aktuality/${url}`} className={`aktualita ${(children || data || alt) ? 'aktualita-img' : 'aktualita-no-img'}`}>
-        <div className="image-wrapper">
+        <div className="image-wrapper" style={{display: 'grid'}}>
             {children}
             {data && <GatsbyImage
                 alt={alt ?? ""}
