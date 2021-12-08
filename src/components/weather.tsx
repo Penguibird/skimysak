@@ -57,6 +57,7 @@ export default function Weather(props) {
     return <div
         style={{
             zIndex: 1,
+            padding: '0.2vw',
         }}
     >
         <h2
