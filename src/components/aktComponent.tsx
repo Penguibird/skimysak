@@ -3,7 +3,7 @@ import { Fragment, useState, useEffect } from 'react';
 import { StaticImage } from "gatsby-plugin-image";
 import { Link, graphql } from 'gatsby';
 
-import { useBreakpoint } from 'gatsby-plugin-breakpoints';
+import { BreakpointsObject, useBreakpoint } from 'gatsby-plugin-breakpoints';
 import loadable from '@loadable/component'
 
 // @ts-ignore
@@ -15,6 +15,7 @@ import Aktualita from './aktualita'
 
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import useAktuality from '../hooks/useAktuality';
+import type { useBreakpointsType } from '../types/useBreakPointsType';
 
 const getShortText = (s: string) => {
     if (s.length < 103)
@@ -23,8 +24,18 @@ const getShortText = (s: string) => {
     return s.slice(0, 100) + "...";
 }
 
+const sizes: Partial<Record<keyof Omit<useBreakpointsType, "portrait" | "prefersReducedData" | "prefersReducedMotion" | "dropM">, number>> = {
+    xl: 95,
+    ll: 125,
+    ls: 155,
+    ml: 125,
+    ms: 150,
+    s: 110,
+}
+const getSizeFromBreakpoint = (breakPoints: useBreakpointsType) => Object.entries(breakPoints).filter(([_k, v]) => !!v).map(([k, _v]) => sizes[k]).find(Boolean);
+
 export default function AktComponent(props) {
-    const breakPoints = useBreakpoint();
+    const breakPoints = useBreakpoint() as useBreakpointsType;
     const aktuality = useAktuality();
     // const aktuality = [];
     return <section className="section-aktuality section">
@@ -32,7 +43,7 @@ export default function AktComponent(props) {
             <h1 className="title-white smaller">Aktuality</h1>
             <CarouselProvider
                 naturalSlideWidth={100}
-                naturalSlideHeight={breakPoints.ll ? 135 : breakPoints.ls ? 150 : breakPoints.ml ? 125 : breakPoints.ms ? 150 : breakPoints.s ? 110 : 150}
+                naturalSlideHeight={getSizeFromBreakpoint(breakPoints)}
                 isIntrinsicHeight={breakPoints.s}
                 className={breakPoints.s ? 'small-width-carousel' : ' '}
                 totalSlides={aktuality.length}

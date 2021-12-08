@@ -1,3 +1,3 @@
-import { myCustomQueries } from "../../gatsby-config";
+import { myCustomQueries } from "../../myCustomQueries";
 
 export type useBreakpointsType = Record<keyof typeof myCustomQueries, boolean>; 

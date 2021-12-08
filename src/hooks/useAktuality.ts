@@ -7,7 +7,7 @@ import encodeUrl from 'encodeurl';
 
 type HTMLAst = any;
 
-const flatten = (htmlAst: HTMLAst): (string[] | void) => {
+const flatten = (htmlAst: HTMLAst): (string | void) => {
   if (htmlAst.type == "text") {
     const x = htmlAst.value.replaceAll("\n", "");
     const y = x;
@@ -15,10 +15,10 @@ const flatten = (htmlAst: HTMLAst): (string[] | void) => {
       // String empty
       return;
     }
-    return [x, " "];
+    return (x + " ");
   } else if (htmlAst.children) {
     // console.log(htmlAst.children.map(flatten))
-    return htmlAst.children.map(flatten).filter(Boolean)
+    return htmlAst.children.map(flatten).filter(Boolean).join("")
   }
 }
 

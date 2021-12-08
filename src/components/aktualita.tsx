@@ -23,15 +23,15 @@ export default function Aktualita({ title, url, rawText, date, children, data, a
                 objectPosition={'top'}
 
                 // formats={["jpg", "webp"]}
-                imgStyle={{ maxHeight: '250px', objectPosition: 'top' }}
-                style={{ maxHeight: '250px' }}
+                imgStyle={{ maxHeight: '190px', objectPosition: 'top' }}
+                style={{ maxHeight: '190px' }}
                 // layout={'constrained'}
                 image={data}
             />}
         </div>
 
         <h3 className="title" >{title}</h3>
-        {date && <p className="date" style={{ color: '#757575', fontSize: '14px' }} >{date}</p>}
+        {date && <p className="date" style={{ wordBreak: 'break-all', color: '#757575', fontSize: '14px' }} >{date}</p>}
 
         <p>{rawText}</p>
         <p className="show-more-link">Více...</p>
