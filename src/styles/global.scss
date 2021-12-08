@@ -562,6 +562,14 @@ h1.small {
     @media screen and (max-width: 900px) {
         width: 80vw;
     }
+    transition: transform ease-in-out 0.5s;
+    &:hover {
+        transform: translateY(-2em) scale(1.03);
+    }
+    &:active {
+        transform: translateY(0.1em);
+        transition-duration: .25s;
+    }
 }
 
 // Section
