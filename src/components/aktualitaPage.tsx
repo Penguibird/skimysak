@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { graphql, Link } from 'gatsby';
-import '../styles/pages/aktualityPage.scss';
+import '../styles/pages/aktualitaPage.scss';
 import '../styles/global.scss'
 import { Helmet } from "react-helmet";
 import Header from './header'
