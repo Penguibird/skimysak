@@ -35,7 +35,7 @@ export default function AktComponent(props) {
                 naturalSlideHeight={breakPoints.ll ? 135 : breakPoints.ls ? 150 : breakPoints.ml ? 125 : breakPoints.ms ? 150 : breakPoints.s ? 110 : 150}
                 isIntrinsicHeight={breakPoints.s}
                 className={breakPoints.s ? 'small-width-carousel' : ' '}
-                totalSlides={8}
+                totalSlides={aktuality.length}
                 visibleSlides={breakPoints.l ? 3 : breakPoints.m ? 2 : breakPoints.s ? 1 : 3}
             >
                 <Slider style={{ width: breakPoints.ll ? '1300px' : null }}>
