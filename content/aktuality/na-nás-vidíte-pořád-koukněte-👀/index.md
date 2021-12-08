@@ -3,6 +3,7 @@ name: Na nás vidíte pořád...koukněte 👀
 date: 26-11-2021
 image:
   imageAlt: Sledujte nás přes kamery
+  image: snímek1.jpg
 ---
 Sledujte jak pomalu vstupuje ZIMA ❄❄❄
 
