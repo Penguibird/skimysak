@@ -40,7 +40,7 @@ export default function AktualitaPage({ data, pageContext: { nextUrl, prevUrl } 
 
 	}, [])
 	const getP = () => {
-		if (isBrowser) return;
+		if (!isBrowser) return;
 		let imageParent = document.getElementById("imageParent");
 		if (!imageParent) {
 			imageParent = document.createElement('div');
@@ -62,7 +62,7 @@ export default function AktualitaPage({ data, pageContext: { nextUrl, prevUrl } 
 		</Helmet>
 		<Header always />
 		<main className="main-aktualita-text">
-			{(image || (images.length > 0)) && ReactDOM.createPortal(
+			{isBrowser && (image || (images.length > 0)) && ReactDOM.createPortal(
 				<Fragment>
 					{image && !(images.length > 0) && <GatsbyImage
 						loading='lazy'
