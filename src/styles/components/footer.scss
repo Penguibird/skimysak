@@ -1,3 +1,18 @@
+#___gatsby,
+#gatsby-focus-wrapper {
+    height: 100%;
+}
+#gatsby-focus-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex: 1 0 auto;
+}
+footer {
+    flex-shrink: 0;
+}
+
 footer {
     background-color: var(--background-blue);
     display: grid;
@@ -36,7 +51,7 @@ footer {
             }
             margin-top: 2em;
             & > * + * {
-               margin-left: 2em;
+                margin-left: 2em;
             }
         }
         .footer-logo {

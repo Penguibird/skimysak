@@ -10,6 +10,7 @@ import Footer from './footer'
 import { Fragment, useState, useEffect } from 'react';
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 
+const isBrowser = typeof window !== "undefined"
 
 export default function AktualitaPage({ data, pageContext: { nextUrl, prevUrl } }) {
 	const {
@@ -39,6 +40,7 @@ export default function AktualitaPage({ data, pageContext: { nextUrl, prevUrl } 
 
 	}, [])
 	const getP = () => {
+		if (isBrowser) return;
 		let imageParent = document.getElementById("imageParent");
 		if (!imageParent) {
 			imageParent = document.createElement('div');
