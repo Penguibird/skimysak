@@ -67,7 +67,7 @@ export default function Weather(props) {
             className="weather-title widget-title"
         >
             {data ? `${getTemp(data)} °C`
-                : error ? "Weather" : "Weather"}
+                : "Počasí"}
         </h2>
         <div className="flexbox-column" style={{
             margin: 'auto',
