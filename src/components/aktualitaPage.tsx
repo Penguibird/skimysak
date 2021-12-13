@@ -58,7 +58,14 @@ export default function AktualitaPage({ data, pageContext: { nextUrl, prevUrl } 
 			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 			<meta name="viewport" content="width=device-width, initial-scale=1" />
 			<meta name="description" content="Parádní lyžování v jeseníkách" />
-
+			<style>{`
+				body {
+					perspective: 1px;
+					height: 100vh;
+					overflow-x: hidden;
+					overflow-y: auto;
+				}
+			`}</style>
 		</Helmet>
 		<Header always />
 		<main className="main-aktualita-text">
