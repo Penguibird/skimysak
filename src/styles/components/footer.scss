@@ -1,101 +1,110 @@
-#___gatsby,
-#gatsby-focus-wrapper {
-    height: 100%;
-}
-#gatsby-focus-wrapper {
-    display: flex;
-    flex-direction: column;
-}
-main {
-    flex: 1 0 auto;
-}
 footer {
-    flex-shrink: 0;
+    position: sticky;
+    top: 100vh;
 }
 
 footer {
     background-color: var(--background-blue);
     display: grid;
-    grid-template-columns: 12vw 1fr 12vw;
-    align-items: start;
-    justify-items: center;
-    // grid-template-rows: 1fr;
-    position: relative;
-    bottom: 0px;
-    .footer-wrapper {
-        grid-column: 2/3;
-        // border-top: 1px var(--text-black-light) solid;
-        justify-self: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0.7em 10vw;
+    place-items: center center;
+    padding: 0.5rem;
+    padding-bottom: 2rem;
+    margin-top: 5rem;
+    padding-top: 3rem;
+    box-shadow: 1px -3px 13px 0px hsl(210deg 24% 63% / 50%);
+
+    @media (min-width: 600px) and (max-width: 1149px) {
+        // grid-auto-flow: column;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 1rem;
+        row-gap: 2rem;
+        .footer-logo {
+            grid-row: 1 / span 1;
+        }
+        .footer-logo.safe-travels {
+            grid-column: 1 / span 2;
+        }
+        .footer-logo.impuls {
+            grid-column: 3 / span 2;
+        }
+        // .footer-logo.mysak {
+        //     grid-column: 3 / 4;
+        // }
+        .footer-wrapper {
+            grid-column: 1 / 4;
+        }
+        .footer-wrapper,
+        .footer-logo.mysak {
+            grid-row: 2 / 3;
+        }
+        .footer-logo.mysak {
+            margin: 0;
+        }
     }
     p {
-        font-size: clamp(13px, 1.3vw, 18px);
         text-align: center;
+        font-size: clamp(15px, 1.35vw, 18px);
     }
-    & > * + * {
-        margin-top: 0.3em;
-    }
-    @media screen and (max-width: 900px) {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr auto auto;
-        place-items: center center;
-        .footer-logos-left {
-            grid-row: 3 / span 1;
-            // width: 50%;
-            flex-direction: row;
-            & > * {
-                width: 20vw;
-            }
-            margin-top: 2em;
-            & > * + * {
-                margin-left: 2em;
-            }
-        }
+    @media (min-width: 1150px) {
+        column-gap: 2rem;
+        grid-template-columns: 1fr auto 1fr;
         .footer-logo {
-            margin: auto;
-            grid-row: 2 / span 1;
-            width: 35%;
-            display: grid;
-            place-items: center;
+            grid-column: 1/2;
         }
         .footer-wrapper {
-            grid-column: 1 / span 1;
+            grid-column: 2 / 3;
         }
-        & > * {
-            grid-column: 1 / span 1 !important;
+        .footer-wrapper,
+        .footer-logo.mysak {
+            grid-row: 2 / 3;
         }
-    }
-}
+        .footer-logo.mysak {
+            margin: 0;
+            grid-column: -2 /-1;
+        }
 
-.footer-logos-left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5em;
-    & > * + * {
-        margin-top: 1em;
+        .footer-logo.mysak {
+            place-self: end end;
+            .img {
+                width: 10rem;
+            }
+        }
     }
 }
 
 .footer-logo {
-    grid-column: 3/4;
-    // float: right;
-    justify-self: start;
-    float: right;
-    // max-width: 7vw;
-    // width: 7vw;
-    margin-right: 4vw;
-    margin-bottom: 1.3em;
-    // img {
-    //     width: 100%;
-    //     height: auto;
-    // }
-    @media screen and (max-width: 900px) {
-        grid-column: 2/3;
-        width: 15vw;
-        margin: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0.1rem;
+    & + .footer-logo {
+        margin: 1rem;
     }
+    .img {
+        max-width: 10rem;
+        margin: 1rem;
+        height: auto;
+    }
+    p {
+        // margin-top: 1em;
+        font-size: clamp(13px, 1.3vw, 18px);
+        max-width: 70%;
+    }
+}
+
+.footer-logo.safe-travels .img {
+    margin-right: -9%;
+}
+
+.footer-logo.mysak {
+    margin: 1rem;
+    margin-top: 3rem;
+    .img {
+        width: 7rem;
+    }
+}
+
+.footer-wrapper p + p {
+    margin-top: 0.5em;
 }
