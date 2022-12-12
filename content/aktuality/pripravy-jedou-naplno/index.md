@@ -3,7 +3,7 @@ name: Přípravy jedou naplno
 date: 09-12-2022
 image:
   image: modrá.jpg
-  imageAlt: Foto z modré sjzedovky na Myšáku
+  imageAlt: Foto z modré sjezdovky na Myšáku
 ---
 Přípravy jedou naplno a počasí nám pomáhá…
 
