@@ -44,12 +44,12 @@ export default function Page(props) {
                 {/* <img className="hero-image" src={image} alt="Ski slope" /> */}
             </section>
             <section className="section-page-aktuality">
-                {aktuality.map((akt, i) =>
+                {aktuality.map((akt, i, arr) =>
                     <Aktualita
                         key={i}
                         title={akt.title}
                         date={akt.date}
-                        url={akt.url}
+                        url={(arr.length - i).toString()}
                         rawText={getShortText(akt.text)}
                         data={akt.image.image}
                         alt={akt.image.imageAlt}

@@ -50,12 +50,12 @@ export default function AktComponent(props) {
                 visibleSlides={breakPoints.l ? 3 : breakPoints.m ? 2 : breakPoints.s ? 1 : 3}
             >
                 <Slider style={{ width: breakPoints.ll ? '1300px' : null }}>
-                    {aktuality.map((a, i) =>
+                    {aktuality.map((a, i, arr) =>
                         <Slide index={i} key={i} innerClassName="slide-inner" className="carousel-slide">
                             <Aktualita
                                 title={a.title}
                                 date={a.date}
-                                url={a.url}
+                                url={(arr.length - i).toString()}
                                 rawText={getShortText(a.text)}
                                 alt={a.image.imageAlt}
                                 data={a.image.image}
