@@ -42,19 +42,19 @@ export default function Page(props) {
                     <tbody>
                         <tr>
                             <td>1&nbsp;lekce</td>
-                            <td className="align-right ">  650 Kč</td>
+                            <td className="align-right ">  790 Kč</td>
                         </tr>
                         <tr>
                             <td>2 lekce</td>
-                            <td className="align-right " >1 150 Kč</td>
+                            <td className="align-right " >1 200 Kč</td>
                         </tr>
                         <tr>
                             <td>3 lekce</td>
-                            <td className="align-right " >1 650 Kč</td>
+                            <td className="align-right " >1 700 Kč</td>
                         </tr>
                         <tr>
                             <td>4 lekce</td>
-                            <td className="align-right " >2 100 Kč</td>
+                            <td className="align-right " >2 200 Kč</td>
                         </tr>
                     </tbody>
                     <thead>
@@ -65,7 +65,7 @@ export default function Page(props) {
                     <tbody>
                         <tr className="cell-brighter">
                             <td>Cena za osobu</td>
-                            <td>550 Kč</td>
+                            <td>600 Kč</td>
                         </tr>
                     </tbody>
                 </table>
