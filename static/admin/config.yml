@@ -2,7 +2,7 @@ backend:
   name: github
   repo: penguibird/skimysak
   branch: main
-  base_url: 'https://my-github-auth-provider.herokuapp.com'
+  base_url: 'http://164.90.242.52:3000'
   # site_domain: 'cms.netlify.com'
 
 
