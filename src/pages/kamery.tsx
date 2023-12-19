@@ -30,7 +30,7 @@ export default function Page(props) {
                         <h2>Myšák horní stanice</h2>
                         <iframe
                             // width="560" height="315"
-                            src="https://www.youtube.com/embed/PKwT1CVinhI"
+                            src="https://www.youtube.com/embed/DkPvTnaEdEg"
                             frameBorder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen>
                         </iframe>
