@@ -42,36 +42,43 @@ export default function Page(props) {
                     <tbody>
                         <tr>
                             <td>1&nbsp;lekce</td>
-                            <td className="align-right ">  790 Kč</td>
+                            <td className="align-right ">  890 Kč</td>
                         </tr>
                         <tr>
                             <td>2 lekce</td>
-                            <td className="align-right " >1 200 Kč</td>
+                            <td className="align-right " >1 680 Kč</td>
                         </tr>
                         <tr>
                             <td>3 lekce</td>
-                            <td className="align-right " >1 700 Kč</td>
+                            <td className="align-right " >2 390 Kč</td>
                         </tr>
                         <tr>
                             <td>4 lekce</td>
-                            <td className="align-right " >2 200 Kč</td>
+                            <td className="align-right " >2 990 Kč</td>
                         </tr>
                     </tbody>
                     <thead>
                         <tr>
-                            <th colSpan={2}>Skupinová výuka  2-4 osoby</th>
+                            <th colSpan={2}>Skupinová výuka  2-3 osoby</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr className="cell-brighter">
-                            <td>Cena za osobu</td>
-                            <td>600 Kč</td>
+                        <tr>
+                            <td>1&nbsp;lekce</td>
+                            <td className="align-right ">  690 Kč</td>
+                        </tr>
+                        <tr>
+                            <td>2 lekce</td>
+                            <td className="align-right " >1 280 Kč</td>
                         </tr>
                     </tbody>
                 </table>
                 <p>Objednávky na&nbsp;výuku přijímáme osobně v&nbsp;kanceláři lyžařské školy
                     (vedle pokladny na&nbsp;parkovišti u&nbsp;nástupní stanice lanové dráhy Myšák),
                     nebo na&nbsp;telefonním čísle <a href="tel:+420 734 824 493" className="a-tel telehpone-link">+420&nbsp;734&nbsp;824&nbsp;493</a>.</p>
+
+
+
                 <h2 className="smaller">Zákazníci lyžařské školy Myšák si&nbsp;mohou v&nbsp;naší půjčovně zapůjčit lyžařské a&nbsp;snowboardové vybavení za&nbsp;zvýhodněné ceny</h2>
                 <table className="skola-last-talbe">
                     <tr className="cell-brighter">
@@ -92,6 +99,12 @@ export default function Page(props) {
                     </tr>
                 </table>
 
+                <ul>
+                    <li>1 výuková hodina (lekce) = 50 min.</li>
+                    <li>V ceně výuky jsou služby instruktora a jízdné po dobu výuky.</li>
+                    <li>Zvýhodněné ceny 2-4 lekcí platí při vybrání v&nbsp;jeden den.</li>
+                    <li>Započaté lekce, které budou zrušeny klientem a rezervované lekce zrušené méně než 30 min před začátkem výuky se plně hradí klientem.</li>
+                </ul>
             </section>
         </main>
         <Footer />

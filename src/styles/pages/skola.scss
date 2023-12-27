@@ -2,5 +2,24 @@
     .price {
         padding-inline-start: 5ch;
     }
-}
 
+    ul {
+        list-style-type: circle;
+        max-width: 85ch;
+        padding-top: 10px;
+
+        & > * + * {
+            padding-top: 0.5em;
+        }
+        li {
+            font-size: 16px;
+            display: list-item;
+            padding-left: 16px;
+            &::marker {
+                content: "●";
+                color: var(--background-dark-blue);
+                font-size: 1.1em;
+            }
+        }
+    }
+}
