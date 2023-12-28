@@ -79,7 +79,7 @@ export default function Page(props) {
 
 
 
-                <h2 className="smaller">Zákazníci lyžařské školy Myšák si&nbsp;mohou v&nbsp;naší půjčovně zapůjčit lyžařské a&nbsp;snowboardové vybavení za&nbsp;zvýhodněné ceny</h2>
+                {/* <h2 className="smaller">Zákazníci lyžařské školy Myšák si&nbsp;mohou v&nbsp;naší půjčovně zapůjčit lyžařské a&nbsp;snowboardové vybavení za&nbsp;zvýhodněné ceny</h2>
                 <table className="skola-last-talbe">
                     <tr className="cell-brighter">
                         <td>Lyžařský set dětský (lyže, hůlky, lyžáky, helma)</td>
@@ -97,7 +97,7 @@ export default function Page(props) {
                         <td>Snowboardový set dospělí (prkno, boty, helma)</td>
                         <td className="align-right heading">200&nbsp;Kč/den</td>
                     </tr>
-                </table>
+                </table> */}
 
                 <ul>
                     <li>1 výuková hodina (lekce) = 50 min.</li>
