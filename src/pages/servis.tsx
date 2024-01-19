@@ -66,206 +66,188 @@ export default function Page(props) {
                             <th>5 dnů</th>
                             <th>6 dnů</th>
                             <th>7 dnů</th>
-                            <th>8 - 9 dnů</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th>CARVINGOVÉ</th>
+                            <th rowSpan={2}>CARVINGOVÉ <br /> LYŽE - TOP</th>
                             <th  >komplet*</th>
-                            <td className="price" >350,-</td>
-                            <td className="price" >540,-</td>
-                            <td className="price" >680,-</td>
-                            <td className="price" >780,-</td>
-                            <td className="price" >900,-</td>
-                            <td className="price" >1020,-</td>
-                            <td className="price" >1120,-</td>
-                            <td className="price" >1120,-</td>
+                            <td className="price" >400,-</td>
+                            <td className="price" >650,-</td>
+                            <td className="price" >800,-</td>
+                            <td className="price" >1000,-</td>
+                            <td className="price" >1200,-</td>
+                            <td className="price" >1400,-</td>
+                            <td className="price" >1600,-</td>
                         </tr>
                         <tr>
-                            <th>LYŽE - TOP</th>
+                            {/* <th>LYŽE - TOP</th> */}
                             <th>pouze lyže</th>
                             <td className="price">310,-</td>
                             <td className="price">500,-</td>
-                            <td className="price">640,-</td>
-                            <td className="price">720,-</td>
-                            <td className="price">820,-</td>
-                            <td className="price">920,-</td>
-                            <td className="price">1020,-</td>
-                            <td className="price">1020,-</td>
-                        </tr>
-                        <tr>
-                            <th>CARVINGOVÉ</th>
-                            <th>komplet*</th>
-                            <td className="price">520,-</td>
-                            <td className="price">750,-</td>
-                            <td className="price">880,-</td>
-                            <td className="price">1100,-</td>
-                            <td className="price">1350,-</td>
-                            <td className="price">1530,-</td>
-                            <td className="price">1640,-</td>
-                            <td className="price">1640,-</td>
-                        </tr>
-                        <tr>
-                            <th>LYŽE - VIP</th>
-                            <th>pouze lyže</th>
-                            <td className="price">470,-</td>
                             <td className="price">700,-</td>
-                            <td className="price">830,-</td>
-                            <td className="price">1050,-</td>
-                            <td className="price">1280,-</td>
-                            <td className="price">1480,-</td>
-                            <td className="price">1590,-</td>
-                            <td className="price">1590,-</td>
+                            <td className="price">900,-</td>
+                            <td className="price">1100,-</td>
+                            <td className="price">1300,-</td>
+                            <td className="price">1500,-</td>
                         </tr>
                         <tr>
-                            <th>DĚTSKÉ SKI</th>
+                            <th rowSpan={2}>CARVINGOVÉ <br/> LYŽE - VIP</th>
+                            <th>komplet*</th>
+                            <td className="price">500,-</td>
+                            <td className="price">750,-</td>
+                            <td className="price">900,-</td>
+                            <td className="price">1100,-</td>
+                            <td className="price">1300,-</td>
+                            <td className="price">1500,-</td>
+                            <td className="price">1700,-</td>
+                        </tr>
+                        <tr>
+                            {/* <th>LYŽE - VIP</th> */}
+                            <th>pouze lyže</th>
+                            <td className="price">410,-</td>
+                            <td className="price">600,-</td>
+                            <td className="price">800,-</td>
+                            <td className="price">1000,-</td>
+                            <td className="price">1200,-</td>
+                            <td className="price">1400,-</td>
+                            <td className="price">1600,-</td>
+                        </tr>
+                        <tr>
+                            <th rowSpan={2}>DĚTSKÉ SKI <br /> (do 135cm) </th>
                             <th >komplet*</th>
                             <td className="price">260,-</td>
-                            <td className="price">320,-</td>
-                            <td className="price">410,-</td>
-                            <td className="price">470,-</td>
-                            <td className="price">540,-</td>
-                            <td className="price">610,-</td>
-                            <td className="price">690,-</td>
-                            <td className="price">690,-</td>
+                            <td className="price">350,-</td>
+                            <td className="price">450,-</td>
+                            <td className="price">550,-</td>
+                            <td className="price">650,-</td>
+                            <td className="price">750,-</td>
+                            <td className="price">850,-</td>
                         </tr>
                         <tr>
-                            <th>DO 135 cm</th>
+                            {/* <th>DO 135 cm</th> */}
                             <th>pouze lyže</th>
                             <td className="price">230,-</td>
-                            <td className="price">260,-</td>
                             <td className="price">290,-</td>
                             <td className="price">320,-</td>
                             <td className="price">350,-</td>
-                            <td className="price">390,-</td>
-                            <td className="price">430,-</td>
-                            <td className="price">430,-</td>
+                            <td className="price">380,-</td>
+                            <td className="price">420,-</td>
+                            <td className="price">460,-</td>
                         </tr>
                         <tr>
                             <th rowSpan={2} >SKIALPOVÉ LYŽE	</th>
                             <th>komplet</th>
                             <td className="price">850,-</td>
-                            <td className="price">1200,-</td>
-                            <td className="price">1500,-</td>
-                            <td className="price">1800,-</td>
-                            <td className="price">2100,-</td>
-                            <td className="price">2400,-</td>
-                            <td className="price">2700,-</td>
-                            <td className="price">2700,-</td>
+                            <td className="price">1400,-</td>
+                            <td className="price">2000,-</td>
+                            <td className="price">2600,-</td>
+                            <td className="price">3200,-</td>
+                            <td className="price">3800,-</td>
+                            <td className="price">4400,-</td>
                         </tr>
                         <tr>
                             <th>pouze lyže</th>
-                            <td className="price">550,-</td>
-                            <td className="price">900,-</td>
-                            <td className="price">1200,-</td>
+                            <td className="price">600,-</td>
+                            <td className="price">1100,-</td>
                             <td className="price">1500,-</td>
-                            <td className="price">1800,-</td>
-                            <td className="price">2100,-</td>
+                            <td className="price">2000,-</td>
                             <td className="price">2400,-</td>
-                            <td className="price">2400,-</td>
+                            <td className="price">2800,-</td>
+                            <td className="price">3200,-</td>
                         </tr>
                         <tr>
                             <th rowSpan={2}>BĚŽECKÉ LYŽE	</th>
                             <th>komplet</th>
-                            <td className="price">300</td>
-                            <td className="price">390</td>
-                            <td className="price">470</td>
-                            <td className="price">550</td>
-                            <td className="price">620</td>
-                            <td className="price">690</td>
-                            <td className="price">760</td>
-                            <td className="price">760</td>
+                            <td className="price">300,-</td>
+                            <td className="price">450,-</td>
+                            <td className="price">550,-</td>
+                            <td className="price">650,-</td>
+                            <td className="price">750,-</td>
+                            <td className="price">850,-</td>
+                            <td className="price">950,-</td>
                         </tr>
                         <tr>
                             <th>pouze lyže</th>
                             <td className="price">250,-</td>
-                            <td className="price">340,-</td>
-                            <td className="price">420,-</td>
-                            <td className="price">500,-</td>
-                            <td className="price">570,-</td>
-                            <td className="price">640,-</td>
-                            <td className="price">710,-</td>
-                            <td className="price">710,-</td>
+                            <td className="price">350,-</td>
+                            <td className="price">450,-</td>
+                            <td className="price">550,-</td>
+                            <td className="price">650,-</td>
+                            <td className="price">750,-</td>
+                            <td className="price">850,-</td>
                         </tr>
                         <tr>
                             <th rowSpan={2}>SNOWBOARD</th>
                             <th>komplet*</th>
-                            <td className="price">310,-</td>
-                            <td className="price">470,-</td>
-                            <td className="price">620,-</td>
-                            <td className="price">720,-</td>
-                            <td className="price">820,-</td>
-                            <td className="price">900,-</td>
-                            <td className="price">970,-</td>
-                            <td className="price">970,-</td>
+                            <td className="price">350,-</td>
+                            <td className="price">600,-</td>
+                            <td className="price">800,-</td>
+                            <td className="price">1000,-</td>
+                            <td className="price">1100,-</td>
+                            <td className="price">1250,-</td>
+                            <td className="price">1400,-</td>
                         </tr>
                         <tr>
                             <th>pouze SNB</th>
                             <td className="price">270,-</td>
                             <td className="price">430,-</td>
                             <td className="price">580,-</td>
-                            <td className="price">660,-</td>
-                            <td className="price">750,-</td>
-                            <td className="price">830,-</td>
+                            <td className="price">730,-</td>
                             <td className="price">900,-</td>
-                            <td className="price">900,-</td>
+                            <td className="price">1050,-</td>
+                            <td className="price">1200,-</td>
                         </tr>
                         <tr>
                             <th colSpan={2}>Lyžařské, skialpové, snowwboardové, běžecké boty</th>
                             <td className="price">160,-</td>
-                            <td className="price">230,-</td>
-                            <td className="price">290,-</td>
-                            <td className="price">350,-</td>
-                            <td className="price">410,-</td>
-                            <td className="price">460,-</td>
-                            <td className="price">510,-</td>
-                            <td className="price">510,-</td>
+                            <td className="price">250,-</td>
+                            <td className="price">400,-</td>
+                            <td className="price">500,-</td>
+                            <td className="price">600,-</td>
+                            <td className="price">700,-</td>
+                            <td className="price">800,-</td>
                         </tr>
                         <tr></tr>
                         <tr>
                             <th colSpan={2}>Lyžařské, teleskopické, běžecké hole</th>
-                            <td className="price">80</td>
-                            <td className="price">110</td>
-                            <td className="price">140</td>
-                            <td className="price">160</td>
-                            <td className="price">180</td>
+                            <td className="price">100</td>
+                            <td className="price">150</td>
                             <td className="price">200</td>
-                            <td className="price">220</td>
-                            <td className="price">220</td>
+                            <td className="price">250</td>
+                            <td className="price">300</td>
+                            <td className="price">350</td>
+                            <td className="price">400</td>
                         </tr>
                         <tr>
                             <th colSpan={2}>Helma</th>
-                            <td className="price">80</td>
-                            <td className="price">110</td>
-                            <td className="price">140</td>
-                            <td className="price">160</td>
-                            <td className="price">180</td>
+                            <td className="price">100</td>
+                            <td className="price">150</td>
                             <td className="price">200</td>
-                            <td className="price">220</td>
-                            <td className="price">220</td>
+                            <td className="price">250</td>
+                            <td className="price">300</td>
+                            <td className="price">350</td>
+                            <td className="price">400</td>
                         </tr>
                         <tr>
                             <th colSpan={2}>Lyžařské brýle</th>
-                            <td className="price">80</td>
-                            <td className="price">110</td>
-                            <td className="price">140</td>
-                            <td className="price">160</td>
-                            <td className="price">180</td>
+                            <td className="price">100</td>
+                            <td className="price">150</td>
                             <td className="price">200</td>
-                            <td className="price">220</td>
-                            <td className="price">220</td>
+                            <td className="price">250</td>
+                            <td className="price">300</td>
+                            <td className="price">350</td>
+                            <td className="price">400</td>
                         </tr>
                         <tr className="cell-brighter">
                             <th colSpan={2}>Sněžnice</th>
-                            <td className="price">150,-</td>
-                            <td className="price">210,-</td>
-                            <td className="price">270,-</td>
-                            <td className="price">320,-</td>
-                            <td className="price">380,-</td>
-                            <td className="price">430,-</td>
-                            <td className="price">480,-</td>
-                            <td className="price">480,-</td>
+                            <td className="price">160,-</td>
+                            <td className="price">250,-</td>
+                            <td className="price">400,-</td>
+                            <td className="price">500,-</td>
+                            <td className="price">600,-</td>
+                            <td className="price">700,-</td>
+                            <td className="price">800,-</td>
                         </tr>
                     </tbody>
                 </table>
@@ -282,30 +264,30 @@ export default function Page(props) {
                     <tbody>
                         <tr>
                             <th>voskování - lyže</th>
-                            <td className="price">100,-</td></tr>
+                            <td className="price">200,-</td></tr>
                         <tr>
                             <th>voskování - SNB</th>
-                            <td className="price">200,-</td>
+                            <td className="price">300,-</td>
                         </tr>
                         <tr>
                             <th>seřízení vázání</th>
                             <td className="price">50,-</td>
                         </tr>
                         <tr>
-                            <th>broušení hran</th>
-                            <td className="price">150,-</td>
+                            <th>broušení hran - stroj</th>
+                            <td className="price">200,-</td>
                         </tr>
                         <tr>
-                            <th>broušení skluznice</th>
-                            <td className="price">150,-</td>
+                            <th>broušení hran - ručně</th>
+                            <td className="price">250,-</td>
                         </tr>
                         <tr>
-                            <th>zalití děr ve skluznici</th>
-                            <td className="price">150,-</td>
+                            <th>malý servis</th>
+                            <td className="price">400,-</td>
                         </tr>
                         <tr>
                             <th>velký servis</th>
-                            <td className="price">500,-</td>
+                            <td className="price">600,-</td>
                         </tr>
                     </tbody>
                 </table>

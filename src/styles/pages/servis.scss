@@ -1,5 +1,5 @@
 main.servis {
-    overflow-x: scroll;
+    overflow-x: auto;
     @media screen and(max-width: 650px) {
         .table-cenik {
             align-self: flex-start;
