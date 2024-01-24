@@ -7,4 +7,4 @@ image:
 ---
 S﻿vah plný dětí, to máme rádi. Je veselo. Lyžařské kurzy vítáme a třídy se k nám rády vracejí. Tak krásné počasí, milí lyžaříci. 
 
-H﻿orní část FAMILY - modré sjezdovky je k procvičování techniky jak stvořená.
+H﻿orní část FAMILY sjezdovky je k procvičování techniky jak stvořená.
