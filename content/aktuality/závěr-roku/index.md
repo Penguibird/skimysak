@@ -7,4 +7,4 @@ image:
 ---
 Počasí si s námi pěkně pinká... Dnes konečně přimrzlo 🥶 a křupe to. 
 
-Pro letošek hotovo 👌 Moc si užijte oslavu konce roku - veselého Silvestra přejeme.  Jestli ale vidíte všude myšky 🐭 a myšáky 🐭, raději doporučíme přejít na nealko.
+Pro letošek hotovo 👌 Moc si užijte oslavu konce roku! Přejeme veselého Silvestra  Jestli ale vidíte všude myšky 🐭 a myšáky 🐭, raději doporučíme přejít na nealko.
