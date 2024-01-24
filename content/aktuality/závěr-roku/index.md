@@ -5,6 +5,6 @@ image:
   image: myšák-au-led.jpg
   imageAlt: Myšák se sklenicí ledu. Myšák je symbolem SKI areálu Myšák v Karlově
 ---
-Počasí si s námi pěkně pinká... Dnes konečně přimrzlo 🥶 a křupe to. 
+Počasí si s námi pěkně pinká... Dnes konečně přimrzlo 🥶 a křupe to!
 
 Pro letošek hotovo 👌 Moc si užijte oslavu konce roku! Přejeme veselého Silvestra  Jestli ale vidíte všude myšky 🐭 a myšáky 🐭, raději doporučíme přejít na nealko.
