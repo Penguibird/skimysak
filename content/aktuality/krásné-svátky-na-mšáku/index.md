@@ -1,5 +1,5 @@
 ---
-name: Krásné svátky na Myšáku
+name: Zasněžené svátky na Myšáku
 date: 25-12-2024
 image:
   image: připraveno.jpg
