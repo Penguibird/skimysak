@@ -42,19 +42,15 @@ export default function Page(props) {
                     <tbody>
                         <tr>
                             <td>1&nbsp;lekce</td>
-                            <td className="align-right ">  890 Kč</td>
+                            <td className="align-right ">  950 Kč</td>
                         </tr>
                         <tr>
                             <td>2 lekce</td>
-                            <td className="align-right " >1 680 Kč</td>
+                            <td className="align-right " >1 800 Kč</td>
                         </tr>
                         <tr>
-                            <td>3 lekce</td>
-                            <td className="align-right " >2 390 Kč</td>
-                        </tr>
-                        <tr>
-                            <td>4 lekce</td>
-                            <td className="align-right " >2 990 Kč</td>
+                            <td>Každá další lekce</td>
+                            <td className="align-right " >900 Kč</td>
                         </tr>
                     </tbody>
                     <thead>
@@ -65,11 +61,11 @@ export default function Page(props) {
                     <tbody>
                         <tr>
                             <td>1&nbsp;lekce</td>
-                            <td className="align-right ">  690 Kč</td>
+                            <td className="align-right ">  750 Kč</td>
                         </tr>
                         <tr>
                             <td>2 lekce</td>
-                            <td className="align-right " >1 280 Kč</td>
+                            <td className="align-right " >1 400 Kč</td>
                         </tr>
                     </tbody>
                 </table>
@@ -102,7 +98,7 @@ export default function Page(props) {
                 <ul>
                     <li>1 výuková hodina (lekce) = 50 min.</li>
                     <li>V ceně výuky jsou služby instruktora a jízdné po dobu výuky.</li>
-                    <li>Zvýhodněné ceny 2-4 lekcí platí při vybrání v&nbsp;jeden den.</li>
+                    <li>Zvýhodněné ceny 2 a více lekcí platí při vybrání v&nbsp;jeden den.</li>
                     <li>Započaté lekce, které budou zrušeny klientem a rezervované lekce zrušené méně než 30 min před začátkem výuky se plně hradí klientem.</li>
                 </ul>
             </section>
