@@ -1,6 +1,6 @@
 ---
 name: Skikross na FAMILY
-date: 28-03-2025
+date: 05-03-2025
 image:
   image: familly.jpg
 ---
