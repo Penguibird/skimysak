@@ -13,7 +13,7 @@ export default function Footer(props) {
             <p>Ski myšák má razítko Safe Travels od Světové rady cestování a cestovního ruchu</p>
         </a>
         <a className="footer-logo impuls" href="https://www.impuls.cz/">
-            <StaticImage className='img' formats={['avif', 'png', 'webp']} src="../../assets/impuls.png" alt='Logo Impuls' layout='constrained' placeholder='blurred' />
+            <StaticImage className='img' formats={['avif', 'png', 'webp']} src="../../assets/impuls_new.png" alt='Logo Impuls' layout='constrained' placeholder='blurred' />
         </a>
         <div className="footer-wrapper">
             <p>
