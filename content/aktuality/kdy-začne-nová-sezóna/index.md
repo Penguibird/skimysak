@@ -1,5 +1,5 @@
 ---
-name: "Kdy začne nová sezóna? "
+name: Kdy začne nová sezóna 2026/2026?
 date: 18-12-2025
 image:
   image: noční-zasněžování.jpg
