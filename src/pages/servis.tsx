@@ -53,6 +53,7 @@ export default function Page(props) {
                     V&nbsp;prostorách půjčovny prodáváme také potřebné doplňky –&nbsp;brýle, kukly, rukavice apod. české značky RELAX.
                 </p>
                 <p><strong>Spolehněte se na odborné poradenství i&nbsp;bezpečnostní seřízení vybavení.</strong></p>
+                <p>Více informací na <a href="tel:+420734335988"><strong>+420 734 335 988</strong></a></p>
                 <h2>Ceník</h2>
                 <table className="table-cenik">
                     <thead>
