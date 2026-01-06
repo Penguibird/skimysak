@@ -24,10 +24,13 @@ jobs:
           GATSBY_ENV: "prod"
 
       - name: deploy
-        uses: Penguibird/FTP-Deploy-Action@4.2.1
-        with:
-          server: 46.234.108.44
-          username: askimysakcz.17365
-          password: ${{ secrets.ftp_password }}
-          local-dir: ./public/
-          server-dir: ./www/
+        run: |
+          lftp -e "set ssl:verify-certificate no; open 46.234.108.44; user askimysakcz.17365 ${{ secrets.ftp_password }}; mirror --log=./.lftp-dev.log --parallel=8 --reverse --delete ./public/ ./www/;  bye"
+
+        # uses: Penguibird/FTP-Deploy-Action@4.2.1
+        # with:
+        #   server: 46.234.108.44
+        #   username: askimysakcz.17365
+        #   password: ${{ secrets.ftp_password }}
+        #   local-dir: ./public/
+        #   server-dir: ./www/
