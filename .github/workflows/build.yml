@@ -23,6 +23,9 @@ jobs:
         env:
           GATSBY_ENV: "prod"
 
+      - name: Install lftp
+        run: sudo apt install lftp
+        
       - name: deploy
         run: |
           lftp -e "set ssl:verify-certificate no; open 46.234.108.44; user askimysakcz.17365 ${{ secrets.ftp_password }}; mirror --log=./.lftp-dev.log --parallel=8 --reverse --delete ./public/ ./www/;  bye"
